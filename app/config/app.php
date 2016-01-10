@@ -157,7 +157,7 @@ return array(
         'Phphub\Sitemap\SitemapServiceProvider',
         'Maknz\Slack\SlackServiceProvider',
         'SimpleSoftwareIO\QrCode\QrCodeServiceProvider',
-
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
     ),
 
     /*

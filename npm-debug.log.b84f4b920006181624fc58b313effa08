@@ -1,0 +1,2858 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData gulp-asset-manifest
+20 silly mapToRegistry name gulp-asset-manifest
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/gulp-asset-manifest
+24 verbose request uri https://registry.npmjs.org/gulp-asset-manifest
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 8:31:26 AM
+27 verbose request id 71c5dac6d96fe064
+28 verbose etag "51R5V3XCUNZYCV9X00QKFRZXC"
+29 http request GET https://registry.npmjs.org/gulp-asset-manifest
+30 http 304 https://registry.npmjs.org/gulp-asset-manifest
+31 verbose headers { date: 'Sat, 09 Jan 2016 08:31:30 GMT',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   'cache-control': 'max-age=300',
+31 verbose headers   etag: '"51R5V3XCUNZYCV9X00QKFRZXC"',
+31 verbose headers   age: '0',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'x-served-by': 'cache-itm7427-ITM',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1452328290.694816,VS0,VE746',
+31 verbose headers   vary: 'Accept' }
+32 silly get cb [ 304,
+32 silly get   { date: 'Sat, 09 Jan 2016 08:31:30 GMT',
+32 silly get     via: '1.1 varnish',
+32 silly get     'cache-control': 'max-age=300',
+32 silly get     etag: '"51R5V3XCUNZYCV9X00QKFRZXC"',
+32 silly get     age: '0',
+32 silly get     connection: 'keep-alive',
+32 silly get     'x-served-by': 'cache-itm7427-ITM',
+32 silly get     'x-cache': 'MISS',
+32 silly get     'x-cache-hits': '0',
+32 silly get     'x-timer': 'S1452328290.694816,VS0,VE746',
+32 silly get     vary: 'Accept' } ]
+33 verbose etag https://registry.npmjs.org/gulp-asset-manifest from cache
+34 verbose get saving gulp-asset-manifest to /home/vagrant/.npm/registry.npmjs.org/gulp-asset-manifest/.cache.json
+35 silly resolveWithNewModule gulp-asset-manifest@0.0.4 checking installable status
+36 silly cache add args [ 'gulp-asset-manifest@0.0.4', null ]
+37 verbose cache add spec gulp-asset-manifest@0.0.4
+38 silly cache add parsed spec Result {
+38 silly cache add   raw: 'gulp-asset-manifest@0.0.4',
+38 silly cache add   scope: null,
+38 silly cache add   name: 'gulp-asset-manifest',
+38 silly cache add   rawSpec: '0.0.4',
+38 silly cache add   spec: '0.0.4',
+38 silly cache add   type: 'version' }
+39 silly addNamed gulp-asset-manifest@0.0.4
+40 verbose addNamed "0.0.4" is a plain semver version for gulp-asset-manifest
+41 silly mapToRegistry name gulp-asset-manifest
+42 silly mapToRegistry using default registry
+43 silly mapToRegistry registry https://registry.npmjs.org/
+44 silly mapToRegistry uri https://registry.npmjs.org/gulp-asset-manifest
+45 verbose addNameVersion registry:https://registry.npmjs.org/gulp-asset-manifest not in flight; fetching
+46 verbose get https://registry.npmjs.org/gulp-asset-manifest not expired, no request
+47 silly cache afterAdd gulp-asset-manifest@0.0.4
+48 verbose afterAdd /home/vagrant/.npm/gulp-asset-manifest/0.0.4/package/package.json not in flight; writing
+49 verbose afterAdd /home/vagrant/.npm/gulp-asset-manifest/0.0.4/package/package.json written
+50 silly fetchNamedPackageData gulp-util
+51 silly mapToRegistry name gulp-util
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/gulp-util
+55 verbose request uri https://registry.npmjs.org/gulp-util
+56 verbose request no auth needed
+57 info attempt registry request try #1 at 8:31:30 AM
+58 verbose etag "39D1DKY815U8G61C3NUNRABOX"
+59 http request GET https://registry.npmjs.org/gulp-util
+60 http 304 https://registry.npmjs.org/gulp-util
+61 verbose headers { date: 'Sat, 09 Jan 2016 08:31:32 GMT',
+61 verbose headers   via: '1.1 varnish',
+61 verbose headers   'cache-control': 'max-age=300',
+61 verbose headers   etag: '"39D1DKY815U8G61C3NUNRABOX"',
+61 verbose headers   age: '80',
+61 verbose headers   connection: 'keep-alive',
+61 verbose headers   'x-served-by': 'cache-itm7427-ITM',
+61 verbose headers   'x-cache': 'HIT',
+61 verbose headers   'x-cache-hits': '2',
+61 verbose headers   'x-timer': 'S1452328292.619583,VS0,VE0',
+61 verbose headers   vary: 'Accept' }
+62 silly get cb [ 304,
+62 silly get   { date: 'Sat, 09 Jan 2016 08:31:32 GMT',
+62 silly get     via: '1.1 varnish',
+62 silly get     'cache-control': 'max-age=300',
+62 silly get     etag: '"39D1DKY815U8G61C3NUNRABOX"',
+62 silly get     age: '80',
+62 silly get     connection: 'keep-alive',
+62 silly get     'x-served-by': 'cache-itm7427-ITM',
+62 silly get     'x-cache': 'HIT',
+62 silly get     'x-cache-hits': '2',
+62 silly get     'x-timer': 'S1452328292.619583,VS0,VE0',
+62 silly get     vary: 'Accept' } ]
+63 verbose etag https://registry.npmjs.org/gulp-util from cache
+64 verbose get saving gulp-util to /home/vagrant/.npm/registry.npmjs.org/gulp-util/.cache.json
+65 silly resolveWithNewModule gulp-util@2.2.20 checking installable status
+66 silly cache add args [ 'gulp-util@~2.2.10', null ]
+67 verbose cache add spec gulp-util@~2.2.10
+68 silly cache add parsed spec Result {
+68 silly cache add   raw: 'gulp-util@~2.2.10',
+68 silly cache add   scope: null,
+68 silly cache add   name: 'gulp-util',
+68 silly cache add   rawSpec: '~2.2.10',
+68 silly cache add   spec: '>=2.2.10 <2.3.0',
+68 silly cache add   type: 'range' }
+69 silly addNamed gulp-util@>=2.2.10 <2.3.0
+70 verbose addNamed ">=2.2.10 <2.3.0" is a valid semver range for gulp-util
+71 silly addNameRange { name: 'gulp-util', range: '>=2.2.10 <2.3.0', hasData: false }
+72 silly mapToRegistry name gulp-util
+73 silly mapToRegistry using default registry
+74 silly mapToRegistry registry https://registry.npmjs.org/
+75 silly mapToRegistry uri https://registry.npmjs.org/gulp-util
+76 verbose addNameRange registry:https://registry.npmjs.org/gulp-util not in flight; fetching
+77 verbose get https://registry.npmjs.org/gulp-util not expired, no request
+78 silly addNameRange number 2 { name: 'gulp-util', range: '>=2.2.10 <2.3.0', hasData: true }
+79 silly addNameRange versions [ 'gulp-util',
+79 silly addNameRange   [ '0.0.1',
+79 silly addNameRange     '1.0.0',
+79 silly addNameRange     '1.1.0',
+79 silly addNameRange     '1.1.1',
+79 silly addNameRange     '1.2.0',
+79 silly addNameRange     '1.3.0',
+79 silly addNameRange     '2.0.0',
+79 silly addNameRange     '2.1.1',
+79 silly addNameRange     '2.1.2',
+79 silly addNameRange     '2.1.3',
+79 silly addNameRange     '2.1.4',
+79 silly addNameRange     '2.2.0',
+79 silly addNameRange     '2.2.1',
+79 silly addNameRange     '2.2.2',
+79 silly addNameRange     '2.2.3',
+79 silly addNameRange     '2.2.5',
+79 silly addNameRange     '2.2.6',
+79 silly addNameRange     '2.2.7',
+79 silly addNameRange     '2.2.8',
+79 silly addNameRange     '2.2.9',
+79 silly addNameRange     '2.2.10',
+79 silly addNameRange     '2.2.11',
+79 silly addNameRange     '2.2.12',
+79 silly addNameRange     '2.2.13',
+79 silly addNameRange     '2.2.14',
+79 silly addNameRange     '2.2.15',
+79 silly addNameRange     '2.2.16',
+79 silly addNameRange     '2.2.17',
+79 silly addNameRange     '2.2.18',
+79 silly addNameRange     '2.2.19',
+79 silly addNameRange     '2.2.20',
+79 silly addNameRange     '3.0.0',
+79 silly addNameRange     '3.0.1',
+79 silly addNameRange     '3.0.2',
+79 silly addNameRange     '3.0.3',
+79 silly addNameRange     '3.0.4',
+79 silly addNameRange     '3.0.5',
+79 silly addNameRange     '3.0.6',
+79 silly addNameRange     '3.0.7' ] ]
+80 silly addNamed gulp-util@2.2.20
+81 verbose addNamed "2.2.20" is a plain semver version for gulp-util
+82 silly cache afterAdd gulp-util@2.2.20
+83 verbose afterAdd /home/vagrant/.npm/gulp-util/2.2.20/package/package.json not in flight; writing
+84 verbose afterAdd /home/vagrant/.npm/gulp-util/2.2.20/package/package.json written
+85 silly fetchNamedPackageData chalk
+86 silly mapToRegistry name chalk
+87 silly mapToRegistry using default registry
+88 silly mapToRegistry registry https://registry.npmjs.org/
+89 silly mapToRegistry uri https://registry.npmjs.org/chalk
+90 silly fetchNamedPackageData lodash._reinterpolate
+91 silly mapToRegistry name lodash._reinterpolate
+92 silly mapToRegistry using default registry
+93 silly mapToRegistry registry https://registry.npmjs.org/
+94 silly mapToRegistry uri https://registry.npmjs.org/lodash._reinterpolate
+95 silly fetchNamedPackageData lodash.template
+96 silly mapToRegistry name lodash.template
+97 silly mapToRegistry using default registry
+98 silly mapToRegistry registry https://registry.npmjs.org/
+99 silly mapToRegistry uri https://registry.npmjs.org/lodash.template
+100 silly fetchNamedPackageData minimist
+101 silly mapToRegistry name minimist
+102 silly mapToRegistry using default registry
+103 silly mapToRegistry registry https://registry.npmjs.org/
+104 silly mapToRegistry uri https://registry.npmjs.org/minimist
+105 silly fetchNamedPackageData through2
+106 silly mapToRegistry name through2
+107 silly mapToRegistry using default registry
+108 silly mapToRegistry registry https://registry.npmjs.org/
+109 silly mapToRegistry uri https://registry.npmjs.org/through2
+110 silly fetchNamedPackageData vinyl
+111 silly mapToRegistry name vinyl
+112 silly mapToRegistry using default registry
+113 silly mapToRegistry registry https://registry.npmjs.org/
+114 silly mapToRegistry uri https://registry.npmjs.org/vinyl
+115 verbose request uri https://registry.npmjs.org/chalk
+116 verbose request no auth needed
+117 info attempt registry request try #1 at 8:31:31 AM
+118 verbose etag "549MVI9H3FO47119SF4PJ8AIO"
+119 http request GET https://registry.npmjs.org/chalk
+120 verbose request uri https://registry.npmjs.org/lodash._reinterpolate
+121 verbose request no auth needed
+122 info attempt registry request try #1 at 8:31:31 AM
+123 verbose etag "4H6XCWFW7MWXSOSI7412A2YT"
+124 http request GET https://registry.npmjs.org/lodash._reinterpolate
+125 verbose request uri https://registry.npmjs.org/lodash.template
+126 verbose request no auth needed
+127 info attempt registry request try #1 at 8:31:31 AM
+128 verbose etag "986D3Z3UFXUBY4E9AIO4H9CRW"
+129 http request GET https://registry.npmjs.org/lodash.template
+130 verbose request uri https://registry.npmjs.org/minimist
+131 verbose request no auth needed
+132 info attempt registry request try #1 at 8:31:31 AM
+133 verbose etag "4KH4J10O4EBO8KRO8ASNRDRTO"
+134 http request GET https://registry.npmjs.org/minimist
+135 verbose request uri https://registry.npmjs.org/through2
+136 verbose request no auth needed
+137 info attempt registry request try #1 at 8:31:31 AM
+138 verbose etag "E7S31MS9JJ061VY14JM1A6SK4"
+139 http request GET https://registry.npmjs.org/through2
+140 verbose request uri https://registry.npmjs.org/vinyl
+141 verbose request no auth needed
+142 info attempt registry request try #1 at 8:31:31 AM
+143 verbose etag "6M9KP7YEI7KE38937XBMREVWD"
+144 http request GET https://registry.npmjs.org/vinyl
+145 http 304 https://registry.npmjs.org/minimist
+146 verbose headers { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+146 verbose headers   via: '1.1 varnish',
+146 verbose headers   'cache-control': 'max-age=300',
+146 verbose headers   etag: '"4KH4J10O4EBO8KRO8ASNRDRTO"',
+146 verbose headers   age: '194',
+146 verbose headers   connection: 'keep-alive',
+146 verbose headers   'x-served-by': 'cache-itm7426-ITM',
+146 verbose headers   'x-cache': 'HIT',
+146 verbose headers   'x-cache-hits': '245',
+146 verbose headers   'x-timer': 'S1452328293.335510,VS0,VE0',
+146 verbose headers   vary: 'Accept' }
+147 silly get cb [ 304,
+147 silly get   { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+147 silly get     via: '1.1 varnish',
+147 silly get     'cache-control': 'max-age=300',
+147 silly get     etag: '"4KH4J10O4EBO8KRO8ASNRDRTO"',
+147 silly get     age: '194',
+147 silly get     connection: 'keep-alive',
+147 silly get     'x-served-by': 'cache-itm7426-ITM',
+147 silly get     'x-cache': 'HIT',
+147 silly get     'x-cache-hits': '245',
+147 silly get     'x-timer': 'S1452328293.335510,VS0,VE0',
+147 silly get     vary: 'Accept' } ]
+148 verbose etag https://registry.npmjs.org/minimist from cache
+149 verbose get saving minimist to /home/vagrant/.npm/registry.npmjs.org/minimist/.cache.json
+150 silly resolveWithNewModule minimist@0.2.0 checking installable status
+151 silly cache add args [ 'minimist@^0.2.0', null ]
+152 verbose cache add spec minimist@^0.2.0
+153 silly cache add parsed spec Result {
+153 silly cache add   raw: 'minimist@^0.2.0',
+153 silly cache add   scope: null,
+153 silly cache add   name: 'minimist',
+153 silly cache add   rawSpec: '^0.2.0',
+153 silly cache add   spec: '>=0.2.0 <0.3.0',
+153 silly cache add   type: 'range' }
+154 silly addNamed minimist@>=0.2.0 <0.3.0
+155 verbose addNamed ">=0.2.0 <0.3.0" is a valid semver range for minimist
+156 silly addNameRange { name: 'minimist', range: '>=0.2.0 <0.3.0', hasData: false }
+157 silly mapToRegistry name minimist
+158 silly mapToRegistry using default registry
+159 silly mapToRegistry registry https://registry.npmjs.org/
+160 silly mapToRegistry uri https://registry.npmjs.org/minimist
+161 verbose addNameRange registry:https://registry.npmjs.org/minimist not in flight; fetching
+162 http 304 https://registry.npmjs.org/lodash.template
+163 verbose headers { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+163 verbose headers   via: '1.1 varnish',
+163 verbose headers   'cache-control': 'max-age=300',
+163 verbose headers   etag: '"986D3Z3UFXUBY4E9AIO4H9CRW"',
+163 verbose headers   age: '46',
+163 verbose headers   connection: 'keep-alive',
+163 verbose headers   'x-served-by': 'cache-itm7424-ITM',
+163 verbose headers   'x-cache': 'HIT',
+163 verbose headers   'x-cache-hits': '1',
+163 verbose headers   'x-timer': 'S1452328293.360472,VS0,VE0',
+163 verbose headers   vary: 'Accept' }
+164 silly get cb [ 304,
+164 silly get   { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+164 silly get     via: '1.1 varnish',
+164 silly get     'cache-control': 'max-age=300',
+164 silly get     etag: '"986D3Z3UFXUBY4E9AIO4H9CRW"',
+164 silly get     age: '46',
+164 silly get     connection: 'keep-alive',
+164 silly get     'x-served-by': 'cache-itm7424-ITM',
+164 silly get     'x-cache': 'HIT',
+164 silly get     'x-cache-hits': '1',
+164 silly get     'x-timer': 'S1452328293.360472,VS0,VE0',
+164 silly get     vary: 'Accept' } ]
+165 verbose etag https://registry.npmjs.org/lodash.template from cache
+166 verbose get saving lodash.template to /home/vagrant/.npm/registry.npmjs.org/lodash.template/.cache.json
+167 verbose get https://registry.npmjs.org/minimist not expired, no request
+168 silly addNameRange number 2 { name: 'minimist', range: '>=0.2.0 <0.3.0', hasData: true }
+169 silly addNameRange versions [ 'minimist',
+169 silly addNameRange   [ '0.0.0',
+169 silly addNameRange     '0.0.1',
+169 silly addNameRange     '0.0.2',
+169 silly addNameRange     '0.0.3',
+169 silly addNameRange     '0.0.4',
+169 silly addNameRange     '0.0.5',
+169 silly addNameRange     '0.0.6',
+169 silly addNameRange     '0.0.7',
+169 silly addNameRange     '0.0.8',
+169 silly addNameRange     '0.0.9',
+169 silly addNameRange     '0.0.10',
+169 silly addNameRange     '0.1.0',
+169 silly addNameRange     '0.2.0',
+169 silly addNameRange     '1.0.0',
+169 silly addNameRange     '1.1.0',
+169 silly addNameRange     '1.1.1',
+169 silly addNameRange     '1.1.2',
+169 silly addNameRange     '1.1.3',
+169 silly addNameRange     '1.2.0' ] ]
+170 silly addNamed minimist@0.2.0
+171 verbose addNamed "0.2.0" is a plain semver version for minimist
+172 silly resolveWithNewModule lodash.template@2.4.1 checking installable status
+173 silly cache add args [ 'lodash.template@^2.4.1', null ]
+174 verbose cache add spec lodash.template@^2.4.1
+175 silly cache add parsed spec Result {
+175 silly cache add   raw: 'lodash.template@^2.4.1',
+175 silly cache add   scope: null,
+175 silly cache add   name: 'lodash.template',
+175 silly cache add   rawSpec: '^2.4.1',
+175 silly cache add   spec: '>=2.4.1 <3.0.0',
+175 silly cache add   type: 'range' }
+176 silly addNamed lodash.template@>=2.4.1 <3.0.0
+177 verbose addNamed ">=2.4.1 <3.0.0" is a valid semver range for lodash.template
+178 silly addNameRange { name: 'lodash.template',
+178 silly addNameRange   range: '>=2.4.1 <3.0.0',
+178 silly addNameRange   hasData: false }
+179 silly mapToRegistry name lodash.template
+180 silly mapToRegistry using default registry
+181 silly mapToRegistry registry https://registry.npmjs.org/
+182 silly mapToRegistry uri https://registry.npmjs.org/lodash.template
+183 verbose addNameRange registry:https://registry.npmjs.org/lodash.template not in flight; fetching
+184 http 304 https://registry.npmjs.org/lodash._reinterpolate
+185 verbose headers { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+185 verbose headers   via: '1.1 varnish',
+185 verbose headers   'cache-control': 'max-age=300',
+185 verbose headers   etag: '"4H6XCWFW7MWXSOSI7412A2YT"',
+185 verbose headers   age: '46',
+185 verbose headers   connection: 'keep-alive',
+185 verbose headers   'x-served-by': 'cache-itm7427-ITM',
+185 verbose headers   'x-cache': 'HIT',
+185 verbose headers   'x-cache-hits': '2',
+185 verbose headers   'x-timer': 'S1452328293.355534,VS0,VE0',
+185 verbose headers   vary: 'Accept' }
+186 silly get cb [ 304,
+186 silly get   { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+186 silly get     via: '1.1 varnish',
+186 silly get     'cache-control': 'max-age=300',
+186 silly get     etag: '"4H6XCWFW7MWXSOSI7412A2YT"',
+186 silly get     age: '46',
+186 silly get     connection: 'keep-alive',
+186 silly get     'x-served-by': 'cache-itm7427-ITM',
+186 silly get     'x-cache': 'HIT',
+186 silly get     'x-cache-hits': '2',
+186 silly get     'x-timer': 'S1452328293.355534,VS0,VE0',
+186 silly get     vary: 'Accept' } ]
+187 verbose etag https://registry.npmjs.org/lodash._reinterpolate from cache
+188 verbose get saving lodash._reinterpolate to /home/vagrant/.npm/registry.npmjs.org/lodash._reinterpolate/.cache.json
+189 verbose get https://registry.npmjs.org/lodash.template not expired, no request
+190 silly addNameRange number 2 { name: 'lodash.template',
+190 silly addNameRange   range: '>=2.4.1 <3.0.0',
+190 silly addNameRange   hasData: true }
+191 silly addNameRange versions [ 'lodash.template',
+191 silly addNameRange   [ '2.0.0',
+191 silly addNameRange     '2.1.0',
+191 silly addNameRange     '2.2.0',
+191 silly addNameRange     '2.2.1',
+191 silly addNameRange     '2.3.0',
+191 silly addNameRange     '2.4.0',
+191 silly addNameRange     '2.4.1',
+191 silly addNameRange     '3.0.0',
+191 silly addNameRange     '3.0.1',
+191 silly addNameRange     '3.1.0',
+191 silly addNameRange     '3.2.0',
+191 silly addNameRange     '3.3.0',
+191 silly addNameRange     '3.3.1',
+191 silly addNameRange     '3.3.2',
+191 silly addNameRange     '3.4.0',
+191 silly addNameRange     '3.5.0',
+191 silly addNameRange     '3.5.1',
+191 silly addNameRange     '3.6.0',
+191 silly addNameRange     '3.6.1',
+191 silly addNameRange     '3.6.2' ] ]
+192 silly addNamed lodash.template@2.4.1
+193 verbose addNamed "2.4.1" is a plain semver version for lodash.template
+194 silly cache afterAdd minimist@0.2.0
+195 verbose afterAdd /home/vagrant/.npm/minimist/0.2.0/package/package.json not in flight; writing
+196 silly resolveWithNewModule lodash._reinterpolate@2.4.1 checking installable status
+197 silly cache add args [ 'lodash._reinterpolate@^2.4.1', null ]
+198 verbose cache add spec lodash._reinterpolate@^2.4.1
+199 silly cache add parsed spec Result {
+199 silly cache add   raw: 'lodash._reinterpolate@^2.4.1',
+199 silly cache add   scope: null,
+199 silly cache add   name: 'lodash._reinterpolate',
+199 silly cache add   rawSpec: '^2.4.1',
+199 silly cache add   spec: '>=2.4.1 <3.0.0',
+199 silly cache add   type: 'range' }
+200 silly addNamed lodash._reinterpolate@>=2.4.1 <3.0.0
+201 verbose addNamed ">=2.4.1 <3.0.0" is a valid semver range for lodash._reinterpolate
+202 silly addNameRange { name: 'lodash._reinterpolate',
+202 silly addNameRange   range: '>=2.4.1 <3.0.0',
+202 silly addNameRange   hasData: false }
+203 silly mapToRegistry name lodash._reinterpolate
+204 silly mapToRegistry using default registry
+205 silly mapToRegistry registry https://registry.npmjs.org/
+206 silly mapToRegistry uri https://registry.npmjs.org/lodash._reinterpolate
+207 verbose addNameRange registry:https://registry.npmjs.org/lodash._reinterpolate not in flight; fetching
+208 verbose afterAdd /home/vagrant/.npm/minimist/0.2.0/package/package.json written
+209 verbose get https://registry.npmjs.org/lodash._reinterpolate not expired, no request
+210 silly addNameRange number 2 { name: 'lodash._reinterpolate',
+210 silly addNameRange   range: '>=2.4.1 <3.0.0',
+210 silly addNameRange   hasData: true }
+211 silly addNameRange versions [ 'lodash._reinterpolate',
+211 silly addNameRange   [ '2.0.0',
+211 silly addNameRange     '2.1.0',
+211 silly addNameRange     '2.2.0',
+211 silly addNameRange     '2.2.1',
+211 silly addNameRange     '2.3.0',
+211 silly addNameRange     '2.4.0',
+211 silly addNameRange     '2.4.1',
+211 silly addNameRange     '3.0.0' ] ]
+212 silly addNamed lodash._reinterpolate@2.4.1
+213 verbose addNamed "2.4.1" is a plain semver version for lodash._reinterpolate
+214 silly cache afterAdd lodash.template@2.4.1
+215 verbose afterAdd /home/vagrant/.npm/lodash.template/2.4.1/package/package.json not in flight; writing
+216 verbose afterAdd /home/vagrant/.npm/lodash.template/2.4.1/package/package.json written
+217 silly cache afterAdd lodash._reinterpolate@2.4.1
+218 verbose afterAdd /home/vagrant/.npm/lodash._reinterpolate/2.4.1/package/package.json not in flight; writing
+219 http 304 https://registry.npmjs.org/chalk
+220 verbose headers { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+220 verbose headers   via: '1.1 varnish',
+220 verbose headers   'cache-control': 'max-age=300',
+220 verbose headers   etag: '"549MVI9H3FO47119SF4PJ8AIO"',
+220 verbose headers   age: '15',
+220 verbose headers   connection: 'keep-alive',
+220 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+220 verbose headers   'x-cache': 'HIT',
+220 verbose headers   'x-cache-hits': '2',
+220 verbose headers   'x-timer': 'S1452328293.378028,VS0,VE0',
+220 verbose headers   vary: 'Accept' }
+221 silly get cb [ 304,
+221 silly get   { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+221 silly get     via: '1.1 varnish',
+221 silly get     'cache-control': 'max-age=300',
+221 silly get     etag: '"549MVI9H3FO47119SF4PJ8AIO"',
+221 silly get     age: '15',
+221 silly get     connection: 'keep-alive',
+221 silly get     'x-served-by': 'cache-itm7421-ITM',
+221 silly get     'x-cache': 'HIT',
+221 silly get     'x-cache-hits': '2',
+221 silly get     'x-timer': 'S1452328293.378028,VS0,VE0',
+221 silly get     vary: 'Accept' } ]
+222 verbose etag https://registry.npmjs.org/chalk from cache
+223 verbose get saving chalk to /home/vagrant/.npm/registry.npmjs.org/chalk/.cache.json
+224 verbose afterAdd /home/vagrant/.npm/lodash._reinterpolate/2.4.1/package/package.json written
+225 silly resolveWithNewModule chalk@0.5.1 checking installable status
+226 silly cache add args [ 'chalk@^0.5.0', null ]
+227 verbose cache add spec chalk@^0.5.0
+228 silly cache add parsed spec Result {
+228 silly cache add   raw: 'chalk@^0.5.0',
+228 silly cache add   scope: null,
+228 silly cache add   name: 'chalk',
+228 silly cache add   rawSpec: '^0.5.0',
+228 silly cache add   spec: '>=0.5.0 <0.6.0',
+228 silly cache add   type: 'range' }
+229 silly addNamed chalk@>=0.5.0 <0.6.0
+230 verbose addNamed ">=0.5.0 <0.6.0" is a valid semver range for chalk
+231 silly addNameRange { name: 'chalk', range: '>=0.5.0 <0.6.0', hasData: false }
+232 silly mapToRegistry name chalk
+233 silly mapToRegistry using default registry
+234 silly mapToRegistry registry https://registry.npmjs.org/
+235 silly mapToRegistry uri https://registry.npmjs.org/chalk
+236 verbose addNameRange registry:https://registry.npmjs.org/chalk not in flight; fetching
+237 verbose get https://registry.npmjs.org/chalk not expired, no request
+238 silly addNameRange number 2 { name: 'chalk', range: '>=0.5.0 <0.6.0', hasData: true }
+239 silly addNameRange versions [ 'chalk',
+239 silly addNameRange   [ '0.1.0',
+239 silly addNameRange     '0.1.1',
+239 silly addNameRange     '0.2.0',
+239 silly addNameRange     '0.2.1',
+239 silly addNameRange     '0.3.0',
+239 silly addNameRange     '0.4.0',
+239 silly addNameRange     '0.5.0',
+239 silly addNameRange     '0.5.1',
+239 silly addNameRange     '1.0.0',
+239 silly addNameRange     '1.1.0',
+239 silly addNameRange     '1.1.1' ] ]
+240 silly addNamed chalk@0.5.1
+241 verbose addNamed "0.5.1" is a plain semver version for chalk
+242 silly cache afterAdd chalk@0.5.1
+243 verbose afterAdd /home/vagrant/.npm/chalk/0.5.1/package/package.json not in flight; writing
+244 verbose afterAdd /home/vagrant/.npm/chalk/0.5.1/package/package.json written
+245 http 304 https://registry.npmjs.org/through2
+246 verbose headers { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+246 verbose headers   via: '1.1 varnish',
+246 verbose headers   'cache-control': 'max-age=300',
+246 verbose headers   etag: '"E7S31MS9JJ061VY14JM1A6SK4"',
+246 verbose headers   age: '227',
+246 verbose headers   connection: 'keep-alive',
+246 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+246 verbose headers   'x-cache': 'HIT',
+246 verbose headers   'x-cache-hits': '2',
+246 verbose headers   'x-timer': 'S1452328293.975898,VS0,VE0',
+246 verbose headers   vary: 'Accept' }
+247 silly get cb [ 304,
+247 silly get   { date: 'Sat, 09 Jan 2016 08:31:33 GMT',
+247 silly get     via: '1.1 varnish',
+247 silly get     'cache-control': 'max-age=300',
+247 silly get     etag: '"E7S31MS9JJ061VY14JM1A6SK4"',
+247 silly get     age: '227',
+247 silly get     connection: 'keep-alive',
+247 silly get     'x-served-by': 'cache-itm7421-ITM',
+247 silly get     'x-cache': 'HIT',
+247 silly get     'x-cache-hits': '2',
+247 silly get     'x-timer': 'S1452328293.975898,VS0,VE0',
+247 silly get     vary: 'Accept' } ]
+248 verbose etag https://registry.npmjs.org/through2 from cache
+249 verbose get saving through2 to /home/vagrant/.npm/registry.npmjs.org/through2/.cache.json
+250 silly resolveWithNewModule through2@0.5.1 checking installable status
+251 silly cache add args [ 'through2@^0.5.0', null ]
+252 verbose cache add spec through2@^0.5.0
+253 silly cache add parsed spec Result {
+253 silly cache add   raw: 'through2@^0.5.0',
+253 silly cache add   scope: null,
+253 silly cache add   name: 'through2',
+253 silly cache add   rawSpec: '^0.5.0',
+253 silly cache add   spec: '>=0.5.0 <0.6.0',
+253 silly cache add   type: 'range' }
+254 silly addNamed through2@>=0.5.0 <0.6.0
+255 verbose addNamed ">=0.5.0 <0.6.0" is a valid semver range for through2
+256 silly addNameRange { name: 'through2', range: '>=0.5.0 <0.6.0', hasData: false }
+257 silly mapToRegistry name through2
+258 silly mapToRegistry using default registry
+259 silly mapToRegistry registry https://registry.npmjs.org/
+260 silly mapToRegistry uri https://registry.npmjs.org/through2
+261 verbose addNameRange registry:https://registry.npmjs.org/through2 not in flight; fetching
+262 verbose get https://registry.npmjs.org/through2 not expired, no request
+263 silly addNameRange number 2 { name: 'through2', range: '>=0.5.0 <0.6.0', hasData: true }
+264 silly addNameRange versions [ 'through2',
+264 silly addNameRange   [ '0.0.0',
+264 silly addNameRange     '0.0.1',
+264 silly addNameRange     '0.0.2',
+264 silly addNameRange     '0.0.3',
+264 silly addNameRange     '0.0.4',
+264 silly addNameRange     '0.0.5',
+264 silly addNameRange     '0.1.0',
+264 silly addNameRange     '0.2.0',
+264 silly addNameRange     '0.2.1',
+264 silly addNameRange     '0.2.2',
+264 silly addNameRange     '0.2.3',
+264 silly addNameRange     '0.3.0',
+264 silly addNameRange     '0.4.0',
+264 silly addNameRange     '0.4.1',
+264 silly addNameRange     '1.0.0',
+264 silly addNameRange     '0.4.2',
+264 silly addNameRange     '0.5.0',
+264 silly addNameRange     '0.5.1',
+264 silly addNameRange     '0.6.0',
+264 silly addNameRange     '1.1.0',
+264 silly addNameRange     '0.6.1',
+264 silly addNameRange     '1.1.1',
+264 silly addNameRange     '0.6.2',
+264 silly addNameRange     '0.6.3',
+264 silly addNameRange     '0.6.4',
+264 silly addNameRange     '0.6.5',
+264 silly addNameRange     '2.0.0' ] ]
+265 silly addNamed through2@0.5.1
+266 verbose addNamed "0.5.1" is a plain semver version for through2
+267 silly cache afterAdd through2@0.5.1
+268 verbose afterAdd /home/vagrant/.npm/through2/0.5.1/package/package.json not in flight; writing
+269 verbose afterAdd /home/vagrant/.npm/through2/0.5.1/package/package.json written
+270 http 304 https://registry.npmjs.org/vinyl
+271 verbose headers { date: 'Sat, 09 Jan 2016 08:31:39 GMT',
+271 verbose headers   via: '1.1 varnish',
+271 verbose headers   'cache-control': 'max-age=300',
+271 verbose headers   etag: '"6M9KP7YEI7KE38937XBMREVWD"',
+271 verbose headers   age: '213',
+271 verbose headers   connection: 'keep-alive',
+271 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+271 verbose headers   'x-cache': 'HIT',
+271 verbose headers   'x-cache-hits': '2',
+271 verbose headers   'x-timer': 'S1452328299.424055,VS0,VE0',
+271 verbose headers   vary: 'Accept' }
+272 silly get cb [ 304,
+272 silly get   { date: 'Sat, 09 Jan 2016 08:31:39 GMT',
+272 silly get     via: '1.1 varnish',
+272 silly get     'cache-control': 'max-age=300',
+272 silly get     etag: '"6M9KP7YEI7KE38937XBMREVWD"',
+272 silly get     age: '213',
+272 silly get     connection: 'keep-alive',
+272 silly get     'x-served-by': 'cache-itm7421-ITM',
+272 silly get     'x-cache': 'HIT',
+272 silly get     'x-cache-hits': '2',
+272 silly get     'x-timer': 'S1452328299.424055,VS0,VE0',
+272 silly get     vary: 'Accept' } ]
+273 verbose etag https://registry.npmjs.org/vinyl from cache
+274 verbose get saving vinyl to /home/vagrant/.npm/registry.npmjs.org/vinyl/.cache.json
+275 silly resolveWithNewModule vinyl@0.2.3 checking installable status
+276 silly cache add args [ 'vinyl@^0.2.1', null ]
+277 verbose cache add spec vinyl@^0.2.1
+278 silly cache add parsed spec Result {
+278 silly cache add   raw: 'vinyl@^0.2.1',
+278 silly cache add   scope: null,
+278 silly cache add   name: 'vinyl',
+278 silly cache add   rawSpec: '^0.2.1',
+278 silly cache add   spec: '>=0.2.1 <0.3.0',
+278 silly cache add   type: 'range' }
+279 silly addNamed vinyl@>=0.2.1 <0.3.0
+280 verbose addNamed ">=0.2.1 <0.3.0" is a valid semver range for vinyl
+281 silly addNameRange { name: 'vinyl', range: '>=0.2.1 <0.3.0', hasData: false }
+282 silly mapToRegistry name vinyl
+283 silly mapToRegistry using default registry
+284 silly mapToRegistry registry https://registry.npmjs.org/
+285 silly mapToRegistry uri https://registry.npmjs.org/vinyl
+286 verbose addNameRange registry:https://registry.npmjs.org/vinyl not in flight; fetching
+287 verbose get https://registry.npmjs.org/vinyl not expired, no request
+288 silly addNameRange number 2 { name: 'vinyl', range: '>=0.2.1 <0.3.0', hasData: true }
+289 silly addNameRange versions [ 'vinyl',
+289 silly addNameRange   [ '0.1.0',
+289 silly addNameRange     '0.2.0',
+289 silly addNameRange     '0.2.1',
+289 silly addNameRange     '0.2.2',
+289 silly addNameRange     '0.2.3',
+289 silly addNameRange     '0.3.0',
+289 silly addNameRange     '0.3.1',
+289 silly addNameRange     '0.3.2',
+289 silly addNameRange     '0.3.3',
+289 silly addNameRange     '0.4.0',
+289 silly addNameRange     '0.4.1',
+289 silly addNameRange     '0.4.2',
+289 silly addNameRange     '0.4.3',
+289 silly addNameRange     '0.4.4',
+289 silly addNameRange     '0.4.5',
+289 silly addNameRange     '0.4.6',
+289 silly addNameRange     '0.5.0',
+289 silly addNameRange     '0.5.1',
+289 silly addNameRange     '0.5.3',
+289 silly addNameRange     '1.0.0',
+289 silly addNameRange     '1.1.0' ] ]
+290 silly addNamed vinyl@0.2.3
+291 verbose addNamed "0.2.3" is a plain semver version for vinyl
+292 silly cache afterAdd vinyl@0.2.3
+293 verbose afterAdd /home/vagrant/.npm/vinyl/0.2.3/package/package.json not in flight; writing
+294 verbose afterAdd /home/vagrant/.npm/vinyl/0.2.3/package/package.json written
+295 silly fetchNamedPackageData ansi-styles
+296 silly mapToRegistry name ansi-styles
+297 silly mapToRegistry using default registry
+298 silly mapToRegistry registry https://registry.npmjs.org/
+299 silly mapToRegistry uri https://registry.npmjs.org/ansi-styles
+300 silly fetchNamedPackageData has-ansi
+301 silly mapToRegistry name has-ansi
+302 silly mapToRegistry using default registry
+303 silly mapToRegistry registry https://registry.npmjs.org/
+304 silly mapToRegistry uri https://registry.npmjs.org/has-ansi
+305 silly fetchNamedPackageData strip-ansi
+306 silly mapToRegistry name strip-ansi
+307 silly mapToRegistry using default registry
+308 silly mapToRegistry registry https://registry.npmjs.org/
+309 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+310 silly fetchNamedPackageData supports-color
+311 silly mapToRegistry name supports-color
+312 silly mapToRegistry using default registry
+313 silly mapToRegistry registry https://registry.npmjs.org/
+314 silly mapToRegistry uri https://registry.npmjs.org/supports-color
+315 verbose request uri https://registry.npmjs.org/ansi-styles
+316 verbose request no auth needed
+317 info attempt registry request try #1 at 8:31:38 AM
+318 verbose etag "9LLFLOJ9GM4RQX3H0RXPTL575"
+319 http request GET https://registry.npmjs.org/ansi-styles
+320 verbose request uri https://registry.npmjs.org/has-ansi
+321 verbose request no auth needed
+322 info attempt registry request try #1 at 8:31:38 AM
+323 verbose etag "BBDMGI1OGAVY5ZWT2355AH7Y1"
+324 http request GET https://registry.npmjs.org/has-ansi
+325 verbose request uri https://registry.npmjs.org/strip-ansi
+326 verbose request no auth needed
+327 info attempt registry request try #1 at 8:31:38 AM
+328 verbose etag "RBPZS1J21XBKPHESKAG048ZH"
+329 http request GET https://registry.npmjs.org/strip-ansi
+330 verbose request uri https://registry.npmjs.org/supports-color
+331 verbose request no auth needed
+332 info attempt registry request try #1 at 8:31:38 AM
+333 verbose etag "91QPISXHGSPQQAUI4IY5OE9UJ"
+334 http request GET https://registry.npmjs.org/supports-color
+335 http 304 https://registry.npmjs.org/supports-color
+336 verbose headers { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+336 verbose headers   via: '1.1 varnish',
+336 verbose headers   'cache-control': 'max-age=300',
+336 verbose headers   etag: '"91QPISXHGSPQQAUI4IY5OE9UJ"',
+336 verbose headers   age: '250',
+336 verbose headers   connection: 'keep-alive',
+336 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+336 verbose headers   'x-cache': 'HIT',
+336 verbose headers   'x-cache-hits': '10',
+336 verbose headers   'x-timer': 'S1452328300.271873,VS0,VE0',
+336 verbose headers   vary: 'Accept' }
+337 silly get cb [ 304,
+337 silly get   { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+337 silly get     via: '1.1 varnish',
+337 silly get     'cache-control': 'max-age=300',
+337 silly get     etag: '"91QPISXHGSPQQAUI4IY5OE9UJ"',
+337 silly get     age: '250',
+337 silly get     connection: 'keep-alive',
+337 silly get     'x-served-by': 'cache-itm7421-ITM',
+337 silly get     'x-cache': 'HIT',
+337 silly get     'x-cache-hits': '10',
+337 silly get     'x-timer': 'S1452328300.271873,VS0,VE0',
+337 silly get     vary: 'Accept' } ]
+338 verbose etag https://registry.npmjs.org/supports-color from cache
+339 verbose get saving supports-color to /home/vagrant/.npm/registry.npmjs.org/supports-color/.cache.json
+340 http 304 https://registry.npmjs.org/strip-ansi
+341 verbose headers { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+341 verbose headers   via: '1.1 varnish',
+341 verbose headers   'cache-control': 'max-age=300',
+341 verbose headers   etag: '"RBPZS1J21XBKPHESKAG048ZH"',
+341 verbose headers   age: '21',
+341 verbose headers   connection: 'keep-alive',
+341 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+341 verbose headers   'x-cache': 'HIT',
+341 verbose headers   'x-cache-hits': '41',
+341 verbose headers   'x-timer': 'S1452328300.282136,VS0,VE0',
+341 verbose headers   vary: 'Accept' }
+342 silly get cb [ 304,
+342 silly get   { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+342 silly get     via: '1.1 varnish',
+342 silly get     'cache-control': 'max-age=300',
+342 silly get     etag: '"RBPZS1J21XBKPHESKAG048ZH"',
+342 silly get     age: '21',
+342 silly get     connection: 'keep-alive',
+342 silly get     'x-served-by': 'cache-itm7421-ITM',
+342 silly get     'x-cache': 'HIT',
+342 silly get     'x-cache-hits': '41',
+342 silly get     'x-timer': 'S1452328300.282136,VS0,VE0',
+342 silly get     vary: 'Accept' } ]
+343 verbose etag https://registry.npmjs.org/strip-ansi from cache
+344 verbose get saving strip-ansi to /home/vagrant/.npm/registry.npmjs.org/strip-ansi/.cache.json
+345 silly resolveWithNewModule supports-color@0.2.0 checking installable status
+346 silly cache add args [ 'supports-color@^0.2.0', null ]
+347 verbose cache add spec supports-color@^0.2.0
+348 silly cache add parsed spec Result {
+348 silly cache add   raw: 'supports-color@^0.2.0',
+348 silly cache add   scope: null,
+348 silly cache add   name: 'supports-color',
+348 silly cache add   rawSpec: '^0.2.0',
+348 silly cache add   spec: '>=0.2.0 <0.3.0',
+348 silly cache add   type: 'range' }
+349 silly addNamed supports-color@>=0.2.0 <0.3.0
+350 verbose addNamed ">=0.2.0 <0.3.0" is a valid semver range for supports-color
+351 silly addNameRange { name: 'supports-color',
+351 silly addNameRange   range: '>=0.2.0 <0.3.0',
+351 silly addNameRange   hasData: false }
+352 silly mapToRegistry name supports-color
+353 silly mapToRegistry using default registry
+354 silly mapToRegistry registry https://registry.npmjs.org/
+355 silly mapToRegistry uri https://registry.npmjs.org/supports-color
+356 verbose addNameRange registry:https://registry.npmjs.org/supports-color not in flight; fetching
+357 http 304 https://registry.npmjs.org/has-ansi
+358 verbose headers { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+358 verbose headers   via: '1.1 varnish',
+358 verbose headers   'cache-control': 'max-age=300',
+358 verbose headers   etag: '"BBDMGI1OGAVY5ZWT2355AH7Y1"',
+358 verbose headers   age: '21',
+358 verbose headers   connection: 'keep-alive',
+358 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+358 verbose headers   'x-cache': 'HIT',
+358 verbose headers   'x-cache-hits': '1',
+358 verbose headers   'x-timer': 'S1452328300.288470,VS0,VE0',
+358 verbose headers   vary: 'Accept' }
+359 silly get cb [ 304,
+359 silly get   { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+359 silly get     via: '1.1 varnish',
+359 silly get     'cache-control': 'max-age=300',
+359 silly get     etag: '"BBDMGI1OGAVY5ZWT2355AH7Y1"',
+359 silly get     age: '21',
+359 silly get     connection: 'keep-alive',
+359 silly get     'x-served-by': 'cache-itm7421-ITM',
+359 silly get     'x-cache': 'HIT',
+359 silly get     'x-cache-hits': '1',
+359 silly get     'x-timer': 'S1452328300.288470,VS0,VE0',
+359 silly get     vary: 'Accept' } ]
+360 verbose etag https://registry.npmjs.org/has-ansi from cache
+361 verbose get saving has-ansi to /home/vagrant/.npm/registry.npmjs.org/has-ansi/.cache.json
+362 silly resolveWithNewModule strip-ansi@0.3.0 checking installable status
+363 silly cache add args [ 'strip-ansi@^0.3.0', null ]
+364 verbose cache add spec strip-ansi@^0.3.0
+365 silly cache add parsed spec Result {
+365 silly cache add   raw: 'strip-ansi@^0.3.0',
+365 silly cache add   scope: null,
+365 silly cache add   name: 'strip-ansi',
+365 silly cache add   rawSpec: '^0.3.0',
+365 silly cache add   spec: '>=0.3.0 <0.4.0',
+365 silly cache add   type: 'range' }
+366 silly addNamed strip-ansi@>=0.3.0 <0.4.0
+367 verbose addNamed ">=0.3.0 <0.4.0" is a valid semver range for strip-ansi
+368 silly addNameRange { name: 'strip-ansi', range: '>=0.3.0 <0.4.0', hasData: false }
+369 silly mapToRegistry name strip-ansi
+370 silly mapToRegistry using default registry
+371 silly mapToRegistry registry https://registry.npmjs.org/
+372 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+373 verbose addNameRange registry:https://registry.npmjs.org/strip-ansi not in flight; fetching
+374 http 304 https://registry.npmjs.org/ansi-styles
+375 verbose headers { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+375 verbose headers   via: '1.1 varnish',
+375 verbose headers   'cache-control': 'max-age=300',
+375 verbose headers   etag: '"9LLFLOJ9GM4RQX3H0RXPTL575"',
+375 verbose headers   age: '160',
+375 verbose headers   connection: 'keep-alive',
+375 verbose headers   'x-served-by': 'cache-itm7420-ITM',
+375 verbose headers   'x-cache': 'HIT',
+375 verbose headers   'x-cache-hits': '4',
+375 verbose headers   'x-timer': 'S1452328300.296609,VS0,VE0',
+375 verbose headers   vary: 'Accept' }
+376 silly get cb [ 304,
+376 silly get   { date: 'Sat, 09 Jan 2016 08:31:40 GMT',
+376 silly get     via: '1.1 varnish',
+376 silly get     'cache-control': 'max-age=300',
+376 silly get     etag: '"9LLFLOJ9GM4RQX3H0RXPTL575"',
+376 silly get     age: '160',
+376 silly get     connection: 'keep-alive',
+376 silly get     'x-served-by': 'cache-itm7420-ITM',
+376 silly get     'x-cache': 'HIT',
+376 silly get     'x-cache-hits': '4',
+376 silly get     'x-timer': 'S1452328300.296609,VS0,VE0',
+376 silly get     vary: 'Accept' } ]
+377 verbose etag https://registry.npmjs.org/ansi-styles from cache
+378 verbose get saving ansi-styles to /home/vagrant/.npm/registry.npmjs.org/ansi-styles/.cache.json
+379 verbose get https://registry.npmjs.org/supports-color not expired, no request
+380 silly addNameRange number 2 { name: 'supports-color',
+380 silly addNameRange   range: '>=0.2.0 <0.3.0',
+380 silly addNameRange   hasData: true }
+381 silly addNameRange versions [ 'supports-color',
+381 silly addNameRange   [ '0.2.0',
+381 silly addNameRange     '1.0.0',
+381 silly addNameRange     '1.1.0',
+381 silly addNameRange     '1.2.0',
+381 silly addNameRange     '1.2.1',
+381 silly addNameRange     '1.3.0',
+381 silly addNameRange     '1.3.1',
+381 silly addNameRange     '2.0.0',
+381 silly addNameRange     '3.0.0',
+381 silly addNameRange     '3.0.1',
+381 silly addNameRange     '3.1.0',
+381 silly addNameRange     '3.1.1',
+381 silly addNameRange     '3.1.2' ] ]
+382 silly addNamed supports-color@0.2.0
+383 verbose addNamed "0.2.0" is a plain semver version for supports-color
+384 verbose get https://registry.npmjs.org/strip-ansi not expired, no request
+385 silly addNameRange number 2 { name: 'strip-ansi', range: '>=0.3.0 <0.4.0', hasData: true }
+386 silly addNameRange versions [ 'strip-ansi',
+386 silly addNameRange   [ '0.1.0',
+386 silly addNameRange     '0.1.1',
+386 silly addNameRange     '0.2.0',
+386 silly addNameRange     '0.2.1',
+386 silly addNameRange     '0.2.2',
+386 silly addNameRange     '0.3.0',
+386 silly addNameRange     '1.0.0',
+386 silly addNameRange     '2.0.0',
+386 silly addNameRange     '2.0.1',
+386 silly addNameRange     '3.0.0' ] ]
+387 silly addNamed strip-ansi@0.3.0
+388 verbose addNamed "0.3.0" is a plain semver version for strip-ansi
+389 silly resolveWithNewModule has-ansi@0.1.0 checking installable status
+390 silly cache add args [ 'has-ansi@^0.1.0', null ]
+391 verbose cache add spec has-ansi@^0.1.0
+392 silly cache add parsed spec Result {
+392 silly cache add   raw: 'has-ansi@^0.1.0',
+392 silly cache add   scope: null,
+392 silly cache add   name: 'has-ansi',
+392 silly cache add   rawSpec: '^0.1.0',
+392 silly cache add   spec: '>=0.1.0 <0.2.0',
+392 silly cache add   type: 'range' }
+393 silly addNamed has-ansi@>=0.1.0 <0.2.0
+394 verbose addNamed ">=0.1.0 <0.2.0" is a valid semver range for has-ansi
+395 silly addNameRange { name: 'has-ansi', range: '>=0.1.0 <0.2.0', hasData: false }
+396 silly mapToRegistry name has-ansi
+397 silly mapToRegistry using default registry
+398 silly mapToRegistry registry https://registry.npmjs.org/
+399 silly mapToRegistry uri https://registry.npmjs.org/has-ansi
+400 verbose addNameRange registry:https://registry.npmjs.org/has-ansi not in flight; fetching
+401 silly resolveWithNewModule ansi-styles@1.1.0 checking installable status
+402 silly cache add args [ 'ansi-styles@^1.1.0', null ]
+403 verbose cache add spec ansi-styles@^1.1.0
+404 silly cache add parsed spec Result {
+404 silly cache add   raw: 'ansi-styles@^1.1.0',
+404 silly cache add   scope: null,
+404 silly cache add   name: 'ansi-styles',
+404 silly cache add   rawSpec: '^1.1.0',
+404 silly cache add   spec: '>=1.1.0 <2.0.0',
+404 silly cache add   type: 'range' }
+405 silly addNamed ansi-styles@>=1.1.0 <2.0.0
+406 verbose addNamed ">=1.1.0 <2.0.0" is a valid semver range for ansi-styles
+407 silly addNameRange { name: 'ansi-styles', range: '>=1.1.0 <2.0.0', hasData: false }
+408 silly mapToRegistry name ansi-styles
+409 silly mapToRegistry using default registry
+410 silly mapToRegistry registry https://registry.npmjs.org/
+411 silly mapToRegistry uri https://registry.npmjs.org/ansi-styles
+412 verbose addNameRange registry:https://registry.npmjs.org/ansi-styles not in flight; fetching
+413 verbose get https://registry.npmjs.org/has-ansi not expired, no request
+414 silly addNameRange number 2 { name: 'has-ansi', range: '>=0.1.0 <0.2.0', hasData: true }
+415 silly addNameRange versions [ 'has-ansi',
+415 silly addNameRange   [ '0.1.0', '1.0.0', '1.0.1', '1.0.2', '1.0.3', '2.0.0' ] ]
+416 silly addNamed has-ansi@0.1.0
+417 verbose addNamed "0.1.0" is a plain semver version for has-ansi
+418 silly cache afterAdd supports-color@0.2.0
+419 verbose afterAdd /home/vagrant/.npm/supports-color/0.2.0/package/package.json not in flight; writing
+420 verbose get https://registry.npmjs.org/ansi-styles not expired, no request
+421 silly addNameRange number 2 { name: 'ansi-styles', range: '>=1.1.0 <2.0.0', hasData: true }
+422 silly addNameRange versions [ 'ansi-styles',
+422 silly addNameRange   [ '0.1.0',
+422 silly addNameRange     '0.1.1',
+422 silly addNameRange     '0.1.2',
+422 silly addNameRange     '0.2.0',
+422 silly addNameRange     '1.0.0',
+422 silly addNameRange     '1.1.0',
+422 silly addNameRange     '2.0.0',
+422 silly addNameRange     '2.0.1',
+422 silly addNameRange     '2.1.0' ] ]
+423 silly addNamed ansi-styles@1.1.0
+424 verbose addNamed "1.1.0" is a plain semver version for ansi-styles
+425 silly cache afterAdd strip-ansi@0.3.0
+426 verbose afterAdd /home/vagrant/.npm/strip-ansi/0.3.0/package/package.json not in flight; writing
+427 verbose afterAdd /home/vagrant/.npm/supports-color/0.2.0/package/package.json written
+428 verbose afterAdd /home/vagrant/.npm/strip-ansi/0.3.0/package/package.json written
+429 silly cache afterAdd has-ansi@0.1.0
+430 verbose afterAdd /home/vagrant/.npm/has-ansi/0.1.0/package/package.json not in flight; writing
+431 silly cache afterAdd ansi-styles@1.1.0
+432 verbose afterAdd /home/vagrant/.npm/ansi-styles/1.1.0/package/package.json not in flight; writing
+433 verbose afterAdd /home/vagrant/.npm/has-ansi/0.1.0/package/package.json written
+434 verbose afterAdd /home/vagrant/.npm/ansi-styles/1.1.0/package/package.json written
+435 silly fetchNamedPackageData ansi-regex
+436 silly mapToRegistry name ansi-regex
+437 silly mapToRegistry using default registry
+438 silly mapToRegistry registry https://registry.npmjs.org/
+439 silly mapToRegistry uri https://registry.npmjs.org/ansi-regex
+440 verbose request uri https://registry.npmjs.org/ansi-regex
+441 verbose request no auth needed
+442 info attempt registry request try #1 at 8:31:38 AM
+443 verbose etag "1MRHZG3BYMGFOFAI4EBGRPR9U"
+444 http request GET https://registry.npmjs.org/ansi-regex
+445 http 304 https://registry.npmjs.org/ansi-regex
+446 verbose headers { date: 'Sat, 09 Jan 2016 08:31:41 GMT',
+446 verbose headers   via: '1.1 varnish',
+446 verbose headers   'cache-control': 'max-age=300',
+446 verbose headers   etag: '"1MRHZG3BYMGFOFAI4EBGRPR9U"',
+446 verbose headers   age: '22',
+446 verbose headers   connection: 'keep-alive',
+446 verbose headers   'x-served-by': 'cache-itm7427-ITM',
+446 verbose headers   'x-cache': 'HIT',
+446 verbose headers   'x-cache-hits': '1',
+446 verbose headers   'x-timer': 'S1452328301.889424,VS0,VE0',
+446 verbose headers   vary: 'Accept' }
+447 silly get cb [ 304,
+447 silly get   { date: 'Sat, 09 Jan 2016 08:31:41 GMT',
+447 silly get     via: '1.1 varnish',
+447 silly get     'cache-control': 'max-age=300',
+447 silly get     etag: '"1MRHZG3BYMGFOFAI4EBGRPR9U"',
+447 silly get     age: '22',
+447 silly get     connection: 'keep-alive',
+447 silly get     'x-served-by': 'cache-itm7427-ITM',
+447 silly get     'x-cache': 'HIT',
+447 silly get     'x-cache-hits': '1',
+447 silly get     'x-timer': 'S1452328301.889424,VS0,VE0',
+447 silly get     vary: 'Accept' } ]
+448 verbose etag https://registry.npmjs.org/ansi-regex from cache
+449 verbose get saving ansi-regex to /home/vagrant/.npm/registry.npmjs.org/ansi-regex/.cache.json
+450 silly resolveWithNewModule ansi-regex@0.2.1 checking installable status
+451 silly cache add args [ 'ansi-regex@^0.2.0', null ]
+452 verbose cache add spec ansi-regex@^0.2.0
+453 silly cache add parsed spec Result {
+453 silly cache add   raw: 'ansi-regex@^0.2.0',
+453 silly cache add   scope: null,
+453 silly cache add   name: 'ansi-regex',
+453 silly cache add   rawSpec: '^0.2.0',
+453 silly cache add   spec: '>=0.2.0 <0.3.0',
+453 silly cache add   type: 'range' }
+454 silly addNamed ansi-regex@>=0.2.0 <0.3.0
+455 verbose addNamed ">=0.2.0 <0.3.0" is a valid semver range for ansi-regex
+456 silly addNameRange { name: 'ansi-regex', range: '>=0.2.0 <0.3.0', hasData: false }
+457 silly mapToRegistry name ansi-regex
+458 silly mapToRegistry using default registry
+459 silly mapToRegistry registry https://registry.npmjs.org/
+460 silly mapToRegistry uri https://registry.npmjs.org/ansi-regex
+461 verbose addNameRange registry:https://registry.npmjs.org/ansi-regex not in flight; fetching
+462 verbose get https://registry.npmjs.org/ansi-regex not expired, no request
+463 silly addNameRange number 2 { name: 'ansi-regex', range: '>=0.2.0 <0.3.0', hasData: true }
+464 silly addNameRange versions [ 'ansi-regex',
+464 silly addNameRange   [ '0.1.0', '0.2.0', '0.2.1', '1.0.0', '1.1.0', '1.1.1', '2.0.0' ] ]
+465 silly addNamed ansi-regex@0.2.1
+466 verbose addNamed "0.2.1" is a plain semver version for ansi-regex
+467 silly cache afterAdd ansi-regex@0.2.1
+468 verbose afterAdd /home/vagrant/.npm/ansi-regex/0.2.1/package/package.json not in flight; writing
+469 verbose afterAdd /home/vagrant/.npm/ansi-regex/0.2.1/package/package.json written
+470 silly fetchNamedPackageData lodash.escape
+471 silly mapToRegistry name lodash.escape
+472 silly mapToRegistry using default registry
+473 silly mapToRegistry registry https://registry.npmjs.org/
+474 silly mapToRegistry uri https://registry.npmjs.org/lodash.escape
+475 silly fetchNamedPackageData lodash.keys
+476 silly mapToRegistry name lodash.keys
+477 silly mapToRegistry using default registry
+478 silly mapToRegistry registry https://registry.npmjs.org/
+479 silly mapToRegistry uri https://registry.npmjs.org/lodash.keys
+480 silly fetchNamedPackageData lodash.templatesettings
+481 silly mapToRegistry name lodash.templatesettings
+482 silly mapToRegistry using default registry
+483 silly mapToRegistry registry https://registry.npmjs.org/
+484 silly mapToRegistry uri https://registry.npmjs.org/lodash.templatesettings
+485 verbose request uri https://registry.npmjs.org/lodash.escape
+486 verbose request no auth needed
+487 info attempt registry request try #1 at 8:31:40 AM
+488 verbose etag "C5YTX0M4DTQJE5INU4PJUM3CL"
+489 http request GET https://registry.npmjs.org/lodash.escape
+490 verbose request uri https://registry.npmjs.org/lodash.keys
+491 verbose request no auth needed
+492 info attempt registry request try #1 at 8:31:40 AM
+493 verbose etag "BHWBXZX3O23JHL6WV9C090MR5"
+494 http request GET https://registry.npmjs.org/lodash.keys
+495 verbose request uri https://registry.npmjs.org/lodash.templatesettings
+496 verbose request no auth needed
+497 info attempt registry request try #1 at 8:31:40 AM
+498 verbose etag "CKXEDEO7Z7JMUWVK67VMXM924"
+499 http request GET https://registry.npmjs.org/lodash.templatesettings
+500 http 304 https://registry.npmjs.org/lodash.escape
+501 verbose headers { date: 'Sat, 09 Jan 2016 08:31:42 GMT',
+501 verbose headers   via: '1.1 varnish',
+501 verbose headers   'cache-control': 'max-age=300',
+501 verbose headers   etag: '"C5YTX0M4DTQJE5INU4PJUM3CL"',
+501 verbose headers   age: '53',
+501 verbose headers   connection: 'keep-alive',
+501 verbose headers   'x-served-by': 'cache-itm7426-ITM',
+501 verbose headers   'x-cache': 'HIT',
+501 verbose headers   'x-cache-hits': '2',
+501 verbose headers   'x-timer': 'S1452328302.614940,VS0,VE0',
+501 verbose headers   vary: 'Accept' }
+502 silly get cb [ 304,
+502 silly get   { date: 'Sat, 09 Jan 2016 08:31:42 GMT',
+502 silly get     via: '1.1 varnish',
+502 silly get     'cache-control': 'max-age=300',
+502 silly get     etag: '"C5YTX0M4DTQJE5INU4PJUM3CL"',
+502 silly get     age: '53',
+502 silly get     connection: 'keep-alive',
+502 silly get     'x-served-by': 'cache-itm7426-ITM',
+502 silly get     'x-cache': 'HIT',
+502 silly get     'x-cache-hits': '2',
+502 silly get     'x-timer': 'S1452328302.614940,VS0,VE0',
+502 silly get     vary: 'Accept' } ]
+503 verbose etag https://registry.npmjs.org/lodash.escape from cache
+504 verbose get saving lodash.escape to /home/vagrant/.npm/registry.npmjs.org/lodash.escape/.cache.json
+505 silly resolveWithNewModule lodash.escape@2.4.1 checking installable status
+506 silly cache add args [ 'lodash.escape@~2.4.1', null ]
+507 verbose cache add spec lodash.escape@~2.4.1
+508 silly cache add parsed spec Result {
+508 silly cache add   raw: 'lodash.escape@~2.4.1',
+508 silly cache add   scope: null,
+508 silly cache add   name: 'lodash.escape',
+508 silly cache add   rawSpec: '~2.4.1',
+508 silly cache add   spec: '>=2.4.1 <2.5.0',
+508 silly cache add   type: 'range' }
+509 silly addNamed lodash.escape@>=2.4.1 <2.5.0
+510 verbose addNamed ">=2.4.1 <2.5.0" is a valid semver range for lodash.escape
+511 silly addNameRange { name: 'lodash.escape',
+511 silly addNameRange   range: '>=2.4.1 <2.5.0',
+511 silly addNameRange   hasData: false }
+512 silly mapToRegistry name lodash.escape
+513 silly mapToRegistry using default registry
+514 silly mapToRegistry registry https://registry.npmjs.org/
+515 silly mapToRegistry uri https://registry.npmjs.org/lodash.escape
+516 verbose addNameRange registry:https://registry.npmjs.org/lodash.escape not in flight; fetching
+517 verbose get https://registry.npmjs.org/lodash.escape not expired, no request
+518 silly addNameRange number 2 { name: 'lodash.escape', range: '>=2.4.1 <2.5.0', hasData: true }
+519 silly addNameRange versions [ 'lodash.escape',
+519 silly addNameRange   [ '2.0.0',
+519 silly addNameRange     '2.1.0',
+519 silly addNameRange     '2.2.0',
+519 silly addNameRange     '2.2.1',
+519 silly addNameRange     '2.3.0',
+519 silly addNameRange     '2.4.0',
+519 silly addNameRange     '2.4.1',
+519 silly addNameRange     '3.0.0' ] ]
+520 silly addNamed lodash.escape@2.4.1
+521 verbose addNamed "2.4.1" is a plain semver version for lodash.escape
+522 silly cache afterAdd lodash.escape@2.4.1
+523 verbose afterAdd /home/vagrant/.npm/lodash.escape/2.4.1/package/package.json not in flight; writing
+524 verbose afterAdd /home/vagrant/.npm/lodash.escape/2.4.1/package/package.json written
+525 http 304 https://registry.npmjs.org/lodash.keys
+526 verbose headers { date: 'Sat, 09 Jan 2016 08:31:42 GMT',
+526 verbose headers   via: '1.1 varnish',
+526 verbose headers   'cache-control': 'max-age=300',
+526 verbose headers   etag: '"BHWBXZX3O23JHL6WV9C090MR5"',
+526 verbose headers   age: '103',
+526 verbose headers   connection: 'keep-alive',
+526 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+526 verbose headers   'x-cache': 'HIT',
+526 verbose headers   'x-cache-hits': '1',
+526 verbose headers   'x-timer': 'S1452328302.675280,VS0,VE0',
+526 verbose headers   vary: 'Accept' }
+527 silly get cb [ 304,
+527 silly get   { date: 'Sat, 09 Jan 2016 08:31:42 GMT',
+527 silly get     via: '1.1 varnish',
+527 silly get     'cache-control': 'max-age=300',
+527 silly get     etag: '"BHWBXZX3O23JHL6WV9C090MR5"',
+527 silly get     age: '103',
+527 silly get     connection: 'keep-alive',
+527 silly get     'x-served-by': 'cache-itm7421-ITM',
+527 silly get     'x-cache': 'HIT',
+527 silly get     'x-cache-hits': '1',
+527 silly get     'x-timer': 'S1452328302.675280,VS0,VE0',
+527 silly get     vary: 'Accept' } ]
+528 verbose etag https://registry.npmjs.org/lodash.keys from cache
+529 verbose get saving lodash.keys to /home/vagrant/.npm/registry.npmjs.org/lodash.keys/.cache.json
+530 silly resolveWithNewModule lodash.keys@2.4.1 checking installable status
+531 silly cache add args [ 'lodash.keys@~2.4.1', null ]
+532 verbose cache add spec lodash.keys@~2.4.1
+533 silly cache add parsed spec Result {
+533 silly cache add   raw: 'lodash.keys@~2.4.1',
+533 silly cache add   scope: null,
+533 silly cache add   name: 'lodash.keys',
+533 silly cache add   rawSpec: '~2.4.1',
+533 silly cache add   spec: '>=2.4.1 <2.5.0',
+533 silly cache add   type: 'range' }
+534 silly addNamed lodash.keys@>=2.4.1 <2.5.0
+535 verbose addNamed ">=2.4.1 <2.5.0" is a valid semver range for lodash.keys
+536 silly addNameRange { name: 'lodash.keys', range: '>=2.4.1 <2.5.0', hasData: false }
+537 silly mapToRegistry name lodash.keys
+538 silly mapToRegistry using default registry
+539 silly mapToRegistry registry https://registry.npmjs.org/
+540 silly mapToRegistry uri https://registry.npmjs.org/lodash.keys
+541 verbose addNameRange registry:https://registry.npmjs.org/lodash.keys not in flight; fetching
+542 verbose get https://registry.npmjs.org/lodash.keys not expired, no request
+543 silly addNameRange number 2 { name: 'lodash.keys', range: '>=2.4.1 <2.5.0', hasData: true }
+544 silly addNameRange versions [ 'lodash.keys',
+544 silly addNameRange   [ '2.0.0',
+544 silly addNameRange     '2.1.0',
+544 silly addNameRange     '2.2.0',
+544 silly addNameRange     '2.2.1',
+544 silly addNameRange     '2.3.0',
+544 silly addNameRange     '2.4.0',
+544 silly addNameRange     '2.4.1',
+544 silly addNameRange     '3.0.0',
+544 silly addNameRange     '3.0.1',
+544 silly addNameRange     '3.0.2',
+544 silly addNameRange     '3.0.3',
+544 silly addNameRange     '3.0.4',
+544 silly addNameRange     '3.0.5',
+544 silly addNameRange     '3.0.6',
+544 silly addNameRange     '3.0.7',
+544 silly addNameRange     '3.1.0',
+544 silly addNameRange     '3.1.1',
+544 silly addNameRange     '3.1.2' ] ]
+545 silly addNamed lodash.keys@2.4.1
+546 verbose addNamed "2.4.1" is a plain semver version for lodash.keys
+547 silly cache afterAdd lodash.keys@2.4.1
+548 verbose afterAdd /home/vagrant/.npm/lodash.keys/2.4.1/package/package.json not in flight; writing
+549 verbose afterAdd /home/vagrant/.npm/lodash.keys/2.4.1/package/package.json written
+550 http 304 https://registry.npmjs.org/lodash.templatesettings
+551 verbose headers { date: 'Sat, 09 Jan 2016 08:31:42 GMT',
+551 verbose headers   via: '1.1 varnish',
+551 verbose headers   'cache-control': 'max-age=300',
+551 verbose headers   etag: '"CKXEDEO7Z7JMUWVK67VMXM924"',
+551 verbose headers   age: '53',
+551 verbose headers   connection: 'keep-alive',
+551 verbose headers   'x-served-by': 'cache-itm7421-ITM',
+551 verbose headers   'x-cache': 'HIT',
+551 verbose headers   'x-cache-hits': '1',
+551 verbose headers   'x-timer': 'S1452328302.815414,VS0,VE0',
+551 verbose headers   vary: 'Accept' }
+552 silly get cb [ 304,
+552 silly get   { date: 'Sat, 09 Jan 2016 08:31:42 GMT',
+552 silly get     via: '1.1 varnish',
+552 silly get     'cache-control': 'max-age=300',
+552 silly get     etag: '"CKXEDEO7Z7JMUWVK67VMXM924"',
+552 silly get     age: '53',
+552 silly get     connection: 'keep-alive',
+552 silly get     'x-served-by': 'cache-itm7421-ITM',
+552 silly get     'x-cache': 'HIT',
+552 silly get     'x-cache-hits': '1',
+552 silly get     'x-timer': 'S1452328302.815414,VS0,VE0',
+552 silly get     vary: 'Accept' } ]
+553 verbose etag https://registry.npmjs.org/lodash.templatesettings from cache
+554 verbose get saving lodash.templatesettings to /home/vagrant/.npm/registry.npmjs.org/lodash.templatesettings/.cache.json
+555 silly resolveWithNewModule lodash.templatesettings@2.4.1 checking installable status
+556 silly cache add args [ 'lodash.templatesettings@~2.4.1', null ]
+557 verbose cache add spec lodash.templatesettings@~2.4.1
+558 silly cache add parsed spec Result {
+558 silly cache add   raw: 'lodash.templatesettings@~2.4.1',
+558 silly cache add   scope: null,
+558 silly cache add   name: 'lodash.templatesettings',
+558 silly cache add   rawSpec: '~2.4.1',
+558 silly cache add   spec: '>=2.4.1 <2.5.0',
+558 silly cache add   type: 'range' }
+559 silly addNamed lodash.templatesettings@>=2.4.1 <2.5.0
+560 verbose addNamed ">=2.4.1 <2.5.0" is a valid semver range for lodash.templatesettings
+561 silly addNameRange { name: 'lodash.templatesettings',
+561 silly addNameRange   range: '>=2.4.1 <2.5.0',
+561 silly addNameRange   hasData: false }
+562 silly mapToRegistry name lodash.templatesettings
+563 silly mapToRegistry using default registry
+564 silly mapToRegistry registry https://registry.npmjs.org/
+565 silly mapToRegistry uri https://registry.npmjs.org/lodash.templatesettings
+566 verbose addNameRange registry:https://registry.npmjs.org/lodash.templatesettings not in flight; fetching
+567 verbose get https://registry.npmjs.org/lodash.templatesettings not expired, no request
+568 silly addNameRange number 2 { name: 'lodash.templatesettings',
+568 silly addNameRange   range: '>=2.4.1 <2.5.0',
+568 silly addNameRange   hasData: true }
+569 silly addNameRange versions [ 'lodash.templatesettings',
+569 silly addNameRange   [ '2.0.0',
+569 silly addNameRange     '2.1.0',
+569 silly addNameRange     '2.2.0',
+569 silly addNameRange     '2.2.1',
+569 silly addNameRange     '2.3.0',
+569 silly addNameRange     '2.4.0',
+569 silly addNameRange     '2.4.1',
+569 silly addNameRange     '3.0.0',
+569 silly addNameRange     '3.0.1',
+569 silly addNameRange     '3.1.0' ] ]
+570 silly addNamed lodash.templatesettings@2.4.1
+571 verbose addNamed "2.4.1" is a plain semver version for lodash.templatesettings
+572 silly cache afterAdd lodash.templatesettings@2.4.1
+573 verbose afterAdd /home/vagrant/.npm/lodash.templatesettings/2.4.1/package/package.json not in flight; writing
+574 verbose afterAdd /home/vagrant/.npm/lodash.templatesettings/2.4.1/package/package.json written
+575 silly fetchNamedPackageData readable-stream
+576 silly mapToRegistry name readable-stream
+577 silly mapToRegistry using default registry
+578 silly mapToRegistry registry https://registry.npmjs.org/
+579 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+580 silly fetchNamedPackageData xtend
+581 silly mapToRegistry name xtend
+582 silly mapToRegistry using default registry
+583 silly mapToRegistry registry https://registry.npmjs.org/
+584 silly mapToRegistry uri https://registry.npmjs.org/xtend
+585 verbose request uri https://registry.npmjs.org/readable-stream
+586 verbose request no auth needed
+587 info attempt registry request try #1 at 8:31:41 AM
+588 verbose etag "3EOIL5JTL47JFABLY3LGTYV7"
+589 http request GET https://registry.npmjs.org/readable-stream
+590 verbose request uri https://registry.npmjs.org/xtend
+591 verbose request no auth needed
+592 info attempt registry request try #1 at 8:31:41 AM
+593 verbose etag "1IDUFAB2QOA8033MD814NYRK9"
+594 http request GET https://registry.npmjs.org/xtend
+595 http 304 https://registry.npmjs.org/readable-stream
+596 verbose headers { date: 'Sat, 09 Jan 2016 08:31:43 GMT',
+596 verbose headers   via: '1.1 varnish',
+596 verbose headers   'cache-control': 'max-age=300',
+596 verbose headers   etag: '"3EOIL5JTL47JFABLY3LGTYV7"',
+596 verbose headers   age: '19',
+596 verbose headers   connection: 'keep-alive',
+596 verbose headers   'x-served-by': 'cache-itm7422-ITM',
+596 verbose headers   'x-cache': 'HIT',
+596 verbose headers   'x-cache-hits': '1',
+596 verbose headers   'x-timer': 'S1452328303.600543,VS0,VE0',
+596 verbose headers   vary: 'Accept' }
+597 silly get cb [ 304,
+597 silly get   { date: 'Sat, 09 Jan 2016 08:31:43 GMT',
+597 silly get     via: '1.1 varnish',
+597 silly get     'cache-control': 'max-age=300',
+597 silly get     etag: '"3EOIL5JTL47JFABLY3LGTYV7"',
+597 silly get     age: '19',
+597 silly get     connection: 'keep-alive',
+597 silly get     'x-served-by': 'cache-itm7422-ITM',
+597 silly get     'x-cache': 'HIT',
+597 silly get     'x-cache-hits': '1',
+597 silly get     'x-timer': 'S1452328303.600543,VS0,VE0',
+597 silly get     vary: 'Accept' } ]
+598 verbose etag https://registry.npmjs.org/readable-stream from cache
+599 verbose get saving readable-stream to /home/vagrant/.npm/registry.npmjs.org/readable-stream/.cache.json
+600 http 304 https://registry.npmjs.org/xtend
+601 verbose headers { date: 'Sat, 09 Jan 2016 08:31:43 GMT',
+601 verbose headers   via: '1.1 varnish',
+601 verbose headers   'cache-control': 'max-age=300',
+601 verbose headers   etag: '"1IDUFAB2QOA8033MD814NYRK9"',
+601 verbose headers   age: '13',
+601 verbose headers   connection: 'keep-alive',
+601 verbose headers   'x-served-by': 'cache-itm7420-ITM',
+601 verbose headers   'x-cache': 'HIT',
+601 verbose headers   'x-cache-hits': '1',
+601 verbose headers   'x-timer': 'S1452328303.597291,VS0,VE0',
+601 verbose headers   vary: 'Accept' }
+602 silly get cb [ 304,
+602 silly get   { date: 'Sat, 09 Jan 2016 08:31:43 GMT',
+602 silly get     via: '1.1 varnish',
+602 silly get     'cache-control': 'max-age=300',
+602 silly get     etag: '"1IDUFAB2QOA8033MD814NYRK9"',
+602 silly get     age: '13',
+602 silly get     connection: 'keep-alive',
+602 silly get     'x-served-by': 'cache-itm7420-ITM',
+602 silly get     'x-cache': 'HIT',
+602 silly get     'x-cache-hits': '1',
+602 silly get     'x-timer': 'S1452328303.597291,VS0,VE0',
+602 silly get     vary: 'Accept' } ]
+603 verbose etag https://registry.npmjs.org/xtend from cache
+604 verbose get saving xtend to /home/vagrant/.npm/registry.npmjs.org/xtend/.cache.json
+605 silly resolveWithNewModule readable-stream@1.0.33 checking installable status
+606 silly cache add args [ 'readable-stream@~1.0.17', null ]
+607 verbose cache add spec readable-stream@~1.0.17
+608 silly cache add parsed spec Result {
+608 silly cache add   raw: 'readable-stream@~1.0.17',
+608 silly cache add   scope: null,
+608 silly cache add   name: 'readable-stream',
+608 silly cache add   rawSpec: '~1.0.17',
+608 silly cache add   spec: '>=1.0.17 <1.1.0',
+608 silly cache add   type: 'range' }
+609 silly addNamed readable-stream@>=1.0.17 <1.1.0
+610 verbose addNamed ">=1.0.17 <1.1.0" is a valid semver range for readable-stream
+611 silly addNameRange { name: 'readable-stream',
+611 silly addNameRange   range: '>=1.0.17 <1.1.0',
+611 silly addNameRange   hasData: false }
+612 silly mapToRegistry name readable-stream
+613 silly mapToRegistry using default registry
+614 silly mapToRegistry registry https://registry.npmjs.org/
+615 silly mapToRegistry uri https://registry.npmjs.org/readable-stream
+616 verbose addNameRange registry:https://registry.npmjs.org/readable-stream not in flight; fetching
+617 silly resolveWithNewModule xtend@3.0.0 checking installable status
+618 silly cache add args [ 'xtend@~3.0.0', null ]
+619 verbose cache add spec xtend@~3.0.0
+620 silly cache add parsed spec Result {
+620 silly cache add   raw: 'xtend@~3.0.0',
+620 silly cache add   scope: null,
+620 silly cache add   name: 'xtend',
+620 silly cache add   rawSpec: '~3.0.0',
+620 silly cache add   spec: '>=3.0.0 <3.1.0',
+620 silly cache add   type: 'range' }
+621 silly addNamed xtend@>=3.0.0 <3.1.0
+622 verbose addNamed ">=3.0.0 <3.1.0" is a valid semver range for xtend
+623 silly addNameRange { name: 'xtend', range: '>=3.0.0 <3.1.0', hasData: false }
+624 silly mapToRegistry name xtend
+625 silly mapToRegistry using default registry
+626 silly mapToRegistry registry https://registry.npmjs.org/
+627 silly mapToRegistry uri https://registry.npmjs.org/xtend
+628 verbose addNameRange registry:https://registry.npmjs.org/xtend not in flight; fetching
+629 verbose get https://registry.npmjs.org/readable-stream not expired, no request
+630 silly addNameRange number 2 { name: 'readable-stream',
+630 silly addNameRange   range: '>=1.0.17 <1.1.0',
+630 silly addNameRange   hasData: true }
+631 silly addNameRange versions [ 'readable-stream',
+631 silly addNameRange   [ '0.0.1',
+631 silly addNameRange     '0.0.2',
+631 silly addNameRange     '0.0.3',
+631 silly addNameRange     '0.0.4',
+631 silly addNameRange     '0.1.0',
+631 silly addNameRange     '0.2.0',
+631 silly addNameRange     '0.3.0',
+631 silly addNameRange     '0.3.1',
+631 silly addNameRange     '1.0.0',
+631 silly addNameRange     '1.0.1',
+631 silly addNameRange     '1.0.2',
+631 silly addNameRange     '1.0.15',
+631 silly addNameRange     '1.0.17',
+631 silly addNameRange     '1.1.7',
+631 silly addNameRange     '1.1.8',
+631 silly addNameRange     '1.1.9',
+631 silly addNameRange     '1.0.24',
+631 silly addNameRange     '1.0.25',
+631 silly addNameRange     '1.1.10',
+631 silly addNameRange     '1.0.25-1',
+631 silly addNameRange     '1.1.11',
+631 silly addNameRange     '1.0.26',
+631 silly addNameRange     '1.0.26-1',
+631 silly addNameRange     '1.1.11-1',
+631 silly addNameRange     '1.0.26-2',
+631 silly addNameRange     '1.1.12',
+631 silly addNameRange     '1.0.26-3',
+631 silly addNameRange     '1.0.26-4',
+631 silly addNameRange     '1.1.12-1',
+631 silly addNameRange     '1.0.27-1',
+631 silly addNameRange     '1.1.13-1',
+631 silly addNameRange     '1.0.31',
+631 silly addNameRange     '1.1.13',
+631 silly addNameRange     '1.0.32',
+631 silly addNameRange     '1.0.32-1',
+631 silly addNameRange     '1.0.33-1',
+631 silly addNameRange     '1.0.33-2',
+631 silly addNameRange     '1.0.33',
+631 silly addNameRange     '2.0.0',
+631 silly addNameRange     '2.0.1',
+631 silly addNameRange     '2.0.2',
+631 silly addNameRange     '2.0.3',
+631 silly addNameRange     '2.0.4',
+631 silly addNameRange     '2.0.5' ] ]
+632 silly addNamed readable-stream@1.0.33
+633 verbose addNamed "1.0.33" is a plain semver version for readable-stream
+634 verbose get https://registry.npmjs.org/xtend not expired, no request
+635 silly addNameRange number 2 { name: 'xtend', range: '>=3.0.0 <3.1.0', hasData: true }
+636 silly addNameRange versions [ 'xtend',
+636 silly addNameRange   [ '1.0.0',
+636 silly addNameRange     '1.0.1',
+636 silly addNameRange     '1.0.2',
+636 silly addNameRange     '1.0.3',
+636 silly addNameRange     '2.0.1',
+636 silly addNameRange     '2.0.2',
+636 silly addNameRange     '2.0.3',
+636 silly addNameRange     '2.0.4',
+636 silly addNameRange     '2.0.5',
+636 silly addNameRange     '2.0.6',
+636 silly addNameRange     '2.1.1',
+636 silly addNameRange     '2.1.2',
+636 silly addNameRange     '2.2.0',
+636 silly addNameRange     '3.0.0',
+636 silly addNameRange     '4.0.0',
+636 silly addNameRange     '4.0.1' ] ]
+637 silly addNamed xtend@3.0.0
+638 verbose addNamed "3.0.0" is a plain semver version for xtend
+639 silly cache afterAdd readable-stream@1.0.33
+640 verbose afterAdd /home/vagrant/.npm/readable-stream/1.0.33/package/package.json not in flight; writing
+641 silly cache afterAdd xtend@3.0.0
+642 verbose afterAdd /home/vagrant/.npm/xtend/3.0.0/package/package.json not in flight; writing
+643 verbose afterAdd /home/vagrant/.npm/readable-stream/1.0.33/package/package.json written
+644 verbose afterAdd /home/vagrant/.npm/xtend/3.0.0/package/package.json written
+645 silly loadAllDepsIntoIdealTree Finishing
+646 silly idealTree:prePrune /home/vagrant/Code/phphub
+646 silly idealTree:prePrune ├── align-text@0.1.3
+646 silly idealTree:prePrune ├── amdefine@1.0.0
+646 silly idealTree:prePrune ├── ansi-regex@2.0.0
+646 silly idealTree:prePrune ├── ansi-styles@2.1.0
+646 silly idealTree:prePrune ├── archy@1.0.0
+646 silly idealTree:prePrune ├── array-differ@0.1.0
+646 silly idealTree:prePrune ├── array-union@0.1.0
+646 silly idealTree:prePrune ├── array-uniq@0.1.1
+646 silly idealTree:prePrune ├── async@0.9.2
+646 silly idealTree:prePrune ├── autoprefixer-core@3.1.2
+646 silly idealTree:prePrune ├── balanced-match@0.3.0
+646 silly idealTree:prePrune ├── beeper@1.1.0
+646 silly idealTree:prePrune ├── brace-expansion@1.1.2
+646 silly idealTree:prePrune ├── bufferstreams@0.0.2
+646 silly idealTree:prePrune ├── builtin-modules@1.1.1
+646 silly idealTree:prePrune ├── camelcase-keys@2.0.0
+646 silly idealTree:prePrune ├── camelcase@2.0.1
+646 silly idealTree:prePrune ├── caniuse-db@1.0.30000384
+646 silly idealTree:prePrune ├── center-align@0.1.2
+646 silly idealTree:prePrune ├── chalk@1.1.1
+646 silly idealTree:prePrune ├── clean-css@3.0.10
+646 silly idealTree:prePrune ├── cliui@2.1.0
+646 silly idealTree:prePrune ├── clone-stats@0.0.1
+646 silly idealTree:prePrune ├── clone@1.0.2
+646 silly idealTree:prePrune ├── commander@2.5.1
+646 silly idealTree:prePrune ├── concat-map@0.0.1
+646 silly idealTree:prePrune ├─┬ concat-with-sourcemaps@1.0.4
+646 silly idealTree:prePrune │ └── source-map@0.5.3
+646 silly idealTree:prePrune ├── core-util-is@1.0.2
+646 silly idealTree:prePrune ├── dateformat@1.0.12
+646 silly idealTree:prePrune ├── deap@1.0.0
+646 silly idealTree:prePrune ├── debug@2.0.0
+646 silly idealTree:prePrune ├── decamelize@1.1.2
+646 silly idealTree:prePrune ├── defaults@1.0.3
+646 silly idealTree:prePrune ├── del@0.1.3
+646 silly idealTree:prePrune ├── deprecated@0.0.1
+646 silly idealTree:prePrune ├── diff@1.0.8
+646 silly idealTree:prePrune ├── duplexer2@0.0.2
+646 silly idealTree:prePrune ├── each-async@1.1.1
+646 silly idealTree:prePrune ├── end-of-stream@0.1.5
+646 silly idealTree:prePrune ├── error-ex@1.3.0
+646 silly idealTree:prePrune ├── escape-string-regexp@1.0.4
+646 silly idealTree:prePrune ├── extend@2.0.1
+646 silly idealTree:prePrune ├── fancy-log@1.1.0
+646 silly idealTree:prePrune ├── find-index@0.1.1
+646 silly idealTree:prePrune ├── find-up@1.1.0
+646 silly idealTree:prePrune ├─┬ findup-sync@0.3.0
+646 silly idealTree:prePrune │ └── glob@5.0.15
+646 silly idealTree:prePrune ├── first-chunk-stream@1.0.0
+646 silly idealTree:prePrune ├── flagged-respawn@0.3.1
+646 silly idealTree:prePrune ├── formatio@1.0.2
+646 silly idealTree:prePrune ├── gaze@0.5.2
+646 silly idealTree:prePrune ├── get-stdin@4.0.1
+646 silly idealTree:prePrune ├─┬ glob-stream@3.1.18
+646 silly idealTree:prePrune │ ├── readable-stream@1.0.33
+646 silly idealTree:prePrune │ └── through2@0.6.5
+646 silly idealTree:prePrune ├── glob-watcher@0.0.6
+646 silly idealTree:prePrune ├── glob@4.5.3
+646 silly idealTree:prePrune ├── glob2base@0.0.12
+646 silly idealTree:prePrune ├── globby@0.1.1
+646 silly idealTree:prePrune ├─┬ globule@0.1.0
+646 silly idealTree:prePrune │ ├── glob@3.1.21
+646 silly idealTree:prePrune │ ├── graceful-fs@1.2.3
+646 silly idealTree:prePrune │ ├── inherits@1.0.2
+646 silly idealTree:prePrune │ └── minimatch@0.2.14
+646 silly idealTree:prePrune ├── glogg@1.0.0
+646 silly idealTree:prePrune ├── graceful-fs@4.1.2
+646 silly idealTree:prePrune ├── growl@1.8.1
+646 silly idealTree:prePrune ├─┬ gulp-asset-manifest@0.0.4
+646 silly idealTree:prePrune │ ├── ansi-regex@0.2.1
+646 silly idealTree:prePrune │ ├── ansi-styles@1.1.0
+646 silly idealTree:prePrune │ ├── chalk@0.5.1
+646 silly idealTree:prePrune │ ├── gulp-util@2.2.20
+646 silly idealTree:prePrune │ ├── has-ansi@0.1.0
+646 silly idealTree:prePrune │ ├── lodash._reinterpolate@2.4.1
+646 silly idealTree:prePrune │ ├── lodash.escape@2.4.1
+646 silly idealTree:prePrune │ ├── lodash.keys@2.4.1
+646 silly idealTree:prePrune │ ├── lodash.template@2.4.1
+646 silly idealTree:prePrune │ ├── lodash.templatesettings@2.4.1
+646 silly idealTree:prePrune │ ├── minimist@0.2.0
+646 silly idealTree:prePrune │ ├── readable-stream@1.0.33
+646 silly idealTree:prePrune │ ├── strip-ansi@0.3.0
+646 silly idealTree:prePrune │ ├── supports-color@0.2.0
+646 silly idealTree:prePrune │ ├── through2@0.5.1
+646 silly idealTree:prePrune │ ├── vinyl@0.2.3
+646 silly idealTree:prePrune │ └── xtend@3.0.0
+646 silly idealTree:prePrune ├─┬ gulp-autoprefixer@1.0.1
+646 silly idealTree:prePrune │ ├── object-assign@1.0.0
+646 silly idealTree:prePrune │ ├── readable-stream@1.0.33
+646 silly idealTree:prePrune │ └── through2@0.6.5
+646 silly idealTree:prePrune ├─┬ gulp-concat@2.6.0
+646 silly idealTree:prePrune │ ├── readable-stream@1.0.33
+646 silly idealTree:prePrune │ └── through2@0.6.5
+646 silly idealTree:prePrune ├─┬ gulp-minify-css@0.3.13
+646 silly idealTree:prePrune │ ├── readable-stream@1.0.33
+646 silly idealTree:prePrune │ └── through2@0.6.5
+646 silly idealTree:prePrune ├─┬ gulp-rev@1.1.0
+646 silly idealTree:prePrune │ ├── object-assign@1.0.0
+646 silly idealTree:prePrune │ ├── readable-stream@1.0.33
+646 silly idealTree:prePrune │ └── through2@0.6.5
+646 silly idealTree:prePrune ├─┬ gulp-sass@0.7.3
+646 silly idealTree:prePrune │ └── map-stream@0.1.0
+646 silly idealTree:prePrune ├─┬ gulp-uglify@1.5.1
+646 silly idealTree:prePrune │ ├── source-map@0.5.3
+646 silly idealTree:prePrune │ └── vinyl-sourcemaps-apply@0.2.1
+646 silly idealTree:prePrune ├─┬ gulp-util@3.0.7
+646 silly idealTree:prePrune │ ├── array-differ@1.0.0
+646 silly idealTree:prePrune │ └── array-uniq@1.0.2
+646 silly idealTree:prePrune ├── gulp@3.9.0
+646 silly idealTree:prePrune ├── gulplog@1.0.0
+646 silly idealTree:prePrune ├── has-ansi@2.0.0
+646 silly idealTree:prePrune ├── has-gulplog@0.1.0
+646 silly idealTree:prePrune ├── hosted-git-info@2.1.4
+646 silly idealTree:prePrune ├── indent-string@2.1.0
+646 silly idealTree:prePrune ├── inflight@1.0.4
+646 silly idealTree:prePrune ├── inherits@2.0.1
+646 silly idealTree:prePrune ├── interpret@0.6.6
+646 silly idealTree:prePrune ├── is-arrayish@0.2.1
+646 silly idealTree:prePrune ├── is-buffer@1.1.1
+646 silly idealTree:prePrune ├── is-builtin-module@1.0.0
+646 silly idealTree:prePrune ├── is-finite@1.0.1
+646 silly idealTree:prePrune ├── is-path-cwd@1.0.0
+646 silly idealTree:prePrune ├── is-path-in-cwd@1.0.0
+646 silly idealTree:prePrune ├── is-path-inside@1.0.0
+646 silly idealTree:prePrune ├── is-utf8@0.2.1
+646 silly idealTree:prePrune ├── isarray@0.0.1
+646 silly idealTree:prePrune ├── isobject@2.0.0
+646 silly idealTree:prePrune ├─┬ jade@0.26.3
+646 silly idealTree:prePrune │ ├── commander@0.6.1
+646 silly idealTree:prePrune │ └── mkdirp@0.3.0
+646 silly idealTree:prePrune ├── js-base64@2.1.9
+646 silly idealTree:prePrune ├── kind-of@2.0.1
+646 silly idealTree:prePrune ├── lazy-cache@0.2.7
+646 silly idealTree:prePrune ├── liftoff@2.2.0
+646 silly idealTree:prePrune ├── load-json-file@1.1.0
+646 silly idealTree:prePrune ├── lodash._basecopy@3.0.1
+646 silly idealTree:prePrune ├── lodash._basetostring@3.0.1
+646 silly idealTree:prePrune ├── lodash._basevalues@3.0.0
+646 silly idealTree:prePrune ├── lodash._escapehtmlchar@2.4.1
+646 silly idealTree:prePrune ├── lodash._escapestringchar@2.4.1
+646 silly idealTree:prePrune ├── lodash._getnative@3.9.1
+646 silly idealTree:prePrune ├── lodash._htmlescapes@2.4.1
+646 silly idealTree:prePrune ├── lodash._isiterateecall@3.0.9
+646 silly idealTree:prePrune ├── lodash._isnative@2.4.1
+646 silly idealTree:prePrune ├── lodash._objecttypes@2.4.1
+646 silly idealTree:prePrune ├── lodash._reescape@3.0.0
+646 silly idealTree:prePrune ├── lodash._reevaluate@3.0.0
+646 silly idealTree:prePrune ├── lodash._reinterpolate@3.0.0
+646 silly idealTree:prePrune ├─┬ lodash._reunescapedhtml@2.4.1
+646 silly idealTree:prePrune │ └── lodash.keys@2.4.1
+646 silly idealTree:prePrune ├── lodash._shimkeys@2.4.1
+646 silly idealTree:prePrune ├─┬ lodash.defaults@2.4.1
+646 silly idealTree:prePrune │ └── lodash.keys@2.4.1
+646 silly idealTree:prePrune ├── lodash.escape@3.0.0
+646 silly idealTree:prePrune ├── lodash.isarguments@3.0.4
+646 silly idealTree:prePrune ├── lodash.isarray@3.0.4
+646 silly idealTree:prePrune ├── lodash.isobject@2.4.1
+646 silly idealTree:prePrune ├── lodash.keys@3.1.2
+646 silly idealTree:prePrune ├── lodash.restparam@3.6.1
+646 silly idealTree:prePrune ├── lodash.template@3.6.2
+646 silly idealTree:prePrune ├── lodash.templatesettings@3.1.0
+646 silly idealTree:prePrune ├─┬ lodash.values@2.4.1
+646 silly idealTree:prePrune │ └── lodash.keys@2.4.1
+646 silly idealTree:prePrune ├── lodash@1.0.2
+646 silly idealTree:prePrune ├── longest@1.0.1
+646 silly idealTree:prePrune ├── loud-rejection@1.2.0
+646 silly idealTree:prePrune ├── lru-cache@2.7.3
+646 silly idealTree:prePrune ├── map-obj@1.0.1
+646 silly idealTree:prePrune ├── map-stream@0.0.6
+646 silly idealTree:prePrune ├── memory-cache@0.0.5
+646 silly idealTree:prePrune ├─┬ meow@3.7.0
+646 silly idealTree:prePrune │ └── object-assign@4.0.1
+646 silly idealTree:prePrune ├── minimatch@2.0.10
+646 silly idealTree:prePrune ├── minimist@1.2.0
+646 silly idealTree:prePrune ├─┬ mkdirp@0.5.1
+646 silly idealTree:prePrune │ └── minimist@0.0.8
+646 silly idealTree:prePrune ├─┬ mocha@1.21.5
+646 silly idealTree:prePrune │ ├── commander@2.3.0
+646 silly idealTree:prePrune │ ├── escape-string-regexp@1.0.2
+646 silly idealTree:prePrune │ ├── glob@3.2.3
+646 silly idealTree:prePrune │ ├── graceful-fs@2.0.3
+646 silly idealTree:prePrune │ ├── minimatch@0.2.14
+646 silly idealTree:prePrune │ ├── minimist@0.0.8
+646 silly idealTree:prePrune │ └── mkdirp@0.5.0
+646 silly idealTree:prePrune ├── ms@0.6.2
+646 silly idealTree:prePrune ├── multipipe@0.1.2
+646 silly idealTree:prePrune ├── nan@1.3.0
+646 silly idealTree:prePrune ├── node-sass-middleware@0.3.1
+646 silly idealTree:prePrune ├─┬ node-sass@0.9.6
+646 silly idealTree:prePrune │ ├── ansi-regex@0.2.1
+646 silly idealTree:prePrune │ ├── ansi-styles@1.1.0
+646 silly idealTree:prePrune │ ├── chalk@0.5.1
+646 silly idealTree:prePrune │ ├── get-stdin@3.0.2
+646 silly idealTree:prePrune │ ├── has-ansi@0.1.0
+646 silly idealTree:prePrune │ ├── object-assign@1.0.0
+646 silly idealTree:prePrune │ ├── strip-ansi@0.3.0
+646 silly idealTree:prePrune │ └── supports-color@0.2.0
+646 silly idealTree:prePrune ├── node-watch@0.3.5
+646 silly idealTree:prePrune ├── normalize-package-data@2.3.5
+646 silly idealTree:prePrune ├── number-is-nan@1.0.0
+646 silly idealTree:prePrune ├── object-assign@3.0.0
+646 silly idealTree:prePrune ├── once@1.3.3
+646 silly idealTree:prePrune ├── onetime@1.1.0
+646 silly idealTree:prePrune ├── orchestrator@0.3.7
+646 silly idealTree:prePrune ├── ordered-read-streams@0.1.0
+646 silly idealTree:prePrune ├── os-homedir@1.0.1
+646 silly idealTree:prePrune ├── parse-json@2.2.0
+646 silly idealTree:prePrune ├── path-exists@2.1.0
+646 silly idealTree:prePrune ├── path-is-absolute@1.0.0
+646 silly idealTree:prePrune ├── path-is-inside@1.0.1
+646 silly idealTree:prePrune ├── path-type@1.1.0
+646 silly idealTree:prePrune ├── pify@2.3.0
+646 silly idealTree:prePrune ├── pinkie-promise@2.0.0
+646 silly idealTree:prePrune ├── pinkie@2.0.1
+646 silly idealTree:prePrune ├── postcss@2.2.6
+646 silly idealTree:prePrune ├── pretty-hrtime@1.0.1
+646 silly idealTree:prePrune ├── process-nextick-args@1.0.6
+646 silly idealTree:prePrune ├── read-pkg-up@1.0.1
+646 silly idealTree:prePrune ├── read-pkg@1.1.0
+646 silly idealTree:prePrune ├── readable-stream@1.1.13
+646 silly idealTree:prePrune ├── rechoir@0.6.2
+646 silly idealTree:prePrune ├── redent@1.0.0
+646 silly idealTree:prePrune ├── repeat-string@1.5.2
+646 silly idealTree:prePrune ├── repeating@2.0.0
+646 silly idealTree:prePrune ├── replace-ext@0.0.1
+646 silly idealTree:prePrune ├── resolve@1.1.6
+646 silly idealTree:prePrune ├── right-align@0.1.3
+646 silly idealTree:prePrune ├─┬ rimraf@2.5.0
+646 silly idealTree:prePrune │ └── glob@6.0.4
+646 silly idealTree:prePrune ├── samsam@1.1.3
+646 silly idealTree:prePrune ├── semver@4.3.6
+646 silly idealTree:prePrune ├── sequencify@0.0.7
+646 silly idealTree:prePrune ├── set-immediate-shim@1.0.1
+646 silly idealTree:prePrune ├── shelljs@0.3.0
+646 silly idealTree:prePrune ├── sigmund@1.0.1
+646 silly idealTree:prePrune ├── signal-exit@2.1.2
+646 silly idealTree:prePrune ├── sinon@1.10.3
+646 silly idealTree:prePrune ├── source-map@0.1.43
+646 silly idealTree:prePrune ├── sparkles@1.0.0
+646 silly idealTree:prePrune ├── spdx-correct@1.0.2
+646 silly idealTree:prePrune ├── spdx-exceptions@1.0.4
+646 silly idealTree:prePrune ├── spdx-expression-parse@1.0.2
+646 silly idealTree:prePrune ├── spdx-license-ids@1.1.0
+646 silly idealTree:prePrune ├── stream-consume@0.1.0
+646 silly idealTree:prePrune ├── string_decoder@0.10.31
+646 silly idealTree:prePrune ├── strip-ansi@3.0.0
+646 silly idealTree:prePrune ├── strip-bom@2.0.0
+646 silly idealTree:prePrune ├── strip-indent@1.0.1
+646 silly idealTree:prePrune ├── supports-color@2.0.0
+646 silly idealTree:prePrune ├─┬ through2@2.0.0
+646 silly idealTree:prePrune │ └── readable-stream@2.0.5
+646 silly idealTree:prePrune ├── tildify@1.1.2
+646 silly idealTree:prePrune ├── trim-newlines@1.0.0
+646 silly idealTree:prePrune ├─┬ uglify-js@2.6.0
+646 silly idealTree:prePrune │ ├── async@0.2.10
+646 silly idealTree:prePrune │ ├── camelcase@1.2.1
+646 silly idealTree:prePrune │ ├── source-map@0.5.3
+646 silly idealTree:prePrune │ └── yargs@3.10.0
+646 silly idealTree:prePrune ├── uglify-save-license@0.4.1
+646 silly idealTree:prePrune ├── uglify-to-browserify@1.0.2
+646 silly idealTree:prePrune ├── unique-stream@1.0.0
+646 silly idealTree:prePrune ├── user-home@1.1.1
+646 silly idealTree:prePrune ├── util-deprecate@1.0.2
+646 silly idealTree:prePrune ├── util@0.10.3
+646 silly idealTree:prePrune ├── v8flags@2.0.11
+646 silly idealTree:prePrune ├── validate-npm-package-license@3.0.1
+646 silly idealTree:prePrune ├─┬ vinyl-fs@0.3.14
+646 silly idealTree:prePrune │ ├── clone@0.2.0
+646 silly idealTree:prePrune │ ├── graceful-fs@3.0.8
+646 silly idealTree:prePrune │ ├── readable-stream@1.0.33
+646 silly idealTree:prePrune │ ├── strip-bom@1.0.0
+646 silly idealTree:prePrune │ ├── through2@0.6.5
+646 silly idealTree:prePrune │ └── vinyl@0.4.6
+646 silly idealTree:prePrune ├── vinyl-sourcemaps-apply@0.1.4
+646 silly idealTree:prePrune ├── vinyl@0.5.3
+646 silly idealTree:prePrune ├── window-size@0.1.0
+646 silly idealTree:prePrune ├── wordwrap@0.0.2
+646 silly idealTree:prePrune ├── wrappy@1.0.1
+646 silly idealTree:prePrune ├── xtend@4.0.1
+646 silly idealTree:prePrune └── yargs@1.3.3
+647 silly loadIdealTree Finishing
+648 silly currentTree /home/vagrant/Code/phphub
+648 silly currentTree ├── align-text@0.1.3
+648 silly currentTree ├── amdefine@1.0.0
+648 silly currentTree ├── ansi-regex@2.0.0
+648 silly currentTree ├── ansi-styles@2.1.0
+648 silly currentTree ├── archy@1.0.0
+648 silly currentTree ├── array-differ@0.1.0
+648 silly currentTree ├── array-union@0.1.0
+648 silly currentTree ├── array-uniq@0.1.1
+648 silly currentTree ├── async@0.9.2
+648 silly currentTree ├── autoprefixer-core@3.1.2
+648 silly currentTree ├── balanced-match@0.3.0
+648 silly currentTree ├── beeper@1.1.0
+648 silly currentTree ├── brace-expansion@1.1.2
+648 silly currentTree ├── bufferstreams@0.0.2
+648 silly currentTree ├── builtin-modules@1.1.1
+648 silly currentTree ├── camelcase-keys@2.0.0
+648 silly currentTree ├── camelcase@2.0.1
+648 silly currentTree ├── caniuse-db@1.0.30000384
+648 silly currentTree ├── center-align@0.1.2
+648 silly currentTree ├── chalk@1.1.1
+648 silly currentTree ├── clean-css@3.0.10
+648 silly currentTree ├── cliui@2.1.0
+648 silly currentTree ├── clone-stats@0.0.1
+648 silly currentTree ├── clone@1.0.2
+648 silly currentTree ├── commander@2.5.1
+648 silly currentTree ├── concat-map@0.0.1
+648 silly currentTree ├─┬ concat-with-sourcemaps@1.0.4
+648 silly currentTree │ └── source-map@0.5.3
+648 silly currentTree ├── core-util-is@1.0.2
+648 silly currentTree ├── dateformat@1.0.12
+648 silly currentTree ├── deap@1.0.0
+648 silly currentTree ├── debug@2.0.0
+648 silly currentTree ├── decamelize@1.1.2
+648 silly currentTree ├── defaults@1.0.3
+648 silly currentTree ├── del@0.1.3
+648 silly currentTree ├── deprecated@0.0.1
+648 silly currentTree ├── diff@1.0.8
+648 silly currentTree ├── duplexer2@0.0.2
+648 silly currentTree ├── each-async@1.1.1
+648 silly currentTree ├── end-of-stream@0.1.5
+648 silly currentTree ├── error-ex@1.3.0
+648 silly currentTree ├── escape-string-regexp@1.0.4
+648 silly currentTree ├── extend@2.0.1
+648 silly currentTree ├── fancy-log@1.1.0
+648 silly currentTree ├── find-index@0.1.1
+648 silly currentTree ├── find-up@1.1.0
+648 silly currentTree ├─┬ findup-sync@0.3.0
+648 silly currentTree │ └── glob@5.0.15
+648 silly currentTree ├── first-chunk-stream@1.0.0
+648 silly currentTree ├── flagged-respawn@0.3.1
+648 silly currentTree ├── formatio@1.0.2
+648 silly currentTree ├── gaze@0.5.2
+648 silly currentTree ├── get-stdin@4.0.1
+648 silly currentTree ├─┬ glob-stream@3.1.18
+648 silly currentTree │ ├── readable-stream@1.0.33
+648 silly currentTree │ └── through2@0.6.5
+648 silly currentTree ├── glob-watcher@0.0.6
+648 silly currentTree ├── glob@4.5.3
+648 silly currentTree ├── glob2base@0.0.12
+648 silly currentTree ├── globby@0.1.1
+648 silly currentTree ├─┬ globule@0.1.0
+648 silly currentTree │ ├── glob@3.1.21
+648 silly currentTree │ ├── graceful-fs@1.2.3
+648 silly currentTree │ ├── inherits@1.0.2
+648 silly currentTree │ └── minimatch@0.2.14
+648 silly currentTree ├── glogg@1.0.0
+648 silly currentTree ├── graceful-fs@4.1.2
+648 silly currentTree ├── growl@1.8.1
+648 silly currentTree ├─┬ gulp-autoprefixer@1.0.1
+648 silly currentTree │ ├── object-assign@1.0.0
+648 silly currentTree │ ├── readable-stream@1.0.33
+648 silly currentTree │ └── through2@0.6.5
+648 silly currentTree ├─┬ gulp-concat@2.6.0
+648 silly currentTree │ ├── readable-stream@1.0.33
+648 silly currentTree │ └── through2@0.6.5
+648 silly currentTree ├─┬ gulp-minify-css@0.3.13
+648 silly currentTree │ ├── readable-stream@1.0.33
+648 silly currentTree │ └── through2@0.6.5
+648 silly currentTree ├─┬ gulp-rev@1.1.0
+648 silly currentTree │ ├── object-assign@1.0.0
+648 silly currentTree │ ├── readable-stream@1.0.33
+648 silly currentTree │ └── through2@0.6.5
+648 silly currentTree ├─┬ gulp-sass@0.7.3
+648 silly currentTree │ └── map-stream@0.1.0
+648 silly currentTree ├─┬ gulp-uglify@1.5.1
+648 silly currentTree │ ├── source-map@0.5.3
+648 silly currentTree │ └── vinyl-sourcemaps-apply@0.2.1
+648 silly currentTree ├─┬ gulp-util@3.0.7
+648 silly currentTree │ ├── array-differ@1.0.0
+648 silly currentTree │ └── array-uniq@1.0.2
+648 silly currentTree ├── gulp@3.9.0
+648 silly currentTree ├── gulplog@1.0.0
+648 silly currentTree ├── has-ansi@2.0.0
+648 silly currentTree ├── has-gulplog@0.1.0
+648 silly currentTree ├── hosted-git-info@2.1.4
+648 silly currentTree ├── indent-string@2.1.0
+648 silly currentTree ├── inflight@1.0.4
+648 silly currentTree ├── inherits@2.0.1
+648 silly currentTree ├── interpret@0.6.6
+648 silly currentTree ├── is-arrayish@0.2.1
+648 silly currentTree ├── is-buffer@1.1.1
+648 silly currentTree ├── is-builtin-module@1.0.0
+648 silly currentTree ├── is-finite@1.0.1
+648 silly currentTree ├── is-path-cwd@1.0.0
+648 silly currentTree ├── is-path-in-cwd@1.0.0
+648 silly currentTree ├── is-path-inside@1.0.0
+648 silly currentTree ├── is-utf8@0.2.1
+648 silly currentTree ├── isarray@0.0.1
+648 silly currentTree ├── isobject@2.0.0
+648 silly currentTree ├─┬ jade@0.26.3
+648 silly currentTree │ ├── commander@0.6.1
+648 silly currentTree │ └── mkdirp@0.3.0
+648 silly currentTree ├── js-base64@2.1.9
+648 silly currentTree ├── kind-of@2.0.1
+648 silly currentTree ├── lazy-cache@0.2.7
+648 silly currentTree ├── liftoff@2.2.0
+648 silly currentTree ├── load-json-file@1.1.0
+648 silly currentTree ├── lodash._basecopy@3.0.1
+648 silly currentTree ├── lodash._basetostring@3.0.1
+648 silly currentTree ├── lodash._basevalues@3.0.0
+648 silly currentTree ├── lodash._escapehtmlchar@2.4.1
+648 silly currentTree ├── lodash._escapestringchar@2.4.1
+648 silly currentTree ├── lodash._getnative@3.9.1
+648 silly currentTree ├── lodash._htmlescapes@2.4.1
+648 silly currentTree ├── lodash._isiterateecall@3.0.9
+648 silly currentTree ├── lodash._isnative@2.4.1
+648 silly currentTree ├── lodash._objecttypes@2.4.1
+648 silly currentTree ├── lodash._reescape@3.0.0
+648 silly currentTree ├── lodash._reevaluate@3.0.0
+648 silly currentTree ├── lodash._reinterpolate@3.0.0
+648 silly currentTree ├─┬ lodash._reunescapedhtml@2.4.1
+648 silly currentTree │ └── lodash.keys@2.4.1
+648 silly currentTree ├── lodash._shimkeys@2.4.1
+648 silly currentTree ├─┬ lodash.defaults@2.4.1
+648 silly currentTree │ └── lodash.keys@2.4.1
+648 silly currentTree ├── lodash.escape@3.0.0
+648 silly currentTree ├── lodash.isarguments@3.0.4
+648 silly currentTree ├── lodash.isarray@3.0.4
+648 silly currentTree ├── lodash.isobject@2.4.1
+648 silly currentTree ├── lodash.keys@3.1.2
+648 silly currentTree ├── lodash.restparam@3.6.1
+648 silly currentTree ├── lodash.template@3.6.2
+648 silly currentTree ├── lodash.templatesettings@3.1.0
+648 silly currentTree ├─┬ lodash.values@2.4.1
+648 silly currentTree │ └── lodash.keys@2.4.1
+648 silly currentTree ├── lodash@1.0.2
+648 silly currentTree ├── longest@1.0.1
+648 silly currentTree ├── loud-rejection@1.2.0
+648 silly currentTree ├── lru-cache@2.7.3
+648 silly currentTree ├── map-obj@1.0.1
+648 silly currentTree ├── map-stream@0.0.6
+648 silly currentTree ├── memory-cache@0.0.5
+648 silly currentTree ├─┬ meow@3.7.0
+648 silly currentTree │ └── object-assign@4.0.1
+648 silly currentTree ├── minimatch@2.0.10
+648 silly currentTree ├── minimist@1.2.0
+648 silly currentTree ├─┬ mkdirp@0.5.1
+648 silly currentTree │ └── minimist@0.0.8
+648 silly currentTree ├─┬ mocha@1.21.5
+648 silly currentTree │ ├── commander@2.3.0
+648 silly currentTree │ ├── escape-string-regexp@1.0.2
+648 silly currentTree │ ├── glob@3.2.3
+648 silly currentTree │ ├── graceful-fs@2.0.3
+648 silly currentTree │ ├── minimatch@0.2.14
+648 silly currentTree │ ├── minimist@0.0.8
+648 silly currentTree │ └── mkdirp@0.5.0
+648 silly currentTree ├── ms@0.6.2
+648 silly currentTree ├── multipipe@0.1.2
+648 silly currentTree ├── nan@1.3.0
+648 silly currentTree ├── node-sass-middleware@0.3.1
+648 silly currentTree ├─┬ node-sass@0.9.6
+648 silly currentTree │ ├── ansi-regex@0.2.1
+648 silly currentTree │ ├── ansi-styles@1.1.0
+648 silly currentTree │ ├── chalk@0.5.1
+648 silly currentTree │ ├── get-stdin@3.0.2
+648 silly currentTree │ ├── has-ansi@0.1.0
+648 silly currentTree │ ├── object-assign@1.0.0
+648 silly currentTree │ ├── strip-ansi@0.3.0
+648 silly currentTree │ └── supports-color@0.2.0
+648 silly currentTree ├── node-watch@0.3.5
+648 silly currentTree ├── normalize-package-data@2.3.5
+648 silly currentTree ├── number-is-nan@1.0.0
+648 silly currentTree ├── object-assign@3.0.0
+648 silly currentTree ├── once@1.3.3
+648 silly currentTree ├── onetime@1.1.0
+648 silly currentTree ├── orchestrator@0.3.7
+648 silly currentTree ├── ordered-read-streams@0.1.0
+648 silly currentTree ├── os-homedir@1.0.1
+648 silly currentTree ├── parse-json@2.2.0
+648 silly currentTree ├── path-exists@2.1.0
+648 silly currentTree ├── path-is-absolute@1.0.0
+648 silly currentTree ├── path-is-inside@1.0.1
+648 silly currentTree ├── path-type@1.1.0
+648 silly currentTree ├── pify@2.3.0
+648 silly currentTree ├── pinkie-promise@2.0.0
+648 silly currentTree ├── pinkie@2.0.1
+648 silly currentTree ├── postcss@2.2.6
+648 silly currentTree ├── pretty-hrtime@1.0.1
+648 silly currentTree ├── process-nextick-args@1.0.6
+648 silly currentTree ├── read-pkg-up@1.0.1
+648 silly currentTree ├── read-pkg@1.1.0
+648 silly currentTree ├── readable-stream@1.1.13
+648 silly currentTree ├── rechoir@0.6.2
+648 silly currentTree ├── redent@1.0.0
+648 silly currentTree ├── repeat-string@1.5.2
+648 silly currentTree ├── repeating@2.0.0
+648 silly currentTree ├── replace-ext@0.0.1
+648 silly currentTree ├── resolve@1.1.6
+648 silly currentTree ├── right-align@0.1.3
+648 silly currentTree ├─┬ rimraf@2.5.0
+648 silly currentTree │ └── glob@6.0.4
+648 silly currentTree ├── samsam@1.1.3
+648 silly currentTree ├── semver@4.3.6
+648 silly currentTree ├── sequencify@0.0.7
+648 silly currentTree ├── set-immediate-shim@1.0.1
+648 silly currentTree ├── shelljs@0.3.0
+648 silly currentTree ├── sigmund@1.0.1
+648 silly currentTree ├── signal-exit@2.1.2
+648 silly currentTree ├── sinon@1.10.3
+648 silly currentTree ├── source-map@0.1.43
+648 silly currentTree ├── sparkles@1.0.0
+648 silly currentTree ├── spdx-correct@1.0.2
+648 silly currentTree ├── spdx-exceptions@1.0.4
+648 silly currentTree ├── spdx-expression-parse@1.0.2
+648 silly currentTree ├── spdx-license-ids@1.1.0
+648 silly currentTree ├── stream-consume@0.1.0
+648 silly currentTree ├── string_decoder@0.10.31
+648 silly currentTree ├── strip-ansi@3.0.0
+648 silly currentTree ├── strip-bom@2.0.0
+648 silly currentTree ├── strip-indent@1.0.1
+648 silly currentTree ├── supports-color@2.0.0
+648 silly currentTree ├─┬ through2@2.0.0
+648 silly currentTree │ └── readable-stream@2.0.5
+648 silly currentTree ├── tildify@1.1.2
+648 silly currentTree ├── trim-newlines@1.0.0
+648 silly currentTree ├─┬ uglify-js@2.6.0
+648 silly currentTree │ ├── async@0.2.10
+648 silly currentTree │ ├── camelcase@1.2.1
+648 silly currentTree │ ├── source-map@0.5.3
+648 silly currentTree │ └── yargs@3.10.0
+648 silly currentTree ├── uglify-save-license@0.4.1
+648 silly currentTree ├── uglify-to-browserify@1.0.2
+648 silly currentTree ├── unique-stream@1.0.0
+648 silly currentTree ├── user-home@1.1.1
+648 silly currentTree ├── util-deprecate@1.0.2
+648 silly currentTree ├── util@0.10.3
+648 silly currentTree ├── v8flags@2.0.11
+648 silly currentTree ├── validate-npm-package-license@3.0.1
+648 silly currentTree ├─┬ vinyl-fs@0.3.14
+648 silly currentTree │ ├── clone@0.2.0
+648 silly currentTree │ ├── graceful-fs@3.0.8
+648 silly currentTree │ ├── readable-stream@1.0.33
+648 silly currentTree │ ├── strip-bom@1.0.0
+648 silly currentTree │ ├── through2@0.6.5
+648 silly currentTree │ └── vinyl@0.4.6
+648 silly currentTree ├── vinyl-sourcemaps-apply@0.1.4
+648 silly currentTree ├── vinyl@0.5.3
+648 silly currentTree ├── window-size@0.1.0
+648 silly currentTree ├── wordwrap@0.0.2
+648 silly currentTree ├── wrappy@1.0.1
+648 silly currentTree ├── xtend@4.0.1
+648 silly currentTree └── yargs@1.3.3
+649 silly idealTree /home/vagrant/Code/phphub
+649 silly idealTree ├── align-text@0.1.3
+649 silly idealTree ├── amdefine@1.0.0
+649 silly idealTree ├── ansi-regex@2.0.0
+649 silly idealTree ├── ansi-styles@2.1.0
+649 silly idealTree ├── archy@1.0.0
+649 silly idealTree ├── array-differ@0.1.0
+649 silly idealTree ├── array-union@0.1.0
+649 silly idealTree ├── array-uniq@0.1.1
+649 silly idealTree ├── async@0.9.2
+649 silly idealTree ├── autoprefixer-core@3.1.2
+649 silly idealTree ├── balanced-match@0.3.0
+649 silly idealTree ├── beeper@1.1.0
+649 silly idealTree ├── brace-expansion@1.1.2
+649 silly idealTree ├── bufferstreams@0.0.2
+649 silly idealTree ├── builtin-modules@1.1.1
+649 silly idealTree ├── camelcase-keys@2.0.0
+649 silly idealTree ├── camelcase@2.0.1
+649 silly idealTree ├── caniuse-db@1.0.30000384
+649 silly idealTree ├── center-align@0.1.2
+649 silly idealTree ├── chalk@1.1.1
+649 silly idealTree ├── clean-css@3.0.10
+649 silly idealTree ├── cliui@2.1.0
+649 silly idealTree ├── clone-stats@0.0.1
+649 silly idealTree ├── clone@1.0.2
+649 silly idealTree ├── commander@2.5.1
+649 silly idealTree ├── concat-map@0.0.1
+649 silly idealTree ├─┬ concat-with-sourcemaps@1.0.4
+649 silly idealTree │ └── source-map@0.5.3
+649 silly idealTree ├── core-util-is@1.0.2
+649 silly idealTree ├── dateformat@1.0.12
+649 silly idealTree ├── deap@1.0.0
+649 silly idealTree ├── debug@2.0.0
+649 silly idealTree ├── decamelize@1.1.2
+649 silly idealTree ├── defaults@1.0.3
+649 silly idealTree ├── del@0.1.3
+649 silly idealTree ├── deprecated@0.0.1
+649 silly idealTree ├── diff@1.0.8
+649 silly idealTree ├── duplexer2@0.0.2
+649 silly idealTree ├── each-async@1.1.1
+649 silly idealTree ├── end-of-stream@0.1.5
+649 silly idealTree ├── error-ex@1.3.0
+649 silly idealTree ├── escape-string-regexp@1.0.4
+649 silly idealTree ├── extend@2.0.1
+649 silly idealTree ├── fancy-log@1.1.0
+649 silly idealTree ├── find-index@0.1.1
+649 silly idealTree ├── find-up@1.1.0
+649 silly idealTree ├─┬ findup-sync@0.3.0
+649 silly idealTree │ └── glob@5.0.15
+649 silly idealTree ├── first-chunk-stream@1.0.0
+649 silly idealTree ├── flagged-respawn@0.3.1
+649 silly idealTree ├── formatio@1.0.2
+649 silly idealTree ├── gaze@0.5.2
+649 silly idealTree ├── get-stdin@4.0.1
+649 silly idealTree ├─┬ glob-stream@3.1.18
+649 silly idealTree │ ├── readable-stream@1.0.33
+649 silly idealTree │ └── through2@0.6.5
+649 silly idealTree ├── glob-watcher@0.0.6
+649 silly idealTree ├── glob@4.5.3
+649 silly idealTree ├── glob2base@0.0.12
+649 silly idealTree ├── globby@0.1.1
+649 silly idealTree ├─┬ globule@0.1.0
+649 silly idealTree │ ├── glob@3.1.21
+649 silly idealTree │ ├── graceful-fs@1.2.3
+649 silly idealTree │ ├── inherits@1.0.2
+649 silly idealTree │ └── minimatch@0.2.14
+649 silly idealTree ├── glogg@1.0.0
+649 silly idealTree ├── graceful-fs@4.1.2
+649 silly idealTree ├── growl@1.8.1
+649 silly idealTree ├─┬ gulp-asset-manifest@0.0.4
+649 silly idealTree │ ├── ansi-regex@0.2.1
+649 silly idealTree │ ├── ansi-styles@1.1.0
+649 silly idealTree │ ├── chalk@0.5.1
+649 silly idealTree │ ├── gulp-util@2.2.20
+649 silly idealTree │ ├── has-ansi@0.1.0
+649 silly idealTree │ ├── lodash._reinterpolate@2.4.1
+649 silly idealTree │ ├── lodash.escape@2.4.1
+649 silly idealTree │ ├── lodash.keys@2.4.1
+649 silly idealTree │ ├── lodash.template@2.4.1
+649 silly idealTree │ ├── lodash.templatesettings@2.4.1
+649 silly idealTree │ ├── minimist@0.2.0
+649 silly idealTree │ ├── readable-stream@1.0.33
+649 silly idealTree │ ├── strip-ansi@0.3.0
+649 silly idealTree │ ├── supports-color@0.2.0
+649 silly idealTree │ ├── through2@0.5.1
+649 silly idealTree │ ├── vinyl@0.2.3
+649 silly idealTree │ └── xtend@3.0.0
+649 silly idealTree ├─┬ gulp-autoprefixer@1.0.1
+649 silly idealTree │ ├── object-assign@1.0.0
+649 silly idealTree │ ├── readable-stream@1.0.33
+649 silly idealTree │ └── through2@0.6.5
+649 silly idealTree ├─┬ gulp-concat@2.6.0
+649 silly idealTree │ ├── readable-stream@1.0.33
+649 silly idealTree │ └── through2@0.6.5
+649 silly idealTree ├─┬ gulp-minify-css@0.3.13
+649 silly idealTree │ ├── readable-stream@1.0.33
+649 silly idealTree │ └── through2@0.6.5
+649 silly idealTree ├─┬ gulp-rev@1.1.0
+649 silly idealTree │ ├── object-assign@1.0.0
+649 silly idealTree │ ├── readable-stream@1.0.33
+649 silly idealTree │ └── through2@0.6.5
+649 silly idealTree ├─┬ gulp-sass@0.7.3
+649 silly idealTree │ └── map-stream@0.1.0
+649 silly idealTree ├─┬ gulp-uglify@1.5.1
+649 silly idealTree │ ├── source-map@0.5.3
+649 silly idealTree │ └── vinyl-sourcemaps-apply@0.2.1
+649 silly idealTree ├─┬ gulp-util@3.0.7
+649 silly idealTree │ ├── array-differ@1.0.0
+649 silly idealTree │ └── array-uniq@1.0.2
+649 silly idealTree ├── gulp@3.9.0
+649 silly idealTree ├── gulplog@1.0.0
+649 silly idealTree ├── has-ansi@2.0.0
+649 silly idealTree ├── has-gulplog@0.1.0
+649 silly idealTree ├── hosted-git-info@2.1.4
+649 silly idealTree ├── indent-string@2.1.0
+649 silly idealTree ├── inflight@1.0.4
+649 silly idealTree ├── inherits@2.0.1
+649 silly idealTree ├── interpret@0.6.6
+649 silly idealTree ├── is-arrayish@0.2.1
+649 silly idealTree ├── is-buffer@1.1.1
+649 silly idealTree ├── is-builtin-module@1.0.0
+649 silly idealTree ├── is-finite@1.0.1
+649 silly idealTree ├── is-path-cwd@1.0.0
+649 silly idealTree ├── is-path-in-cwd@1.0.0
+649 silly idealTree ├── is-path-inside@1.0.0
+649 silly idealTree ├── is-utf8@0.2.1
+649 silly idealTree ├── isarray@0.0.1
+649 silly idealTree ├── isobject@2.0.0
+649 silly idealTree ├─┬ jade@0.26.3
+649 silly idealTree │ ├── commander@0.6.1
+649 silly idealTree │ └── mkdirp@0.3.0
+649 silly idealTree ├── js-base64@2.1.9
+649 silly idealTree ├── kind-of@2.0.1
+649 silly idealTree ├── lazy-cache@0.2.7
+649 silly idealTree ├── liftoff@2.2.0
+649 silly idealTree ├── load-json-file@1.1.0
+649 silly idealTree ├── lodash._basecopy@3.0.1
+649 silly idealTree ├── lodash._basetostring@3.0.1
+649 silly idealTree ├── lodash._basevalues@3.0.0
+649 silly idealTree ├── lodash._escapehtmlchar@2.4.1
+649 silly idealTree ├── lodash._escapestringchar@2.4.1
+649 silly idealTree ├── lodash._getnative@3.9.1
+649 silly idealTree ├── lodash._htmlescapes@2.4.1
+649 silly idealTree ├── lodash._isiterateecall@3.0.9
+649 silly idealTree ├── lodash._isnative@2.4.1
+649 silly idealTree ├── lodash._objecttypes@2.4.1
+649 silly idealTree ├── lodash._reescape@3.0.0
+649 silly idealTree ├── lodash._reevaluate@3.0.0
+649 silly idealTree ├── lodash._reinterpolate@3.0.0
+649 silly idealTree ├─┬ lodash._reunescapedhtml@2.4.1
+649 silly idealTree │ └── lodash.keys@2.4.1
+649 silly idealTree ├── lodash._shimkeys@2.4.1
+649 silly idealTree ├─┬ lodash.defaults@2.4.1
+649 silly idealTree │ └── lodash.keys@2.4.1
+649 silly idealTree ├── lodash.escape@3.0.0
+649 silly idealTree ├── lodash.isarguments@3.0.4
+649 silly idealTree ├── lodash.isarray@3.0.4
+649 silly idealTree ├── lodash.isobject@2.4.1
+649 silly idealTree ├── lodash.keys@3.1.2
+649 silly idealTree ├── lodash.restparam@3.6.1
+649 silly idealTree ├── lodash.template@3.6.2
+649 silly idealTree ├── lodash.templatesettings@3.1.0
+649 silly idealTree ├─┬ lodash.values@2.4.1
+649 silly idealTree │ └── lodash.keys@2.4.1
+649 silly idealTree ├── lodash@1.0.2
+649 silly idealTree ├── longest@1.0.1
+649 silly idealTree ├── loud-rejection@1.2.0
+649 silly idealTree ├── lru-cache@2.7.3
+649 silly idealTree ├── map-obj@1.0.1
+649 silly idealTree ├── map-stream@0.0.6
+649 silly idealTree ├── memory-cache@0.0.5
+649 silly idealTree ├─┬ meow@3.7.0
+649 silly idealTree │ └── object-assign@4.0.1
+649 silly idealTree ├── minimatch@2.0.10
+649 silly idealTree ├── minimist@1.2.0
+649 silly idealTree ├─┬ mkdirp@0.5.1
+649 silly idealTree │ └── minimist@0.0.8
+649 silly idealTree ├─┬ mocha@1.21.5
+649 silly idealTree │ ├── commander@2.3.0
+649 silly idealTree │ ├── escape-string-regexp@1.0.2
+649 silly idealTree │ ├── glob@3.2.3
+649 silly idealTree │ ├── graceful-fs@2.0.3
+649 silly idealTree │ ├── minimatch@0.2.14
+649 silly idealTree │ ├── minimist@0.0.8
+649 silly idealTree │ └── mkdirp@0.5.0
+649 silly idealTree ├── ms@0.6.2
+649 silly idealTree ├── multipipe@0.1.2
+649 silly idealTree ├── nan@1.3.0
+649 silly idealTree ├── node-sass-middleware@0.3.1
+649 silly idealTree ├─┬ node-sass@0.9.6
+649 silly idealTree │ ├── ansi-regex@0.2.1
+649 silly idealTree │ ├── ansi-styles@1.1.0
+649 silly idealTree │ ├── chalk@0.5.1
+649 silly idealTree │ ├── get-stdin@3.0.2
+649 silly idealTree │ ├── has-ansi@0.1.0
+649 silly idealTree │ ├── object-assign@1.0.0
+649 silly idealTree │ ├── strip-ansi@0.3.0
+649 silly idealTree │ └── supports-color@0.2.0
+649 silly idealTree ├── node-watch@0.3.5
+649 silly idealTree ├── normalize-package-data@2.3.5
+649 silly idealTree ├── number-is-nan@1.0.0
+649 silly idealTree ├── object-assign@3.0.0
+649 silly idealTree ├── once@1.3.3
+649 silly idealTree ├── onetime@1.1.0
+649 silly idealTree ├── orchestrator@0.3.7
+649 silly idealTree ├── ordered-read-streams@0.1.0
+649 silly idealTree ├── os-homedir@1.0.1
+649 silly idealTree ├── parse-json@2.2.0
+649 silly idealTree ├── path-exists@2.1.0
+649 silly idealTree ├── path-is-absolute@1.0.0
+649 silly idealTree ├── path-is-inside@1.0.1
+649 silly idealTree ├── path-type@1.1.0
+649 silly idealTree ├── pify@2.3.0
+649 silly idealTree ├── pinkie-promise@2.0.0
+649 silly idealTree ├── pinkie@2.0.1
+649 silly idealTree ├── postcss@2.2.6
+649 silly idealTree ├── pretty-hrtime@1.0.1
+649 silly idealTree ├── process-nextick-args@1.0.6
+649 silly idealTree ├── read-pkg-up@1.0.1
+649 silly idealTree ├── read-pkg@1.1.0
+649 silly idealTree ├── readable-stream@1.1.13
+649 silly idealTree ├── rechoir@0.6.2
+649 silly idealTree ├── redent@1.0.0
+649 silly idealTree ├── repeat-string@1.5.2
+649 silly idealTree ├── repeating@2.0.0
+649 silly idealTree ├── replace-ext@0.0.1
+649 silly idealTree ├── resolve@1.1.6
+649 silly idealTree ├── right-align@0.1.3
+649 silly idealTree ├─┬ rimraf@2.5.0
+649 silly idealTree │ └── glob@6.0.4
+649 silly idealTree ├── samsam@1.1.3
+649 silly idealTree ├── semver@4.3.6
+649 silly idealTree ├── sequencify@0.0.7
+649 silly idealTree ├── set-immediate-shim@1.0.1
+649 silly idealTree ├── shelljs@0.3.0
+649 silly idealTree ├── sigmund@1.0.1
+649 silly idealTree ├── signal-exit@2.1.2
+649 silly idealTree ├── sinon@1.10.3
+649 silly idealTree ├── source-map@0.1.43
+649 silly idealTree ├── sparkles@1.0.0
+649 silly idealTree ├── spdx-correct@1.0.2
+649 silly idealTree ├── spdx-exceptions@1.0.4
+649 silly idealTree ├── spdx-expression-parse@1.0.2
+649 silly idealTree ├── spdx-license-ids@1.1.0
+649 silly idealTree ├── stream-consume@0.1.0
+649 silly idealTree ├── string_decoder@0.10.31
+649 silly idealTree ├── strip-ansi@3.0.0
+649 silly idealTree ├── strip-bom@2.0.0
+649 silly idealTree ├── strip-indent@1.0.1
+649 silly idealTree ├── supports-color@2.0.0
+649 silly idealTree ├─┬ through2@2.0.0
+649 silly idealTree │ └── readable-stream@2.0.5
+649 silly idealTree ├── tildify@1.1.2
+649 silly idealTree ├── trim-newlines@1.0.0
+649 silly idealTree ├─┬ uglify-js@2.6.0
+649 silly idealTree │ ├── async@0.2.10
+649 silly idealTree │ ├── camelcase@1.2.1
+649 silly idealTree │ ├── source-map@0.5.3
+649 silly idealTree │ └── yargs@3.10.0
+649 silly idealTree ├── uglify-save-license@0.4.1
+649 silly idealTree ├── uglify-to-browserify@1.0.2
+649 silly idealTree ├── unique-stream@1.0.0
+649 silly idealTree ├── user-home@1.1.1
+649 silly idealTree ├── util-deprecate@1.0.2
+649 silly idealTree ├── util@0.10.3
+649 silly idealTree ├── v8flags@2.0.11
+649 silly idealTree ├── validate-npm-package-license@3.0.1
+649 silly idealTree ├─┬ vinyl-fs@0.3.14
+649 silly idealTree │ ├── clone@0.2.0
+649 silly idealTree │ ├── graceful-fs@3.0.8
+649 silly idealTree │ ├── readable-stream@1.0.33
+649 silly idealTree │ ├── strip-bom@1.0.0
+649 silly idealTree │ ├── through2@0.6.5
+649 silly idealTree │ └── vinyl@0.4.6
+649 silly idealTree ├── vinyl-sourcemaps-apply@0.1.4
+649 silly idealTree ├── vinyl@0.5.3
+649 silly idealTree ├── window-size@0.1.0
+649 silly idealTree ├── wordwrap@0.0.2
+649 silly idealTree ├── wrappy@1.0.1
+649 silly idealTree ├── xtend@4.0.1
+649 silly idealTree └── yargs@1.3.3
+650 silly generateActionsToTake Starting
+651 silly install generateActionsToTake
+652 silly generateActionsToTake Finishing
+653 silly diffTrees action count 18
+654 silly diffTrees add ansi-regex@0.2.1
+655 silly diffTrees add ansi-styles@1.1.0
+656 silly diffTrees add has-ansi@0.1.0
+657 silly diffTrees add lodash._reinterpolate@2.4.1
+658 silly diffTrees add lodash.keys@2.4.1
+659 silly diffTrees add lodash.escape@2.4.1
+660 silly diffTrees add lodash.templatesettings@2.4.1
+661 silly diffTrees add lodash.template@2.4.1
+662 silly diffTrees add minimist@0.2.0
+663 silly diffTrees add readable-stream@1.0.33
+664 silly diffTrees add strip-ansi@0.3.0
+665 silly diffTrees add supports-color@0.2.0
+666 silly diffTrees add chalk@0.5.1
+667 silly diffTrees add vinyl@0.2.3
+668 silly diffTrees add xtend@3.0.0
+669 silly diffTrees add through2@0.5.1
+670 silly diffTrees add gulp-util@2.2.20
+671 silly diffTrees add gulp-asset-manifest@0.0.4
+672 silly decomposeActions action count 144
+673 silly decomposeActions fetch ansi-regex@0.2.1
+674 silly decomposeActions extract ansi-regex@0.2.1
+675 silly decomposeActions preinstall ansi-regex@0.2.1
+676 silly decomposeActions build ansi-regex@0.2.1
+677 silly decomposeActions install ansi-regex@0.2.1
+678 silly decomposeActions postinstall ansi-regex@0.2.1
+679 silly decomposeActions test ansi-regex@0.2.1
+680 silly decomposeActions finalize ansi-regex@0.2.1
+681 silly decomposeActions fetch ansi-styles@1.1.0
+682 silly decomposeActions extract ansi-styles@1.1.0
+683 silly decomposeActions preinstall ansi-styles@1.1.0
+684 silly decomposeActions build ansi-styles@1.1.0
+685 silly decomposeActions install ansi-styles@1.1.0
+686 silly decomposeActions postinstall ansi-styles@1.1.0
+687 silly decomposeActions test ansi-styles@1.1.0
+688 silly decomposeActions finalize ansi-styles@1.1.0
+689 silly decomposeActions fetch has-ansi@0.1.0
+690 silly decomposeActions extract has-ansi@0.1.0
+691 silly decomposeActions preinstall has-ansi@0.1.0
+692 silly decomposeActions build has-ansi@0.1.0
+693 silly decomposeActions install has-ansi@0.1.0
+694 silly decomposeActions postinstall has-ansi@0.1.0
+695 silly decomposeActions test has-ansi@0.1.0
+696 silly decomposeActions finalize has-ansi@0.1.0
+697 silly decomposeActions fetch lodash._reinterpolate@2.4.1
+698 silly decomposeActions extract lodash._reinterpolate@2.4.1
+699 silly decomposeActions preinstall lodash._reinterpolate@2.4.1
+700 silly decomposeActions build lodash._reinterpolate@2.4.1
+701 silly decomposeActions install lodash._reinterpolate@2.4.1
+702 silly decomposeActions postinstall lodash._reinterpolate@2.4.1
+703 silly decomposeActions test lodash._reinterpolate@2.4.1
+704 silly decomposeActions finalize lodash._reinterpolate@2.4.1
+705 silly decomposeActions fetch lodash.keys@2.4.1
+706 silly decomposeActions extract lodash.keys@2.4.1
+707 silly decomposeActions preinstall lodash.keys@2.4.1
+708 silly decomposeActions build lodash.keys@2.4.1
+709 silly decomposeActions install lodash.keys@2.4.1
+710 silly decomposeActions postinstall lodash.keys@2.4.1
+711 silly decomposeActions test lodash.keys@2.4.1
+712 silly decomposeActions finalize lodash.keys@2.4.1
+713 silly decomposeActions fetch lodash.escape@2.4.1
+714 silly decomposeActions extract lodash.escape@2.4.1
+715 silly decomposeActions preinstall lodash.escape@2.4.1
+716 silly decomposeActions build lodash.escape@2.4.1
+717 silly decomposeActions install lodash.escape@2.4.1
+718 silly decomposeActions postinstall lodash.escape@2.4.1
+719 silly decomposeActions test lodash.escape@2.4.1
+720 silly decomposeActions finalize lodash.escape@2.4.1
+721 silly decomposeActions fetch lodash.templatesettings@2.4.1
+722 silly decomposeActions extract lodash.templatesettings@2.4.1
+723 silly decomposeActions preinstall lodash.templatesettings@2.4.1
+724 silly decomposeActions build lodash.templatesettings@2.4.1
+725 silly decomposeActions install lodash.templatesettings@2.4.1
+726 silly decomposeActions postinstall lodash.templatesettings@2.4.1
+727 silly decomposeActions test lodash.templatesettings@2.4.1
+728 silly decomposeActions finalize lodash.templatesettings@2.4.1
+729 silly decomposeActions fetch lodash.template@2.4.1
+730 silly decomposeActions extract lodash.template@2.4.1
+731 silly decomposeActions preinstall lodash.template@2.4.1
+732 silly decomposeActions build lodash.template@2.4.1
+733 silly decomposeActions install lodash.template@2.4.1
+734 silly decomposeActions postinstall lodash.template@2.4.1
+735 silly decomposeActions test lodash.template@2.4.1
+736 silly decomposeActions finalize lodash.template@2.4.1
+737 silly decomposeActions fetch minimist@0.2.0
+738 silly decomposeActions extract minimist@0.2.0
+739 silly decomposeActions preinstall minimist@0.2.0
+740 silly decomposeActions build minimist@0.2.0
+741 silly decomposeActions install minimist@0.2.0
+742 silly decomposeActions postinstall minimist@0.2.0
+743 silly decomposeActions test minimist@0.2.0
+744 silly decomposeActions finalize minimist@0.2.0
+745 silly decomposeActions fetch readable-stream@1.0.33
+746 silly decomposeActions extract readable-stream@1.0.33
+747 silly decomposeActions preinstall readable-stream@1.0.33
+748 silly decomposeActions build readable-stream@1.0.33
+749 silly decomposeActions install readable-stream@1.0.33
+750 silly decomposeActions postinstall readable-stream@1.0.33
+751 silly decomposeActions test readable-stream@1.0.33
+752 silly decomposeActions finalize readable-stream@1.0.33
+753 silly decomposeActions fetch strip-ansi@0.3.0
+754 silly decomposeActions extract strip-ansi@0.3.0
+755 silly decomposeActions preinstall strip-ansi@0.3.0
+756 silly decomposeActions build strip-ansi@0.3.0
+757 silly decomposeActions install strip-ansi@0.3.0
+758 silly decomposeActions postinstall strip-ansi@0.3.0
+759 silly decomposeActions test strip-ansi@0.3.0
+760 silly decomposeActions finalize strip-ansi@0.3.0
+761 silly decomposeActions fetch supports-color@0.2.0
+762 silly decomposeActions extract supports-color@0.2.0
+763 silly decomposeActions preinstall supports-color@0.2.0
+764 silly decomposeActions build supports-color@0.2.0
+765 silly decomposeActions install supports-color@0.2.0
+766 silly decomposeActions postinstall supports-color@0.2.0
+767 silly decomposeActions test supports-color@0.2.0
+768 silly decomposeActions finalize supports-color@0.2.0
+769 silly decomposeActions fetch chalk@0.5.1
+770 silly decomposeActions extract chalk@0.5.1
+771 silly decomposeActions preinstall chalk@0.5.1
+772 silly decomposeActions build chalk@0.5.1
+773 silly decomposeActions install chalk@0.5.1
+774 silly decomposeActions postinstall chalk@0.5.1
+775 silly decomposeActions test chalk@0.5.1
+776 silly decomposeActions finalize chalk@0.5.1
+777 silly decomposeActions fetch vinyl@0.2.3
+778 silly decomposeActions extract vinyl@0.2.3
+779 silly decomposeActions preinstall vinyl@0.2.3
+780 silly decomposeActions build vinyl@0.2.3
+781 silly decomposeActions install vinyl@0.2.3
+782 silly decomposeActions postinstall vinyl@0.2.3
+783 silly decomposeActions test vinyl@0.2.3
+784 silly decomposeActions finalize vinyl@0.2.3
+785 silly decomposeActions fetch xtend@3.0.0
+786 silly decomposeActions extract xtend@3.0.0
+787 silly decomposeActions preinstall xtend@3.0.0
+788 silly decomposeActions build xtend@3.0.0
+789 silly decomposeActions install xtend@3.0.0
+790 silly decomposeActions postinstall xtend@3.0.0
+791 silly decomposeActions test xtend@3.0.0
+792 silly decomposeActions finalize xtend@3.0.0
+793 silly decomposeActions fetch through2@0.5.1
+794 silly decomposeActions extract through2@0.5.1
+795 silly decomposeActions preinstall through2@0.5.1
+796 silly decomposeActions build through2@0.5.1
+797 silly decomposeActions install through2@0.5.1
+798 silly decomposeActions postinstall through2@0.5.1
+799 silly decomposeActions test through2@0.5.1
+800 silly decomposeActions finalize through2@0.5.1
+801 silly decomposeActions fetch gulp-util@2.2.20
+802 silly decomposeActions extract gulp-util@2.2.20
+803 silly decomposeActions preinstall gulp-util@2.2.20
+804 silly decomposeActions build gulp-util@2.2.20
+805 silly decomposeActions install gulp-util@2.2.20
+806 silly decomposeActions postinstall gulp-util@2.2.20
+807 silly decomposeActions test gulp-util@2.2.20
+808 silly decomposeActions finalize gulp-util@2.2.20
+809 silly decomposeActions fetch gulp-asset-manifest@0.0.4
+810 silly decomposeActions extract gulp-asset-manifest@0.0.4
+811 silly decomposeActions preinstall gulp-asset-manifest@0.0.4
+812 silly decomposeActions build gulp-asset-manifest@0.0.4
+813 silly decomposeActions install gulp-asset-manifest@0.0.4
+814 silly decomposeActions postinstall gulp-asset-manifest@0.0.4
+815 silly decomposeActions test gulp-asset-manifest@0.0.4
+816 silly decomposeActions finalize gulp-asset-manifest@0.0.4
+817 silly executeActions Starting
+818 silly install executeActions
+819 silly doSerial global-install 0
+820 silly doParallel fetch 18
+821 verbose lock using /home/vagrant/.npm/_locks/staging-9b39ab8ea47daa80.lock for /home/vagrant/Code/phphub/node_modules/.staging
+822 silly doParallel extract 18
+823 silly extract ansi-regex
+824 silly extract ansi-styles
+825 silly extract has-ansi
+826 silly extract lodash._reinterpolate
+827 silly extract lodash.keys
+828 silly extract lodash.escape
+829 silly extract lodash.templatesettings
+830 silly extract lodash.template
+831 silly extract minimist
+832 silly extract readable-stream
+833 silly extract strip-ansi
+834 silly extract supports-color
+835 silly extract chalk
+836 silly extract vinyl
+837 silly extract xtend
+838 silly extract through2
+839 silly extract gulp-util
+840 silly extract gulp-asset-manifest
+841 verbose unbuild node_modules/.staging/ansi-regex-518791b55b8589bda92badf3cfe91179
+842 verbose unbuild node_modules/.staging/ansi-styles-82733301e7fc66833cece1c5a66569cd
+843 verbose unbuild node_modules/.staging/lodash._reinterpolate-53e04f0d25ecf4428c7889b81e6f67c9
+844 verbose unbuild node_modules/.staging/lodash.keys-e9873e2981c4a90ac0fef37f757a2892
+845 verbose unbuild node_modules/.staging/lodash.escape-9de4014b644bec26fe8f7f61f827ebf4
+846 verbose unbuild node_modules/.staging/lodash.templatesettings-7012745b3c03f77a9cd3f4a0a40e5d38
+847 verbose unbuild node_modules/.staging/lodash.template-55e398f3a419278370e5bc48a1bd2240
+848 verbose unbuild node_modules/.staging/minimist-46999b56dedd7b47f034deeca96f7a51
+849 verbose unbuild node_modules/.staging/readable-stream-372fbad306628717a3795d434c454b76
+850 verbose unbuild node_modules/.staging/chalk-3ff0c648b610ed1f86a6842179ecaab5
+851 verbose unbuild node_modules/.staging/vinyl-461787ad569c6fb04a96c3d50de2a5a9
+852 verbose unbuild node_modules/.staging/xtend-ac907a0b307531b032b5e58539ad224d
+853 verbose unbuild node_modules/.staging/through2-846844343e3f883da2ec9a127bf7d090
+854 verbose unbuild node_modules/.staging/gulp-util-e7b83df2a722c60fc83fefcf34103acc
+855 verbose unbuild node_modules/.staging/gulp-asset-manifest-996ce7e480317e8981e76ef5e9a526f5
+856 verbose unbuild node_modules/.staging/has-ansi-5e799b8a8dc5ac013f3a1f6d2b25f7e2
+857 verbose unbuild node_modules/.staging/strip-ansi-fca0ba49e0ea6b59ebe717215d2946e0
+858 verbose unbuild node_modules/.staging/supports-color-58d7b74e9d5a0215e7fd90f25829e346
+859 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/ansi-regex-518791b55b8589bda92badf3cfe91179 is being purged from base /home/vagrant/Code/phphub
+860 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/ansi-styles-82733301e7fc66833cece1c5a66569cd is being purged from base /home/vagrant/Code/phphub
+861 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.keys-e9873e2981c4a90ac0fef37f757a2892 is being purged from base /home/vagrant/Code/phphub
+862 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash._reinterpolate-53e04f0d25ecf4428c7889b81e6f67c9 is being purged from base /home/vagrant/Code/phphub
+863 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.escape-9de4014b644bec26fe8f7f61f827ebf4 is being purged from base /home/vagrant/Code/phphub
+864 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.templatesettings-7012745b3c03f77a9cd3f4a0a40e5d38 is being purged from base /home/vagrant/Code/phphub
+865 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.template-55e398f3a419278370e5bc48a1bd2240 is being purged from base /home/vagrant/Code/phphub
+866 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/minimist-46999b56dedd7b47f034deeca96f7a51 is being purged from base /home/vagrant/Code/phphub
+867 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/readable-stream-372fbad306628717a3795d434c454b76 is being purged from base /home/vagrant/Code/phphub
+868 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/chalk-3ff0c648b610ed1f86a6842179ecaab5 is being purged from base /home/vagrant/Code/phphub
+869 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/vinyl-461787ad569c6fb04a96c3d50de2a5a9 is being purged from base /home/vagrant/Code/phphub
+870 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/xtend-ac907a0b307531b032b5e58539ad224d is being purged from base /home/vagrant/Code/phphub
+871 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/through2-846844343e3f883da2ec9a127bf7d090 is being purged from base /home/vagrant/Code/phphub
+872 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/gulp-util-e7b83df2a722c60fc83fefcf34103acc is being purged from base /home/vagrant/Code/phphub
+873 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/gulp-asset-manifest-996ce7e480317e8981e76ef5e9a526f5 is being purged from base /home/vagrant/Code/phphub
+874 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/has-ansi-5e799b8a8dc5ac013f3a1f6d2b25f7e2 is being purged from base /home/vagrant/Code/phphub
+875 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/ansi-styles-82733301e7fc66833cece1c5a66569cd
+876 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/ansi-regex-518791b55b8589bda92badf3cfe91179
+877 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.keys-e9873e2981c4a90ac0fef37f757a2892
+878 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash._reinterpolate-53e04f0d25ecf4428c7889b81e6f67c9
+879 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.escape-9de4014b644bec26fe8f7f61f827ebf4
+880 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.templatesettings-7012745b3c03f77a9cd3f4a0a40e5d38
+881 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.template-55e398f3a419278370e5bc48a1bd2240
+882 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/minimist-46999b56dedd7b47f034deeca96f7a51
+883 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/strip-ansi-fca0ba49e0ea6b59ebe717215d2946e0 is being purged from base /home/vagrant/Code/phphub
+884 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/supports-color-58d7b74e9d5a0215e7fd90f25829e346 is being purged from base /home/vagrant/Code/phphub
+885 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/readable-stream-372fbad306628717a3795d434c454b76
+886 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/chalk-3ff0c648b610ed1f86a6842179ecaab5
+887 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/xtend-ac907a0b307531b032b5e58539ad224d
+888 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/vinyl-461787ad569c6fb04a96c3d50de2a5a9
+889 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/through2-846844343e3f883da2ec9a127bf7d090
+890 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/gulp-util-e7b83df2a722c60fc83fefcf34103acc
+891 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/gulp-asset-manifest-996ce7e480317e8981e76ef5e9a526f5
+892 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/has-ansi-5e799b8a8dc5ac013f3a1f6d2b25f7e2
+893 verbose tar unpack /home/vagrant/.npm/ansi-styles/1.1.0/package.tgz
+894 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/ansi-styles-82733301e7fc66833cece1c5a66569cd
+895 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/ansi-styles-82733301e7fc66833cece1c5a66569cd is being purged
+896 verbose tar unpack /home/vagrant/.npm/lodash.keys/2.4.1/package.tgz
+897 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/lodash.keys-e9873e2981c4a90ac0fef37f757a2892
+898 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.keys-e9873e2981c4a90ac0fef37f757a2892 is being purged
+899 verbose tar unpack /home/vagrant/.npm/ansi-regex/0.2.1/package.tgz
+900 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/ansi-regex-518791b55b8589bda92badf3cfe91179
+901 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/ansi-regex-518791b55b8589bda92badf3cfe91179 is being purged
+902 verbose tar unpack /home/vagrant/.npm/lodash._reinterpolate/2.4.1/package.tgz
+903 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/lodash._reinterpolate-53e04f0d25ecf4428c7889b81e6f67c9
+904 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash._reinterpolate-53e04f0d25ecf4428c7889b81e6f67c9 is being purged
+905 verbose tar unpack /home/vagrant/.npm/lodash.escape/2.4.1/package.tgz
+906 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/lodash.escape-9de4014b644bec26fe8f7f61f827ebf4
+907 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.escape-9de4014b644bec26fe8f7f61f827ebf4 is being purged
+908 verbose tar unpack /home/vagrant/.npm/lodash.templatesettings/2.4.1/package.tgz
+909 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/lodash.templatesettings-7012745b3c03f77a9cd3f4a0a40e5d38
+910 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.templatesettings-7012745b3c03f77a9cd3f4a0a40e5d38 is being purged
+911 verbose tar unpack /home/vagrant/.npm/lodash.template/2.4.1/package.tgz
+912 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/lodash.template-55e398f3a419278370e5bc48a1bd2240
+913 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/lodash.template-55e398f3a419278370e5bc48a1bd2240 is being purged
+914 verbose tar unpack /home/vagrant/.npm/minimist/0.2.0/package.tgz
+915 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/minimist-46999b56dedd7b47f034deeca96f7a51
+916 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/minimist-46999b56dedd7b47f034deeca96f7a51 is being purged
+917 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/strip-ansi-fca0ba49e0ea6b59ebe717215d2946e0
+918 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/supports-color-58d7b74e9d5a0215e7fd90f25829e346
+919 verbose tar unpack /home/vagrant/.npm/readable-stream/1.0.33/package.tgz
+920 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/readable-stream-372fbad306628717a3795d434c454b76
+921 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/readable-stream-372fbad306628717a3795d434c454b76 is being purged
+922 verbose tar unpack /home/vagrant/.npm/chalk/0.5.1/package.tgz
+923 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/chalk-3ff0c648b610ed1f86a6842179ecaab5
+924 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/chalk-3ff0c648b610ed1f86a6842179ecaab5 is being purged
+925 verbose tar unpack /home/vagrant/.npm/xtend/3.0.0/package.tgz
+926 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/xtend-ac907a0b307531b032b5e58539ad224d
+927 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/xtend-ac907a0b307531b032b5e58539ad224d is being purged
+928 verbose tar unpack /home/vagrant/.npm/vinyl/0.2.3/package.tgz
+929 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/vinyl-461787ad569c6fb04a96c3d50de2a5a9
+930 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/vinyl-461787ad569c6fb04a96c3d50de2a5a9 is being purged
+931 verbose tar unpack /home/vagrant/.npm/through2/0.5.1/package.tgz
+932 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/through2-846844343e3f883da2ec9a127bf7d090
+933 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/through2-846844343e3f883da2ec9a127bf7d090 is being purged
+934 verbose tar unpack /home/vagrant/.npm/gulp-util/2.2.20/package.tgz
+935 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/gulp-util-e7b83df2a722c60fc83fefcf34103acc
+936 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/gulp-util-e7b83df2a722c60fc83fefcf34103acc is being purged
+937 verbose tar unpack /home/vagrant/.npm/gulp-asset-manifest/0.0.4/package.tgz
+938 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/gulp-asset-manifest-996ce7e480317e8981e76ef5e9a526f5
+939 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/gulp-asset-manifest-996ce7e480317e8981e76ef5e9a526f5 is being purged
+940 verbose tar unpack /home/vagrant/.npm/has-ansi/0.1.0/package.tgz
+941 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/has-ansi-5e799b8a8dc5ac013f3a1f6d2b25f7e2
+942 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/has-ansi-5e799b8a8dc5ac013f3a1f6d2b25f7e2 is being purged
+943 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.keys-e9873e2981c4a90ac0fef37f757a2892
+944 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/ansi-styles-82733301e7fc66833cece1c5a66569cd
+945 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/ansi-regex-518791b55b8589bda92badf3cfe91179
+946 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash._reinterpolate-53e04f0d25ecf4428c7889b81e6f67c9
+947 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.escape-9de4014b644bec26fe8f7f61f827ebf4
+948 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.templatesettings-7012745b3c03f77a9cd3f4a0a40e5d38
+949 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/lodash.template-55e398f3a419278370e5bc48a1bd2240
+950 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/minimist-46999b56dedd7b47f034deeca96f7a51
+951 verbose tar unpack /home/vagrant/.npm/strip-ansi/0.3.0/package.tgz
+952 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/strip-ansi-fca0ba49e0ea6b59ebe717215d2946e0
+953 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/strip-ansi-fca0ba49e0ea6b59ebe717215d2946e0 is being purged
+954 verbose tar unpack /home/vagrant/.npm/supports-color/0.2.0/package.tgz
+955 verbose tar unpacking to /home/vagrant/Code/phphub/node_modules/.staging/supports-color-58d7b74e9d5a0215e7fd90f25829e346
+956 silly gentlyRm /home/vagrant/Code/phphub/node_modules/.staging/supports-color-58d7b74e9d5a0215e7fd90f25829e346 is being purged
+957 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/readable-stream-372fbad306628717a3795d434c454b76
+958 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/chalk-3ff0c648b610ed1f86a6842179ecaab5
+959 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/xtend-ac907a0b307531b032b5e58539ad224d
+960 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/vinyl-461787ad569c6fb04a96c3d50de2a5a9
+961 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/through2-846844343e3f883da2ec9a127bf7d090
+962 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/gulp-util-e7b83df2a722c60fc83fefcf34103acc
+963 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/gulp-asset-manifest-996ce7e480317e8981e76ef5e9a526f5
+964 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/has-ansi-5e799b8a8dc5ac013f3a1f6d2b25f7e2
+965 silly gunzTarPerm modes [ '755', '644' ]
+966 silly gunzTarPerm modes [ '755', '644' ]
+967 silly gunzTarPerm modes [ '755', '644' ]
+968 silly gunzTarPerm modes [ '755', '644' ]
+969 silly gunzTarPerm modes [ '755', '644' ]
+970 silly gunzTarPerm modes [ '755', '644' ]
+971 silly gunzTarPerm modes [ '755', '644' ]
+972 silly gunzTarPerm modes [ '755', '644' ]
+973 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/strip-ansi-fca0ba49e0ea6b59ebe717215d2946e0
+974 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/.staging/supports-color-58d7b74e9d5a0215e7fd90f25829e346
+975 silly gunzTarPerm modes [ '755', '644' ]
+976 silly gunzTarPerm modes [ '755', '644' ]
+977 silly gunzTarPerm modes [ '755', '644' ]
+978 silly gunzTarPerm modes [ '755', '644' ]
+979 silly gunzTarPerm modes [ '755', '644' ]
+980 silly gunzTarPerm modes [ '755', '644' ]
+981 silly gunzTarPerm modes [ '755', '644' ]
+982 silly gunzTarPerm modes [ '755', '644' ]
+983 silly gunzTarPerm modes [ '755', '644' ]
+984 silly gunzTarPerm modes [ '755', '644' ]
+985 silly gunzTarPerm extractEntry package.json
+986 silly gunzTarPerm extractEntry package.json
+987 silly gunzTarPerm extractEntry package.json
+988 silly gunzTarPerm extractEntry package.json
+989 silly gunzTarPerm extractEntry package.json
+990 silly gunzTarPerm extractEntry package.json
+991 silly gunzTarPerm extractEntry package.json
+992 silly gunzTarPerm extractEntry package.json
+993 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+994 silly gunzTarPerm extractEntry package.json
+995 silly gunzTarPerm extractEntry package.json
+996 silly gunzTarPerm extractEntry package.json
+997 silly gunzTarPerm extractEntry package.json
+998 silly gunzTarPerm extractEntry package.json
+999 silly gunzTarPerm extractEntry package.json
+1000 silly gunzTarPerm extractEntry package.json
+1001 silly gunzTarPerm extractEntry package.json
+1002 silly gunzTarPerm extractEntry package.json
+1003 silly gunzTarPerm extractEntry package.json
+1004 silly gunzTarPerm extractEntry README.md
+1005 silly gunzTarPerm extractEntry index.js
+1006 silly gunzTarPerm extractEntry index.js
+1007 silly gunzTarPerm extractEntry readme.md
+1008 silly gunzTarPerm extractEntry index.js
+1009 silly gunzTarPerm extractEntry readme.md
+1010 silly gunzTarPerm extractEntry README.md
+1011 silly gunzTarPerm extractEntry index.js
+1012 silly gunzTarPerm extractEntry README.md
+1013 silly gunzTarPerm extractEntry index.js
+1014 silly gunzTarPerm extractEntry README.md
+1015 silly gunzTarPerm extractEntry index.js
+1016 silly gunzTarPerm extractEntry README.md
+1017 silly gunzTarPerm extractEntry index.js
+1018 silly gunzTarPerm extractEntry LICENSE
+1019 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+1020 silly gunzTarPerm extractEntry index.js
+1021 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+1022 silly gunzTarPerm extractEntry index.js
+1023 silly gunzTarPerm extractEntry readme.md
+1024 silly gunzTarPerm extractEntry .npmignore
+1025 silly gunzTarPerm extractEntry README.md
+1026 silly gunzTarPerm extractEntry .npmignore
+1027 silly gunzTarPerm extractEntry README.md
+1028 silly gunzTarPerm extractEntry .npmignore
+1029 silly gunzTarPerm extractEntry README.md
+1030 silly gunzTarPerm extractEntry .npmignore
+1031 silly gunzTarPerm extractEntry README.md
+1032 silly gunzTarPerm extractEntry README.md
+1033 silly gunzTarPerm extractEntry index.js
+1034 silly gunzTarPerm extractEntry .npmignore
+1035 silly gunzTarPerm extractEntry README.md
+1036 silly gunzTarPerm extractEntry cli.js
+1037 silly gunzTarPerm extractEntry index.js
+1038 silly gunzTarPerm extractEntry cli.js
+1039 silly gunzTarPerm extractEntry index.js
+1040 silly gunzTarPerm extractEntry cli.js
+1041 silly gunzTarPerm extractEntry index.js
+1042 silly gunzTarPerm extractEntry LICENSE.txt
+1043 silly gunzTarPerm extractEntry LICENSE.txt
+1044 silly gunzTarPerm extractEntry LICENSE.txt
+1045 silly gunzTarPerm extractEntry LICENSE.txt
+1046 silly gunzTarPerm extractEntry LICENSE.txt
+1047 silly gunzTarPerm extractEntry .travis.yml
+1048 silly gunzTarPerm modified mode [ '.travis.yml', 436, 420 ]
+1049 silly gunzTarPerm extractEntry example/parse.js
+1050 silly gunzTarPerm modified mode [ 'example/parse.js', 436, 420 ]
+1051 silly gunzTarPerm extractEntry LICENSE
+1052 silly gunzTarPerm extractEntry through2.js
+1053 silly gunzTarPerm extractEntry LICENSE
+1054 silly gunzTarPerm extractEntry duplex.js
+1055 silly gunzTarPerm extractEntry LICENCE
+1056 silly gunzTarPerm extractEntry index.js
+1057 silly gunzTarPerm extractEntry LICENSE
+1058 silly gunzTarPerm extractEntry index.js
+1059 silly gunzTarPerm extractEntry LICENSE
+1060 silly gunzTarPerm extractEntry index.js
+1061 silly gunzTarPerm extractEntry readme.md
+1062 silly gunzTarPerm extractEntry readme.md
+1063 silly gunzTarPerm extractEntry readme.md
+1064 silly gunzTarPerm extractEntry writable.js
+1065 silly gunzTarPerm extractEntry passthrough.js
+1066 silly gunzTarPerm extractEntry .travis.yml
+1067 silly gunzTarPerm extractEntry lib/File.js
+1068 silly gunzTarPerm extractEntry mutable.js
+1069 silly gunzTarPerm extractEntry test.js
+1070 silly gunzTarPerm extractEntry readme.markdown
+1071 silly gunzTarPerm modified mode [ 'readme.markdown', 436, 420 ]
+1072 silly gunzTarPerm extractEntry test/all_bool.js
+1073 silly gunzTarPerm modified mode [ 'test/all_bool.js', 436, 420 ]
+1074 silly gunzTarPerm extractEntry .travis.yml
+1075 silly gunzTarPerm extractEntry lib/cloneBuffer.js
+1076 silly gunzTarPerm extractEntry readable.js
+1077 silly gunzTarPerm extractEntry transform.js
+1078 silly gunzTarPerm extractEntry .jshintrc
+1079 silly gunzTarPerm extractEntry Makefile
+1080 silly gunzTarPerm extractEntry test/dash.js
+1081 silly gunzTarPerm modified mode [ 'test/dash.js', 436, 420 ]
+1082 silly gunzTarPerm extractEntry lib/colors.js
+1083 silly gunzTarPerm extractEntry lib/combine.js
+1084 silly gunzTarPerm extractEntry lib/inspectStream.js
+1085 silly gunzTarPerm extractEntry lib/isBuffer.js
+1086 silly gunzTarPerm extractEntry test/default_bool.js
+1087 silly gunzTarPerm modified mode [ 'test/default_bool.js', 436, 420 ]
+1088 silly gunzTarPerm extractEntry test/dotted.js
+1089 silly gunzTarPerm modified mode [ 'test/dotted.js', 436, 420 ]
+1090 silly gunzTarPerm extractEntry lib/_stream_duplex.js
+1091 silly gunzTarPerm extractEntry lib/_stream_passthrough.js
+1092 silly gunzTarPerm extractEntry lib/isNull.js
+1093 silly gunzTarPerm extractEntry lib/date.js
+1094 silly gunzTarPerm extractEntry lib/env.js
+1095 silly gunzTarPerm extractEntry lib/buffer.js
+1096 silly gunzTarPerm extractEntry lib/isNull.js
+1097 silly gunzTarPerm extractEntry lib/isStream.js
+1098 silly gunzTarPerm extractEntry lib/linefeed.js
+1099 silly gunzTarPerm extractEntry lib/log.js
+1100 silly gunzTarPerm extractEntry lib/noop.js
+1101 silly gunzTarPerm extractEntry lib/beep.js
+1102 silly gunzTarPerm extractEntry lib/replaceExtension.js
+1103 silly gunzTarPerm extractEntry lib/PluginError.js
+1104 silly gunzTarPerm extractEntry lib/template.js
+1105 silly gunzTarPerm extractEntry lib/isBuffer.js
+1106 silly gunzTarPerm extractEntry lib/_stream_readable.js
+1107 silly gunzTarPerm extractEntry test/bool.js
+1108 silly gunzTarPerm modified mode [ 'test/bool.js', 436, 420 ]
+1109 silly gunzTarPerm extractEntry test/num.js
+1110 silly gunzTarPerm modified mode [ 'test/num.js', 436, 420 ]
+1111 silly gunzTarPerm extractEntry lib/isStream.js
+1112 silly gunzTarPerm extractEntry test/File.js
+1113 silly gunzTarPerm extractEntry lib/_stream_transform.js
+1114 silly gunzTarPerm extractEntry lib/_stream_writable.js
+1115 silly gunzTarPerm extractEntry test/parse.js
+1116 silly gunzTarPerm modified mode [ 'test/parse.js', 436, 420 ]
+1117 silly gunzTarPerm extractEntry test/parse_modified.js
+1118 silly gunzTarPerm modified mode [ 'test/parse_modified.js', 436, 420 ]
+1119 silly gunzTarPerm extractEntry test/cloneBuffer.js
+1120 silly gunzTarPerm extractEntry test/inspectStream.js
+1121 silly gunzTarPerm extractEntry test/short.js
+1122 silly gunzTarPerm modified mode [ 'test/short.js', 436, 420 ]
+1123 silly gunzTarPerm extractEntry test/whitespace.js
+1124 silly gunzTarPerm modified mode [ 'test/whitespace.js', 436, 420 ]
+1125 silly gunzTarPerm extractEntry test/isBuffer.js
+1126 silly gunzTarPerm extractEntry test/isNull.js
+1127 silly gunzTarPerm extractEntry test/isStream.js
+1128 silly gunzTarPerm extractEntry test/long.js
+1129 silly gunzTarPerm modified mode [ 'test/long.js', 436, 420 ]
+1130 silly doParallel preinstall 18
+1131 silly preinstall ansi-regex /home/vagrant/Code/phphub/node_modules/.staging/ansi-regex-518791b55b8589bda92badf3cfe91179
+1132 info lifecycle ansi-regex@0.2.1~preinstall: ansi-regex@0.2.1
+1133 silly preinstall ansi-styles /home/vagrant/Code/phphub/node_modules/.staging/ansi-styles-82733301e7fc66833cece1c5a66569cd
+1134 info lifecycle ansi-styles@1.1.0~preinstall: ansi-styles@1.1.0
+1135 silly preinstall has-ansi /home/vagrant/Code/phphub/node_modules/.staging/has-ansi-5e799b8a8dc5ac013f3a1f6d2b25f7e2
+1136 info lifecycle has-ansi@0.1.0~preinstall: has-ansi@0.1.0
+1137 silly preinstall lodash._reinterpolate /home/vagrant/Code/phphub/node_modules/.staging/lodash._reinterpolate-53e04f0d25ecf4428c7889b81e6f67c9
+1138 info lifecycle lodash._reinterpolate@2.4.1~preinstall: lodash._reinterpolate@2.4.1
+1139 silly preinstall lodash.keys /home/vagrant/Code/phphub/node_modules/.staging/lodash.keys-e9873e2981c4a90ac0fef37f757a2892
+1140 info lifecycle lodash.keys@2.4.1~preinstall: lodash.keys@2.4.1
+1141 silly preinstall lodash.escape /home/vagrant/Code/phphub/node_modules/.staging/lodash.escape-9de4014b644bec26fe8f7f61f827ebf4
+1142 info lifecycle lodash.escape@2.4.1~preinstall: lodash.escape@2.4.1
+1143 silly preinstall lodash.templatesettings /home/vagrant/Code/phphub/node_modules/.staging/lodash.templatesettings-7012745b3c03f77a9cd3f4a0a40e5d38
+1144 info lifecycle lodash.templatesettings@2.4.1~preinstall: lodash.templatesettings@2.4.1
+1145 silly preinstall lodash.template /home/vagrant/Code/phphub/node_modules/.staging/lodash.template-55e398f3a419278370e5bc48a1bd2240
+1146 info lifecycle lodash.template@2.4.1~preinstall: lodash.template@2.4.1
+1147 silly preinstall minimist /home/vagrant/Code/phphub/node_modules/.staging/minimist-46999b56dedd7b47f034deeca96f7a51
+1148 info lifecycle minimist@0.2.0~preinstall: minimist@0.2.0
+1149 silly preinstall readable-stream /home/vagrant/Code/phphub/node_modules/.staging/readable-stream-372fbad306628717a3795d434c454b76
+1150 info lifecycle readable-stream@1.0.33~preinstall: readable-stream@1.0.33
+1151 silly preinstall strip-ansi /home/vagrant/Code/phphub/node_modules/.staging/strip-ansi-fca0ba49e0ea6b59ebe717215d2946e0
+1152 info lifecycle strip-ansi@0.3.0~preinstall: strip-ansi@0.3.0
+1153 silly preinstall supports-color /home/vagrant/Code/phphub/node_modules/.staging/supports-color-58d7b74e9d5a0215e7fd90f25829e346
+1154 info lifecycle supports-color@0.2.0~preinstall: supports-color@0.2.0
+1155 silly preinstall chalk /home/vagrant/Code/phphub/node_modules/.staging/chalk-3ff0c648b610ed1f86a6842179ecaab5
+1156 info lifecycle chalk@0.5.1~preinstall: chalk@0.5.1
+1157 silly preinstall vinyl /home/vagrant/Code/phphub/node_modules/.staging/vinyl-461787ad569c6fb04a96c3d50de2a5a9
+1158 info lifecycle vinyl@0.2.3~preinstall: vinyl@0.2.3
+1159 silly preinstall xtend /home/vagrant/Code/phphub/node_modules/.staging/xtend-ac907a0b307531b032b5e58539ad224d
+1160 info lifecycle xtend@3.0.0~preinstall: xtend@3.0.0
+1161 silly preinstall through2 /home/vagrant/Code/phphub/node_modules/.staging/through2-846844343e3f883da2ec9a127bf7d090
+1162 info lifecycle through2@0.5.1~preinstall: through2@0.5.1
+1163 silly preinstall gulp-util /home/vagrant/Code/phphub/node_modules/.staging/gulp-util-e7b83df2a722c60fc83fefcf34103acc
+1164 info lifecycle gulp-util@2.2.20~preinstall: gulp-util@2.2.20
+1165 silly preinstall gulp-asset-manifest /home/vagrant/Code/phphub/node_modules/.staging/gulp-asset-manifest-996ce7e480317e8981e76ef5e9a526f5
+1166 info lifecycle gulp-asset-manifest@0.0.4~preinstall: gulp-asset-manifest@0.0.4
+1167 silly lifecycle ansi-styles@1.1.0~preinstall: no script for preinstall, continuing
+1168 silly lifecycle ansi-regex@0.2.1~preinstall: no script for preinstall, continuing
+1169 silly lifecycle lodash._reinterpolate@2.4.1~preinstall: no script for preinstall, continuing
+1170 silly lifecycle has-ansi@0.1.0~preinstall: no script for preinstall, continuing
+1171 silly lifecycle lodash.keys@2.4.1~preinstall: no script for preinstall, continuing
+1172 silly lifecycle lodash.escape@2.4.1~preinstall: no script for preinstall, continuing
+1173 silly lifecycle lodash.templatesettings@2.4.1~preinstall: no script for preinstall, continuing
+1174 silly lifecycle lodash.template@2.4.1~preinstall: no script for preinstall, continuing
+1175 silly lifecycle minimist@0.2.0~preinstall: no script for preinstall, continuing
+1176 silly lifecycle readable-stream@1.0.33~preinstall: no script for preinstall, continuing
+1177 silly lifecycle strip-ansi@0.3.0~preinstall: no script for preinstall, continuing
+1178 silly lifecycle supports-color@0.2.0~preinstall: no script for preinstall, continuing
+1179 silly lifecycle chalk@0.5.1~preinstall: no script for preinstall, continuing
+1180 silly lifecycle vinyl@0.2.3~preinstall: no script for preinstall, continuing
+1181 silly lifecycle xtend@3.0.0~preinstall: no script for preinstall, continuing
+1182 silly lifecycle through2@0.5.1~preinstall: no script for preinstall, continuing
+1183 silly lifecycle gulp-asset-manifest@0.0.4~preinstall: no script for preinstall, continuing
+1184 silly lifecycle gulp-util@2.2.20~preinstall: no script for preinstall, continuing
+1185 silly doReverseSerial remove 0
+1186 silly doSerial move 0
+1187 silly doSerial finalize 18
+1188 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/ansi-regex
+1189 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/ansi-styles
+1190 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/has-ansi
+1191 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/lodash._reinterpolate
+1192 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/lodash.keys
+1193 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/lodash.escape
+1194 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/lodash.templatesettings
+1195 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/lodash.template
+1196 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/minimist
+1197 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/readable-stream
+1198 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/strip-ansi
+1199 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/supports-color
+1200 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/chalk
+1201 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/vinyl
+1202 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/xtend
+1203 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/through2
+1204 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/gulp-util
+1205 silly finalize /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest
+1206 silly doSerial build 18
+1207 silly build ansi-regex
+1208 info linkStuff ansi-regex@0.2.1
+1209 silly linkStuff ansi-regex@0.2.1 has /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules as its parent node_modules
+1210 verbose linkBins ansi-regex@0.2.1
+1211 verbose linkMans ansi-regex@0.2.1
+1212 verbose rebuildBundles ansi-regex@0.2.1
+1213 silly build ansi-styles
+1214 info linkStuff ansi-styles@1.1.0
+1215 silly linkStuff ansi-styles@1.1.0 has /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules as its parent node_modules
+1216 verbose linkBins ansi-styles@1.1.0
+1217 verbose linkMans ansi-styles@1.1.0
+1218 verbose rebuildBundles ansi-styles@1.1.0
+1219 silly build has-ansi
+1220 info linkStuff has-ansi@0.1.0
+1221 silly linkStuff has-ansi@0.1.0 has /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules as its parent node_modules
+1222 verbose linkBins has-ansi@0.1.0
+1223 verbose link bins [ { 'has-ansi': 'cli.js' },
+1223 verbose link bins   '/home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/.bin',
+1223 verbose link bins   false ]
+1224 verbose linkMans has-ansi@0.1.0
+1225 verbose rebuildBundles has-ansi@0.1.0
+1226 silly gentlyRm /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/.bin/has-ansi is being purged
+1227 verbose gentlyRm don't care about contents; nuking /home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/.bin/has-ansi
+1228 verbose unlock done using /home/vagrant/.npm/_locks/staging-9b39ab8ea47daa80.lock for /home/vagrant/Code/phphub/node_modules/.staging
+1229 silly rollbackFailedOptional Starting
+1230 silly rollbackFailedOptional Finishing
+1231 silly runTopLevelLifecycles Starting
+1232 silly runTopLevelLifecycles Finishing
+1233 silly install printInstalled
+1234 warn EPACKAGEJSON /home/vagrant/Code/phphub No repository field.
+1235 warn EPACKAGEJSON /home/vagrant/Code/phphub No license field.
+1236 verbose stack Error: EPROTO: protocol error, symlink '../has-ansi/cli.js' -> '/home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/.bin/has-ansi'
+1236 verbose stack     at Error (native)
+1237 verbose cwd /home/vagrant/Code/phphub
+1238 error Linux 3.19.0-25-generic
+1239 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
+1240 error node v5.0.0
+1241 error npm  v3.3.6
+1242 error path ../has-ansi/cli.js
+1243 error code EPROTO
+1244 error errno -71
+1245 error syscall symlink
+1246 error EPROTO: protocol error, symlink '../has-ansi/cli.js' -> '/home/vagrant/Code/phphub/node_modules/gulp-asset-manifest/node_modules/.bin/has-ansi'
+1247 error If you need help, you may report this error at:
+1247 error     <https://github.com/npm/npm/issues>
+1248 verbose exit [ -71, true ]

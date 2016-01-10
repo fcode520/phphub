@@ -1,17 +1,30 @@
 {
-  "devDependencies": {
-    "del": "^0.1.2",
-    "gulp": "^3.8.7",
-    "gulp-asset-manifest": "0.0.4",
-    "gulp-autoprefixer": "^1.0.1",
-    "gulp-concat": "^2.4.1",
-    "gulp-minify-css": "^0.3.10",
-    "gulp-rev": "^1.1.0",
-    "gulp-sass": "^0.7.3",
-    "gulp-uglify": "^1.0.0"
+  "name": "php",
+  "version": "1.0.0",
+  "description": "You can checkout the others open source projects of PHPHub in the following list.",
+  "main": "Gulpfile.js",
+  "directories": {
+    "test": "tests"
   },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-asset-manifest": "^0.0.6",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcode520/phphub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fcode520/phphub/issues"
+  },
+  "homepage": "https://github.com/fcode520/phphub#readme"
 }
