@@ -14,7 +14,7 @@ class AddGithubNameFiledToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('github_name')->index();
+            $table->string('github_name')->nullable()->index();
             $table->string('real_name')->nullable();
         });
     }
