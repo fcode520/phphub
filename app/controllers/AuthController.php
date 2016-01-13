@@ -14,7 +14,6 @@ class AuthController extends BaseController implements GithubAuthenticatorListen
         if (Input::has('code')) {
             return App::make('Phphub\Github\GithubAuthenticator')->authByCode($this, Input::get('code'));
         }
-
         // redirect to the github authentication url
         return Redirect::to((string) OAuth::consumer('GitHub')->getAuthorizationUri());
     }

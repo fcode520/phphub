@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="box text-center">
-  {{ lang('site_intro') }}
-</div>
+{{--<div class="box text-center">--}}
+  {{--{{ lang('site_intro') }}--}}
+{{--</div>--}}
 
 
 <div class="panel panel-default list-panel">

@@ -40,6 +40,8 @@ class TopicsController extends \BaseController implements CreatorListener
 
     public function show($id)
     {
+        $currentUser=Auth::user();
+        $temp=$currentUser->can("manage_topics");
         $topic = Topic::findOrFail($id);
         $replies = $topic->getRepliesWithLimit(Config::get('phphub.replies_perpage'));
         $node = $topic->node;

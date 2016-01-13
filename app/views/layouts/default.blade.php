@@ -22,18 +22,18 @@ ______                            _              _                              
 
 		<title>
 			@section('title')
-PHPHub  - PHP & Laravel的中文社区
+OneWork & 远程工作者社区
 			@show
 		</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<meta name="keywords" content="PHP,Laravel,PHP论坛,Laravel论坛,PHP社区,Laravel社区" />
-		<meta name="author" content="The PHP China Community." />
-		<meta name="description" content="@section('description') PHP China 是 PHP 和 Laravel 的中文社区，致力于推动 Laravel, php-fig 等国外 PHP 新技术, 新理念在中国的发展。 @show" />
+		<meta name="keywords" content="Onework,远程办公,远程工作,在家办公,soho" />
+		<meta name="author" content="The OneWork  Community." />
+		<meta name="description" content="@section('description') 我们崇尚工作方式简单化，所以A Personal Computer, One Work!是我们的追求，更是我们的初心。 @show" />
 
         <link rel="stylesheet" href="{{ cdn('assets/css/'.Asset::styles('frontend')) }}">
-
+		<link rel="stylesheet" href="{{ cdn('assets/onework_css/style.css') }}">
         <link rel="shortcut icon" href="{{ cdn('favicon.ico') }}"/>
 
         <script>
@@ -66,19 +66,8 @@ PHPHub  - PHP & Laravel的中文社区
 			</div>
 
 		</div>
+		@include('layouts.partials.footer')
 
-	  <div id="footer" class="footer">
-	    <div class="container small">
-	      <p class="pull-left">
-	      	<i class="fa fa-heart-o"></i> Made With Love By <a href="http://est-group.org/" style="color:#989898;">The EST Group</a>. <br>
-			&nbsp;<i class="fa fa-lightbulb-o"></i> Inspired by v2ex & ruby-china.
-	      </p>
-
-	      <p class="pull-right">
-	      	<a href="https://www.ucloud.cn/?utm_source=zanzhu&utm_campaign=phphub&utm_medium=display" target="_blank"><img src="{{ cdn('assets/images/ucloud.png') }}" width="98" data-toggle="tooltip" data-placement="top" title="本站服务器由 UCloud 赞助"></a>.
-	      </p>
-	    </div>
-	  </div>
 
         <script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
 

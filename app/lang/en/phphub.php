@@ -4,6 +4,7 @@ return array(
     'Topics' => 'Topics',
     'Wiki' => 'Wiki',
     'Users' => 'Users',
+    'Cooperate'=>'Cooperate',
     'About' => 'About',
     'Search' => 'Search',
     'Login' => 'Login',

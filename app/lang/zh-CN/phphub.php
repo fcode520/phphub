@@ -1,9 +1,11 @@
 <?php
 
 return array(
-    'Topics' => '社区',
+    'Topics' => '发现',
     'Wiki' => 'Wiki',
     'Jobs' => '招聘',
+    'Cooperate'=>'云协作',
+    'Team' =>'团队',
     'Users' => '会员',
     'About' => '关于',
     'Search' => '搜索',
