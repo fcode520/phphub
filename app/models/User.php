@@ -33,32 +33,32 @@ class User extends \Eloquent implements UserInterface, RemindableInterface
             SiteStatus::newUser();
         });
     }
-
+    //最喜欢的文章
     public function favoriteTopics()
     {
         return $this->belongsToMany('Topic', 'favorites')->withTimestamps();
     }
-
+    //关注文章
     public function attentTopics()
     {
         return $this->belongsToMany('Topic', 'attentions')->withTimestamps();
     }
-
+    //文章
     public function topics()
     {
         return $this->hasMany('Topic');
     }
-
+    //回复
     public function replies()
     {
         return $this->hasMany('Reply');
     }
-
+    //通知
     public function notifications()
     {
         return $this->hasMany('Notification')->recent()->with('topic', 'fromUser')->paginate(20);
     }
-
+    //通过gihubid 获取
     public function getByGithubId($id)
     {
         return $this->where('github_id', '=', $id)->first();
