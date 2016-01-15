@@ -33,17 +33,17 @@ Route::get('/sitemap', 'PagesController@sitemap');
 Route::get('/sitemap.xml', 'PagesController@sitemap');
 
 # ------------------ User stuff ------------------------
-
+#用户回复路由 id为用户id
 Route::get('/users/{id}/replies', [
     'as' => 'users.replies',
     'uses' => 'UsersController@replies',
 ]);
-
+#用户文章
 Route::get('/users/{id}/topics', [
     'as' => 'users.topics',
     'uses' => 'UsersController@topics',
 ]);
-
+#获取用户关注
 Route::get('/users/{id}/favorites', [
     'as' => 'users.favorites',
     'uses' => 'UsersController@favorites',
@@ -227,4 +227,13 @@ Route::get('/github-api-proxy/users/{username}', [
 Route::get('/github-card', [
     'as' => 'users.github-card',
     'uses' => 'UsersController@githubCard',
+]);
+#-------------------register System-------------
+Route::get('/ow_login', [
+    'as' => 'ow_login',
+    'uses' => 'ow_AuthController@ow_login',
+]);
+Route::post('/ow_login', [
+    'as' => 'ow_Auth_login',
+    'uses' => 'ow_AuthController@ow_Auth_login',
 ]);
