@@ -1,5 +1,5 @@
 <?php
-
+//ÊÕ²Ø
 class FavoritesController extends \BaseController
 {
     public function createOrDelete($id)

@@ -1,5 +1,5 @@
 <?php
-
+//¹Ø×¢
 class AttentionsController extends \BaseController
 {
     public function createOrDelete($id)

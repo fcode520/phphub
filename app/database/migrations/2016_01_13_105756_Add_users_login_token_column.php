@@ -27,7 +27,9 @@ class AddUsersLoginTokenColumn extends Migration {
 	{
 		Schema::table('users', function(Blueprint $table)
 		{
-			//
+
+			$table->dropColumn('login_token');
+
 		});
 	}
 

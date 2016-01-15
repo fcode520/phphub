@@ -1,5 +1,5 @@
 <?php
-
+//节点/分类 控制器
 class NodesController extends \BaseController
 {
 
