@@ -231,9 +231,25 @@ Route::get('/github-card', [
 #-------------------register System-------------
 Route::get('/ow_login', [
     'as' => 'ow_login',
-    'uses' => 'ow_AuthController@ow_login',
+    'uses' => 'ow_AuthController@show_login',
 ]);
 Route::post('/ow_login', [
     'as' => 'ow_Auth_login',
     'uses' => 'ow_AuthController@ow_Auth_login',
+]);
+Route::get('/ow_register', [
+    'as' => 'ow_register',
+    'uses' => 'ow_AuthController@show_register',
+]);
+Route::post('/ow_register', [
+    'as' => 'ow_register',
+    'uses' => 'ow_AuthController@ow_Auth_register',
+]);
+Route::get('/ow_registerok', [
+    'as' => 'ow_registerok',
+    'uses' => 'ow_AuthController@ow_registerok',
+]);
+Route::get('/ow_register_ziliao', [
+    'as' => 'ow_register_ziliao',
+    'uses' => 'ow_AuthController@ow_register_ziliao',
 ]);

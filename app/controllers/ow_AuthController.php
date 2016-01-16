@@ -8,15 +8,35 @@ class ow_AuthController extends \BaseController
     /**
      * Authenticate with github
      */
-    public function ow_login()
+    public function show_login()
     {
         // Redirect from Github
-        return View::make("register.index");
+        return View::make("register.loginindex");
     }
     public function ow_Auth_login()
     {
-        $temp=Input::all();
-        return $temp;
+        $password=Hash::make("mima");
+        if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')))){
+          //  return "登录成功";
+            return Redirect::to('/');//->with('message', '欢迎登录');
+        }else{
+
+            return Redirect::to('/ow_login')->with('message', '登录好像失败了亲!');
+        }
+    }
+    public function show_register(){
+ return View::make('register.registerindex');
+    }
+    public function ow_Auth_register(){
+        $validator= Validator::make(Input::all(),User::$rules);
+        if($validator->passes()){
+            return "可以注册成功";
+        }else{
+            return "不可以注册";
+        }
+    }
+    public function ow_registerok(){
+        return view::make('register.registerok');
     }
     public function logout()
     {

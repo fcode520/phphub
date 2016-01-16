@@ -9,6 +9,10 @@ use Zizaco\Entrust\HasRole;
 
 class User extends \Eloquent implements UserInterface, RemindableInterface
 {
+public static $rules = array(
+    'username'=>'required|alpha|min:2',
+    'password'=>'required||unique:users',
+);
     // Using: $user->present()->anyMethodYourWant()
     use PresentableTrait;
     public $presenter = 'Phphub\Presenters\UserPresenter';
