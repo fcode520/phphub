@@ -15,9 +15,9 @@ class ow_AuthController extends \BaseController
     }
     public function ow_Auth_login()
     {
-        if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')))){
+        if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')),true)){
           //  return "登录成功";
-            return Redirect::to('www.baidu.com');//->with('message', '欢迎登录');
+            return Redirect::intended();//->with('message', '欢迎登录');
         }else{
 
             return Redirect::to('/ow_login')->with('message', '登录好像失败了亲!');
