@@ -12,7 +12,8 @@
 
         <div class="avatar pull-left">
             <a href="{{ route('users.show', [$topic->user_id]) }}">
-                <img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->name }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>
+                {{--<img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->name }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>--}}
+                <img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->username }}}" src=""  style="width:48px;height:48px;"/>
             </a>
         </div>
 
@@ -45,8 +46,8 @@
 
             @if ($topic->reply_count == 0)
                 <span> • </span>
-                <a href="{{ route('users.show', [$topic->user_id]) }}" title="{{{ $topic->user->name }}}">
-                    {{{ $topic->user->name }}}
+                <a href="{{ route('users.show', [$topic->user_id]) }}" title="{{{ $topic->user->username }}}">
+                    {{{ $topic->user->username }}}
                 </a>
                 <span> • </span>
                 <span class="timeago">{{ $topic->created_at }}</span>

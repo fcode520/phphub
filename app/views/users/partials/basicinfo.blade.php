@@ -8,7 +8,7 @@
 
   <dt><lable>&nbsp; </lable></dt><dd> {{ lang('User ID:') }} {{ $user->id }}</dd>
 
-  <dt><label>Name:</label></dt><dd><strong>{{{ $user->name }}}</strong></dd>
+  <dt><label>Name:</label></dt><dd><strong>{{{ $user->username }}}</strong></dd>
 
   @if ($user->present()->hasBadge())
     <dt><label>Role:</label></dt><dd><span class="label label-warning">{{{ $user->present()->badgeName() }}}</span></dd>
@@ -18,12 +18,12 @@
     <dt class="adr"><label> {{ lang('Real Name') }}:</label></dt><dd><span class="org">{{{ $user->real_name }}}</span></dd>
   @endif
 
-  <dt><label>Github:</label></dt>
-  <dd>
-    <a href="https://github.com/{{ $user->github_name }}" target="_blank">
-      <i class="fa fa-github-alt"></i> {{ $user->github_name }}
-    </a>
-  </dd>
+  {{--<dt><label>Github:</label></dt>--}}
+  {{--<dd>--}}
+    {{--<a href="https://github.com/{{ $user->github_name }}" target="_blank">--}}
+      {{--<i class="fa fa-github-alt"></i> {{ $user->github_name }}--}}
+    {{--</a>--}}
+  {{--</dd>--}}
 
   @if ($user->company)
     <dt class="adr"><label> {{ lang('Company') }}:</label></dt><dd><span class="org">{{{ $user->company }}}</span></dd>

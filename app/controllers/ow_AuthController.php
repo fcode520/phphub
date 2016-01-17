@@ -15,10 +15,9 @@ class ow_AuthController extends \BaseController
     }
     public function ow_Auth_login()
     {
-        $password=Hash::make("mima");
         if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')))){
           //  return "登录成功";
-            return Redirect::to('/');//->with('message', '欢迎登录');
+            return Redirect::to('www.baidu.com');//->with('message', '欢迎登录');
         }else{
 
             return Redirect::to('/ow_login')->with('message', '登录好像失败了亲!');
@@ -30,7 +29,13 @@ class ow_AuthController extends \BaseController
     public function ow_Auth_register(){
         $validator= Validator::make(Input::all(),User::$rules);
         if($validator->passes()){
-            return "可以注册成功";
+            $user =new User;
+            $user->username=Input::get('username');
+            $user->email=Input::get('email');
+            $user->password=Hash::make(Input::get('password'));
+            $user->save();
+//            return Redirect::intended();
+
         }else{
             return "不可以注册";
         }

@@ -2,8 +2,9 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
-class AddUsersLoginTokenColumn extends Migration {
+//profession
+//ÃèÊöÖ°ÒµµÄ
+class CreateProfessionTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +13,10 @@ class AddUsersLoginTokenColumn extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users_git', function(Blueprint $table)
+		Schema::create('profession', function(Blueprint $table)
 		{
-			$table->text('login_token')->nullable();
+			$table->increments('id');
+			$table->string('profession');
 		});
 	}
 
@@ -25,11 +27,9 @@ class AddUsersLoginTokenColumn extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users_git', function(Blueprint $table)
+		Schema::table('profession', function(Blueprint $table)
 		{
-
-			$table->dropColumn('login_token');
-
+			//
 		});
 	}
 

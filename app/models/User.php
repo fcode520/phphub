@@ -10,8 +10,10 @@ use Zizaco\Entrust\HasRole;
 class User extends \Eloquent implements UserInterface, RemindableInterface
 {
 public static $rules = array(
+    'email'=>'required|email|unique:users',
     'username'=>'required|alpha|min:2',
-    'password'=>'required||unique:users',
+    'password'=>'required|alpha_num|between:6,30|confirmed',
+    'password_confirmation'=>'required|alpha_num|between:6,30',
 );
     // Using: $user->present()->anyMethodYourWant()
     use PresentableTrait;
@@ -26,7 +28,7 @@ public static $rules = array(
     protected $dates = ['deleted_at'];
 
     protected $table      = 'users';
-    protected $hidden     = ['github_id'];
+    protected $hidden     = ['id'];
     protected $guarded    = ['id', 'notifications', 'is_banned'];
 
     public static function boot()

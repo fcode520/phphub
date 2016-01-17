@@ -11,7 +11,8 @@
 
     <div class="avatar pull-left">
       <a href="{{ route('users.show', [$reply->user_id]) }}">
-        <img class="media-object img-thumbnail avatar" alt="{{{ $reply->user->name }}}" src="{{ $reply->user->present()->gravatar }}"  style="width:48px;height:48px;"/>
+        {{--<img class="media-object img-thumbnail avatar" alt="{{{ $reply->user->username }}}" src="{{ $reply->user->present()->gravatar }}"  style="width:48px;height:48px;"/>--}}
+        <img class="media-object img-thumbnail avatar" alt="{{{ $reply->user->username }}}" src=""  style="width:48px;height:48px;"/>
       </a>
     </div>
 
@@ -19,7 +20,7 @@
 
       <div class="media-heading meta">
 
-        <a href="{{ route('users.show', [$reply->user_id]) }}" title="{{{ $reply->user->name }}}" class="remove-padding-left author">
+        <a href="{{ route('users.show', [$reply->user_id]) }}" title="{{{ $reply->user->username }}}" class="remove-padding-left author">
             {{{ $reply->user->name }}}
         </a>
 
@@ -40,7 +41,7 @@
             </a>
             <span> •  </span>
           @endif
-          <a class="fa fa-reply" href="javascript:void(0)" onclick="replyOne('{{{ $reply->user->name }}}');" title="回复 {{{ $reply->user->name }}}"></a>
+          <a class="fa fa-reply" href="javascript:void(0)" onclick="replyOne('{{{ $reply->user->username }}}');" title="回复 {{{ $reply->user->username }}}"></a>
         </span>
 
       </div>

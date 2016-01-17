@@ -1,11 +1,11 @@
 <div class="meta inline-block" >
 
   <a href="{{ route('nodes.show', $topic->node->id) }}" class="remove-padding-left">
-    {{{ $topic->node->name }}}
+    {{{ $topic->node->username }}}
   </a>
   •
   <a href="{{ route('users.show', $topic->user->id) }}">
-    {{{ $topic->user->name }}}
+    {{{ $topic->user->username }}}
   </a>
 
   @if ($topic->user->present()->hasBadge())

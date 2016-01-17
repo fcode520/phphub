@@ -10,6 +10,7 @@ return array(
     'About' => '关于',
     'Search' => '搜索',
     'Login' => '登 录',
+    'Register' => '注 册',
     'Logout' => '退出',
     'New Topic' => '发 布 新 帖',
     'Links' => '友情社区',

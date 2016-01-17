@@ -45,7 +45,7 @@
                     {{--</li>--}}
                     {{--<li>--}}
                         <a href="{{ route('users.show', $currentUser->id) }}">
-                            <i class="fa fa-user"></i> {{{ $currentUser->name }}}
+                            <i class="fa fa-user"></i> {{{ $currentUser->username }}}
                         </a>
                     {{--</li>--}}
                     {{--<li>--}}
@@ -54,9 +54,13 @@
                         </a>
                     {{--</li>--}}
                 @else
-                    <a href="{{ URL::route('login') }}" class="btn btn-info" id="login-btn">
+                    <a href="{{ URL::route('ow_login') }}" class="btn btn-info" id="login-btn">
                         {{--<i class="fa fa-github-alt"></i>--}}
                         {{ lang('Login') }}
+                    </a>
+                    <a href="{{ URL::route('ow_register') }}" class="btn btn-info" id="login-btn">
+                        {{--<i class="fa fa-github-alt"></i>--}}
+                        {{ lang('Register') }}
                     </a>
                 @endif
             </div>

@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('users_git', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('github_id')->index();
             $table->string('github_url');

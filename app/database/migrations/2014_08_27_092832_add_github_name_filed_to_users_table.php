@@ -13,7 +13,7 @@ class AddGithubNameFiledToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('users_git', function (Blueprint $table) {
             $table->string('github_name')->nullable()->index();
             $table->string('real_name')->nullable();
         });
@@ -26,7 +26,7 @@ class AddGithubNameFiledToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('users_git', function (Blueprint $table) {
             $table->dropColumn('github_name');
             $table->dropColumn('real_name');
         });

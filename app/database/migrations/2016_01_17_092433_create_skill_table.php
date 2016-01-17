@@ -2,8 +2,9 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+//职业技能表
 
-class AddUsersLoginTokenColumn extends Migration {
+class CreateSkillTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +13,10 @@ class AddUsersLoginTokenColumn extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users_git', function(Blueprint $table)
+		Schema::create('skill', function(Blueprint $table)
 		{
-			$table->text('login_token')->nullable();
+			$table->increments('id');
+			$table->string('skill');
 		});
 	}
 
@@ -25,12 +27,7 @@ class AddUsersLoginTokenColumn extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users_git', function(Blueprint $table)
-		{
-
-			$table->dropColumn('login_token');
-
-		});
+		Schema::drop('skill');
 	}
 
 }
