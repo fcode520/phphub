@@ -19,6 +19,7 @@ class TopicsController extends \BaseController implements CreatorListener
     {
         $filter = $this->topic->present()->getTopicFilter();
         $topics = $this->topic->getTopicsWithFilter($filter);
+
         $nodes  = Node::allLevelUp();
         $links  = Link::remember(1440)->get();
 

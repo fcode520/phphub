@@ -11,7 +11,7 @@ class User extends \Eloquent implements UserInterface, RemindableInterface
 {
 public static $rules = array(
     'email'=>'required|email|unique:users',
-    'username'=>'required|alpha|min:2',
+    'username'=>'required|alpha_num|min:2',
     'password'=>'required|alpha_num|between:6,30|confirmed',
     'password_confirmation'=>'required|alpha_num|between:6,30',
 );
@@ -23,12 +23,13 @@ public static $rules = array(
     //   and ability($roles, $permissions, $options)
     use HasRole;
 
-    // Enable soft delete
+    // Enable soft delete--定义软删除
     use SoftDeletingTrait;
     protected $dates = ['deleted_at'];
 
     protected $table      = 'users';
     protected $hidden     = ['id'];
+    //黑名单 下的列名 不允许批量更改。
     protected $guarded    = ['id', 'notifications', 'is_banned'];
 
     public static function boot()
@@ -64,6 +65,11 @@ public static $rules = array(
     {
         return $this->hasMany('Notification')->recent()->with('topic', 'fromUser')->paginate(20);
     }
+    //简历
+    public function resume(){
+        return $this->hasOne('Resume');
+    }
+
     //通过gihubid 获取
     public function getByGithubId($id)
     {

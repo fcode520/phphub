@@ -28,11 +28,12 @@ class UsersController extends \BaseController
 
     public function show($id)
     {
+        $resume=Resume::find(1);
         $user = User::findOrFail($id);
         $topics = Topic::whose($user->id)->recent()->limit(10)->get();
         $replies = Reply::whose($user->id)->recent()->limit(10)->get();
 
-        return View::make('users.show', compact('user', 'topics', 'replies'));
+        return View::make('users.show', compact('user', 'topics', 'replies','resume'));
     }
 
     public function edit($id)

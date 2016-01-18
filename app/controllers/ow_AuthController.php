@@ -34,10 +34,10 @@ class ow_AuthController extends \BaseController
             $user->email=Input::get('email');
             $user->password=Hash::make(Input::get('password'));
             $user->save();
-//            return Redirect::intended();
+            return Redirect::intended();
 
         }else{
-            return "不可以注册";
+            return "不可以注册".$validator->messages();
         }
     }
     public function ow_registerok(){

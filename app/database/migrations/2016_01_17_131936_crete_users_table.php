@@ -24,7 +24,7 @@ class CreteUsersTable extends Migration {
 			$table->integer('reply_count')->default(0)->index();
 			$table->integer('notification_count')->default(0);
 			$table->string('avatar')->default("def_avatars.png");
-			$table->text('login_token',255);
+			$table->text('login_token',255)->default();
 			$table->rememberToken();
 			$table->softDeletes();
 			$table->timestamps();

@@ -18,12 +18,10 @@
     <dt class="adr"><label> {{ lang('Real Name') }}:</label></dt><dd><span class="org">{{{ $user->real_name }}}</span></dd>
   @endif
 
-  {{--<dt><label>Github:</label></dt>--}}
-  {{--<dd>--}}
-    {{--<a href="https://github.com/{{ $user->github_name }}" target="_blank">--}}
-      {{--<i class="fa fa-github-alt"></i> {{ $user->github_name }}--}}
-    {{--</a>--}}
-  {{--</dd>--}}
+  <dt><label>QQ:</label></dt>
+  <dd>
+  <strong>{{{ $resume->qq }}}</strong></dd>
+  </dd>
 
   @if ($user->company)
     <dt class="adr"><label> {{ lang('Company') }}:</label></dt><dd><span class="org">{{{ $user->company }}}</span></dd>

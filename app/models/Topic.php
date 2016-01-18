@@ -6,11 +6,12 @@ use Naux\AutoCorrect;
 class Topic extends \Eloquent
 {
     // manually maintian
+    //禁止自动更新 时间戳
     public $timestamps = false;
-
+    //
     use PresentableTrait;
     protected $presenter = 'Phphub\Presenters\TopicPresenter';
-
+    //软删除
     use SoftDeletingTrait;
     protected $dates = ['deleted_at'];
 

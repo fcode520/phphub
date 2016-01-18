@@ -4,6 +4,7 @@
 
 <ul class="list-group row topic-list">
     @foreach ($topics as $topic)
+        {{--{{var_dump($topic)}}--}}
      <li class="list-group-item media {{ !$column ?:'col-sm-6'; }}" style="margin-top: 0px;">
 
         <a class="pull-right" href="{{ route('topics.show', [$topic->id]) }}" >
@@ -12,8 +13,9 @@
 
         <div class="avatar pull-left">
             <a href="{{ route('users.show', [$topic->user_id]) }}">
-                {{--<img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->name }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>--}}
-                <img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->username }}}" src=""  style="width:48px;height:48px;"/>
+
+                <img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->username }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>
+                {{--<img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->username }}}" src=""  style="width:48px;height:48px;"/>--}}
             </a>
         </div>
 
