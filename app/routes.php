@@ -48,7 +48,7 @@ Route::get('/users/{id}/favorites', [
     'as' => 'users.favorites',
     'uses' => 'UsersController@favorites',
 ]);
-
+//更新用户与github缓存
 Route::get('/users/{id}/refresh_cache', [
     'as' => 'users.refresh_cache',
     'uses' => 'UsersController@refreshCache',
@@ -245,6 +245,10 @@ Route::post('/ow_register', [
     'as' => 'ow_register',
     'uses' => 'ow_AuthController@ow_Auth_register',
 ]);
+Route::get('/activation', [
+    'as' => 'activation',
+    'uses' => 'ow_AuthController@activation',
+]);
 Route::get('/ow_registerok', [
     'as' => 'ow_registerok',
     'uses' => 'ow_AuthController@ow_registerok',
@@ -252,4 +256,8 @@ Route::get('/ow_registerok', [
 Route::get('/ow_register_ziliao', [
     'as' => 'ow_register_ziliao',
     'uses' => 'ow_AuthController@ow_register_ziliao',
+]);
+Route::get('/addResume', [
+    'as' => 'addResume',
+    'uses' => 'UsersController@addResume',
 ]);

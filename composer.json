@@ -58,7 +58,8 @@
 			"tests/unit/UnitTestCase.php"
 		],
 		"files": [
-			"app/helpers.php"
+			"app/helpers.php",
+		  	"app/lib/helpers.php"
 		],
 		"psr-4": {
 			"Phphub\\": "app/Phphub"

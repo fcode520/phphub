@@ -158,6 +158,7 @@ return array(
         'Maknz\Slack\SlackServiceProvider',
         'SimpleSoftwareIO\QrCode\QrCodeServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+
     ),
 
     /*

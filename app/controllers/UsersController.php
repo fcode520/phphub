@@ -28,7 +28,7 @@ class UsersController extends \BaseController
 
     public function show($id)
     {
-        $resume=Resume::find(1);
+        $resume=Resume::find($id);
         $user = User::findOrFail($id);
         $topics = Topic::whose($user->id)->recent()->limit(10)->get();
         $replies = Reply::whose($user->id)->recent()->limit(10)->get();
@@ -38,10 +38,11 @@ class UsersController extends \BaseController
 
     public function edit($id)
     {
+        $resume=Resume::find($id);
         $user = User::findOrFail($id);
         $this->authorOrAdminPermissioinRequire($user->id);
 
-        return View::make('users.edit', compact('user', 'topics', 'replies'));
+        return View::make('users.edit', compact('user', 'topics', 'replies','resume'));
     }
 
     public function update($id)
@@ -176,4 +177,16 @@ class UsersController extends \BaseController
 
         return Redirect::route('users.show', Auth::id());
     }
+
+    //2016-01-19
+    public function addResume()
+    {
+        $user=User::findOrFail(1);
+        return View::make('register.resumes', compact('user'));
+    }
+
+    public function getavatar($id,$size){
+
+    }
+
 }

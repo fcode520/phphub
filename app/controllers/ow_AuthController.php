@@ -33,7 +33,17 @@ class ow_AuthController extends \BaseController
             $user->username=Input::get('username');
             $user->email=Input::get('email');
             $user->password=Hash::make(Input::get('password'));
+            $user->activation=Hash::make(Input::get('email').time());
+            $user->statue=0;
             $user->save();
+            $data=array('username'=>$user->username,
+                'activation'=>$user->activation,
+                );
+            Mail::send('emails.auth.activation',$data,function($message){
+                $message->to(Input::get('email'), Input::get('username'))->subject('Welcome to the Laravel 4 Auth ');
+            });
+            //return Redirect::to('users/login')->with('message', 'Thanks for registering!,请登录您邮箱激活您的账号');
+
             return Redirect::intended();
 
         }else{
@@ -43,6 +53,36 @@ class ow_AuthController extends \BaseController
     public function ow_registerok(){
         return view::make('register.registerok');
     }
+    public function activation(){
+        if(!empty($_GET['activation']) && isset($_GET['activation'])){
+            $code=mysql_escape($_GET['activation']);
+            $user_count = User::where('activation',$code)->count();
+            if($user_count > 0)
+            {
+
+                $count=DB::table('users')->where('activation',$code)->where('status','0')->count();
+                if($count == 1)
+                {
+                    $db_res = DB::table('users')->where('activation',$code)->update(array('status' => 1));
+                    if($db_res == 1){
+                        return Redirect::to('ow_login')->with('message','您的账号已经激活');
+                    }
+                }
+                else
+                {
+                    return Redirect::to('ow_login')->with('message', '您的账号已经激活无需再次激活!');
+                }
+
+            }
+            else {
+                return Redirect::to('ow_register')->with('message', '您的账号存在');
+            }
+        }
+    }
+
+
+
+
     public function logout()
     {
         Auth::logout();
