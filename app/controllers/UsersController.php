@@ -179,7 +179,7 @@ class UsersController extends \BaseController
     }
 
     //2016-01-19
-    public function addResume()
+    public function EditResume()
     {
         $user=User::findOrFail(1);
         return View::make('register.resumes', compact('user'));
@@ -187,6 +187,36 @@ class UsersController extends \BaseController
 
     public function getavatar($id,$size){
 
+    }
+    public function vaild_email($id){
+
+        $user=User::find($id);
+
+
+
+
+        return View::make('register.email_activation',compact('user'));
+    }
+    public function p_vaild_email($id){
+        $user=User::find($id);
+        if($user->activation==null)
+        {
+            $user->activation=Hash::make($user->email.time());
+            $user->save();
+        }
+
+        if($user->statue==0){
+            //发送邮件
+            $data=array('username'=>$user->username,
+                'activation'=>$user->activation,
+            );
+            Mail::send('emails.auth.activation',$data,function($message)use ($user){
+                $message->to($user->email, $user->username)->subject('欢迎注册成为OneWork会员，请尽快进行账号激活！');
+            });
+            return true;
+        }else{
+            return false;
+        }
     }
 
 }

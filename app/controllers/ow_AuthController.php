@@ -40,8 +40,10 @@ class ow_AuthController extends \BaseController
                 'activation'=>$user->activation,
                 );
             Mail::send('emails.auth.activation',$data,function($message){
-                $message->to(Input::get('email'), Input::get('username'))->subject('Welcome to the Laravel 4 Auth ');
+                $message->to(Input::get('email'), Input::get('username'))->subject('欢迎注册成为OneWork会员，请尽快进行账号激活！');
             });
+
+            return View::make('register.email_activation',compact('user'));
             //return Redirect::to('users/login')->with('message', 'Thanks for registering!,请登录您邮箱激活您的账号');
 
             return Redirect::intended();
@@ -57,6 +59,8 @@ class ow_AuthController extends \BaseController
         if(!empty($_GET['activation']) && isset($_GET['activation'])){
             $code=mysql_escape($_GET['activation']);
             $user_count = User::where('activation',$code)->count();
+            $User=User::where('activation', '=', $code)->firstOrFail();;
+
             if($user_count > 0)
             {
 
@@ -65,7 +69,8 @@ class ow_AuthController extends \BaseController
                 {
                     $db_res = DB::table('users')->where('activation',$code)->update(array('status' => 1));
                     if($db_res == 1){
-                        return Redirect::to('ow_login')->with('message','您的账号已经激活');
+                        Auth::login($User);
+                        return Redirect::to('/')->with('message','您的账号已经激活');
                     }
                 }
                 else

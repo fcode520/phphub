@@ -257,7 +257,15 @@ Route::get('/ow_register_ziliao', [
     'as' => 'ow_register_ziliao',
     'uses' => 'ow_AuthController@ow_register_ziliao',
 ]);
-Route::get('/addResume', [
-    'as' => 'addResume',
-    'uses' => 'UsersController@addResume',
+Route::get('/EditResume', [
+    'as' => 'EditResume',
+    'uses' => 'UsersController@EditResume',
+]);
+Route::get('/vaild_email/{id}', [
+    'as' => 'vaild_email',
+    'uses' => 'UsersController@vaild_email',
+]);
+Route::post('/vaild_email/{id}', [
+    'as' => 'p_vaild_email',
+    'uses' => 'UsersController@p_vaild_email',
 ]);

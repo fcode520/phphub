@@ -59,7 +59,7 @@
 		],
 		"files": [
 			"app/helpers.php",
-		  	"app/lib/helpers.php"
+		  "app/lib/helpers.php"
 		],
 		"psr-4": {
 			"Phphub\\": "app/Phphub"
