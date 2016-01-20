@@ -261,6 +261,10 @@ Route::get('/EditResume', [
     'as' => 'EditResume',
     'uses' => 'UsersController@EditResume',
 ]);
+Route::post('/EditResume', [
+    'as' => 'EditResume',
+    'uses' => 'UsersController@p_EditResume',
+]);
 Route::get('/vaild_email/{id}', [
     'as' => 'vaild_email',
     'uses' => 'UsersController@vaild_email',

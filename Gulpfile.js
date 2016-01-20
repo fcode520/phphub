@@ -29,7 +29,9 @@ var paths = {
             'app/assets/js/localforage.min.js',
             'app/assets/js/jquery.inline-attach.min.js',
             'app/assets/js/snowfall.jquery.min.js',
-            'app/assets/js/main.js'
+            'app/assets/js/main.js',
+            'app/assets/js/packet/distpicker/distpicker.data.min.js',
+            'app/assets/js/packet/distpicker/distpicker.min.js',
         ],
         styles: [
             'app/assets/css/bootstrap.min.css',
@@ -37,7 +39,10 @@ var paths = {
             'app/assets/css/dist/main.css',
             'app/assets/css/dist/markdown.css',
             'app/assets/css/dist/nprogress.css',
-            'app/assets/css/dist/prism.css'
+            'app/assets/css/dist/prism.css',
+            'app/assets/css/packet/cxcalendar/jquery.cxcalendar.css',
+
+
         ]
     }
 }

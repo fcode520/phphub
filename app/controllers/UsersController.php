@@ -184,6 +184,12 @@ class UsersController extends \BaseController
         $user=User::findOrFail(1);
         return View::make('register.resumes', compact('user'));
     }
+    public function p_EditResume()
+    {
+        $xiangmujingli=Input::get('xiangmujingli');
+        $user=User::findOrFail(1);
+        return View::make('register.resumes', compact('user'));
+    }
 
     public function getavatar($id,$size){
 
