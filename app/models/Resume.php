@@ -14,12 +14,12 @@ class Resume extends \Eloquent {
 		return $this->belongsTo('User');
 	}
 	public function userproject(){
-		return $this->hasMany('userproject');
+		return $this->hasMany('userproject','user_id','user_id');
 	}
 
 
 	//api
 	public function ResumesByid($id){
-
+		return $this->where('user_id','=',$id)->get();
 	}
 }

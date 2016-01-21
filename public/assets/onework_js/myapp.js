@@ -42,7 +42,9 @@ $(function(){//操作DOM 个人终极，点击回复
 		
 	})
 });
-
+$(function(){
+	$("#distpicker").distpicker();
+});
 $(function(){//点击添一个项目经验
 
 	var t = $('.project-info');
@@ -68,12 +70,6 @@ $(function(){//点击添一个项目经验
 		numProject-=1;
 		$('#projectNum').val(numProject);
 	});
-	//$(".timeclass").cxCalendar();
-	//$.cxCalendar.defaults.startDate = 1980;
-	//$.cxCalendar.defaults.language = {
-	//	monthList: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-	//	weekList: ['Sun', 'Mon', 'Tur', 'Wed', 'Thu', 'Fri', 'Sat']
-	//};
 	$.cxCalendar.defaults.startDate = 1980;
 	$.cxCalendar.defaults.language = {
 		monthList: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
@@ -83,6 +79,7 @@ $(function(){//点击添一个项目经验
 		$(this).cxCalendar().focus();
 
 	});
+
 });
 
 

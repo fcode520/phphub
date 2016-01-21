@@ -67,7 +67,7 @@ public static $rules = array(
     }
     //简历
     public function resume(){
-        return $this->hasOne('Resume');
+        return $this->hasMany('Resume');
     }
 
     //通过gihubid 获取

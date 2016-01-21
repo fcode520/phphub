@@ -181,10 +181,18 @@ class UsersController extends \BaseController
     //2016-01-19
     public function EditResume()
     {
-        $Resum=Resume::all(array('user_id'=>1));
-        $Project=Userproject::all(array('user_id'=>1));
-        $user=User::findOrFail(1);
-        return View::make('register.resumes', compact('user'));
+        if(Auth::check()){
+            $user=Auth::user();
+            $id=$user->id;
+            $resume = User::find($id)->resume()->first();
+            if(!is_null($resume)){
+                $project=Resume::find($id)->userproject()->get();
+            }
+            return View::make('register.resumes', compact('user','resume','project'));
+        }else{
+            return View::make('register.loginindex');
+        }
+
     }
     public function p_EditResume()
     {
@@ -197,8 +205,9 @@ class UsersController extends \BaseController
             $Resum->remote_status=Input::get('profession');
             $Resum->skill_id=Input::get('skill');
             $Resum->qq=Input::get('qqnumber');
-            $position=Input::get('sheng').'-'.Input::get('shi').'-'.Input::get('diqu');
+            $position=Input::get('province').'-'.Input::get('city').'-'.Input::get('district');
             $Resum->position=$position;
+            $Resum->blog=Input::get('Blog');
             $Resum->summary=Input::get('summery');
             $Resum->skill_experience=Input::get('experience');
 
@@ -210,7 +219,10 @@ class UsersController extends \BaseController
             $PtEndTime=Input::get('endtime');
             $ProjectUrl=Input::get('ProjectUrl');
             $Projectecperience=Input::get('Projectexperience');
-
+            $num=count($ProjectName);
+            if($num!=$projectNum){
+                $projectNum=$num;
+            }
             for($i=0;$i<$projectNum ;$i++){
                 $OneProject=new Userproject();
                 $OneProject->user_id=$id;
@@ -228,8 +240,6 @@ class UsersController extends \BaseController
 
         }
         $user=User::findOrFail(1);
-        $Resum=Resum::all(array('user_id'=>1));
-        $Project=Userproject::all(array('user_id'=>1));
         return View::make('register.resumes', compact('user'));
     }
 
