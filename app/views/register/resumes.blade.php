@@ -73,7 +73,7 @@
                         <input id="starttime_id" name="starttime[]" type="text" class ="timeclass" data-position="bottom">
                         <input id="endtime_id" name="endtime[]" type="text" class ="timeclass" data-position="bottom">
                     </div>
-                    <input type="text" name="ProjecteUrl[ ]" id="" placeholder="展示链接">
+                    <input type="text" name="ProjectUrl[ ]" id="" placeholder="展示链接">
                     <textarea name = "Projectexperience[ ]" id="" placeholder="项目经历"></textarea>
                 </div>
             </div>

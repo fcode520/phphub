@@ -13,4 +13,13 @@ class Resume extends \Eloquent {
 	{
 		return $this->belongsTo('User');
 	}
+	public function userproject(){
+		return $this->hasMany('userproject');
+	}
+
+
+	//api
+	public function ResumesByid($id){
+
+	}
 }
