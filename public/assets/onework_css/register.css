@@ -4,7 +4,12 @@ body{
 	font-size: 12px;
 	background-color:#eeeff1;
 }
-
+/*修改某人留下来的坑   请不要在意书写风格 相同的不用逗号节省，主要为了以后方便修改*/
+.mimaxiugai > button{width: 150px;margin-top: 15px;}
+.mimazhaohui > input{width: 150px;margin-top: 15px;}
+.mimazhaohui > p{margin-bottom: 0!important;}
+.mimazhaohui > p > input{margin-bottom: 15px;margin-top: 15px;text-indent:5px;}
+.mimazhaohui > p > label{display: block;}
 /* 注册成功 */
 .register_ok{
 	width:700px;

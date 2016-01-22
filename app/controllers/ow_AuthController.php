@@ -85,6 +85,14 @@ class ow_AuthController extends \BaseController
         }
     }
 
+    public function find_password(){
+        return View::make('register.find_password');
+    }
+
+    public function p_find_password(){
+
+    }
+
 
 
 

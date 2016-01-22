@@ -3,7 +3,9 @@
 @section('title')
 {{ lang('Newly Registered User List') }}_@parent
 @stop
-
+@section('css')
+    {{HTML::style('assets/onework_css/login.css')}}
+@stop
 @section('content')
 
         {{--错误信息框--}}
@@ -21,8 +23,10 @@
     {{ Form::submit('登录',array('class'=>'btn btn-large btn-success btn-block')) }}
 </div>
        <div class="login_about">
+           <p>
            <a href="{{route("ow_register")}}">注册帐号</a>
-           <a href="{{route('ow_registerok')}}">忘记密码</a>
+           {{ HTML::link('/password/remind', '忘记密码', array('id' => 'linkid'), true)}}
+           </p>
        </div>
 {{Form::close()}}
 

@@ -5,7 +5,7 @@ body{
 	background-color:#eeeff1;
 }
 
-/*�޸ĵ�*/
+
 #uploadImg:hover{cursor: pointer;background: #63ce83;text-indent:-100px;opacity: 0.1;}
 #uploadImg:focus{outline: none;}
 .renzheng p.addjingyan:hover{color: #333;}
