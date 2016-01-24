@@ -8,6 +8,9 @@
 {{{ $topic->excerpt }}}
 @stop
 
+@section('css')
+ <link rel="stylesheet" href="{{cdn('assets/onework_css/layout.css')}}">
+@stop
 @section('content')
 
 <div class="col-md-9 topics-show main-col">

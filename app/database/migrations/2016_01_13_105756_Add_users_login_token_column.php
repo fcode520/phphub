@@ -12,10 +12,10 @@ class AddUsersLoginTokenColumn extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('users_git', function(Blueprint $table)
-		{
-			$table->text('login_token')->nullable();
-		});
+//		Schema::table('users_git', function(Blueprint $table)
+//		{
+//			$table->text('login_token')->nullable();
+//		});
 	}
 
 	/**
@@ -25,12 +25,12 @@ class AddUsersLoginTokenColumn extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('users_git', function(Blueprint $table)
-		{
-
-			$table->dropColumn('login_token');
-
-		});
+//		Schema::table('users_git', function(Blueprint $table)
+//		{
+//
+//			$table->dropColumn('login_token');
+//
+//		});
 	}
 
 }

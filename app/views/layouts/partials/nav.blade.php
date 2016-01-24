@@ -11,13 +11,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/"><img src={{cdn('assets/images/logo.png')}}></a>
+            <a id="navbar-brand" class="navbar-brand" href="/"><img src={{cdn('assets/images/logo.png')}}></a>
         </div>
 
         <!-- 导航按钮区域 -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="{{ (Request::is('topics*') ? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Topics') }}</a></li>
+                <li class="{{ (Request::is('topics*') ||Request::is('/')? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Topics') }}</a></li>
                 <li class="{{ (Request::is('nodes/40') ? ' active' : '') }}"><a href="{{ route('nodes.show', 40) }}">{{ lang('Jobs') }}</a></li>
                 <li class="{{ (Request::is('Cooperate*') ? ' active' : '') }}"><a href="{{ route('topics.index', 40) }}">{{ lang('Cooperate') }}</a></li>
                 <li class="{{ (Request::is('team*') ? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Team') }}</a></li>

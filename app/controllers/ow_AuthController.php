@@ -34,7 +34,7 @@ class ow_AuthController extends \BaseController
             $user->email=Input::get('email');
             $user->password=Hash::make(Input::get('password'));
             $user->activation=Hash::make(Input::get('email').time());
-            $user->statue=0;
+            $user->status=0;
             $user->save();
             $data=array('username'=>$user->username,
                 'activation'=>$user->activation,
@@ -44,12 +44,9 @@ class ow_AuthController extends \BaseController
             });
 
             return View::make('register.email_activation',compact('user'));
-            //return Redirect::to('users/login')->with('message', 'Thanks for registering!,请登录您邮箱激活您的账号');
-
-            return Redirect::intended();
 
         }else{
-            return "不可以注册".$validator->messages();
+            return Redirect::to('/ow_register')->with('message', $validator->messages());
         }
     }
     public function ow_registerok(){

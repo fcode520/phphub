@@ -2,73 +2,54 @@
 
 @if (count($topics))
 
-<ul class="list-group row topic-list">
+<ul class="">
     @foreach ($topics as $topic)
-        {{--{{var_dump($topic)}}--}}
-     <li class="list-group-item media {{ !$column ?:'col-sm-6'; }}" style="margin-top: 0px;">
+     <li>
+                  <div class="photo">
+                   <img class="" alt="{{{ $topic->user->username }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>
+                    </div>
+                   <div class="hot-news">
+                     <h2 class="hot-news-title">
+                     <a href="{{ route('topics.show', [$topic->id]) }}" title="{{{ $topic->title }}}">
+                      {{{ $topic->title }}}</a>
+                      </h2>
 
-        <a class="pull-right" href="{{ route('topics.show', [$topic->id]) }}" >
-            <span class="badge badge-reply-count"> {{ $topic->reply_count }} </span>
-        </a>
+                     <div class="hot-news-info">
+                        {{--<a href="{{ route('nodes.show', [$topic->node->id]) }}" title="{{{ $topic->node->name }}}"></a>--}}
+                        <span> {{{ $topic->node->name }}}</span>
 
-        <div class="avatar pull-left">
-            <a href="{{ route('users.show', [$topic->user_id]) }}">
 
-                <img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->username }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>
-                {{--<img class="media-object img-thumbnail avatar" alt="{{{ $topic->user->username }}}" src=""  style="width:48px;height:48px;"/>--}}
-            </a>
-        </div>
+                @if ($topic->reply_count == 0)
 
-        <div class="infos">
+                    <a href="{{ route('users.show', [$topic->user_id]) }}" title="{{{ $topic->user->username }}}">
+                        {{{ $topic->user->username }}}
+                    </a>
+                    <span> • </span>
+                    <span class="timeago">{{ $topic->created_at }}</span>
+                @endif
 
-          <div class="media-heading">
+                @if ($topic->reply_count > 0 && count($topic->lastReplyUser))
+                    {{ lang('Last Reply by') }}
+                    <a href="{{{ URL::route('users.show', [$topic->lastReplyUser->id]) }}}">
+                      {{{ $topic->lastReplyUser->name }}}
+                    </a>
+                    <span> • </span>
+                    <span class="timeago">{{ $topic->updated_at }}</span>
+                @endif
+                        {{--<span>卡卡西前辈</span>--}}
 
-            @if ($topic->order > 0 && !Input::get('filter') && Route::currentRouteName() != 'home' )
-                <span class="label label-warning">{{ lang('Stick') }}</span>
-            @elseif ($topic->is_excellent && !Input::get('filter') && Route::currentRouteName() != 'home' )
-                <span class="label label-success">{{ lang('Recommended') }}</span>
-            @endif
 
-            <a href="{{ route('topics.show', [$topic->id]) }}" title="{{{ $topic->title }}}">
-                {{{ $topic->title }}}
-            </a>
-          </div>
-          <div class="media-body meta">
 
-            @if ($topic->vote_count > 0)
-                <a href="{{ route('topics.show', [$topic->id]) }}" class="remove-padding-left" id="pin-{{ $topic->id }}">
-                    <span class="fa fa-thumbs-o-up"> {{ $topic->vote_count }} </span>
-                </a>
-                <span> •  </span>
-            @endif
 
-            <a href="{{ route('nodes.show', [$topic->node->id]) }}" title="{{{ $topic->node->name }}}" {{ $topic->vote_count == 0 || 'class="remove-padding-left"'}}>
-                {{{ $topic->node->name }}}
-            </a>
+                        {{--<span>发表了文章&nbsp;•&nbsp;1&nbsp;个评论&nbsp;•&nbsp;111&nbsp;次浏览&nbsp;•&nbsp;2015-11-17 00:17</span>--}}
+                     </div>
+                     <a class="pull-right" href="{{ route('topics.show', [$topic->id]) }}" >
+                                 <span class="hot-comment"> {{ $topic->reply_count }} </span>
+                      </a>
+                   </div>
+     </li>
+     @endforeach
 
-            @if ($topic->reply_count == 0)
-                <span> • </span>
-                <a href="{{ route('users.show', [$topic->user_id]) }}" title="{{{ $topic->user->username }}}">
-                    {{{ $topic->user->username }}}
-                </a>
-                <span> • </span>
-                <span class="timeago">{{ $topic->created_at }}</span>
-            @endif
-
-            @if ($topic->reply_count > 0 && count($topic->lastReplyUser))
-                <span> • </span>{{ lang('Last Reply by') }}
-                <a href="{{{ URL::route('users.show', [$topic->lastReplyUser->id]) }}}">
-                  {{{ $topic->lastReplyUser->name }}}
-                </a>
-                <span> • </span>
-                <span class="timeago">{{ $topic->updated_at }}</span>
-            @endif
-          </div>
-
-        </div>
-
-    </li>
-    @endforeach
 </ul>
 
 @else

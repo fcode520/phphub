@@ -1,0 +1,276 @@
+/*基础css*/
+ul,li{list-style-type: none;margin: 0;padding: 0;}
+.copy .text-center{padding-left: 70px;}
+.modify-article{max-width: 1180px;}
+
+
+/****
+	交流页面css begin
+****/
+
+.exchange-head > ul{width: 100%;min-height: 40px;background-color: #fff;height: auto;overflow: hidden;padding-left: 10px;}
+.exchange-head > ul > li{line-height: 40px;padding:0 14px;float: left;}
+.exchange-head > ul > li > a{color: #666666;}
+.exchange-head > ul > li > a:hover{color: #63ce83;}
+
+.exchange{padding-right: 40px;margin-top: 10px;}
+.exchange-hot{background: #fff;border: 1px solid #f0f5f6;margin-top: 20px;}
+.hot-title{color: #222525;font-size: 12px;height: 35px;line-height: 35px;padding-left: 15px;background: #f7f8f8;margin-bottom: 0px;margin-top: 0px;}
+.photo{float: left;margin-right: 5px;}
+.photo > img{border: 1px solid #f0f0f0;margin-left: 10px;margin-top: 10px;border-radius: 4px;}
+.hot-con > ul{}
+.hot-con > ul > li{border-bottom: 1px solid #f0f0f0;min-height: 78px;width: 100%;height: auto;overflow: hidden;position: relative;}
+.hot-footer{border-top:none;padding:1px 15px;}
+.hot-news{float: left;}
+.hot-news-title{font-size: 14px;margin-bottom: 0px;margin-left: 15px;}
+.hot-news-title a{color: #222525;margin-bottom: 0px;}
+.hot-news-title a:hover{color: #63ce83;}
+.hot-news-info{margin-top: 10px;margin-left: 15px;margin-bottom: 10px;}
+.hot-news-info span{color: #666;}
+.hot-news-info > span:first-child{color: #666;background: #f0f0f0;padding: 2px 5px;border-radius: 4px;}
+.hot-news-info > span:nth-child(2){color: #666;}
+.hot-news-info > span:last-child{color: #9ca2a2;margin-left: 5px;}
+.hot-comment{line-height: 22px;text-align: center;font-size: 12px;color: #fff;background-color: #e8e8e8;float: right;border-radius: 5px;top: 24px;right: 25px;display: inline-block;position: absolute;padding: 0 5px;}
+
+.more-exchange{text-align: center;background: #fff;border: 1px solid #f0f5f6;height: 40px;line-height: 40px;width: 100%;font-size: 12px;color: #999;display: block;margin-top: 20px;margin-bottom: 20px;}
+.more-exchange:hover{color: #63ce83;}
+
+.exchange-side{margin-top: 10px;}
+.personal-info{border: 1px solid #f0f0f0;background-color: #fff;padding: 20px;overflow: hidden;width: 100%;margin-bottom: 20px;}
+.personal-photo > img{border: 1px solid #f0f5f6;float: left;margin-right: 10px;}
+.personal-name{float: left;}
+.personal-name > h2{color: #333;font-size: 14px;margin-top: 10px;}
+.personal-name > p > span{color: #333;font-size: 12px;float: left;}
+.three-info{margin-top: 5px;border-bottom: 1px solid #f3f3f3;padding-bottom: 20px;margin-bottom: 20px;}
+.three-info > div{float: left;min-width: 65px;width: 30%;text-align: center;color: #9ca2a2;border: 1px solid #f5f5f5;margin: 0 1.5%;box-sizing:border-box;-moz-box-sizing:border-box;border-radius: 5px;padding-top: 5px;margin-top: 10px;}
+.three-info > div:first-child{margin-left: 0;}
+.three-info > div > span{font-size: 20px;}
+
+.side_banner img{max-width: 300px;width: 100%;}
+
+.personal-comment{color: #9ca2a2;height: 20px;line-height: 20px;}
+.personal-comment > span{color: #fff;background-color: #ff0909;padding: 0px 5px;border-radius: 4px;float: right;display: inline;line-height: 16px;}
+.personal-info > .a > a{color: #9ca2a2;background: #f4f4f4;width: 100%;height: 35px;border: 1px solid #dfdfdf;text-align: center;line-height: 35px;display: block;}
+.personal-info > .a > a:hover{color: #4cae4c;}
+.personal-info > .b > a{color: #fff;background: #63ce83;width: 100%;height: 37px;text-align: center;line-height: 37px;display: block;}
+.personal-info > .b > a:hover{background: #4cae4c;}
+.personal-info > .c{width: 100%;text-align: center;margin-bottom: 0px;}
+.personal-info > .c > a{color: #9ca2a2;}
+.personal-info > .c > a:hover{color: #63ce83;}
+
+@media screen and (max-width:768px){
+.exchange{padding-right: 15px;}
+}
+
+/****
+	交流页面css end
+****/
+
+/****
+	文章交流内页css begin
+****/
+.exchange .news{background: #fff;padding: 30px;}
+.news-title h2{font-size: 20px;color: #000;}
+.news-title-info img{width: 26px;height: 26px;border: 1px solid #eff5f6;float: left;margin-right: 15px;}
+.news-title-info p{font-size: 12px;color: #999999;line-height: 28px;}
+.news-title-info p span{font-size: 14px;color: #000;margin-right: 15px;}
+.news-con{margin-bottom: 60px;}
+.news-con > p{font-size: 12px;line-height: 150%;color: #666666;}
+.enjoy > .two-icon > span{width: 40px;height: 40px;border-radius: 50%;background: #000;line-height: 41px;text-align: center;font-size: 20px;color: #fff;}
+.enjoy > .two-icon span:hover{background: #63ce83;cursor: pointer;}
+.glyphicon{margin-right: 10px;}
+.glyphicon-thumbs-up{margin-left: 30px;}
+.two-icon > i{font-size: 14px;font-style: normal;position: relative;border: 1px solid #edeef0;padding: 7px;border-radius: 10px;background: #f4f4f4;color: #000000;margin-left: 2px;}
+.two-icon > i:before{position: absolute;content: ''; width: 0;height: 0; border-top: 5px solid transparent;border-right: 10px solid #f4f4f4; border-bottom: 5px solid transparent;top:10px;left: -10px;}
+
+.news-comments{padding: 30px;background: #fff;margin-top: 30px;}
+.news-comments > h2{font-size: 16px;color: #000;line-height: 16px;}
+.comments-text{width: 100%;border: 1px solid #d8d8d8;border-radius: 5px;resize:none;height:180px;padding: 10px;color: #999999;}
+.post-comment{line-height: 31px;width: 100%;margin: 20px 0;}
+.post-comment > span{font-size: 16px;color: #999;}
+.post-comment > button{padding: 4px 20px;font-size: 14px;background: #000;color: #fff;float: right;transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
+.post-comment > button:hover{color: #fff;background: #63ce83;}
+.comment-img{float: left;height: 100%;}
+.comment-img > img{border: 1px solid #eff5f6;width: 34px;height: 34px;position: absolute;}
+.comment-info {margin-left: 45px;float: left;margin-right: 40px;}
+.comment-info > div{line-height: 150%;}
+.comment-info > p{color: #999;margin-bottom: 5px;float: left;}
+.comment-info > p > a{color: #333;margin-right: 10px;}
+.comment-info > p > a:hover{color: #63ce83;}
+.comment-info > a{color: #3071de;position: absolute;right: 10px;top:23px;}
+.comment-info > a:hover{color: #63ce83;}
+.comment-content > ul{overflow: hidden;}
+.comment-content > ul > li{height: auto;position: relative;overflow: hidden;border-bottom: 1px solid #f1f1f1;margin-bottom: 20px;padding-bottom: 20px;}
+.comment-content > ul > li:last-child{height: auto;position: relative;overflow: hidden;border-bottom: none;}
+
+/****
+	文章交流内页css end
+****/
+
+/****
+	我-文章-内页修改 css end
+****/
+.left-nav{width: 70px;position: fixed;height: 100%;background: #30333a;}
+.left-nav-logo{background: #222224;font-size: 12px;color: #697177;height: 50px;line-height: 50px;}
+
+.my-article{width:auto;padding-left: 70px;}
+.modify-article > h2{font-size: 14px;color: #30333a;margin: 0;float: left;margin-top: 20px;}
+.modify-article{margin-left: 10px;float: left;position: relative;}
+.modify-article > .news{background: #fff;padding: 20px;margin-top: 20px;border-radius: 4px;}
+.modify-article > .news-comments{background: #fff;padding: 20px;margin-bottom: 40px;border-radius: 4px;}
+.modify-article > button{position: absolute;right: 40px;top: 65px;height: 30px;line-height: 10px;}
+
+
+.my-article .container {
+  width: 100%;
+}
+/****
+	我-文章-内页修改 css end
+****/
+
+
+/****
+	我-文章 css end
+****/
+.modify-article .news-list{background: #fff;padding: 20px;margin-top: 20px;margin-bottom: 40px;}
+.modify-article .news-list > ul > li{border-bottom: 1px solid #e9ecee;padding-top: 10px;}
+.modify-article .news-list > ul > li:last-child{border-bottom: none;}
+.modify-article .news-list > ul > li > a{color: #222525;font-size: 14px;}
+.modify-article .news-list > ul > li > p{color: #9ca2a2;margin-top: 5px;}
+.modify-article .news-list > ul > li > p > a {color: #9ca2a2;}
+/****
+	我-文章 css end
+****/
+
+/****
+	我 css end
+****/
+.modify-article .my-message{background: #fff;padding: 20px 0;margin-bottom: 40px;border-radius: 0 0 5px 5px;}
+.left-nav {z-index: 9;}
+.left-nav ul{overflow: hidden;position: relative;}
+.left-nav ul > li{height: 60px;padding-top: 20px;padding-left: 15px;width: 100%;}
+.left-nav ul > li > span{width: 40px;height: 40px;display: block;cursor: pointer;border-radius: 5px;}
+.left-nav ul > li .a{background: url(../images/1.png) center center no-repeat;}
+.left-nav ul > li .b{background: url(../images/2.png) center center no-repeat;}
+.left-nav ul > li .c{background: url(../images/3.png) center center no-repeat;}
+.left-nav ul > li .d{background: url(../images/4.png) center center no-repeat;}
+.left-nav ul > li .e{background: url(../images/5.png) center center no-repeat;}
+.nav-title-tip{width: 40px;height: 40px;opacity: 0;position: absolute;left: 80px;background: #30333a;border-radius: 5px;}
+.nav-title-tip .glyphicon-triangle-left{color: #30333a;left: -10px;position: absolute;font-size: 14px;top:12px;}
+.nav-title-tip i{color: #fff;width: 40px;text-align: center;font-size: 14px;font-style: normal;line-height: 40px;display: block;}
+
+.post-message{position: absolute;right: 20px;top: 10px;border: none;}
+.post-message:focus{outline: none;}
+.m-message{height: 200px!important;resize:none;color: #999;}
+
+.message-num{color: #708184;background: #f7f8f8;min-height: 52px;width: 100%;line-height: 52px;border-radius: 5px 5px 0 0;margin-bottom: 0;margin-top: 20px;overflow: hidden;}
+.message-num i{padding: 2px 3px;font-style: normal;background: #30333a;color: #fff;border-radius: 3px;margin-left: 5px;}
+.message-num span{margin-left: 25px;}
+.my-message > ul{overflow: hidden;}
+.my-message > ul >li{overflow: hidden;border-bottom: 1px solid #e9ecee;margin: 15px 15px 0 15px;padding-bottom: 15px;}
+.my-message > ul >li:last-child{border-bottom: none;}
+.my-message .a{margin-bottom: 5px;}
+.my-message .a > img{border: 1px solid #eff5f6;width: 34px;height: 34px;}
+.my-message .b{color: #9ca2a2;padding-left: 15px;}
+.my-message .b > p{margin-bottom: 0;margin-top: 5px;}
+.my-message .b > a{color: #666666;}
+.my-message .b > a:hover{color: #63ce83;}
+.my-message .c{color: #9ca2a2;text-align: right;}
+.my-message .c > button{border: 1px solid #f4f5f5;width: 34px;height: 34px;width: 44px;height: 24px;border-radius: 5px;cursor: pointer;background: #fff;}
+.my-message .c > button:hover{background: #63ce83;border-color: #63ce83;color: #fff;}
+.my-message .c > button:focus{outline: none;}
+.my-message .c > button:last-child{margin-left: 5px;}
+.my-message .c > button.act{outline: none;background: #63ce83;color: #fff;}
+.my-comment{margin-top: 20px;display: none;}
+.my-comment textarea{width: 100%;height: 80px;border: 1px solid #f4f5f5;resize:none;padding: 10px;border-radius: 5px;}
+.my-comment button{width: 100px;float: right;margin: 10px 0;}
+
+@media screen and (max-width:510px){
+.message-num span{display: block;padding-left: 15px;}
+}
+/****
+	我 css end
+****/
+
+/****
+	新话题 css end
+****/
+.new-topic{border: 1px solid #f0f0f0;border-radius: 5px;}
+.new-topic > h2{width: 100%;background: #f8f8f8;border-bottom: 1px solid #f0f0f0;color: #666;padding: 0 40px;margin-bottom: 0;min-height: 70px;font-size: 20px;font-weight: normal;margin-top: 0;line-height: 70px;height: auto;overflow: hidden;}
+.topic-con{background: #fff;padding: 25px 40px;}
+.topic-title > input{width: 100%;height: 40px;border: 1px solid #f0f0f0;border-radius: 8px;padding-left: 10px;}
+.topic-content{width: 100%;height: 150px;border: 1px solid #f0f0f0;border-radius: 8px;padding: 10px;margin-top: 25px;}
+
+.some-select{margin-top: 25px;z-index: 99;}
+
+.post-file > button{background: none;border: 1px solid #f0f0f0;margin-top: 25px;float: left;}
+.post-file > span{margin-left: 15px;float: left;margin-top: 35px;}
+.post-art > button{background: #000;border: 1px solid #f0f0f0;margin-top: 25px;color: #fff;font-size: 16px;height: 36px;width: 100px;}
+.post-file > button:hover,.post-art > button:hover{background: #63ce83;color: #fff;}
+.post-file > button:focus{outline: none;}
+.post-art > button:focus{outline: none;color: #fff;}
+
+/****
+	新话题 css end
+****/
+
+/****
+	我-个人设置-展示 css begin
+****/
+.personal-nav{min-height: 45px;background: #fff;width: auto;overflow: hidden;margin-bottom: 20px;margin-top: 20px;float: left;padding: 0 10px;border-radius: 5px;line-height: 43px;height: auto;}
+.personal-nav > li{float: left;margin: 0 20px;cursor: pointer;font-size: 14px;}
+.personal-nav > li:hover{color: #63ce83;}
+.personal-nav > li.act{border-bottom: 2px solid #63ce83;color: #63ce83;}
+.personal-infomation{max-width: 1180px;padding: 20px 30px;background: #fff;margin-bottom: 40px;border-radius: 5px;}
+.personal-infomation{color: #999;}
+.personal-infomation > .a{margin-top: 25px;}
+.personal-infomation > .a > p > span{}
+.personal-infomation > .a > p > span > label{font-size: 14px;}
+.personal-infomation > .b > p{overflow: hidden;}
+.personal-infomation > .b > p > label{font-size: 14px;height: 100%;float: left;}
+.personal-infomation > .b > p > span{display: block;margin-top: 3px;width: auto;margin-left: 70px;}
+.personal-infomation > .c > p > label{font-size: 14px;}
+.personal-infomation > .c {margin-bottom: 40px;}
+
+.personal-infomation > .d{color: #d9534f;margin: 15px 0;}
+
+
+/****
+	我-个人设置-展示 css end
+****/
+
+/****
+	邮箱验证 css begin
+****/
+.email-ok{width: 100%;background: #fff;padding: 20px 0;max-width: 1180px;border-radius: 5px;}
+.email-ok > h2{font-size: 18px;font-weight: normal;color: #969b9d;margin-bottom: 20px;}
+.email-ok > p{color: #969b9d;}
+.email-ok > p.a{color: #333;font-size: 14px;}
+.email-ok > p.b{margin-top: 25px;}
+.email-ok > .c{color: #2881cc;margin-bottom: 20px;display: block;}
+.email-ok > .c:hover{color: #5cb85c;}
+.email-ok > button{width: 120px;}
+
+
+
+
+
+
+
+
+
+
+
+
+/****
+	邮箱验证 css end
+****/
+
+
+
+
+
+
+
+
+

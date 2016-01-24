@@ -5,10 +5,12 @@
 @stop
 
 @section('content')
-
-        <!-- 注册 -->
-
-
+        {{--错误信息框--}}
+<div class="container">
+    @if(Session::has('message'))
+        <p class="alert">{{ Session::get('message') }}</p>
+    @endif
+</div>
 
 {{Form::open(array('url'=>'/ow_register','class'=>'register'))}}
 <div class="register_box">

@@ -6,7 +6,8 @@ Route::pattern('id', '[0-9]+');
 Route::get('/', 'PageController@home');
 Route::get('/', [
     'as' => 'home',
-    'uses' => 'PagesController@home',
+//    'uses' => 'PagesController@home',
+    'uses' => 'TopicsController@index',
 ]);
 
 Route::get('/about', [

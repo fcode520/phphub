@@ -12,7 +12,7 @@
 
     <div class="reply-box form box-block">
 
-      <div class="alert alert-warning">
+      <div class="alert  alert-warning">
           {{ lang('be_nice') }}
       </div>
 

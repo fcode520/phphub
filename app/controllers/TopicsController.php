@@ -17,10 +17,13 @@ class TopicsController extends \BaseController implements CreatorListener
 
     public function index()
     {
+        //获取提交时以何种类型获取文章  包括 最新发表 精华主题 最多投票 和无人问津
         $filter = $this->topic->present()->getTopicFilter();
-        $topics = $this->topic->getTopicsWithFilter($filter);
 
+        $topics = $this->topic->getTopicsWithFilter($filter);
+        //取所有列表
         $nodes  = Node::allLevelUp();
+        //查询结果缓存1440 分钟 获取友情链接
         $links  = Link::remember(1440)->get();
 
         return View::make('topics.index', compact('topics', 'nodes', 'links'));

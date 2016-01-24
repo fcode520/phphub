@@ -85,9 +85,11 @@ class EntrustSetupTables extends Migration
 
         // Create User
         $user = User::create([
-                'github_id' => 324764,
-                'github_url' => 'https://github.com/summerblue',
-                'name' => 'summerblue'
+                'id' => 1,
+                'username' => 'zhanglei',
+                'password' => Hash::make('zhanglei'),
+                'email'=>'fcode520@gmail.com'
+
             ]);
 
         // Attach Roles to user

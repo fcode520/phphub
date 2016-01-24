@@ -35,7 +35,7 @@ OneWork & 远程工作者社区
         <link rel="stylesheet" href="{{ cdn('assets/css/'.Asset::styles('frontend')) }}">
 		<link rel="stylesheet" href="{{ cdn('assets/onework_css/style.css') }}">
         <link rel="stylesheet" href="{{cdn('assets/onework_css/login.css')}}">
-        <link rel="stylesheet" href="{{cdn('assets/onework_css/bootstrap.min.css')}}">
+{{--        <link rel="stylesheet" href="{{cdn('assets/onework_css/bootstrap.min.css')}}">--}}
         <link rel="shortcut icon" href="{{ cdn('favicon.ico') }}"/>
         @yield('css')
         <script>

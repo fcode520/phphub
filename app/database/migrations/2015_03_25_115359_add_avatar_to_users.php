@@ -13,9 +13,9 @@ class AddAvatarToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users_git', function (Blueprint $table) {
-            $table->string('avatar')->nullable();
-        });
+//        Schema::table('users_git', function (Blueprint $table) {
+//            $table->string('avatar')->nullable();
+//        });
     }
 
 
@@ -26,8 +26,8 @@ class AddAvatarToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users_git', function (Blueprint $table) {
-            $table->dropColumn('avatar');
-        });
+//        Schema::table('users_git', function (Blueprint $table) {
+//            $table->dropColumn('avatar');
+//        });
     }
 }

@@ -4,6 +4,12 @@ body{
 	font-size: 12px;
 	background-color:#eeeff1;
 }
+/*修改 填坑的呢*/
+.header a{color: #666;}
+.header a:hover{color: #63ce83;}
+.navbar-nav > li > a:hover{color: #63ce83!important;}
+
+
 
 /* nav部分 */
 .navbar-brand{
@@ -15,6 +21,10 @@ body{
 .navbar-brand img{
 	display:inline-block;
 	vertical-align:middle;
+}
+#navbar-brand img{
+    display:inline-block;
+    vertical-align:middle;
 }
 .navbar-form input{
 	height:28px;
@@ -116,6 +126,8 @@ body{
 	width:auto;
 }
 
+.nav li.active a{border-bottom: none!important;}
+.header{text-align: center;}
 
 
 }

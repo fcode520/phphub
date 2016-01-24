@@ -121,21 +121,27 @@ class Topic extends \Eloquent
     public function applyFilter($filter)
     {
         switch ($filter) {
+            //没有回复
             case 'noreply':
                 return $this->orderBy('reply_count', 'asc')->recent();
                 break;
+            //投票-点赞
             case 'vote':
                 return $this->orderBy('vote_count', 'desc')->recent();
                 break;
+            //推荐
             case 'excellent':
                 return $this->excellent()->recent();
                 break;
+            //最新
             case 'recent':
                 return $this->recent();
                 break;
+            //节点
             case 'node':
                 return $this->recentReply();
                 break;
+//            默认
             default:
                 return $this->pinAndRecentReply();
                 break;

@@ -13,9 +13,9 @@ class AddNotificationsFieldToUserTable extends Migration
      */
     public function up()
     {
-        Schema::table('users_git', function (Blueprint $table) {
-            $table->integer('notification_count')->default(0);
-        });
+//        Schema::table('users_git', function (Blueprint $table) {
+//            $table->integer('notification_count')->default(0);
+//        });
     }
 
     /**
@@ -25,8 +25,8 @@ class AddNotificationsFieldToUserTable extends Migration
      */
     public function down()
     {
-        Schema::table('users_git', function (Blueprint $table) {
-            $table->dropColumn('notification_count');
-        });
+//        Schema::table('users_git', function (Blueprint $table) {
+//            $table->dropColumn('notification_count');
+//        });
     }
 }

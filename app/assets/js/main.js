@@ -210,9 +210,9 @@
                 $("#preview-box").fadeIn(1500);
                 $("#preview-lable").fadeIn(1500);
 
-                if (!$("#reply_content").val()) {
-                    $("html, body").animate({ scrollTop: $(document).height()}, 1800);
-                }
+                //if (!$("#reply_content").val()) {
+                //    $("html, body").animate({ scrollTop: $(document).height()}, 1800);
+                //}
             });
             $('#reply_content').keyup(function(){
                 self.runPreview();
