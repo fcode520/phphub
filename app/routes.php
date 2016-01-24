@@ -274,3 +274,4 @@ Route::post('/vaild_email/{id}', [
     'as' => 'p_vaild_email',
     'uses' => 'UsersController@p_vaild_email',
 ]);
+Route::controller('password', 'RemindersController');
