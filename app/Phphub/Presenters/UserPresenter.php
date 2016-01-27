@@ -70,7 +70,6 @@ class UserPresenter extends Presenter
             return $value->id == $relation->role_id;
         });
 
-
-        return $role->name;
+        return lang($role->name);
     }
 }

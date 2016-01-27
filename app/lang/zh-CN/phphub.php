@@ -1,6 +1,8 @@
 <?php
 
 return array(
+    'Founder'=>'创始人',
+    'Admin'=>'管理员',
     'Topics' => '发现',
     'Wiki' => 'Wiki',
     'Jobs' => '招聘',

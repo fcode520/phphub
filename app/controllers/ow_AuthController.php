@@ -10,14 +10,16 @@ class ow_AuthController extends \BaseController
      */
     public function show_login()
     {
-        // Redirect from Github
+        if(Auth::check()){
+            return Redirect::intended('/');
+        }
         return View::make("register.loginindex");
     }
-    public function ow_Auth_login()
+    public function Do_Login()
     {
+
         if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')),true)){
-          //  return "登录成功";
-            return Redirect::intended();//->with('message', '欢迎登录');
+            return Redirect::intended('/');
         }else{
 
             return Redirect::to('/ow_login')->with('message', '登录好像失败了亲!');
@@ -67,7 +69,8 @@ class ow_AuthController extends \BaseController
                     $db_res = DB::table('users')->where('activation',$code)->update(array('status' => 1));
                     if($db_res == 1){
                         Auth::login($User);
-                        return Redirect::to('/')->with('message','您的账号已经激活');
+                        return View::make('register/activation_to_resumes')
+                        //return Redirect::to('/')->with('message','您的账号已经激活');
                     }
                 }
                 else

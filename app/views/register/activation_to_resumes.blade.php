@@ -1,0 +1,21 @@
+@extends('layouts.default')
+
+@section('css')
+{{--    <link rel="stylesheet" href="{{cdn('assets/onework_css/register.css')}}">--}}
+    {{HTML::style('assets/onework_css/register.css')}}
+@stop
+
+@section('title')
+{{ lang('Newly Registered User List') }}_@parent
+@stop
+
+@section('content')
+<div class="register_ok">
+  <p>恭喜你，激活成功，请完善个人资料</p>
+  <a href="{{route('EditResume')}}">进一步完善</a>
+</div>
+@stop
+@section('scripts')
+    {{ HTML::script('assets/onework_js/Register_ajax.js') }}
+
+@stop

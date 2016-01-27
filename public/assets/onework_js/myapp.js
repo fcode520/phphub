@@ -84,10 +84,57 @@ $(function(){//点击添一个项目经验
 
 
 
+// 上传图片部分
+//function setImagePreview(imgId,theInput) {
+//    var preview, img_txt, localImag, file_head = document.getElementById(theInput),
+//    picture = file_head.value;
+//    if (!picture.match(/.jpg|.gif|.png|.bmp/i))
+//    return alert("您上传的图片格式不正确，请重新选择！")
+//    ,$('.header > span').html('添加头像')
+//    ,$('#header').attr('src','images/addheader.png')
+//    ,!1;
+//    if (preview = document.getElementById(imgId), file_head.files && file_head.files[0]){
+//    preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
+//    $('.header > span').html('点击头像进行替换');
+//    return !0;
+//    }
+//
+//    };
 
+$(function() {
+    $(document).ready(function () {
+        var options = {
+            beforeSubmit: showRequest,
+            success: showResponse,
+            dataType: 'json'
+        };
+        $('#uploadImg').on('change', function () {
+            $('#upload-avatar').html('正在上传...');
+            $('#uploadimgform').ajaxForm(options).submit();
+        });
+    });
+    function showRequest() {
+        $("#validation-errors").hide().empty();
+        $("#output").css('display', 'none');
+        return true;
+    }
 
+    function showResponse(response) {
+        if (response.success == false) {
+            var responseErrors = response.errors;
+            $.each(responseErrors, function (index, value) {
+                if (value.length != 0) {
+                    $("#validation-errors").append('<div class="alert alert-error"><strong>' + value + '</strong><div>');
+                }
+            });
+            $("#validation-errors").show();
+        } else {
+            $('#user-avatar').attr('src', response.avatar);
+            $('#upload-avatar').html('更新完毕');
+        }
+    }
 
-
+});
 
 
 

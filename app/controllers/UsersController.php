@@ -190,13 +190,14 @@ class UsersController extends \BaseController
             }
             return View::make('register.resumes', compact('user','resume','project'));
         }else{
-            return View::make('register.loginindex');
+            return Redirect::guest('ow_login');
         }
 
     }
     public function p_EditResume()
     {
         if(Auth::check()){
+            $head_img=Input::file('uploadImg');
             $id=Auth::user()->id;
             $Resum=new Resume();
             $Resum->user_id=$id;
@@ -243,9 +244,73 @@ class UsersController extends \BaseController
         return View::make('register.resumes', compact('user'));
     }
 
-    public function getavatar($id,$size){
-
+    public function wrongTokenAjax()
+    {
+        if ( Session::token() !== Request::get('_token') ) {
+            $response = [
+                'status' => false,
+                'errors' => 'Wrong Token',
+            ];
+            return Response::json($response);
+        }
     }
+    public function avatarUpload(){
+        $this->wrongTokenAjax();
+        if(!Auth::check()){
+            Redirect::guest('ow_login');
+        }
+//        $this->wrongTokenAjax();
+        $file = Input::file('uploadImg');
+        $input = array('uploadImg' => $file);
+        $rules = array(
+            'image' => 'uploadImg'
+        );
+        $validator = Validator::make($input, $rules);
+        if ( $validator->fails() ) {
+            return Response::json([
+                'success' => false,
+                'errors' => $validator->getMessageBag()->toArray()
+            ]);
+        }
+        $destinationPath = 'uploads/avatars/';
+        $filename = $file->getClientOriginalName();
+        $filePath_Name=Auth::user()->id.'/'.$filename;
+
+           if(!File::exists(Auth::user()->id))
+            File::makeDirectory(Auth::user()->id);
+
+        $destinationPath=$destinationPath.Auth::user()->id;
+        $file->move($destinationPath, $filename);
+        $Resum=new Resume();
+        if($Resum->find(Auth::user()->id))
+        {
+//            $Resum->find(Auth::user()->id)->update(['head_img'=>$filename]);
+            DB::table('Resume')
+                ->where('user_id', Auth::user()->id)
+                ->update(['head_img' => $filePath_Name]);
+            DB::table('users')
+                ->where('id', Auth::user()->id)
+                ->update(['avatar' => $filePath_Name]);
+        }else
+        {
+            $Resum->user_id=Auth::user()->id;
+            $Resum->head_img=$filePath_Name;
+            $Resum->save();
+            DB::table('users')
+                ->where('id', Auth::user()->id)
+                ->update(['avatar' => $filePath_Name]);
+        }
+
+        return Response::json(
+            [
+                'success' => true,
+                'avatar' => asset($destinationPath.'/'.$filename),
+            ]
+        );
+    }
+
+
+
     public function vaild_email($id){
 
         $user=User::find($id);

@@ -18,14 +18,14 @@ class CreateResumeTable extends Migration {
 			$table->integer('user_id');
 			$table->string('head_img')->nullable();
 			$table->string('email')->nullable()->unique();;
-			$table->integer('sex')->default(0);//0 ÄÐ 1 Å® 2±£ÃÜ
-			$table->integer('profession_id');
-			$table->integer('remote_status')->default(0);//0 ¼æÖ°Ô¶³Ì 1 È«Ö° 2·ÇÔ¶³Ì
-			$table->integer('skill_id');//¼¼ÄÜÁÐ±í  c++ ios
-			$table->string('qq');
-			$table->string('position');
-			$table->string('summary');//¸öÈË¼ò½é
-			$table->string('skill_experience');//¼¼Êõ¾­Ñé
+			$table->integer('sex')->nullable()->default(0);//0 ï¿½ï¿½ 1 Å® 2ï¿½ï¿½ï¿½ï¿½
+			$table->integer('profession_id')->nullable();
+			$table->integer('remote_status')->nullable()->default(0);//0 ï¿½ï¿½Ö°Ô¶ï¿½ï¿½ 1 È«Ö° 2ï¿½ï¿½Ô¶ï¿½ï¿½
+			$table->integer('skill_id')->nullable();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½  c++ ios
+			$table->string('qq')->nullable();
+			$table->string('position')->nullable();
+			$table->string('summary')->nullable();//ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½
+			$table->string('skill_experience')->nullable();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			$table->softDeletes();
 			$table->timestamps();
 		});

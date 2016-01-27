@@ -19,10 +19,11 @@
   @endif
 
   <dt><label>QQ:</label></dt>
-  <dd>
-  <strong>{{{ $resume->qq }}}</strong></dd>
-  </dd>
-
+ @if(isset($resume->qq))
+  <dd><strong>{{{ $resume->qq }}}</strong></dd>
+  @else
+  <dd></dd>
+@endif
   @if ($user->company)
     <dt class="adr"><label> {{ lang('Company') }}:</label></dt><dd><span class="org">{{{ $user->company }}}</span></dd>
   @endif

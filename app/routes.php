@@ -235,8 +235,8 @@ Route::get('/ow_login', [
     'uses' => 'ow_AuthController@show_login',
 ]);
 Route::post('/ow_login', [
-    'as' => 'ow_Auth_login',
-    'uses' => 'ow_AuthController@ow_Auth_login',
+    'as' => 'Do_Login',
+    'uses' => 'ow_AuthController@Do_Login',
 ]);
 Route::get('/ow_register', [
     'as' => 'ow_register',
@@ -266,6 +266,7 @@ Route::post('/EditResume', [
     'as' => 'EditResume',
     'uses' => 'UsersController@p_EditResume',
 ]);
+Route::post('/EditResume/uploadimg','UsersController@avatarUpload');
 Route::get('/vaild_email/{id}', [
     'as' => 'vaild_email',
     'uses' => 'UsersController@vaild_email',
@@ -275,3 +276,5 @@ Route::post('/vaild_email/{id}', [
     'uses' => 'UsersController@p_vaild_email',
 ]);
 Route::controller('password', 'RemindersController');
+
+Route::get('activation','ow_AuthController@activation');

@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('css')
-{{--    <link rel="stylesheet" href="{{cdn('assets/onework_css/register.css')}}">--}}
     {{HTML::style('assets/onework_css/renzheng.css')}}
 @stop
 
@@ -13,20 +12,22 @@
     <div class="renzheng">
     <p class="title"><span>完善资料</span><span>填写详细个人信息，加入人才库</span></p>
 
-        {{Form::open(array('url'=>'/EditResume','class'=>'content','id'=>'renzhengform'))}}
+        {{Form::open(array('url'=>'/EditResume/uploadimg','method' => 'POST','class'=>'content','id'=>'uploadimgform'))}}
 
         <div class="header">
             @if($user->avatar)
-                {{HTML::image($user->present()->gravatar,'a picture',array('class'=>'header'))}}
+                {{HTML::image($user->present()->gravatar,'a picture',array('class'=>'header','id'=>'user-avatar'))}}
             @else
-                {{HTML::image(cdn('assets/images/register/addheader.png'),'a picture',array('class'=>'header'))}}
+                {{HTML::image(cdn('assets/images/register/addheader.png'),'a picture',array('class'=>'header','id'=>'user-avatar'))}}
             @endif
-            <input type="file" name="uploadImg" id="uploadImg" onchange="">
-            <span>添加头像</span>
+            {{Form::file('uploadImg',array('id'=>'uploadImg','onchange'=>'setImagePreview(\'header\',\'uploadImg\')'))}}
+            <span id="upload-avatar">添加头像</span>
         </div>
+        {{Form::close()}}
 
+        {{Form::open(array('url'=>'/EditResume','class'=>'content','id'=>'renzhengform'))}}
         <div class="input">
-          {{--<input type="text" name="email" id="" placeholder="邮箱">--}}
+          <input type="text" name="email" id="" placeholder="邮箱">
 
             @if(is_null($resume))
                 <div class="row">
@@ -52,7 +53,8 @@
 
                 </div>
                 {{Form::text('qqnumber',null,array('placeholder'=>'QQ','id'=>'qq'))}}
-                {{Form::text('Blog',$resume->blog,array('placeholder'=>'博客/github'))}}
+                {{Form::text('Blog','',array('placeholder'=>'博客/github'))}}
+
             @else
                 <div class="row">
                     {{Form::select('sex',[
@@ -95,7 +97,7 @@
                 {{Form::textarea('experience',$resume->skill_experience,['placeholder'=>'技术经验'])}}
             @endif
             <div class="project-info">
-            @if(is_null($project))
+            @if(!isset($project))
                     <div class="one-project">
                         <p class="subtitle">项目经验</p>
                         <div class="row2">
@@ -148,6 +150,7 @@
 @section('scripts')
     {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.min.js'))}}
     {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js'))}}
+    {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
     {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
 
 @stop
