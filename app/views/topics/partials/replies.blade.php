@@ -20,7 +20,7 @@
       <div class="media-heading meta">
 
         <a href="{{ route('users.show', [$reply->user_id]) }}" title="{{{ $reply->user->username }}}" class="remove-padding-left author">
-            {{{ $reply->user->name }}}
+            {{{ $reply->user->username }}}
         </a>
 
         <span> •  </span>

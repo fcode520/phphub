@@ -1,7 +1,7 @@
 @if(isset($currentUser))
 <div class="col-sm-3 exchange-side">
       <div class="personal-info">
-        <div class="personal-photo"><img src='{{$currentUser->present()->gravatar}}'></div>
+        <div class="personal-photo"><img style="width:65px; height:65px;" src='{{$currentUser->present()->gravatar}}'></div>
         <div class="personal-name">
           <h2>MONSTER</h2>
           <p><span>关注:10&nbsp;&nbsp;</span><span>粉丝:20</span></p>
