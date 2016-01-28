@@ -19,8 +19,20 @@ class AccountController extends \BaseController {
 
 		return View::make('account.index', compact('notifications'));
 	}
-
-
+    public function replies(){
+        $notifications=Notification::where('type','=','new_reply')->where('user_id','=',Auth::user()->id)->get();
+        $userID=Auth::user()->id;
+        $notifications->sysNotifyCount=$users = DB::table('notifications')->where('type','<>','new_reply')->where('user_id','=',$userID)->count();
+        $notifications->repliesCount=DB::table('notifications')->where('type','=','new_reply')->where('user_id','=',$userID)->count();
+        return View::make('account.index', compact('notifications'));
+    }
+    public function  sysnotify(){
+        $notifications=Notification::where('type','<>','new_reply')->where('user_id','=',Auth::user()->id)->get();
+        $userID=Auth::user()->id;
+        $notifications->sysNotifyCount=$users = DB::table('notifications')->where('type','<>','new_reply')->where('user_id','=',$userID)->count();
+        $notifications->repliesCount=DB::table('notifications')->where('type','=','new_reply')->where('user_id','=',$userID)->count();
+        return View::make('account.index', compact('notifications'));
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

@@ -281,5 +281,7 @@ Route::get('/activation','ow_AuthController@activation');
 //
 #--------------------个人中心----------------
 Route::get('/account/','AccountController@index');
+Route::get('/account/replies','AccountController@replies');
+Route::get('/account/sysnotify','AccountController@sysnotify');
 
 Route::get('job','JobController@index');

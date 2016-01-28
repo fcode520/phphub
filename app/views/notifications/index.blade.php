@@ -32,7 +32,7 @@
                           <div class="media-heading">
 
                             <a href="{{ route('users.show', [$notification->from_user_id]) }}">
-                                {{{ $notification->fromUser->name }}}
+                                {{{ $notification->fromUser->username }}}
                             </a>
                              •
                             {{ $notification->present()->lableUp }}

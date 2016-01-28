@@ -18,7 +18,9 @@
 
                     <div class="clearfix"></div>
                     <p class="message-num">
-                        <span>所有消息<i>{{$notifications->sysNotifyCount+$notifications->repliesCount}}</i></span><span>评论留言<i>{{$notifications->repliesCount}}</i></span><span>系统提示<i>{{$notifications->sysNotifyCount}}</i></span>
+                        <span><a href="/account">所有消息</a><i>{{$notifications->sysNotifyCount+$notifications->repliesCount}}</i></span>
+                        <span><a href="/account/replies">评论留言</a><i>{{$notifications->repliesCount}}</i></span>
+                        <span><a href="/account/sysnotify">系统提示</a><i>{{$notifications->sysNotifyCount}}</i></span>
                     </p>
                     <div class="my-message">
                     <ul>
@@ -37,11 +39,26 @@
                                                 {{{ $notification->fromUser->name }}}
                                                 {{$notification->topic->title}}
                                             </a>
-                                        {{--<a href="#">你好，我们团队接到外包，缺少ios，请问你有兴趣吗？</a>--}}
-                                            <p>{{ $notification->body }}</p>
+                                            <p>
+                                            @if($notification->type=='topic_attent')
+                                                   {{"文章被关注"}}
+                                                   @elseif($notification->type=='topic_favorite')
+                                                   {{"文章被".$notification->fromUser->username."收藏"}}
+                                                   @elseif($notification->type=='topic_upvote')
+                                                   {{"文章被".$notification->fromUser->username."点赞"}}
+                                                   @elseif($notification->type=='topic_mark_excellent')
+                                                    {{"文章被".$notification->fromUser->username."推荐"}}
+                                                    @else
+                                                     {{ $notification->body }}
+                                            @endif
+
+                                            </p>
+
+
                                         </div>
                                         <div class="c col-sm-3">
                                             <p class="timeago">{{ $notification->created_at }}</p>
+                                            @if($notification->type=='new_reply')
                                             <p>未回复</p>
                                             <a href="{{ route('topics.show', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}" title="回复" class="d">
                                                 {{{ str_limit('回复', '100') }}}
@@ -49,6 +66,7 @@
                                             <a href="{{ route('topics.show', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}" title="回复" class="d">
                                                 {{{ str_limit('删除', '100') }}}
                                             </a>
+                                            @endif
                                         </div>
                                     </li>
 

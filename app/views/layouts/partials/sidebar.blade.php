@@ -16,7 +16,7 @@
         <p class="personal-comment">{{ $currentUser->notification_count }}条未读评论<span>{{ $currentUser->notification_count }}</span></p>
         </a>
         @endif
-        <p class="a"><a href="#">个人中心</a></p>
+        <p class="a"><a href="/account">个人中心</a></p>
         <p class="b"><a href="{{ isset($node) ? URL::route('topics.create', ['node_id' => $node->id]) : URL::route('topics.create') ; }}">＋发布新话题</a></p>
         <p class="c"><a href="#">认证账号，加入人才库</a></p>
       </div>
