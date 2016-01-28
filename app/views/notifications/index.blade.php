@@ -22,10 +22,10 @@
 
                     @if (count($notification->topic))
                         <div class="avatar pull-left">
-                            <a href="{{ route('users.show', [$notification->from_user_id]) }}">
-                                <img class="media-object img-thumbnail avatar" alt="{{{ $notification->fromUser->name }}}" src="{{ $notification->fromUser->present()->gravatar }}"  style="width:38px;height:38px;"/>
-                            </a>
-                        </div>
+                             <a href="{{ route('users.show', [$notification->from_user_id]) }}">
+                                 <img class="media-object img-thumbnail avatar" alt="{{{ $notification->fromUser->name }}}" src="{{ $notification->fromUser->present()->gravatar }}"  style="width:38px;height:38px;"/>
+                             </a>
+                         </div>
 
                         <div class="infos">
 

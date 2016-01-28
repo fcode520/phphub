@@ -69,7 +69,7 @@ class ow_AuthController extends \BaseController
                     $db_res = DB::table('users')->where('activation',$code)->update(array('status' => 1));
                     if($db_res == 1){
                         Auth::login($User);
-                        return View::make('register/activation_to_resumes')
+                        return View::make('register/activation_to_resumes');
                         //return Redirect::to('/')->with('message','您的账号已经激活');
                     }
                 }

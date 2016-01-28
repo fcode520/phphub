@@ -275,6 +275,9 @@ Route::post('/vaild_email/{id}', [
     'as' => 'p_vaild_email',
     'uses' => 'UsersController@p_vaild_email',
 ]);
-Route::controller('password', 'RemindersController');
+Route::controller('/password', 'RemindersController');
 
-Route::get('activation','ow_AuthController@activation');
+Route::get('/activation','ow_AuthController@activation');
+//
+#--------------------个人中心----------------
+Route::get('/account/','AccountController@index');
