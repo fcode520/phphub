@@ -10,7 +10,6 @@
 @stop
 
 @section('content')
-
     <div class="my-article">
         {{--<div class="container">--}}
             <div class="row">
@@ -19,17 +18,18 @@
 
                     <div class="clearfix"></div>
                     <p class="message-num">
-                        <span>所有消息<i>10</i></span><span>评论留言<i>10</i></span><span>系统提示<i>10</i></span>
+                        <span>所有消息<i>{{$notifications->sysNotifyCount+$notifications->repliesCount}}</i></span><span>评论留言<i>{{$notifications->repliesCount}}</i></span><span>系统提示<i>{{$notifications->sysNotifyCount}}</i></span>
                     </p>
                     <div class="my-message">
+                    <ul>
                         @foreach ($notifications as $notification)
                         @if (count($notification->topic))
-                            <ul>
+
 
                                     <li>
                                         <div class="a col-sm-1">
                                             <a href="{{ route('users.show', [$notification->from_user_id]) }}">
-                                                <img class="media-object img-thumbnail avatar" alt="{{{ $notification->fromUser->username }}}" src="{{ $notification->fromUser->present()->gravatar }}"  style="width:38px;height:38px;"/>
+                                                <img class="" alt="{{{ $notification->fromUser->username }}}" src="{{ $notification->fromUser->present()->gravatar }}"  style="width:38px;height:38px;"/>
                                             </a>
                                         </div>
                                         <div class="b col-sm-8">
@@ -52,12 +52,12 @@
                                         </div>
                                     </li>
 
-                            </ul>
+
                         @else
 
                         @endif
                         @endforeach
-
+                    </ul>
                             {{--<li>--}}
                                 {{--<div class="a col-sm-1"><img src="images/personal_photo.png"></div>--}}
                                 {{--<div class="b col-sm-8">--}}

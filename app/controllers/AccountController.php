@@ -11,6 +11,9 @@ class AccountController extends \BaseController {
 	{
 		$notifications = Auth::user()->notifications();
 
+        $userID=Auth::user()->id;
+        $notifications->sysNotifyCount=$users = DB::table('notifications')->where('type','<>','new_reply')->where('user_id','=',$userID)->count();
+        $notifications->repliesCount=DB::table('notifications')->where('type','=','new_reply')->where('user_id','=',$userID)->count();
 		Auth::user()->notification_count = 0;
 		Auth::user()->save();
 
