@@ -21,7 +21,8 @@
                     <div class="clearfix"></div>
                     <div class="personal-infomation">
                         <div class="text-left">
-                            <img class="" alt="{{$resume->user->username}}" src="{{ $resume->user->present()->gravatar }}"  style="width:38px;height:38px;"/>
+                            <img class="" alt="{{$resume->user->username}}"
+                                 src="{{ $resume->user->present()->gravatar }}"  style="width:38px;height:38px;"/>
 
                         </div>
                         <di class="a row">

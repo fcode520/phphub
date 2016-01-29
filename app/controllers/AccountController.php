@@ -44,9 +44,15 @@ class AccountController extends \BaseController {
 	public function personalsettings(){
 		if(!Auth::check())
 		{
-			Redirect::intended('/');
+
+		return	Redirect::guest('/ow_login');
 		}
+
 		$resume=Auth::user()->resume()->first();
+		if(is_null($resume)){
+			Flash::success("请先完善资料，在查看箱子资料");
+			return	Redirect::route('EditResume');
+		}
 		$projects=Auth::user()->projects()->first();
 		return View::make('account.setting',compact('resume','projects'));
 	}

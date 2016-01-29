@@ -4,7 +4,7 @@
 class Resume extends \Eloquent {
 	protected $table='Resume';
 
-	protected $fillable = [];
+	protected $fillable = ['user_id','id'];
 
 	use SoftDeletingTrait;
 	protected $dates = ['deleted_at'];
@@ -13,7 +13,9 @@ class Resume extends \Eloquent {
 	{
 		return $this->belongsTo('User');
 	}
+
 	public function userproject(){
+
 		return $this->hasMany('userproject','user_id','user_id');
 	}
 

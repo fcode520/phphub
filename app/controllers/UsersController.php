@@ -198,7 +198,7 @@ class UsersController extends \BaseController
     {
         if(Auth::check()){
             $id=Auth::user()->id;
-            $Resume=Resume::firstOrCreate(array('user_id'=>$id));
+            $Resume=Resume::firstOrNew(array('user_id'=>$id));
             $Resume->user_id=$id;
             $Resume->sex=Input::get('sex');
             $Resume->profession_id=Input::get('skill');
