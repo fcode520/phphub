@@ -1,4 +1,4 @@
-@extends('layouts.account')
+@extends('layouts.account_right')
 
 @section('title')
     个人中心_@parent

@@ -12,7 +12,7 @@ $(function(){//操作文本域的，评论
 
 $(function(){//操作DOM，内页左边的菜单图标
 	var t = $('.left-nav ul > li > span'),d = $('.nav-title-tip');
-	t.hover(function(){		
+	t.hover(function(){
 		var i = $(this).parent().index()+1;
 		d.stop().animate({opacity:"1"},400);
 		d.find('i').text($(this).attr('data-text'));
@@ -39,7 +39,7 @@ $(function(){//操作DOM 个人终极，点击回复
 			_this.parent().next().show();
 			_this.addClass('act');
 		}
-		
+
 	})
 });
 $(function(){
@@ -137,11 +137,19 @@ $(function() {
         }
     }
 
+
 });
 
 
 
+function gotourl($url){
+    if(self != top) {
+        top.location.href = window.location.href;
+    }
+    var frameid = parent.document.getElementById("iframe_right");
+    frameid.src = $url;
 
+}
 
 
 

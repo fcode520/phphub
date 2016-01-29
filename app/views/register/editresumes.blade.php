@@ -17,10 +17,10 @@
                     {{Form::open(array('url'=>'/EditResume/uploadimg','method' => 'POST','class'=>'content','id'=>'uploadimgform'))}}
 
                     <div class="header">
-                        @if($user->avatar)
-                            {{HTML::image($user->present()->gravatar,'a picture',array('class'=>'header','id'=>'user-avatar'))}}
+                        @if(isset($user->avatar))
+                            {{HTML::image($user->present()->gravatar,'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:38px;height:38px;'))}}
                         @else
-                            {{HTML::image(cdn('assets/images/register/addheader.png'),'a picture',array('class'=>'header','id'=>'user-avatar'))}}
+                            {{HTML::image(cdn('assets/images/register/addheader.png'),'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:38px;height:38px;'))}}
                         @endif
                         {{Form::file('uploadImg',array('id'=>'uploadImg','onchange'=>'setImagePreview(\'header\',\'uploadImg\')'))}}
                         <span id="upload-avatar">添加头像</span>

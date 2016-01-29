@@ -1,4 +1,4 @@
-@extends('layouts.account')
+@extends('layouts.account_right')
 
 @section('title')
     个人中心_@parent
@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-    <div class="my-article">
+<div class="my-article">
         <div class="container">
 
             @include('flash::message')
@@ -26,7 +26,7 @@
                             @foreach($topics as $topic)
                                 <li>
                                     <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
-                                    <p>{{$topic->view_count}} 次浏览 • <span>{{$topic->votes()->ByWhom(Auth::id())->WithType('upvote')->count()}}攒</span> • <span>{{$topic->favorite_count}}关注</span> • {{$topic->reply_count}} 个评论 • <abbr title="{{ $topic->created_at }}" class="timeago">{{ $topic->created_at }}</abbr>
+                                    <p>{{$topic->view_count}} 次浏览 ? <span>{{$topic->votes()->ByWhom(Auth::id())->WithType('upvote')->count()}}攒</span> ? <span>{{$topic->favorite_count}}关注</span> ? {{$topic->reply_count}} 个评论 ? <abbr title="{{ $topic->created_at }}" class="timeago">{{ $topic->created_at }}</abbr>
                                         <a data-method="delete" id="topic-delete-button" href="javascript:void(0);" data-url="{{ route('ac.topics.destroy', [$topic->id]) }}" title="{{ lang('Delete') }}" class="">
                                            删除
                                         </a>

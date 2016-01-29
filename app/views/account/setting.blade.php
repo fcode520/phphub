@@ -1,4 +1,4 @@
-@extends('layouts.account')
+@extends('layouts.account_right')
 
 @section('title')
     个人中心_@parent
@@ -18,7 +18,9 @@
 
                     @include('account.partials.TopSettingNav')
 
+
                     <div class="clearfix"></div>
+
                     <div class="personal-infomation">
                         <div class="text-left">
                             <img class="" alt="{{$resume->user->username}}"

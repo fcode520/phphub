@@ -11,15 +11,12 @@ body{
 .renzheng p.addjingyan:hover{color: #333;}
 .subtitle > span{width: 14px;height: 14px;background: url('../images/register/close.png') no-repeat;display: inline-block;margin-left: 10px;vertical-align: middle;cursor: pointer;}
 
-
-
 .renzheng{
 	position:relative;
 	left:50%;
 	top:25px;
 	margin-left:-365px;
 	width:730px;
-	background-color:#fff;
 }
 .renzheng .title{
 	height:60px;

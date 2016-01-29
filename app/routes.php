@@ -291,13 +291,35 @@ Route::get('/account/',[
     'uses'=>'AccountController@index']);
 Route::get('/account/replies','AccountController@replies');
 Route::get('/account/sysnotify','AccountController@sysnotify');
-Route::get('/account/personalsettings','AccountController@personalsettings');
+Route::get('/account/personalsettings',
+    [
+        'as'=>'ac_setting',
+        'uses'=>'AccountController@personalsettings'
+    ]);
+
+Route::get('/account/ac_if_setting',
+    [
+        'as'=>'ac_if_setting',
+        'uses'=>'AccountController@ac_if_setting'
+    ]);
+
+
 Route::get('/account/editresume',[
-    'as' => 'ac_editresume',
+    'as' => 'acc_editresume',
     'uses' => 'AccountController@editresume',
+]);
+Route::get('/account/notify',[
+    'as' => 'ac_notify',
+    'uses' => 'AccountController@notify',
 ]);
 Route::get('/account/topics',[
     'as' => 'ac_topices',
     'uses' => 'AccountController@topics',
 ]);
+Route::get('/account/editsetting',[
+    'as' => 'editsetting',
+    'uses' => 'AccountController@editsetting',
+]);
+
+
 Route::get('job','JobController@index');

@@ -12,14 +12,8 @@ class AccountController extends \BaseController {
 		if(!Auth::check()){
 		return 	Redirect::intended('/');
 		}
-		$notifications = Auth::user()->notifications();
-        $userID=Auth::user()->id;
-		$notifications->sysNotifyCount=Notification::WithNoType('new_reply')->ToWhom($userID)->count();
-		$notifications->repliesCount=Notification::WithType('new_reply')->ToWhom($userID)->count();
-		Auth::user()->notification_count = 0;
-		Auth::user()->save();
 
-		return View::make('account.index', compact('notifications'));
+		return View::make('account.index');
 	}
     public function replies(){
 		if(!Auth::check()){
@@ -29,7 +23,7 @@ class AccountController extends \BaseController {
         $userID=Auth::user()->id;
 		$notifications->sysNotifyCount=Notification::WithNoType('new_reply')->ToWhom($userID)->count();
 		$notifications->repliesCount=Notification::WithType('new_reply')->ToWhom($userID)->count();
-        return View::make('account.index', compact('notifications'));
+        return View::make('account.notify', compact('notifications'));
     }
     public function  sysnotify(){
 		if(!Auth::check()){
@@ -39,7 +33,7 @@ class AccountController extends \BaseController {
         $userID=Auth::user()->id;
 		$notifications->sysNotifyCount=Notification::WithNoType('new_reply')->ToWhom($userID)->count();
 		$notifications->repliesCount=Notification::WithType('new_reply')->ToWhom($userID)->count();
-        return View::make('account.index', compact('notifications'));
+        return View::make('account.notify', compact('notifications'));
     }
 	public function personalsettings(){
 		if(!Auth::check())
@@ -56,6 +50,21 @@ class AccountController extends \BaseController {
 		$projects=Auth::user()->projects()->first();
 		return View::make('account.setting',compact('resume','projects'));
 	}
+    public function ac_if_setting(){
+        if(!Auth::check())
+        {
+
+            return	Redirect::guest('/ow_login');
+        }
+
+        $resume=Auth::user()->resume()->first();
+        if(is_null($resume)){
+            Flash::success("请先完善资料，在查看箱子资料");
+            return	Redirect::route('EditResume');
+        }
+        $projects=Auth::user()->projects()->first();
+        return View::make('account.iframesetting',compact('resume','projects'));
+    }
 	public function editresume(){
 		if(Auth::check()){
 			$user=Auth::user();
@@ -74,7 +83,29 @@ class AccountController extends \BaseController {
 		$topics = Topic::whose(Auth::user()->id)->recent()->limit(10)->get();
 		return View::make('account.topics',compact('topics'));
 	}
+    public function notify(){
+        $notifications = Auth::user()->notifications();
+        $userID=Auth::user()->id;
+        $notifications->sysNotifyCount=Notification::WithNoType('new_reply')->ToWhom($userID)->count();
+        $notifications->repliesCount=Notification::WithType('new_reply')->ToWhom($userID)->count();
+        Auth::user()->notification_count = 0;
+        Auth::user()->save();
 
+        return View::make('account.notify', compact('notifications'));
+    }
+    public function editsetting(){
+        if(Auth::check()){
+            $user=Auth::user();
+            $id=$user->id;
+            $resume = User::find($id)->resume()->first();
+            if(!is_null($resume)){
+                $project=Resume::find($id)->userproject()->get();
+            }
+            return View::make('account.editsetting', compact('user','resume','project'));
+        }else{
+            return Redirect::guest('ow_login');
+        }
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *
