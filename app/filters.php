@@ -91,7 +91,6 @@ Route::filter('manage_topics', function () {
         return Redirect::guest('login-required');
     } elseif (! Entrust::can('manage_topics')) {
         // Checks the current user
-
         return Redirect::route('admin-required');
     }
 });

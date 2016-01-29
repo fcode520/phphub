@@ -1,5 +1,5 @@
 <div class="left-nav">
-    <div class="left-nav-logo text-center">ONEWORK</div>
+    <div class="left-nav-logo text-center"><a href="{{route('account')}}"></a>ONEWORK</div>
     <ul>
         <li><span data-text="消息" class="a"></span></li>
         <li><span data-text="项目" class="b"></span></li>
@@ -9,3 +9,4 @@
     </ul>
     <div class="nav-title-tip"><span class="glyphicon glyphicon-triangle-left"></span><i></i></div>
 </div>
+

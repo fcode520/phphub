@@ -177,10 +177,18 @@ class TopicsController extends \BaseController implements CreatorListener
     {
         $topic = Topic::findOrFail($id);
         $this->authorOrAdminPermissioinRequire($topic->user_id);
-        $topic->delete();
+        //$topic->delete();
+
         Flash::success(lang('Operation succeeded.'));
 
-        return Redirect::route('topics.index');
+        $url = Request::getRequestUri();
+        if(stripos($url,'account')==false){
+            return Redirect::route('topics.index');
+        }else{
+            return Redirect::route('ac_topices');
+        }
+
+
     }
 
     public function uploadImage()

@@ -13,4 +13,7 @@ class Userproject extends \Eloquent {
 	public function resume(){
 		return $this->belongsTo('resume');
 	}
+	public function users(){
+		return $this->belongsTo('users');
+	}
 }

@@ -49,7 +49,7 @@
                         </a>
                     {{--</li>--}}
                     {{--<li>--}}
-                        <a class="button" href="{{ URL::route('logout') }}" onclick=" return confirm('{{ lang('Are you sure want to logout?') }}')">
+                        <a class="button" href="{{ URL::route('logout') }}" >
                             <i class="fa fa-sign-out"></i> {{ lang('Logout') }}
                         </a>
                     {{--</li>--}}

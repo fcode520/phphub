@@ -197,20 +197,19 @@ class UsersController extends \BaseController
     public function p_EditResume()
     {
         if(Auth::check()){
-            $head_img=Input::file('uploadImg');
             $id=Auth::user()->id;
-            $Resum=new Resume();
-            $Resum->user_id=$id;
-            $Resum->sex=Input::get('sex');
-            $Resum->profession_id=Input::get('skill');
-            $Resum->remote_status=Input::get('profession');
-            $Resum->skill_id=Input::get('skill');
-            $Resum->qq=Input::get('qqnumber');
+            $Resume=Resume::firstOrCreate(array('user_id'=>$id));
+            $Resume->user_id=$id;
+            $Resume->sex=Input::get('sex');
+            $Resume->profession_id=Input::get('skill');
+            $Resume->remote_status=Input::get('profession');
+            $Resume->skill_id=Input::get('skill');
+            $Resume->qq=Input::get('qqnumber');
             $position=Input::get('province').'-'.Input::get('city').'-'.Input::get('district');
-            $Resum->position=$position;
-            $Resum->blog=Input::get('Blog');
-            $Resum->summary=Input::get('summery');
-            $Resum->skill_experience=Input::get('experience');
+            $Resume->position=$position;
+            $Resume->blog=Input::get('Blog');
+            $Resume->summary=Input::get('summery');
+            $Resume->skill_experience=Input::get('experience');
 
             $projectNum=intval(Input::get('projectNum'));
 
@@ -224,6 +223,9 @@ class UsersController extends \BaseController
             if($num!=$projectNum){
                 $projectNum=$num;
             }
+
+            Userproject::where('user_id','=',$id)->delete();
+
             for($i=0;$i<$projectNum ;$i++){
                 $OneProject=new Userproject();
                 $OneProject->user_id=$id;
@@ -235,13 +237,15 @@ class UsersController extends \BaseController
                 $OneProject->description=$Projectecperience[$i];
                 $OneProject->save();
             }
-            $Resum->save();
-
-
-
+            $Resume->save();
         }
-        $user=User::findOrFail(1);
-        return View::make('register.resumes', compact('user'));
+        $url = Request::getRequestUri();
+        if(stripos($url,'account')==false){
+            return Redirect::to('/EditResume');
+        }else{
+            return Redirect::to('/account/personalsettings');
+        }
+
     }
 
     public function wrongTokenAjax()

@@ -195,6 +195,10 @@ class Notification extends \Eloquent
     {
         return $query->where('type', '=', $type);
     }
+    public function scopeWithNoType($query, $type)
+    {
+        return $query->where('type', '<>', $type);
+    }
 
     public function scopeAtTopic($query, $topic_id)
     {

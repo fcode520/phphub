@@ -27,7 +27,7 @@
 
         {{Form::open(array('url'=>'/EditResume','class'=>'content','id'=>'renzhengform'))}}
         <div class="input">
-          <input type="text" name="email" id="" placeholder="邮箱">
+          {{--<input type="text" name="email" id="" placeholder="邮箱">--}}
 
             @if(is_null($resume))
                 <div class="row">
@@ -89,7 +89,7 @@
                 {{Form::select('city')}}
                 {{Form::select('district')}}
             </div>
-            @if(is_null($resume))
+            @if(!isset($resume))
                 {{Form::textarea('summery',null,['placeholder'=>'个人简介'])}}
                 {{Form::textarea('experience',null,['placeholder'=>'技术经验'])}}
             @else
@@ -97,7 +97,7 @@
                 {{Form::textarea('experience',$resume->skill_experience,['placeholder'=>'技术经验'])}}
             @endif
             <div class="project-info">
-            @if(!isset($project))
+            @if(!isset($project) or count($project)==0)
                     <div class="one-project">
                         <p class="subtitle">项目经验</p>
                         <div class="row2">

@@ -191,17 +191,19 @@ Route::group(['before' => 'manage_topics'], function () {
         'uses' => 'TopicsController@pin',
     ]);
 
-    Route::delete('topics/delete/{id}',  [
-        'as' => 'topics.destroy',
-        'uses' => 'TopicsController@destroy',
-    ]);
-
     Route::post('topics/sink/{id}',  [
         'as' => 'topics.sink',
         'uses' => 'TopicsController@sink',
     ]);
 });
-
+Route::delete('topics/delete/{id}',  [
+    'as' => 'topics.destroy',
+    'uses' => 'TopicsController@destroy',
+]);
+Route::delete('account/topics/delete/{id}',  [
+    'as' => 'ac.topics.destroy',
+    'uses' => 'TopicsController@destroy',
+]);
 Route::group(['before' => 'manage_users'], function () {
     Route::post('users/blocking/{id}',  [
         'as' => 'users.blocking',
@@ -266,6 +268,10 @@ Route::post('/EditResume', [
     'as' => 'EditResume',
     'uses' => 'UsersController@p_EditResume',
 ]);
+Route::post('/account/EditResume', [
+    'as' => 'ac_EditResume',
+    'uses' => 'UsersController@p_EditResume',
+]);
 Route::post('/EditResume/uploadimg','UsersController@avatarUpload');
 Route::get('/vaild_email/{id}', [
     'as' => 'vaild_email',
@@ -280,8 +286,18 @@ Route::controller('/password', 'RemindersController');
 Route::get('/activation','ow_AuthController@activation');
 //
 #--------------------个人中心----------------
-Route::get('/account/','AccountController@index');
+Route::get('/account/',[
+    'as'=>'account',
+    'uses'=>'AccountController@index']);
 Route::get('/account/replies','AccountController@replies');
 Route::get('/account/sysnotify','AccountController@sysnotify');
-
+Route::get('/account/personalsettings','AccountController@personalsettings');
+Route::get('/account/editresume',[
+    'as' => 'ac_editresume',
+    'uses' => 'AccountController@editresume',
+]);
+Route::get('/account/topics',[
+    'as' => 'ac_topices',
+    'uses' => 'AccountController@topics',
+]);
 Route::get('job','JobController@index');

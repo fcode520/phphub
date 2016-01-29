@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 //profession
-//ÃèÊöÖ°ÒµµÄ
+//ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½
 class CreateProfessionTable extends Migration {
 
 	/**
@@ -27,10 +27,7 @@ class CreateProfessionTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('profession', function(Blueprint $table)
-		{
-			//
-		});
+		Schema::drop('profession');
 	}
 
 }

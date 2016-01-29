@@ -25,7 +25,7 @@
                     <div class="my-message">
                     <ul>
                         @foreach ($notifications as $notification)
-                        @if (count($notification->topic))
+                            @if (count($notification->topic))
 
 
                                     <li>
@@ -35,31 +35,33 @@
                                             </a>
                                         </div>
                                         <div class="b col-sm-8">
-                                            <a href="{{ route('users.show', [$notification->from_user_id]) }}">
-                                                {{{ $notification->fromUser->name }}}
-                                                {{$notification->topic->title}}
-                                            </a>
-                                            <p>
+                                            {{"系统提示：您的文章 "}}<a href="{{ route('topics.show', [$notification->topic->id]) }}">{{$notification->topic->title}}</a>
+
+                                            {{" 被 "}}<a href="{{route('users.show',[$notification->from_user_id])}}">{{$notification->fromUser->username}}</a>
                                             @if($notification->type=='topic_attent')
-                                                   {{"文章被关注"}}
-                                                   @elseif($notification->type=='topic_favorite')
-                                                   {{"文章被".$notification->fromUser->username."收藏"}}
-                                                   @elseif($notification->type=='topic_upvote')
-                                                   {{"文章被".$notification->fromUser->username."点赞"}}
-                                                   @elseif($notification->type=='topic_mark_excellent')
-                                                    {{"文章被".$notification->fromUser->username."推荐"}}
-                                                    @else
-                                                     {{ $notification->body }}
+                                                {{" 关注"}}
+                                                    @elseif($notification->type=='topic_favorite')
+                                                {{" 收藏"}}
+                                                    @elseif($notification->type=='topic_upvote')
+                                                {{" 点赞"}}
+                                                    @elseif($notification->type=='topic_mark_excellent')
+                                                {{" 推荐"}}
+                                                    @elseif($notification->type=='new_reply')
+                                                {{" 回复"}}
+                                                <p> {{ $notification->body }}</p>
+                                            @else
+                                                <a href="{{ route('users.show', [$notification->from_user_id]) }}">
+                                                    {{$notification->fromUser->username}}
+                                                    {{$notification->topic->title}}
+                                                </a>
+                                                <p> {{ $notification->body }}</p>
+
                                             @endif
-
-                                            </p>
-
-
                                         </div>
                                         <div class="c col-sm-3">
                                             <p class="timeago">{{ $notification->created_at }}</p>
                                             @if($notification->type=='new_reply')
-                                            <p>未回复</p>
+                                            {{--<p>未回复</p>--}}
                                             <a href="{{ route('topics.show', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}" title="回复" class="d">
                                                 {{{ str_limit('回复', '100') }}}
                                             </a>

@@ -31,7 +31,6 @@ OneWork & 远程工作者社区
 		<meta name="keywords" content="Onework,远程办公,远程工作,在家办公,soho" />
 		<meta name="author" content="The OneWork  Community." />
 		<meta name="description" content="@section('description') 我们崇尚工作方式简单化，所以A Personal Computer, One Work!是我们的追求，更是我们的初心。 @show" />
-
         <link rel="stylesheet" href="{{ cdn('assets/css/'.Asset::styles('frontend')) }}">
         <link rel="shortcut icon" href="{{ cdn('favicon.ico') }}"/>
         @yield('css')
@@ -55,10 +54,7 @@ OneWork & 远程工作者社区
 
 			@include('account.partials.leftnav')
 
-
-				@include('flash::message')
-
-				@yield('content')
+			@yield('content')
 
 
 		</div>

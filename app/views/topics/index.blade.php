@@ -10,13 +10,13 @@
 @stop
 
 @section('content')
-@if(isset($currentUser))
-@if($currentUser->status==0)
+    @if(isset($currentUser))
+         @if($currentUser->status==0)
       <div class="alert alert-danger">
           {{ '请激活当前用户' }}
       </div>
-      @endif
-      @endif
+         @endif
+    @endif
 <!--交流页面主要内容begin-->
   <div class="row">
     <div class="col-sm-9 exchange">

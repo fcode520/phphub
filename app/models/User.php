@@ -20,7 +20,7 @@ public static $rules = array(
     public $presenter = 'Phphub\Presenters\UserPresenter';
 
     // Enable hasRole( $name ), can( $permission ),
-    //   and ability($roles, $permissions, $options)
+    // and ability($roles, $permissions, $options)
     use HasRole;
 
     // Enable soft delete--定义软删除
@@ -68,6 +68,11 @@ public static $rules = array(
     //简历
     public function resume(){
         return $this->hasMany('Resume');
+    }
+    //项目经历
+    public function projects()
+    {
+        return $this->hasMany('userproject');
     }
 
     //通过gihubid 获取

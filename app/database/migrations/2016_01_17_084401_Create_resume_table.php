@@ -16,7 +16,7 @@ class CreateResumeTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('user_id');
-			$table->string('head_img')->nullable();
+			$table->string('head_img')->nullable()->default("def_avatars.png");;
 			$table->string('email')->nullable()->unique();;
 			$table->integer('sex')->nullable()->default(0);//0 �� 1 Ů 2����
 			$table->integer('profession_id')->nullable();
@@ -38,7 +38,7 @@ class CreateResumeTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('appends');
+		Schema::drop('Resume');
 	}
 
 }

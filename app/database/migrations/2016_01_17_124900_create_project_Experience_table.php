@@ -17,11 +17,11 @@ class CreateProjectExperienceTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_id');
 			$table->string('project_name');
-			$table->string('role');//µ£ÈÎ½ÇÉ«
+			$table->string('role');//ï¿½ï¿½ï¿½Î½ï¿½É«
 			$table->string('start_time');
 			$table->string('end_time');
 			$table->string('url');
-			$table->string('description');//ÏîÄ¿ÃèÊö
+			$table->string('description');//ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½
 			$table->timestamps();
 		});
 	}
@@ -33,10 +33,7 @@ class CreateProjectExperienceTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('project_Experience', function(Blueprint $table)
-		{
-			//
-		});
+		Schema::drop('project_Experience');
 	}
 
 }

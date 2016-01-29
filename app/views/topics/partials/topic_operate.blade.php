@@ -58,9 +58,7 @@
             </a>
         @endif
 
-        <a data-method="delete" id="topic-delete-button" href="javascript:void(0);" data-url="{{ route('topics.destroy', [$topic->id]) }}" title="{{ lang('Delete') }}" class="admin">
-            <i class="fa fa-trash-o"></i>
-        </a>
+
     @endif
 
     @if ( $currentUser && ($currentUser->can("manage_topics") || $currentUser->id == $topic->user_id) )
@@ -70,6 +68,9 @@
 
       <a id="topic-edit-button" href="{{ route('topics.edit', [$topic->id]) }}" title="{{ lang('Edit') }}" class="admin">
         <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a data-method="delete" id="topic-delete-button" href="javascript:void(0);" data-url="{{ route('topics.destroy', [$topic->id]) }}" title="{{ lang('Delete') }}" class="admin">
+       <i class="fa fa-trash-o"></i>
       </a>
     @endif
 

@@ -9,30 +9,66 @@ class AccountController extends \BaseController {
 	 */
 	public function index()
 	{
+		if(!Auth::check()){
+		return 	Redirect::intended('/');
+		}
 		$notifications = Auth::user()->notifications();
-
         $userID=Auth::user()->id;
-        $notifications->sysNotifyCount=$users = DB::table('notifications')->where('type','<>','new_reply')->where('user_id','=',$userID)->count();
-        $notifications->repliesCount=DB::table('notifications')->where('type','=','new_reply')->where('user_id','=',$userID)->count();
+		$notifications->sysNotifyCount=Notification::WithNoType('new_reply')->ToWhom($userID)->count();
+		$notifications->repliesCount=Notification::WithType('new_reply')->ToWhom($userID)->count();
 		Auth::user()->notification_count = 0;
 		Auth::user()->save();
 
 		return View::make('account.index', compact('notifications'));
 	}
     public function replies(){
+		if(!Auth::check()){
+			Redirect::intended('/');
+		}
         $notifications=Notification::where('type','=','new_reply')->where('user_id','=',Auth::user()->id)->get();
         $userID=Auth::user()->id;
-        $notifications->sysNotifyCount=$users = DB::table('notifications')->where('type','<>','new_reply')->where('user_id','=',$userID)->count();
-        $notifications->repliesCount=DB::table('notifications')->where('type','=','new_reply')->where('user_id','=',$userID)->count();
+		$notifications->sysNotifyCount=Notification::WithNoType('new_reply')->ToWhom($userID)->count();
+		$notifications->repliesCount=Notification::WithType('new_reply')->ToWhom($userID)->count();
         return View::make('account.index', compact('notifications'));
     }
     public function  sysnotify(){
+		if(!Auth::check()){
+			Redirect::intended('/');
+		}
         $notifications=Notification::where('type','<>','new_reply')->where('user_id','=',Auth::user()->id)->get();
         $userID=Auth::user()->id;
-        $notifications->sysNotifyCount=$users = DB::table('notifications')->where('type','<>','new_reply')->where('user_id','=',$userID)->count();
-        $notifications->repliesCount=DB::table('notifications')->where('type','=','new_reply')->where('user_id','=',$userID)->count();
+		$notifications->sysNotifyCount=Notification::WithNoType('new_reply')->ToWhom($userID)->count();
+		$notifications->repliesCount=Notification::WithType('new_reply')->ToWhom($userID)->count();
         return View::make('account.index', compact('notifications'));
     }
+	public function personalsettings(){
+		if(!Auth::check())
+		{
+			Redirect::intended('/');
+		}
+		$resume=Auth::user()->resume()->first();
+		$projects=Auth::user()->projects()->first();
+		return View::make('account.setting',compact('resume','projects'));
+	}
+	public function editresume(){
+		if(Auth::check()){
+			$user=Auth::user();
+			$id=$user->id;
+			$resume = User::find($id)->resume()->first();
+			if(!is_null($resume)){
+				$project=Resume::find($id)->userproject()->get();
+			}
+			return View::make('account.resumes', compact('user','resume','project'));
+		}else{
+			return Redirect::guest('ow_login');
+		}
+	}
+	public function topics(){
+
+		$topics = Topic::whose(Auth::user()->id)->recent()->limit(10)->get();
+		return View::make('account.topics',compact('topics'));
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
