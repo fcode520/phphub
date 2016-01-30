@@ -1,19 +1,3 @@
-<!--
-______                            _              _                                     _
-| ___ \                          | |            | |                                   | |
-| |_/ /___ __      __ ___  _ __  | |__   _   _  | |      __ _  _ __  __ _ __   __ ___ | |
-|  __// _ \\ \ /\ / // _ \| '__| | '_ \ | | | | | |     / _` || '__|/ _` |\ \ / // _ \| |
-| |  | (_) |\ V  V /|  __/| |    | |_) || |_| | | |____| (_| || |  | (_| | \ V /|  __/| |
-\_|   \___/  \_/\_/  \___||_|    |_.__/  \__, | \_____/ \__,_||_|   \__,_|  \_/  \___||_|
-                                          __/ |
-                                         |___/
-  ========================================================
-                                           phphub.org
-
-  --------------------------------------------------------
-  Laravel: v4.2.8
--->
-
 <!DOCTYPE html>
 <html lang="zh">
 	<head>
@@ -35,7 +19,6 @@ OneWork & 远程工作者社区
         <link rel="stylesheet" href="{{ cdn('assets/css/'.Asset::styles('frontend')) }}">
 		<link rel="stylesheet" href="{{ cdn('assets/onework_css/style.css') }}">
         <link rel="stylesheet" href="{{cdn('assets/onework_css/login.css')}}">
-{{--        <link rel="stylesheet" href="{{cdn('assets/onework_css/bootstrap.min.css')}}">--}}
         <link rel="shortcut icon" href="{{ cdn('favicon.ico') }}"/>
         @yield('css')
         <script>

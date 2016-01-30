@@ -16,15 +16,19 @@ body{
 	margin-right:30px;
 }
 .navbar-nav li{
-	font-size:12px;
+	font-size:15px;
 }
 .navbar-brand img{
 	display:inline-block;
 	vertical-align:middle;
+    width: 112px;
+    height: 18px;
 }
 #navbar-brand img{
     display:inline-block;
     vertical-align:middle;
+    width: 112px;
+    height: 18px;
 }
 .navbar-form input{
 	height:28px;

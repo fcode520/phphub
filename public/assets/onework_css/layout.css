@@ -9,7 +9,7 @@ ul,li{list-style-type: none;margin: 0;padding: 0;}
 ****/
 
 .exchange-head > ul{width: 100%;min-height: 40px;background-color: #fff;height: auto;overflow: hidden;padding-left: 10px;}
-.exchange-head > ul > li{line-height: 40px;padding:0 14px;float: left;}
+.exchange-head > ul > li{line-height: 40px;padding:0 14px;float: left;font-size:13px}
 .exchange-head > ul > li > a{color: #666666;}
 .exchange-head > ul > li > a:hover{color: #63ce83;}
 
@@ -37,6 +37,7 @@ ul,li{list-style-type: none;margin: 0;padding: 0;}
 
 .exchange-side{margin-top: 10px;}
 .personal-info{border: 1px solid #f0f0f0;background-color: #fff;padding: 20px;overflow: hidden;width: 100%;margin-bottom: 20px;}
+.personal-info-one{/* border: 1px solid #f0f0f0; *//* background-color: #fff; */padding: 0px;overflow: hidden;width: 100%;/* margin-bottom: 20px; */}
 .personal-photo > img{border: 1px solid #f0f5f6;float: left;margin-right: 10px;}
 .personal-name{float: left;}
 .personal-name > h2{color: #333;font-size: 14px;margin-top: 10px;}
@@ -53,6 +54,8 @@ ul,li{list-style-type: none;margin: 0;padding: 0;}
 .personal-info > .a > a{color: #9ca2a2;background: #f4f4f4;width: 100%;height: 35px;border: 1px solid #dfdfdf;text-align: center;line-height: 35px;display: block;}
 .personal-info > .a > a:hover{color: #4cae4c;}
 .personal-info > .b > a{color: #fff;background: #63ce83;width: 100%;height: 37px;text-align: center;line-height: 37px;display: block;}
+.personal-info-one > .b > a{color: #fff;background: #63ce83;width: 100%;height: 37px;text-align: center;line-height: 37px;display: block;border-radius:2px;}
+
 .personal-info > .b > a:hover{background: #4cae4c;}
 .personal-info > .c{width: 100%;text-align: center;margin-bottom: 0px;}
 .personal-info > .c > a{color: #9ca2a2;}

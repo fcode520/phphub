@@ -41,9 +41,8 @@
 </div>
 @else
 <div class="col-sm-3 exchange-side">
-<div class="personal-info">
- <p class="b"><a href="{{URL::route('ow_login')}}">登录</a></p>
- <p class="b"><a href="{{URL::route('ow_register')}}">注册</a></p>
+<div class="personal-info-one">
+ <p class="b"><a href="{{ isset($node) ? URL::route('topics.create', ['node_id' => $node->id]) : URL::route('topics.create') ; }}">+发布新话题</a></p>
  </div>
  </div>
 @endif
