@@ -25,6 +25,26 @@ $(function(){//操作DOM，内页左边的菜单图标
 	});
 });
 
+$(function () {//操作DOM，交流页面2 中间部分导航效果
+    var t = $('.exchange-head > ul > li > a');
+    var lf = $('.exchange-head > ul > li').first().width() / 2 - 6;
+    if (!!t) {
+        t.next().css('margin-left', lf);
+    }
+    t.on("click", function () {
+        var li = $(this).parent('li');
+        li.siblings().removeClass("act");
+        li.addClass("act");
+        li.find('span').css('margin-left', li.width() / 2 - 6);
+    });
+
+    var tt = $('.list-info > .unit-c > ul > li');
+    var line = $('.list-info > .unit-c > .line');
+    tt.on('click', function () {
+        line.stop().animate({'left': $(this).index() * 33.3333333 + 3.16666 + '%'}, 200);
+    });
+});
+
 $(function(){//操作DOM 个人终极，点击回复
 	var t = $('.my-message .c > .d');
 	t.on('click',function(){
@@ -40,69 +60,227 @@ $(function(){//操作DOM 个人终极，点击回复
 			_this.addClass('act');
 		}
 
-	})
+    })
 });
+
+$(function () {//点击添加 删除 一个项目经验
+    var t = $('.project-info');
+    var html = $('.one-project');
+    var numProject=parseInt($('#projectNum').val());
+    $('.addjingyan').on('click', function () {
+        numProject+=1;
+        var starttime = html.find('input[id="starttime_id"]');
+        var endtime = html.find('input[id="endtime_id"]');
+        var newstartid = starttime.attr('id') + '1';
+        var newendid = endtime.attr('id') + '1';
+        starttime.attr('id', newstartid);
+        endtime.attr('id', newendid);
+        t.append('<div class="one-project">'+html.html()+'</div>');
+        $('.one-project').last().find('.subtitle').append('<b></b>');
+        $('#projectNum').val(numProject);
+    });
+    $.cxCalendar.defaults.startDate = 1980;
+    $.cxCalendar.defaults.language = {
+        monthList: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
+        weekList: ['日', '一', '二', '三', '四', '五', '六']
+    };
+    $(document).on('click',".timeclass", function(){
+        $(this).cxCalendar().focus();
+
+    });
+
+    $('.project-info').on('click', 'b', function (e) {
+        $(this).parent().parent().remove();
+    });
+});
+
+$(function () {//操作文本域的，发送站内信
+    var t = $('.m-message');
+    t.focus(function () {
+        if (t.val() == "消息内容")
+            t.val('');
+    }).blur(function () {
+        if (t.val() == "") {
+            t.val('消息内容');
+        }
+        ;
+    });
+});
+
+$(function () {//左边菜单点击
+    var t = $('.left-nav > ul > li');
+    var s = $('.left-nav > ul > li span');
+    s.on("click", function () {
+        var i = $(this).attr('data-src');
+        $('.modify-article').hide();
+        $('#' + i).show();
+    });
+});
+
+$(function () {
+    if ($('.content').length != 1)return;
+    $('.content').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            uploadImg: {
+                message: '请上传头像图片',
+                validators: {
+                    notEmpty: {
+                        //message: 'The username is required and cannot be empty'
+                    },
+                    stringLength: {
+                        //min: 6,
+                        //max: 30,
+                        //message: 'The username must be more than 6 and less than 30 characters long'
+                    },
+                    regexp: {
+                        //regexp: /^[a-zA-Z0-9_]+$/,
+                        //message: 'The username can only consist of alphabetical, number and underscore'
+                    }
+                }
+            },
+            email: {
+                validators: {
+                    notEmpty: {
+                        message: '邮箱不能为空'
+                    },
+                    emailAddress: {
+                        message: '请输入正确的邮箱地址'
+                    }
+                }
+            },
+            qqnumber: {
+                validators: {
+                    notEmpty: {
+                        message: 'QQ不能为空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        //max: 30,
+                        message: 'QQ位数必须大于6位'
+                    },
+                    regexp: {
+                        regexp: /^[0-9]*$/,
+                        message: 'QQ必须是数字'
+                    }
+                }
+            },
+            summery: {
+                message: '请上传头像图片',
+                validators: {
+                    notEmpty: {
+                        message: '个人简介不能为空'
+                    }
+                }
+            },
+            experience: {
+                validators: {
+                    notEmpty: {
+                        message: '技术经验不能为空'
+                    }
+                }
+            },
+            xiangmumingchegn: {
+                validators: {
+                    notEmpty: {
+                        message: '项目名称不能为空'
+                    }
+                }
+            },
+            danrenzhiwu: {
+                validators: {
+                    notEmpty: {
+                        message: '担任职务不能为空'
+                    }
+                }
+            },
+            zhanshi: {
+                validators: {
+                    notEmpty: {
+                        message: '展示链接不能为空'
+                    }
+                }
+            },
+            xiangmujingli: {
+                validators: {
+                    notEmpty: {
+                        message: '项目经历不能为空'
+                    }
+                }
+            },
+            sex: {
+                validators: {
+                    notEmpty: {
+                        message: '性别选择不能为空'
+                    }
+                }
+            },
+            type: {
+                validators: {
+                    notEmpty: {
+                        message: '远程类型选择不能为空'
+                    }
+                }
+            },
+            profession: {
+                validators: {
+                    notEmpty: {
+                        message: '远程类型选择不能为空'
+                    }
+                }
+            },
+            starttime: {
+                validators: {
+                    notEmpty: {
+                        message: '开始时间选择不能为空'
+                    }
+                }
+            },
+            endtime: {
+                validators: {
+                    notEmpty: {
+                        message: '结束时间选择不能为空'
+                    }
+                }
+            },
+            sheng: {
+                validators: {
+                    notEmpty: {
+                        message: '省选择不能为空'
+                    }
+                }
+            },
+            shi: {
+                validators: {
+                    notEmpty: {
+                        message: '市选择不能为空'
+                    }
+                }
+            },
+            diqu: {
+                validators: {
+                    notEmpty: {
+                        message: '地区选择不能为空'
+                    }
+                }
+            },
+        }
+    });
+});
+
 $(function(){
 	$("#distpicker").distpicker();
 });
-$(function(){//点击添一个项目经验
-
-	var t = $('.project-info');
-	if(t.length>0){
-		var html = $('.one-project');
-		var numProject=parseInt($('#projectNum').val());
-
-
-		$('.addjingyan').on('click',function(){
-			numProject+=1;
-			var starttime = html.find('input[id="starttime_id"]');
-			var endtime = html.find('input[id="endtime_id"]');
-			var newstartid = starttime.attr('id') + '1';
-			var newendid = endtime.attr('id') + '1';
-			starttime.attr('id', newstartid);
-			endtime.attr('id', newendid);
-			t.append('<div class="one-project">'+html.html()+'</div>');
-			$('.one-project').last().find('.subtitle').append('<span></span>');
-			$('#projectNum').val(numProject);
-
-		});
-		$(document).on('click','span',function(e){
-			$(this).parent().parent().remove();
-			numProject-=1;
-			$('#projectNum').val(numProject);
-		});
-		$.cxCalendar.defaults.startDate = 1980;
-		$.cxCalendar.defaults.language = {
-			monthList: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
-			weekList: ['日', '一', '二', '三', '四', '五', '六']
-		};
-		$(document).on('click',".timeclass", function(){
-			$(this).cxCalendar().focus();
-
-		});
-	}
-
-
-});
 
 
 
-// 上传图片部分
-//function setImagePreview(imgId,theInput) {
-//    var preview, img_txt, localImag, file_head = document.getElementById(theInput),
-//    picture = file_head.value;
-//    if (!picture.match(/.jpg|.gif|.png|.bmp/i))
-//    return alert("您上传的图片格式不正确，请重新选择！")
-//    ,$('.header > span').html('添加头像')
-//    ,$('#header').attr('src','images/addheader.png')
-//    ,!1;
-//    if (preview = document.getElementById(imgId), file_head.files && file_head.files[0]){
-//    preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
-//    $('.header > span').html('点击头像进行替换');
-//    return !0;
-//    }
-//
-//    };
+
+
 
 $(function() {
     $(document).ready(function () {
@@ -150,6 +328,8 @@ function gotourl($url){
     frameid.src = $url;
 
 }
+
+
 
 
 

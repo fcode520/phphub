@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('css')
-    {{HTML::style('assets/onework_css/renzheng.css')}}
+  {{HTML::style('assets/onework_css/layout.css')}}
 @stop
 
 @section('title')
@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-    <div class="renzheng">
+    <div class="container attestation">
     <p class="title"><span>完善资料</span><span>填写详细个人信息，加入人才库</span></p>
         @include('register.resume')
     </div>

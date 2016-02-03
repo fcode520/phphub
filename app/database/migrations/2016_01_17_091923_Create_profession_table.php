@@ -20,6 +20,14 @@ class CreateProfessionTable extends Migration {
 		});
 	}
 
+    public function  iniData()
+    {
+        $profession = [
+            ['profession' => '全职远程职业者'],
+            ['profession' => '兼职远程工作者'],
+            ['profession' => '非远程工作者'],
+        ];
+    }
 	/**
 	 * Reverse the migrations.
 	 *

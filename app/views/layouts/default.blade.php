@@ -17,8 +17,7 @@ OneWork & 远程工作者社区
 		<meta name="description" content="@section('description') 我们崇尚工作方式简单化，所以A Personal Computer, One Work!是我们的追求，更是我们的初心。 @show" />
 
         <link rel="stylesheet" href="{{ cdn('assets/css/'.Asset::styles('frontend')) }}">
-		<link rel="stylesheet" href="{{ cdn('assets/onework_css/style.css') }}">
-        <link rel="stylesheet" href="{{cdn('assets/onework_css/login.css')}}">
+        {{HTML::style('assets/onework_css/layout.css')}}
         <link rel="shortcut icon" href="{{ cdn('favicon.ico') }}"/>
         @yield('css')
         <script>
@@ -42,13 +41,13 @@ OneWork & 远程工作者社区
 
 			@include('layouts.partials.nav')
 
-			<div class="container">
+			{{--<div class="container attestation">--}}
 
 				@include('flash::message')
 
 				@yield('content')
 
-			</div>
+			{{--</div>--}}
 
 		</div>
 		@include('layouts.partials.footer')

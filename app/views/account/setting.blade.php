@@ -5,7 +5,7 @@
 @stop
 
 @section('css')
-    {{HTML::style('assets/onework_css/style.css')}}
+
     {{HTML::style('assets/onework_css/layout.css')}}
 @stop
 

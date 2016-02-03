@@ -188,7 +188,9 @@ class UsersController extends \BaseController
             if(!is_null($resume)){
                 $project=Resume::find($id)->userproject()->get();
             }
-            return View::make('register.resumes', compact('user','resume','project'));
+            $skills = Skill::lists('skill');
+            $professions = Profession::lists('profession');
+            return View::make('register.resumes', compact('user', 'resume', 'project', 'skills', 'professions'));
         }else{
             return Redirect::guest('ow_login');
         }

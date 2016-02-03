@@ -4,7 +4,7 @@
 {{ lang('Newly Registered User List') }}_@parent
 @stop
 @section('css')
-    {{HTML::style('assets/onework_css/login.css')}}
+ {{HTML::style('assets/onework_css/layout.css')}}
 @stop
 @section('content')
 

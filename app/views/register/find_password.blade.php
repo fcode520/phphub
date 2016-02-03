@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('css')
-    {{HTML::style('assets/onework_css/register.css')}}
+ {{HTML::style('assets/onework_css/layout.css')}}
 @stop
 
 @section('title')
