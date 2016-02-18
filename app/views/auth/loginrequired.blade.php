@@ -19,7 +19,8 @@
               <div class="alert alert-warning">
                   {{ lang('You need to login to proceed.') }}
               </div>
-              {{ Form::submit(trans('Login with Github'), ['class' => 'btn btn-lg btn-success btn-block', 'id' => 'login-required-submit']) }}
+{{--              {{ Form::button(trans('点击登录'), ['class' => 'btn btn-lg btn-success btn-block', 'id' => 'login-required-submit']) }}--}}
+              <a href="{{ URL::route('ow_login') }}" class="btn btn-lg btn-success btn-block" id="login-required-submit" >点击登录</a>
             </fieldset>
 
           {{ Form::close() }}

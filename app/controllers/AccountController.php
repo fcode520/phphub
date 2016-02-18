@@ -101,7 +101,9 @@ class AccountController extends \BaseController {
             if(!is_null($resume)){
                 $project=Resume::find($id)->userproject()->get();
             }
-            return View::make('account.editsetting', compact('user','resume','project'));
+            $skills = Skill::lists('skill');
+            $professions = Profession::lists('profession');
+            return View::make('account.editsetting', compact('user','resume','project','skills','professions'));
         }else{
             return Redirect::guest('ow_login');
         }

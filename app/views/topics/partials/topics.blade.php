@@ -36,13 +36,7 @@
                     <span> • </span>
                     <span class="timeago">{{ $topic->updated_at }}</span>
                 @endif
-                        {{--<span>卡卡西前辈</span>--}}
-
-
-
-
-                        {{--<span>发表了文章&nbsp;•&nbsp;1&nbsp;个评论&nbsp;•&nbsp;111&nbsp;次浏览&nbsp;•&nbsp;2015-11-17 00:17</span>--}}
-                     </div>
+                         </div>
                      <a class="pull-right" href="{{ route('topics.show', [$topic->id]) }}" >
                                  <span class="hot-comment"> {{ $topic->reply_count }} </span>
                       </a>

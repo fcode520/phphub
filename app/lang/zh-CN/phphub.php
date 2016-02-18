@@ -27,7 +27,7 @@ return array(
     'Notice' => '提 示',
     'Login with Github' => '使用 Github 帐号登录',
     'User Login Require' => '用户登录提示',
-    'You need to login to proceed.' => '需要登录后才能继续操作. <br>当前只允许通过 Github 帐号登录.',
+    'You need to login to proceed.' => '需要登录后才能继续操作. <br>请点击登录按钮.',
     'Create New Account' => '创建新账号',
     'Avatar' => '头 像',
     'Username' => '用户名',
