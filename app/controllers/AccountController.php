@@ -44,7 +44,7 @@ class AccountController extends \BaseController {
 
 		$resume=Auth::user()->resume()->first();
 		if(is_null($resume)){
-			Flash::success("请先完善资料，在查看箱子资料");
+			Flash::success("请先完善资料，在查看资料");
 			return	Redirect::route('EditResume');
 		}
 		$projects=Auth::user()->projects()->first();

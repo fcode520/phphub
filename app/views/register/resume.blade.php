@@ -22,7 +22,7 @@
                                       '2'=>'保密'])}}
            </span>
         <span class="col-sm-4 col-xs-12">
-                {{Form::select('skill',$skills,$resume->skill_id)}}
+                {{Form::select('skill',$skills,isset($resume)?$resume->skill_id:0)}}
                 </span>
         <span class="col-sm-4 col-xs-12">
                {{Form::select('profession',$professions,$resume->remote_status)}}
