@@ -25,7 +25,7 @@
                 {{Form::select('skill',$skills,isset($resume)?$resume->skill_id:0)}}
                 </span>
         <span class="col-sm-4 col-xs-12">
-               {{Form::select('profession',$professions,$resume->remote_status)}}
+               {{Form::select('profession',$professions,isset($resume)?$resume->remote_status:0)}}
                 </span>
 </div>
       @if(is_null($resume))
