@@ -9,8 +9,8 @@ body{
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 /*修改 填坑的呢*/
-.header a{color: #fff;}
-.header a:hover{color: #63ce83;}
+.header .headertext a{color: #666;}
+.header .headertext a:hover{color: #63ce83;}
 .navbar-nav > li > a:hover{color: #63ce83!important;}
 
 

@@ -36,30 +36,25 @@
                     <!-- 搜索框表单 -->
             <div class="header text-right">
                 @if (Auth::check())
-                    {{--<li>--}}
+                <div class="headertext">
                         <a href="{{ route('notifications.index') }}" class="text-warning">
                       <span class="badge badge-{{ $currentUser->notification_count > 0 ? 'important' : 'fade'; }}" id="notification-count">
                           {{ $currentUser->notification_count }}
                       </span>
                         </a>
-                    {{--</li>--}}
-                    {{--<li>--}}
                         <a href="{{ route('users.show', $currentUser->id) }}">
                             <i class="fa fa-user"></i> {{{ $currentUser->username }}}
                         </a>
-                    {{--</li>--}}
-                    {{--<li>--}}
+
                         <a class="button" href="{{ URL::route('logout') }}" >
                             <i class="fa fa-sign-out"></i> {{ lang('Logout') }}
                         </a>
-                    {{--</li>--}}
+                </div>
                 @else
                     <a href="{{ URL::route('ow_login') }}" class="btn btn-success" id="login-btn">
-                        {{--<i class="fa fa-github-alt"></i>--}}
                         {{ lang('Login') }}
                     </a>
                     <a href="{{ URL::route('ow_register') }}" class="btn btn-success" id="login-btn">
-                        {{--<i class="fa fa-github-alt"></i>--}}
                         {{ lang('Register') }}
                     </a>
                 @endif
