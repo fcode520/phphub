@@ -1,0 +1,99 @@
+
+
+<?php $__env->startSection('title'); ?>
+    个人中心_@parent
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+
+    <?php echo HTML::style('assets/onework_css/layout.css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <div class="my-article">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9 modify-article message-center">
+                    <h2 class="title">Message center｜个人设置</h2>
+
+                    <?php echo $__env->make('account.partials.TopSettingNav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+                    <div class="clearfix"></div>
+
+                    <div class="personal-infomation">
+                        <div class="text-left">
+                            <img class="" alt="<?php echo $resume->user->username; ?>"
+                                 src="<?php echo $resume->user->present()->gravatar; ?>"  style="width:38px;height:38px;"/>
+
+                        </div>
+                        <di class="a row">
+                            <p><span class="col-sm-6"><label>邮箱</label>：<?php echo $resume->user->email; ?></span class="col-sm-6"><span class="col-sm-6"><label>性别</label>：男</span></p>
+                            <p><span class="col-sm-6"><label>所在地</label>：<?php echo $resume->position; ?></span><span class="col-sm-6"><label>是否远程</label>：<?php echo $resume->remote_status==2?"否":"是"; ?></span></p>
+
+                            <p><span class="col-sm-6"><label>远程类型</label>：
+                                    <?php if($resume->remote_status==2): ?>
+                                        <?php echo "非远程工作者"; ?>
+
+                                    <?php else: ?>
+                                        <?php echo $resume->remote_status==0?"全职远程工作者":"兼职远程工作者"; ?>
+
+                                    <?php endif; ?>
+                                </span>
+
+
+                                <span class="col-sm-6"><label>注册时间</label>：<?php echo $resume->user->created_at; ?></span></p>
+
+                            <p><span class="col-sm-6"><label>QQ</label>：<?php echo $resume->qq; ?></span><span class="col-sm-6"><label>工作技能</label>：C++工程师</span></p>
+                        </di>
+                        <div class="clearfix"></div>
+                        <div class="b">
+                            <p><label>个人简介：</label><span><?php echo $resume->summary; ?></span></p>
+                            <p><label>技术经验：</label><span><?php echo $resume->skill_experience; ?></span></p>
+                            <?php if(count($resume->userproject)): ?>
+                                <ul>
+                                    <?php foreach($resume->userproject as $project): ?>
+                                        <li>
+                                            <p><label>项目名称：</label><span><?php echo $project->project_name; ?></span></p>
+                                            <p><label>担任职位：</label><span><?php echo $project->role; ?></span></p>
+                                            <p><label>项目时间：</label><span><?php echo $project->start_time .'&nbsp;&nbsp;'.$project->end_time; ?></span></p>
+                                            <p><label>项目连接：</label><span><a href="<?php echo $project->url; ?>"><?php echo $project->url; ?></a></span></p>
+                                            <p><label>项目详情：</label><span><?php echo $project->description; ?></span></p>
+                                        </li>
+
+                                    <?php endforeach; ?>
+                                </ul>
+
+                            <?php else: ?>
+
+                                <ul>
+                                    <li>
+                                        <p><label>项目名称：</label><span> </span></p>
+                                        <p><label>担任职位：</label><span> </span></p>
+                                        <p><label>担任职位：</label><span> </span></p>
+                                        <p><label>项目详情：</label><span> </span></p>
+                                    </li>
+                                </ul>
+                            <?php endif; ?>
+                        </div>
+                        <p class="d">您的个人信息不会透露给任何第三方，请放心填写。</p>
+                        <div class="c">
+                            <p><label>姓名：</label><span>张磊</span></p>
+                            <p><label>身份证号：</label><span>128291294129</span></p>
+                            <p><label>手机号：</label><span>127123687</span></p>
+                            <p><label>微信号：</label><span>xijois</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--个人end-->
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+<?php echo HTML::script('assets/onework_js/myapp.js'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.account_right', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

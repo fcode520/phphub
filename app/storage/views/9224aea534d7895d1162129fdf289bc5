@@ -1,0 +1,54 @@
+
+
+<?php if(count($topics)): ?>
+
+<ul class="">
+    <?php foreach($topics as $topic): ?>
+     <li>
+                  <div class="photo">
+                   <img class="" alt="<?php echo e($topic->user->username); ?>" src="<?php echo $topic->user->present()->gravatar; ?>"  style="width:48px;height:48px;"/>
+                    </div>
+                   <div class="hot-news">
+                     <h2 class="hot-news-title">
+                     <a href="<?php echo route('topics.show', [$topic->id]); ?>" title="<?php echo e($topic->title); ?>">
+                      <?php echo e($topic->title); ?></a>
+                      </h2>
+
+                     <div class="hot-news-info">
+                        <?php /*<a href="<?php echo route('nodes.show', [$topic->node->id]); ?>" title="<?php echo e($topic->node->name); ?>"></a>*/ ?>
+                        <span> <?php echo e($topic->node->name); ?></span>
+
+
+                <?php if($topic->reply_count == 0): ?>
+
+                    <a href="<?php echo route('users.show', [$topic->user_id]); ?>" title="<?php echo e($topic->user->username); ?>">
+                        <?php echo e($topic->user->username); ?>
+
+                    </a>
+                    <span> • </span>
+                    <span class="timeago"><?php echo $topic->created_at; ?></span>
+                <?php endif; ?>
+
+                <?php if($topic->reply_count > 0 && count($topic->lastReplyUser)): ?>
+                    <?php echo lang('Last Reply by'); ?>
+
+                    <a href="<?php echo e(URL::route('users.show', [$topic->lastReplyUser->id])); ?>">
+                      <?php echo e($topic->lastReplyUser->name); ?>
+
+                    </a>
+                    <span> • </span>
+                    <span class="timeago"><?php echo $topic->updated_at; ?></span>
+                <?php endif; ?>
+                         </div>
+                     <a class="pull-right" href="<?php echo route('topics.show', [$topic->id]); ?>" >
+                                 <span class="hot-comment"> <?php echo $topic->reply_count; ?> </span>
+                      </a>
+                   </div>
+     </li>
+     <?php endforeach; ?>
+
+</ul>
+
+<?php else: ?>
+   <div class="empty-block"><?php echo lang('Dont have any data Yet'); ?>~~</div>
+<?php endif; ?>

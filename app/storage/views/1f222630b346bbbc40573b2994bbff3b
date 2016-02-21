@@ -1,0 +1,77 @@
+
+<!-- 导航条 -->
+<nav class="navbar navbar-default">
+    <div class="container">
+
+        <!-- logo区域 -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">手机导航按钮</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="navbar-brand" class="navbar-brand" href="/"><img src=<?php echo cdn('assets/images/logo.png'); ?>></a>
+        </div>
+
+        <!-- 导航按钮区域 -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="<?php echo (Request::is('topics*') ||Request::is('/')? ' active' : ''); ?>"><a href="<?php echo route('topics.index'); ?>"><?php echo lang('Topics'); ?></a></li>
+                <li class="<?php echo (Request::is('nodes/40') ? ' active' : ''); ?>"><a href="<?php echo route('nodes.show', 40); ?>"><?php echo lang('Jobs'); ?></a></li>
+                <li class="<?php echo (Request::is('Cooperate*') ? ' active' : ''); ?>"><a href="<?php echo route('topics.index', 40); ?>"><?php echo lang('Cooperate'); ?></a></li>
+                <li class="<?php echo (Request::is('team*') ? ' active' : ''); ?>"><a href="<?php echo route('topics.index'); ?>"><?php echo lang('Team'); ?></a></li>
+                <li class="<?php echo (Request::is('wiki*') ? ' active' : ''); ?>"><a href="<?php echo route('wiki'); ?>"><?php echo lang('Wiki'); ?></a></li>
+                <li class="<?php echo (Request::is('about*') ? ' active' : ''); ?>"><a href="<?php echo route('about'); ?>"><?php echo lang('About'); ?></a></li>
+            </ul>
+
+            <!-- 导航按钮区域 -->
+            <?php echo Form::open(['route'=>'search', 'method'=>'get', 'class'=>'navbar-form navbar-left hidden-sm', 'target'=>'_blank','role'=>'search']); ?>
+
+            <div class="form-group">
+                <?php echo Form::text('q', null, ['class' => 'form-control ', 'placeholder' => lang('Search'),'placeholder'=>'Search']); ?>
+
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span></button>
+            <?php echo Form::close(); ?>
+
+
+                    <!-- 搜索框表单 -->
+            <div class="header text-right">
+                <?php if(Auth::check()): ?>
+                    <?php /*<li>*/ ?>
+                        <a href="<?php echo route('notifications.index'); ?>" class="text-warning">
+                      <span class="badge badge-<?php echo $currentUser->notification_count > 0 ? 'important' : 'fade';; ?>" id="notification-count">
+                          <?php echo $currentUser->notification_count; ?>
+
+                      </span>
+                        </a>
+                    <?php /*</li>*/ ?>
+                    <?php /*<li>*/ ?>
+                        <a href="<?php echo route('users.show', $currentUser->id); ?>">
+                            <i class="fa fa-user"></i> <?php echo e($currentUser->username); ?>
+
+                        </a>
+                    <?php /*</li>*/ ?>
+                    <?php /*<li>*/ ?>
+                        <a class="button" href="<?php echo URL::route('logout'); ?>" >
+                            <i class="fa fa-sign-out"></i> <?php echo lang('Logout'); ?>
+
+                        </a>
+                    <?php /*</li>*/ ?>
+                <?php else: ?>
+                    <a href="<?php echo URL::route('ow_login'); ?>" class="btn btn-success" id="login-btn">
+                        <?php /*<i class="fa fa-github-alt"></i>*/ ?>
+                        <?php echo lang('Login'); ?>
+
+                    </a>
+                    <a href="<?php echo URL::route('ow_register'); ?>" class="btn btn-success" id="login-btn">
+                        <?php /*<i class="fa fa-github-alt"></i>*/ ?>
+                        <?php echo lang('Register'); ?>
+
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</nav>

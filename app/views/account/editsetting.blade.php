@@ -36,4 +36,5 @@
     {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js'))}}
     {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
     {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
+
 @stop

@@ -1,0 +1,22 @@
+
+
+<?php $__env->startSection('title'); ?>
+    个人中心_@parent
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+    <?php echo HTML::style('assets/onework_css/layout.css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<div id="rightFrame">
+<iframe src="<?php echo route('ac_notify'); ?>" name="iframe_right" id="iframe_right"></iframe>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+<?php echo HTML::script('assets/onework_js/myapp.js'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.account', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

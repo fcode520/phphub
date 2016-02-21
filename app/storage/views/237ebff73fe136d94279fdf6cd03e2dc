@@ -1,0 +1,34 @@
+<div class="meta inline-block" >
+
+  <a href="<?php echo route('nodes.show', $topic->node->id); ?>" class="remove-padding-left">
+    <?php echo e($topic->node->username); ?>
+
+  </a>
+  •
+  <a href="<?php echo route('users.show', $topic->user->id); ?>">
+    <?php echo e($topic->user->username); ?>
+
+  </a>
+
+  <?php if($topic->user->present()->hasBadge()): ?>
+    <span class="label label-warning" style="position: relative;"><?php echo e($topic->user->present()->badgeName()); ?></span>
+  <?php endif; ?>
+  •
+  <?php echo lang('at'); ?> <abbr title="<?php echo $topic->created_at; ?>" class="timeago"><?php echo $topic->created_at; ?></abbr>
+  •
+
+  <?php if(count($topic->lastReplyUser)): ?>
+    <?php echo lang('Last Reply by'); ?>
+
+      <a href="<?php echo e(URL::route('users.show', [$topic->lastReplyUser->id])); ?>">
+        <?php echo e($topic->lastReplyUser->name); ?>
+
+      </a>
+     <?php echo lang('at'); ?> <abbr title="<?php echo $topic->updated_at; ?>" class="timeago"><?php echo $topic->updated_at; ?></abbr>
+    •
+  <?php endif; ?>
+
+  <?php echo $topic->view_count; ?> <?php echo lang('Reads'); ?>
+
+</div>
+<div class="clearfix"></div>

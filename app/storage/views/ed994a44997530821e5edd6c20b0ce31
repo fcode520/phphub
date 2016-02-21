@@ -1,0 +1,59 @@
+
+
+<?php $__env->startSection('title'); ?>
+<?php echo lang('Topic List'); ?> @parent
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+    <?php /*<?php echo HTML::style('assets/onework_css/layout.css'); ?>*/ ?>
+    <link rel="stylesheet" href="<?php echo cdn('assets/onework_css/layout.css'); ?>">
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <?php if(isset($currentUser)): ?>
+         <?php if($currentUser->status==0): ?>
+      <div class="alert alert-danger">
+          <?php echo '请激活当前用户'; ?>
+
+      </div>
+         <?php endif; ?>
+    <?php endif; ?>
+<!--交流页面主要内容begin-->
+
+ <div class="col-sm-9 exchange">
+      <div class="exchange-head">
+        <ul>
+          <li class="act"><a href="#">全部</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">寻求工作</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">团队招募</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">外包</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">寻求合伙人</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+        </ul>
+      </div>
+      <div class="exchange-hot">
+          <?php if(isset($node)): ?>
+                  <h2 class="pull-left panel-title"><?php echo lang('Current Node'); ?>: <?php echo e($node->name); ?></h2>
+          <?php else: ?>
+                  <h2 class="hot-title">全部文章</h2>
+          <?php endif; ?>
+
+        <div class="hot-con">
+             <?php echo $__env->make('topics.partials.topics', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        </div>
+        <div class="hot-footer text-right">
+                        <!-- Pager -->
+         <?php echo $topics->appends(Request::except('page', '_pjax'))->links();; ?>
+
+        </div>
+      </div>
+
+</div>
+<!--交流页面主要内容end-->
+<?php echo $__env->make('layouts.partials.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+<?php echo HTML::script('assets/onework_js/myapp.js'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

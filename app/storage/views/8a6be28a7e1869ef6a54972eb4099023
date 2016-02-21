@@ -1,0 +1,100 @@
+
+
+<?php $__env->startSection('title'); ?>
+<?php echo lang('Create New Topic'); ?>_@parent
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<div class="container">
+		<div class="row">
+<div class="col-sm-9 exchange">
+				<div class="new-topic">
+					<h2>发布新话题</h2>
+					<div class="clearfix"></div>
+					<div class="topic-con">
+					     <?php if(isset($topic)): ?>
+                            <?php echo Form::model($topic, ['route' => ['topics.update', $topic->id], 'id' => 'topic-create-form', 'method' => 'patch']); ?>
+
+                          <?php else: ?>
+                            <?php echo Form::open(['route' => 'topics.store','id' => 'topic-create-form', 'method' => 'post']); ?>
+
+                          <?php endif; ?>
+                        <div class="form-group topic-title">
+                                  <?php echo Form::text('title', null, ['class' => 'topic-title', 'id' => 'topic-title', 'placeholder' => lang('Please write down a topic')]); ?>
+
+                        </div>
+                         <?php echo $__env->make('topics.partials.composing_help_block', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+                                <div class="form-group ">
+                                  <?php echo Form::textarea('body', null, ['class' => 'form-control',
+                                                                    'rows' => 20,
+                                                                    'style' => "overflow:hidden",
+                                                                    'id' => 'reply_content',
+                                                                    'placeholder' => lang('Please using markdown.')]); ?>
+
+                                </div>
+                    						<?php /*<div class="some-select btn-group">*/ ?>
+                    						    <?php /*<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*/ ?>
+                    						    <?php /*招聘信息&nbsp;&nbsp;<span class="caret"></span>*/ ?>
+                    						    <?php /*</button>*/ ?>
+                    						    <?php /*<ul class="dropdown-menu">*/ ?>
+                    						        <?php /*<li><a href="#">招聘信息1</a></li>*/ ?>
+                    							    <?php /*<li><a href="#">招聘信息2</a></li>*/ ?>
+                    							    <?php /*<li><a href="#">招聘信息3</a></li>*/ ?>
+                    							    <?php /*<li><a href="#">招聘信息4</a></li>*/ ?>
+                    						    <?php /*</ul>*/ ?>
+                    						<?php /*</div>*/ ?>
+                    						        <div class="form-group">
+                                                        <select class="some-select btn-group form-control" name="node_id" >
+
+                                                          <option value="" disabled <?php echo App::make('Topic')->present()->haveDefaultNode($node, null) ?: 'selected';; ?>><?php echo lang('Pick a node'); ?></option>
+
+                                                          <?php foreach($nodes['top'] as $top_node): ?>
+                                                            <optgroup label="<?php echo e($top_node->name); ?>">
+                                                              <?php foreach($nodes['second'][$top_node->id] as $snode): ?>
+                                                                <option value="<?php echo $snode->id; ?>" <?php echo App::make('Topic')->present()->haveDefaultNode($node, $snode) ? 'selected' : '';; ?> ><?php echo $snode->name; ?></option>
+                                                              <?php endforeach; ?>
+                                                            </optgroup>
+                                                          <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                    						<div class="post-art clearfix">
+
+                                            							<?php echo Form::submit(lang('Publish'), ['class' => 'btn btn-primary', 'id' => 'topic-create-submit']); ?>
+
+                                            						</div>
+                                <?php /*<div class="form-group status-post-submit">*/ ?>
+                                          <?php /*<?php echo Form::submit(lang('Publish'), ['class' => 'btn btn-primary', 'id' => 'topic-create-submit']); ?>*/ ?>
+                                        <?php /*</div>*/ ?>
+                          <?php echo Form::close(); ?>
+
+
+
+						<?php /*<div class="some-select btn-group">*/ ?>
+						    <?php /*<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">*/ ?>
+						    <?php /*招聘信息&nbsp;&nbsp;<span class="caret"></span>*/ ?>
+						    <?php /*</button>*/ ?>
+
+						    <?php /*<ul class="dropdown-menu">*/ ?>
+						        <?php /*<li><a href="#">招聘信息1</a></li>*/ ?>
+							    <?php /*<li><a href="#">招聘信息2</a></li>*/ ?>
+							    <?php /*<li><a href="#">招聘信息3</a></li>*/ ?>
+							    <?php /*<li><a href="#">招聘信息4</a></li>*/ ?>
+						    <?php /*</ul>*/ ?>
+						<?php /*</div>*/ ?>
+						<?php /*<div class="post-file clearfix">*/ ?>
+							<?php /*<button class="btn">本地上传</button><span>格式为JPG、JPEG、PNG，小于5MB</span>*/ ?>
+						<?php /*</div>*/ ?>
+						<?php /*<div class="post-art clearfix">*/ ?>
+							<?php /*<button class="btn">发&nbsp;布</button>*/ ?>
+						<?php /*</div>*/ ?>
+					</div>
+				</div>
+			</div>
+<!--交流页面主要内容end-->
+<?php echo $__env->make('layouts.partials.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

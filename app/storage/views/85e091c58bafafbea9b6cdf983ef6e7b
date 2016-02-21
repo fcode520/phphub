@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>
+			<?php $__env->startSection('title'); ?>
+OneWork & 远程工作者社区
+			<?php echo $__env->yieldSection(); ?>
+		</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="keywords" content="Onework,远程办公,远程工作,在家办公,soho" />
+		<meta name="author" content="The OneWork  Community." />
+		<meta name="description" content="<?php $__env->startSection('description'); ?> 我们崇尚工作方式简单化，所以A Personal Computer, One Work!是我们的追求，更是我们的初心。 <?php echo $__env->yieldSection(); ?>" />
+
+        <link rel="stylesheet" href="<?php echo cdn('assets/css/'.Asset::styles('frontend')); ?>">
+        <?php echo HTML::style('assets/onework_css/layout.css'); ?>
+
+        <link rel="shortcut icon" href="<?php echo cdn('favicon.ico'); ?>"/>
+        <?php echo $__env->yieldContent('css'); ?>
+        <script>
+            Config = {
+                'cdnDomain': '<?php echo getCdnDomain(); ?>',
+                'user_id': <?php echo $currentUser ? $currentUser->id : 0; ?>,
+                'routes': {
+                    'notificationsCount' : '<?php echo route('notifications.count'); ?>',
+                    'upload_image' : '<?php echo route('upload_image'); ?>'
+                },
+                'token': '<?php echo csrf_token(); ?>',
+            };
+        </script>
+
+	    <?php echo $__env->yieldContent('styles'); ?>
+
+	</head>
+	<body id="body">
+
+		<div id="wrap">
+
+			<?php echo $__env->make('layouts.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+			<?php /*<div class="container attestation">*/ ?>
+
+
+        <div class="container ">
+        <?php /*<?php echo $__env->make('flash::message', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>*/ ?>
+		<?php echo $__env->yieldContent('content'); ?>
+		</div>
+		</div>
+		<?php echo $__env->make('layouts.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+        <script src="<?php echo cdn('assets/js/'.Asset::scripts('frontend')); ?>"></script>
+
+	    <?php echo $__env->yieldContent('scripts'); ?>
+
+        <?php /*<?php if(App::environment() == 'production'): ?>*/ ?>
+		<?php /*<script>*/ ?>
+          <?php /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){*/ ?>
+          <?php /*(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),*/ ?>
+          <?php /*m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)*/ ?>
+          <?php /*})(window,document,'script','//www.google-analytics.com/analytics.js','ga');*/ ?>
+
+          <?php /*ga('create', 'UA-53903425-1', 'auto');*/ ?>
+          <?php /*ga('send', 'pageview');*/ ?>
+
+        <?php /*</script>*/ ?>
+        <?php /*<?php endif; ?>*/ ?>
+
+	</body>
+</html>

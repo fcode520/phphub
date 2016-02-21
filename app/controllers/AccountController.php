@@ -45,7 +45,7 @@ class AccountController extends \BaseController {
 		$resume=Auth::user()->resume()->first();
 		if(is_null($resume)){
 			Flash::success("请先完善资料，在查看资料");
-			return	Redirect::route('EditResume');
+			return	Redirect::route('editsetting');
 		}
 		$projects=Auth::user()->projects()->first();
 		return View::make('account.setting',compact('resume','projects'));
@@ -99,7 +99,8 @@ class AccountController extends \BaseController {
             $id=$user->id;
             $resume = User::find($id)->resume()->first();
             if(!is_null($resume)){
-                $project=Resume::find($id)->userproject()->get();
+//                $project=Resume::find($id)->userproject()->get();
+                $project=userproject::where('user_id','=',$id)->get();
             }
             $skills = Skill::lists('skill');
             $professions = Profession::lists('profession');

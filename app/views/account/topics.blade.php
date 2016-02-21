@@ -12,7 +12,7 @@
 <div class="my-article">
         <div class="container">
 
-            @include('flash::message')
+            {{--@include('flash::message')--}}
             <div class="row">
 
                 <div class="col-xs-9 modify-article">

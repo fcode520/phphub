@@ -1,0 +1,37 @@
+
+
+<?php $__env->startSection('title'); ?>
+<?php echo lang('Newly Registered User List'); ?>_@parent
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+        <?php /*错误信息框*/ ?>
+<div class="container">
+    <?php if(Session::has('message')): ?>
+        <p class="alert"><?php echo Session::get('message'); ?></p>
+    <?php endif; ?>
+</div>
+
+<?php echo Form::open(array('url'=>'/ow_register','class'=>'register')); ?>
+
+<div class="register_box">
+    <p class="title">会员注册</p>
+    <?php echo Form::text('email',null,array('name'=>'email','id'=>'email','placeholder'=>"邮箱")); ?>
+
+    <?php echo Form::text('username',null,array('name'=>'username','id'=>'username','placeholder'=>"昵称")); ?>
+
+
+    <?php echo Form::password('password',null,array('name'=>'password','id'=>'password','placeholder'=>"密码")); ?>
+
+    <?php echo Form::password('password_confirmation',null,array('name'=>'confirm_password','id'=>'confirm_password','placeholder'=>"确认密码")); ?>
+
+    <?php echo Form::submit('注册',array('class'=>'btn btn-large btn-success btn-block')); ?>
+
+</div>
+<?php echo Form::close(); ?>
+
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -43,9 +43,10 @@ OneWork & 远程工作者社区
 
 			{{--<div class="container attestation">--}}
 
-				@include('flash::message')
+
         <div class="container ">
-				@yield('content')
+        {{--@include('flash::message')--}}
+		@yield('content')
 		</div>
 		</div>
 		@include('layouts.partials.footer')

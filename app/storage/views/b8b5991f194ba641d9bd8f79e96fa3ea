@@ -1,0 +1,72 @@
+
+
+<?php $__env->startSection('title'); ?>
+<?php echo lang('Newly Registered User List'); ?>_@parent
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('css'); ?>
+ <?php echo HTML::style('assets/onework_css/layout.css'); ?>
+
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+
+        <?php /*错误信息框*/ ?>
+<div class="container">
+    <?php if(Session::has('message')): ?>
+        <p class="alert"><?php echo Session::get('message'); ?></p>
+    <?php endif; ?>
+</div>
+<!-- 登录框-->
+<?php echo Form::open(array('url'=>'/ow_login','class'=>'login','id'=>'login')); ?>
+
+<div class="login_box">
+    <p class="title">会员登陆</p>
+    <?php echo Form::text('username',null,array('name'=>'username','id'=>'username','placeholder'=>"用户名")); ?>
+
+    <?php echo Form::password('password',null,array('name'=>'password','id'=>'password','placeholder'=>"密码")); ?>
+
+    <?php echo Form::submit('登录',array('class'=>'btn btn-large btn-success btn-block')); ?>
+
+</div>
+       <div class="login_about">
+           <p>
+           <a href="<?php echo route("ow_register"); ?>">注册帐号</a>
+           <?php echo HTML::link('/password/remind', '忘记密码', array('id' => 'linkid'), true); ?>
+
+           </p>
+       </div>
+<?php echo Form::close(); ?>
+
+
+
+        <?php /*<form class="login" id="login">*/ ?>
+        <?php /*<div class="login_box">*/ ?>
+        <?php /*<p class="title">会员登陆</p>*/ ?>
+        <?php /*<input type="text" name="username" id="username" placeholder="用户名">*/ ?>
+        <?php /*<input type="password" name="password" id="password" placeholder="密码">*/ ?>
+        <?php /*<button>登录</button>*/ ?>
+        <?php /*</div>*/ ?>
+        <?php /*<div class="login_about">*/ ?>
+        <?php /*<p><a href="register.html">注册帐号</a><a href="forget.html">忘记密码</a></p>*/ ?>
+        <?php /*<ul class="other_login">*/ ?>
+        <?php /*<li>*/ ?>
+        <?php /*<a href="javascript:;">*/ ?>
+        <?php /*<img src=<?php echo cdn('assets/images/login/login_logo.jpg'); ?>>*/ ?>
+        <?php /*</a>*/ ?>
+        <?php /*</li>*/ ?>
+        <?php /*<li>*/ ?>
+        <?php /*<a href="javascript:;">*/ ?>
+        <?php /*<img src=<?php echo cdn('assets/images/login/login_logo.jpg'); ?>>*/ ?>
+        <?php /*</a>*/ ?>
+        <?php /*</li>*/ ?>
+        <?php /*<li>*/ ?>
+        <?php /*<a href="javascript:;">*/ ?>
+        <?php /*<img src=<?php echo cdn('assets/images/login/login_logo.jpg'); ?>>*/ ?>
+        <?php /*</a>*/ ?>
+        <?php /*</li>*/ ?>
+        <?php /*</ul>*/ ?>
+        <?php /*<p class="ps">第三方帐号登陆</p>*/ ?>
+        <?php /*</div>*/ ?>
+        <?php /*</form>*/ ?>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

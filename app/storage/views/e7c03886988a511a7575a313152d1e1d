@@ -1,0 +1,15 @@
+<div class="left-nav">
+    <div class="left-nav-logo text-center"><a href="<?php echo route('account'); ?>"></a>ONEWORK</div>
+    <ul>
+        <li><span data-text="消息" class="a" data-src="/account/"></span></li>
+        <li><span data-text="项目" class="b" data-src="project"></span></li>
+        <li><span data-text="文章" class="c" data-src="/account/topics"></span></li>
+        <li><span data-text="团队" class="d" data-src="team"></span></li>
+        <li><span data-text="设置" class="e" data-src="/account/personalsettings"></span></li>
+        <?php /*<a  onclick="gotourl('<?php echo route('account'); ?>')"  style="color: rgb(255, 255, 255);">&nbsp;消息</a>*/ ?>
+        <?php /*<a  onclick="gotourl('<?php echo route('ac_topices'); ?>')" style="color: rgb(255, 255, 255);">&nbsp;文章</a>*/ ?>
+        <?php /*<a  onclick="gotourl('<?php echo route('ac_setting'); ?>')"  style="color: rgb(255, 255, 255); ">&nbsp;设置</a>*/ ?>
+    </ul>
+
+    <div class="nav-title-tip"><span class="glyphicon glyphicon-triangle-left"></span><i></i></div>
+</div>

@@ -34,7 +34,8 @@ class TopicsController extends \BaseController implements CreatorListener
         $node = Node::find(Input::get('node_id'));
         $nodes = Node::allLevelUp();
 
-        return View::make('topics.create_edit', compact('nodes', 'node'));
+//        return View::make('topics.create_edit', compact('nodes', 'node'));
+        return View::make('topics.create_article', compact('nodes', 'node'));
     }
 
     public function store()

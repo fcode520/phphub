@@ -1,0 +1,124 @@
+
+
+<?php $__env->startSection('title'); ?>
+<?php echo lang('Create New Topic'); ?>_@parent
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+
+<div class="topic_create">
+
+  <div class="col-md-8 main-col">
+
+    <div class="reply-box form box-block">
+
+      <div class="alert  alert-warning">
+          <?php echo lang('be_nice'); ?>
+
+      </div>
+
+      <?php echo $__env->make('layouts.partials.errors', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+      <?php if(isset($topic)): ?>
+        <?php echo Form::model($topic, ['route' => ['topics.update', $topic->id], 'id' => 'topic-create-form', 'method' => 'patch']); ?>
+
+      <?php else: ?>
+        <?php echo Form::open(['route' => 'topics.store','id' => 'topic-create-form', 'method' => 'post']); ?>
+
+      <?php endif; ?>
+
+        <div class="form-group">
+            <select class="selectpicker form-control" name="node_id" >
+
+              <option value="" disabled <?php echo App::make('Topic')->present()->haveDefaultNode($node, null) ?: 'selected';; ?>><?php echo lang('Pick a node'); ?></option>
+
+              <?php foreach($nodes['top'] as $top_node): ?>
+                <optgroup label="<?php echo e($top_node->name); ?>">
+                  <?php foreach($nodes['second'][$top_node->id] as $snode): ?>
+                    <option value="<?php echo $snode->id; ?>" <?php echo App::make('Topic')->present()->haveDefaultNode($node, $snode) ? 'selected' : '';; ?> ><?php echo $snode->name; ?></option>
+                  <?php endforeach; ?>
+                </optgroup>
+              <?php endforeach; ?>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <?php echo Form::text('title', null, ['class' => 'form-control', 'id' => 'topic-title', 'placeholder' => lang('Please write down a topic')]); ?>
+
+        </div>
+
+        <?php echo $__env->make('topics.partials.composing_help_block', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <div class="form-group">
+          <?php echo Form::textarea('body', null, ['class' => 'form-control',
+                                            'rows' => 20,
+                                            'style' => "overflow:hidden",
+                                            'id' => 'reply_content',
+                                            'placeholder' => lang('Please using markdown.')]); ?>
+
+        </div>
+
+        <div class="form-group status-post-submit">
+          <?php echo Form::submit(lang('Publish'), ['class' => 'btn btn-primary', 'id' => 'topic-create-submit']); ?>
+
+        </div>
+
+        <div class="box preview markdown-body" id="preview-box" style="display:none;"></div>
+
+      <?php echo Form::close(); ?>
+
+
+    </div>
+  </div>
+
+  <div class="col-md-4 side-bar">
+
+    <?php if( $node ): ?>
+
+    <div class="panel panel-default corner-radius help-box">
+      <div class="panel-heading text-center">
+        <h3 class="panel-title"><?php echo lang('Current Node'); ?> : <?php echo e($node->name); ?></h3>
+      </div>
+      <div class="panel-body">
+        <?php echo $node->description; ?>
+
+      </div>
+    </div>
+
+    <?php endif; ?>
+
+    <div class="panel panel-default corner-radius help-box">
+      <div class="panel-heading text-center">
+        <h3 class="panel-title"><?php echo lang('This kind of topic is not allowed.'); ?></h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list">
+          <li>这里放一些关于论坛的基本说明</li>
+          <li>请尽量分享技术相关的话题, 谢绝发布社会, 政治等相关新闻</li>
+          <li>这里绝对不讨论任何有关盗版软件、音乐、电影如何获得的问题</li>
+          <li>这里绝对不会全文转载任何文章，而只会以链接方式分享</li>
+      </div>
+    </div>
+
+    <div class="panel panel-default corner-radius help-box">
+      <div class="panel-heading text-center">
+        <h3 class="panel-title"><?php echo lang('We can benefit from it.'); ?></h3>
+      </div>
+      <div class="panel-body">
+        <ul class="list">
+          <li>分享生活见闻, 分享知识</li>
+          <li>接触新技术, 讨论技术解决方案</li>
+          <li>为自己的创业项目找合伙人, 遇见志同道合的人</li>
+          <li>自发线下聚会, 加强社交</li>
+          <li>发现更好工作机会</li>
+          <li>甚至是开始另一个神奇的开源项目</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

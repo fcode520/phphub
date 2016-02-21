@@ -1,0 +1,9 @@
+<div id="reply_notice" class="box" style="display:none">
+    <ul class="helpblock list">
+      <li><?php echo lang('publish_typography'); ?></li>
+      <li><?php echo lang('publish_markdown'); ?></li>
+      <li><?php echo lang('publish_emoji'); ?></li>
+      <li><?php echo lang('publish_at_user'); ?></li>
+      <li><?php echo lang('publish_image'); ?></li>
+    </ul>
+</div>

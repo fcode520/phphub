@@ -1,0 +1,46 @@
+
+
+<?php $__env->startSection('title'); ?>
+    个人中心_@parent
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('css'); ?>
+    <?php echo HTML::style('assets/onework_css/layout.css'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <div class="my-article">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9 modify-article message-center">
+                    <h2 class="title">Message center｜个人设置</h2>
+
+                    <?php echo $__env->make('account.partials.TopSettingNav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+                    <div class="clearfix"></div>
+
+                    <div class="renzheng  attestation">
+                          <?php echo $__env->make('register.resume', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--个人end-->
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('scripts'); ?>
+    <?php echo HTML::script(cdn('assets/onework_js/jquery.cxcalendar.min.js')); ?>
+
+    <?php echo HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js')); ?>
+
+    <?php echo HTML::script(cdn('assets/onework_js/jquery.form.js')); ?>
+
+    <?php echo HTML::script(cdn('assets/onework_js/myapp.js')); ?>
+
+
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.account_right', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
