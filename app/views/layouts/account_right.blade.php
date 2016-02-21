@@ -39,8 +39,7 @@ OneWork & 远程工作者社区
 		</div>
 
 
-        <script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
-
+         <script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
 	    @yield('scripts')
 
 

@@ -87,11 +87,14 @@ $(function () {//点击添加 删除 一个项目经验
         $('.one-project').last().find('.subtitle').append('<b></b>');
         $('#projectNum').val(numProject);
     });
-    $.cxCalendar.defaults.startDate = 1980;
-    $.cxCalendar.defaults.language = {
-        monthList: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
-        weekList: ['日', '一', '二', '三', '四', '五', '六']
-    };
+    if(typeof($.cxCalendar)!="undefined"){
+        $.cxCalendar.defaults.startDate = 1980;
+        $.cxCalendar.defaults.language = {
+            monthList: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
+            weekList: ['日', '一', '二', '三', '四', '五', '六']
+        };
+    }
+
     $(document).on('click',".timeclass", function(){
         $(this).cxCalendar().focus();
 
@@ -119,9 +122,8 @@ $(function () {//左边菜单点击
     var t = $('.left-nav > ul > li');
     var s = $('.left-nav > ul > li span');
     s.on("click", function () {
-        var i = $(this).attr('data-src');
-        $('.modify-article').hide();
-        $('#' + i).show();
+        var data_src = $(this).attr('data-src');
+        gotourl(data_src);
     });
 });
 
@@ -330,5 +332,6 @@ function gotourl($url){
     var frameid = parent.document.getElementById("iframe_right");
     frameid.src = $url;
 
+    $("#iframe_right").css('z-index',1);
 }
 
