@@ -51,14 +51,14 @@ class TopicsController extends \BaseController implements CreatorListener
         }
         $tmp=$topic->body;
         $tmp2=$topic->vote_count;
-        $topic->vote_count=500;
+
         $replies = $topic->getRepliesWithLimit(Config::get('phphub.replies_perpage'));
         $node = $topic->node;
         $nodeTopics = $topic->getSameNodeTopics();
 
         $topic->increment('view_count', 1);
 
-        return View::make('topics.show', compact('topic', 'replies', 'nodeTopics', 'node'));
+        return View::make('topics.show_article', compact('topic', 'replies', 'nodeTopics', 'node'));
     }
 
     public function edit($id)

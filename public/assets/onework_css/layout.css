@@ -307,8 +307,8 @@ button:hover{background-color:#4dbe92;}
 .news-title-info p span{font-size: 14px;color: #000;margin-right: 15px;}
 .news-con{margin-bottom: 60px;}
 .news-con > p{font-size: 12px;line-height: 150%;color: #666666;}
-.enjoy > .two-icon > span{width: 40px;height: 40px;border-radius: 50%;background: #000;line-height: 41px;text-align: center;font-size: 20px;color: #fff;}
-.enjoy > .two-icon span:hover{background: #63ce83;cursor: pointer;}
+.enjoy > .two-icon a>span {width: 40px;height: 40px;border-radius: 50%;background: #000;line-height: 41px;text-align: center;font-size: 20px;color: #fff;}
+.enjoy > .two-icon a>span:hover{background: #63ce83;cursor: pointer;}
 .glyphicon{margin-right: 10px;}
 .glyphicon-thumbs-up{margin-left: 30px;}
 .two-icon > i{font-size: 14px;font-style: normal;position: relative;border: 1px solid #edeef0;padding: 7px;border-radius: 10px;background: #f4f4f4;color: #000000;margin-left: 2px;}
@@ -319,8 +319,8 @@ button:hover{background-color:#4dbe92;}
 .comments-text{width: 100%;border: 1px solid #d8d8d8;border-radius: 5px;resize:none;height:180px;padding: 10px;color: #999999;}
 .post-comment{line-height: 31px;width: 100%;margin: 20px 0;}
 .post-comment > span{font-size: 16px;color: #999;}
-.post-comment > button{padding: 4px 20px;font-size: 14px;background: #000;color: #fff;float: right;transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
-.post-comment > button:hover{color: #fff;background: #63ce83;}
+.status-post-submit >  button{padding: 4px 20px;font-size: 14px;background: #000;color: #fff;transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;}
+.status-post-submit >  button:hover{color: #fff;background: #63ce83;}
 .comment-img{float: left;height: 100%;}
 .comment-img > img{border: 1px solid #eff5f6;width: 34px;height: 34px;position: absolute;}
 .comment-info {margin-left: 45px;float: left;margin-right: 40px;}
