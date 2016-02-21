@@ -29,17 +29,7 @@
                                                                     'id' => 'reply_content',
                                                                     'placeholder' => lang('Please using markdown.')]) }}
                                 </div>
-                    						{{--<div class="some-select btn-group">--}}
-                    						    {{--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                    						    {{--招聘信息&nbsp;&nbsp;<span class="caret"></span>--}}
-                    						    {{--</button>--}}
-                    						    {{--<ul class="dropdown-menu">--}}
-                    						        {{--<li><a href="#">招聘信息1</a></li>--}}
-                    							    {{--<li><a href="#">招聘信息2</a></li>--}}
-                    							    {{--<li><a href="#">招聘信息3</a></li>--}}
-                    							    {{--<li><a href="#">招聘信息4</a></li>--}}
-                    						    {{--</ul>--}}
-                    						{{--</div>--}}
+
                     						        <div class="form-group">
                                                         <select class="some-select btn-group form-control" name="node_id" >
 
@@ -55,33 +45,12 @@
                                                         </select>
                                                     </div>
                     						<div class="post-art clearfix">
-
-                                            							{{ Form::submit(lang('Publish'), ['class' => 'btn btn-primary', 'id' => 'topic-create-submit']) }}
-                                            						</div>
-                                {{--<div class="form-group status-post-submit">--}}
-                                          {{--{{ Form::submit(lang('Publish'), ['class' => 'btn btn-primary', 'id' => 'topic-create-submit']) }}--}}
-                                        {{--</div>--}}
+                                            {{ Form::submit(lang('Publish'), ['class' => 'btn btn-primary', 'id' => 'topic-create-submit']) }}
+                                            </div>
+                                            <div class="post-art clearfix">
+                                <div class="box preview markdown-body" id="preview-box" style="display:none;"></div>
+                                </div>
                           {{Form::close()}}
-
-
-						{{--<div class="some-select btn-group">--}}
-						    {{--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-						    {{--招聘信息&nbsp;&nbsp;<span class="caret"></span>--}}
-						    {{--</button>--}}
-
-						    {{--<ul class="dropdown-menu">--}}
-						        {{--<li><a href="#">招聘信息1</a></li>--}}
-							    {{--<li><a href="#">招聘信息2</a></li>--}}
-							    {{--<li><a href="#">招聘信息3</a></li>--}}
-							    {{--<li><a href="#">招聘信息4</a></li>--}}
-						    {{--</ul>--}}
-						{{--</div>--}}
-						{{--<div class="post-file clearfix">--}}
-							{{--<button class="btn">本地上传</button><span>格式为JPG、JPEG、PNG，小于5MB</span>--}}
-						{{--</div>--}}
-						{{--<div class="post-art clearfix">--}}
-							{{--<button class="btn">发&nbsp;布</button>--}}
-						{{--</div>--}}
 					</div>
 				</div>
 			</div>
