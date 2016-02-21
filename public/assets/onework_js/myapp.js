@@ -128,8 +128,8 @@ $(function () {//左边菜单点击
 });
 
 $(function () {
-    if ($('.content').length != 1)return;
-    $('.content').bootstrapValidator({
+    if ($('.editresume').length != 1)return;
+    $('.editresume').bootstrapValidator({
         message: 'This value is not valid',
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -137,23 +137,6 @@ $(function () {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            uploadImg: {
-                message: '请上传头像图片',
-                validators: {
-                    notEmpty: {
-                        //message: 'The username is required and cannot be empty'
-                    },
-                    stringLength: {
-                        //min: 6,
-                        //max: 30,
-                        //message: 'The username must be more than 6 and less than 30 characters long'
-                    },
-                    regexp: {
-                        //regexp: /^[a-zA-Z0-9_]+$/,
-                        //message: 'The username can only consist of alphabetical, number and underscore'
-                    }
-                }
-            },
             email: {
                 validators: {
                     notEmpty: {
@@ -164,6 +147,27 @@ $(function () {
                     }
                 }
             },
+            sex: {
+                validators: {
+                    notEmpty: {
+                        message: '性别选择不能为空'
+                    }
+                }
+            },
+            skill:{
+                validators: {
+                    notEmpty: {
+                        message: '主要技能不能为空'
+                    }
+                }
+            },
+            profession:{
+                validators: {
+                    notEmpty: {
+                        message: '职业不能为空'
+                    }
+                }
+            },
             qqnumber: {
                 validators: {
                     notEmpty: {
@@ -171,7 +175,7 @@ $(function () {
                     },
                     stringLength: {
                         min: 6,
-                        //max: 30,
+                        max: 13,
                         message: 'QQ位数必须大于6位'
                     },
                     regexp: {
@@ -180,8 +184,29 @@ $(function () {
                     }
                 }
             },
+            province: {
+                validators: {
+                    notEmpty: {
+                        message: '省选择不能为空'
+                    }
+                }
+            },
+            city: {
+                validators: {
+                    notEmpty: {
+                        message: '市选择不能为空'
+                    }
+                }
+            },
+            district: {
+                validators: {
+                    notEmpty: {
+                        message: '地区选择不能为空'
+                    }
+                }
+            },
             summery: {
-                message: '请上传头像图片',
+                message: '请务必填写个人简介',
                 validators: {
                     notEmpty: {
                         message: '个人简介不能为空'
@@ -195,90 +220,50 @@ $(function () {
                     }
                 }
             },
-            xiangmumingchegn: {
+            "ProjectName[ ]": {
                 validators: {
                     notEmpty: {
                         message: '项目名称不能为空'
                     }
                 }
             },
-            danrenzhiwu: {
+            "ProjectPosition[ ]": {
                 validators: {
                     notEmpty: {
                         message: '担任职务不能为空'
                     }
                 }
             },
-            zhanshi: {
-                validators: {
-                    notEmpty: {
-                        message: '展示链接不能为空'
-                    }
-                }
-            },
-            xiangmujingli: {
-                validators: {
-                    notEmpty: {
-                        message: '项目经历不能为空'
-                    }
-                }
-            },
-            sex: {
-                validators: {
-                    notEmpty: {
-                        message: '性别选择不能为空'
-                    }
-                }
-            },
-            type: {
-                validators: {
-                    notEmpty: {
-                        message: '远程类型选择不能为空'
-                    }
-                }
-            },
-            profession: {
-                validators: {
-                    notEmpty: {
-                        message: '远程类型选择不能为空'
-                    }
-                }
-            },
-            starttime: {
+
+            "starttime[ ]": {
                 validators: {
                     notEmpty: {
                         message: '开始时间选择不能为空'
                     }
                 }
             },
-            endtime: {
+            "endtime[ ]": {
                 validators: {
                     notEmpty: {
                         message: '结束时间选择不能为空'
                     }
                 }
             },
-            sheng: {
+            "ProjectUrl[ ]": {
                 validators: {
                     notEmpty: {
-                        message: '省选择不能为空'
+                        message: '项目连接不能为空'
                     }
                 }
             },
-            shi: {
+            "Projectexperience[ ]": {
                 validators: {
                     notEmpty: {
-                        message: '市选择不能为空'
+                        message: '项目精力不能为空'
                     }
                 }
             },
-            diqu: {
-                validators: {
-                    notEmpty: {
-                        message: '地区选择不能为空'
-                    }
-                }
-            },
+
         }
     });
 });

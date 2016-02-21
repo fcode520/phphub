@@ -20,10 +20,10 @@
 
                     <div class="clearfix"></div>
 
-                    <div class="renzheng  attestation">
+
                           @include('register.resume')
 
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -36,5 +36,7 @@
     {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js'))}}
     {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
     {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
+    {{HTML::script(cdn('assets/onework_js/jquery.validate.min.js'))}}
+    {{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}
 
 @stop
