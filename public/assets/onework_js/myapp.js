@@ -126,7 +126,69 @@ $(function () {//左边菜单点击
         gotourl(data_src);
     });
 });
+$(function(){//认证用户列表相关js
+    var t = $('.user-list-one > div').parent().height();
+    if($(window).width()>768){
+        $('.user-list-one > div').eq(1).height(t);
+        $('.user-list-one > div').eq(2).height(t);
+    }
+    else{
+        $('.user-list-one > div > div').css('position','static');
+    }
 
+});
+
+$(function(){
+   if($('.passwordfrom').length!=1)return;
+    $('.passwordfrom').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+
+            old_pwd:{
+                validators: {
+                    notEmpty: {
+                        message: '旧密码不能为空'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: '新密码不能为空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        //max: 30,
+                        message: '密码位数必须大于6位'
+                    }
+                }
+            },
+            confirmPassword: {
+                validators: {
+                    notEmpty: {
+                        message: '确认密码不能为空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        //max: 30,
+                        message: '密码位数必须大于6位'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: '两次密码输入不一致'
+                    }
+                }
+            }
+
+
+        }
+    });
+});
 $(function () {
     if ($('.editresume').length != 1)return;
     $('.editresume').bootstrapValidator({
@@ -262,7 +324,7 @@ $(function () {
                         message: '项目精力不能为空'
                     }
                 }
-            },
+            }
 
         }
     });

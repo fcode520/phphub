@@ -2,6 +2,8 @@
 ul,li{list-style-type: none;margin: 0;padding: 0;}
 .copy .text-center{padding-left: 70px;}
 .mart20{margin-top: 20px;}
+.btn-success{background-color: #63ce83;border-color: #63ce83;}
+.btn-success:hover{background-color: #5cb85c;border-color: #4cae4c;}
 
 body{
 	font-size: 12px;
@@ -562,10 +564,25 @@ button:hover{background-color:#4dbe92;}
 .user-list > .row{margin-left: 0;margin-right: 0;}
 .user-list-one{background: #fff;}
 .user-list-one > div{padding-top: 15px;}
-.user-list-one > div:nth-child(2){position: relative;border-left: 1px solid #eff5f6;border-right: 1px solid #eff5f6;padding-left: 0;padding-right: 0;}
-.user-list-one > div:nth-child(2) > div{border-top: 1px solid #eff5f6;overflow: hidden;position: absolute;bottom: 0;width: 100%;}
+.user-list-one > .unit-b{position: relative;border-left: 1px solid #eff5f6;border-right: 1px solid #eff5f6;padding-left: 0;padding-right: 0;}
+.user-list-one > .unit-b > div{border-top: 1px solid #eff5f6;overflow: hidden;position: absolute;bottom: 0;width: 100%;}
+.user-list-one > .unit-a{position: relative;text-align: center;}
+.user-list-one > .unit-a > a{position: absolute;bottom: 0;padding: 4px;}
+
 .mid-bottom > p{float: left;line-height: 48px;}
 /***认证用户列表 end***/
+
+/**修改密码 begin**/
+.change-pwd{max-width: 724px;background: #fff;text-align: center;color: #969b9d;}
+.change-pwd-con{width: 50%;margin: 0 auto!important;height: auto;}
+
+.change-pwd-con > input{width: 100%;margin-top: 30px;margin-bottom: 0;height: 40px;border-radius: 5px;border: 1px solid #e9ecee;font-size: 14px;padding: 0 10px;}
+.change-pwd-con > input:focus{outline: none;}
+.change-pwd-con > i{margin-top: 20px;margin-right: -13px;}
+.change-pwd-con > small{margin-top: 10px;}
+.change-submint{width: 50%;margin: 30px 0;}
+/**修改密码 end**/
+
 
 /*** 媒体查询 部分css**/
 @media screen and (max-width:767px){

@@ -109,6 +109,36 @@ class AccountController extends \BaseController {
             return Redirect::guest('ow_login');
         }
     }
+    public function changepassword(){
+        if(Auth::check()){
+            return View::make('account.changepwd');
+        }else
+        {
+            return Redirect::guest('/');
+        }
+    }
+    public function post_changepwd(){
+        if(Auth::check()){
+            $oldpwd=Input::get('old_pwd');
+            $password=Input::get('password');
+            $confirmPassword=Input::get('confirmPassword');
+
+            if(empty($oldpwd) or empty($password) or empty($confirmPassword) or $password!=$confirmPassword){
+                return Redirect::back()->withInput();
+            }
+            if(!Hash::check($oldpwd,Auth::user()->password)){
+                return Redirect::back()->withInput();
+            }
+            $newpwd=Hash::make($confirmPassword);
+            $user=Auth::user();
+            $user->password=$newpwd;
+            $user->save();
+            Auth::logout();
+            return Redirect::route('ac_topices');
+        }else{
+            return Redirect::back()->withInput();
+        }
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

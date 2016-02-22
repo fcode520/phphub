@@ -321,5 +321,13 @@ Route::get('/account/editsetting',[
     'uses' => 'AccountController@editsetting',
 ]);
 
+Route::get('/account/changepassword',[
+    'as'=>'changepassword',
+    'uses'=>'AccountController@changepassword'
+]);
+Route::post('/account/changepassword',[
+    'as'=>'p_changepassword',
+    'uses'=>'AccountController@post_changepwd'
+]);
 
 Route::get('job','JobController@index');
