@@ -118,25 +118,28 @@ class AccountController extends \BaseController {
         }
     }
     public function post_changepwd(){
+
         if(Auth::check()){
             $oldpwd=Input::get('old_pwd');
             $password=Input::get('password');
             $confirmPassword=Input::get('confirmPassword');
 
             if(empty($oldpwd) or empty($password) or empty($confirmPassword) or $password!=$confirmPassword){
-                return Redirect::back()->withInput();
+                return "密码不能为空";
             }
             if(!Hash::check($oldpwd,Auth::user()->password)){
-                return Redirect::back()->withInput();
+                return "旧密码不正确";
             }
             $newpwd=Hash::make($confirmPassword);
             $user=Auth::user();
             $user->password=$newpwd;
             $user->save();
             Auth::logout();
-            return Redirect::route('ac_topices');
+
+            return "修改成功";
+
         }else{
-            return Redirect::back()->withInput();
+            return "请登陆后在进行密码修改操作";
         }
     }
 	/**

@@ -21,10 +21,12 @@
     <div class="change-pwd">
 
          {{Form::open(array('url'=>'/account/changepassword','novalidate'=>'novalidate','method' => 'POST','class'=>'passwordfrom content form-horizontal bv-form','id'=>'changepwd'))}}
-                                    <div class="form-group has-feedback change-pwd-con"><input type="password" class="form-control" name="old_pwd" data-bv-field="pwd" placeholder="旧密码"></div>
+                                    <div class="form-group has-feedback change-pwd-con">
+                                    <input type="password" class="form-control" name="old_pwd" data-bv-field="pwd" placeholder="旧密码" data-bv-notempty data-bv-notempty-message="内容不能为空">
+                                    </div>
                                     <div class="form-group has-feedback change-pwd-con"><input type="password" class="form-control" name="password" data-bv-field="password" placeholder="新密码"></div>
                                     <div class="form-group has-feedback change-pwd-con"><input type="password" class="form-control" name="confirmPassword" data-bv-field="password" placeholder="确认密码"></div>
-                                    {{Form::submit('确定',array('id'=>'mysubmit','class'=>'btn btn-success change-submint'))}}
+                                    {{Form::button('确定',array('id'=>'mysubmit','class'=>'btn btn-success change-submint'))}}
          {{Form::close()}}
    </div>
     						</div>
@@ -39,5 +41,6 @@
     {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
     {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
     {{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}
+    {{HTML::script(cdn('assets/onework_js/form_ajax.js'))}}
 
 @stop
