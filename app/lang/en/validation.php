@@ -100,6 +100,10 @@ return array(
     |
     */
 
-    'attributes' => array(),
+    'attributes' => array(
+        'username' => '用户名',
+        'email'  => '电子邮件',
+        'password' => '密码',
+ ),
 
 );

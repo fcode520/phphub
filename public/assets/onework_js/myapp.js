@@ -382,3 +382,107 @@ function gotourl($url){
     $("#iframe_right").css('z-index',1);
 }
 
+
+$(function(){
+    if($('.register').length!=1)return;
+    $('.register').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+
+            email:{
+                validators: {
+                    notEmpty: {
+                        message: 'email不能为空'
+                    },
+                    emailAddress: {
+                        message: 'email格式不正确'
+                    }
+                }
+            },
+            username:{
+                validators: {
+                    notEmpty: {
+                        message: '用户名不能为空'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: '新密码不能为空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        //max: 30,
+                        message: '密码位数必须大于6位'
+                    }
+                }
+            },
+            password_confirmation: {
+                validators: {
+                    notEmpty: {
+                        message: '确认密码不能为空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        //max: 30,
+                        message: '密码位数必须大于6位'
+                    },
+                    identical: {
+                        field: 'password',
+                        message: '两次密码输入不一致'
+                    }
+                }
+            }
+
+
+        }
+    });
+});
+$(function(){
+    if($('.login').length!=1)return;
+    $('.login').bootstrapValidator({
+        message: 'This value is not valid',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            username: {
+                validators: {
+                    notEmpty: {
+                        message: '用户名不能为空'
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: '新密码不能为空'
+                    },
+                    stringLength: {
+                        min: 6,
+                        //max: 30,
+                        message: '密码位数必须大于6位'
+                    }
+                }
+            },
+            email:{
+                validators: {
+                    notEmpty: {
+                        message: 'email不能为空'
+                    },
+                    emailAddress: {
+                        message: 'email格式不正确'
+                    }
+                }
+            }
+        }
+    });
+});

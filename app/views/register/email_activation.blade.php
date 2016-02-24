@@ -19,7 +19,7 @@
         {{HTML::link('#','再次发送确认邮件',array('class'=>'send_valid_mail','onclick'=>'vaild_mail('.$user->id.')'))}}
                 <meta name="csrf-token" content="{{ csrf_token() }}" />
       </div>
-    <div class="container">
+    <div class="container"></div>
 @stop
 @section('scripts')
     {{ HTML::script('assets/onework_js/Register_ajax.js') }}

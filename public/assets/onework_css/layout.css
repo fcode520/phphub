@@ -116,13 +116,21 @@ i.form-control-feedback.glyphicon.glyphicon-ok{color:#3c763d;}
 .mimazhaohui > p{margin-bottom:0!important;}
 .mimazhaohui > p > input{margin-bottom:15px;margin-top:15px;}
 .mimazhaohui > p > label{display:block;}
-
+/* 注册部分 */
+.register{width:400px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;top:50px;margin-left:-200px;}
+.register .title{font-size:18px;color:#7c8b8e;margin-bottom:20px;text-align:center;}
+.register-context{width: 100%;margin: 0 auto!important;height: auto;}
+/*.register-context > input{width: 100%;margin-top: 30px;margin-bottom: 0;height: 40px;border-radius: 5px;border: 1px solid #e9ecee;font-size: 14px;padding: 0 10px;}*/
+.register-context > input:focus{outline: none;}
+.register-context > i{margin-top: 20px;margin-right: -13px;}
+.register-context > small{margin-top: 10px;}
+.register input{width: 100%;margin-top: 30px;margin-bottom: 0;height: 40px;border-radius: 5px;border: 1px solid #e9ecee;font-size: 14px;padding: 0 10px;}
+.register button{width:340px;border:none;height:40px;color:#fff;background-color:#63ce83;border-radius:4px;margin-top:25px;}
 /* 注册成功 */
 .register_ok{width:700px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;top:50px;margin-left:-350px;}
 .register_ok p{font-size:12px;color:#7c8b8e;margin-bottom:20px;text-align:center;}
 .register_ok a{display:block;width:190px;border:none;height:40px;color:#fff;background-color:#63ce83;border-radius:4px;margin:25px auto 0;text-align:center;line-height:40px;}
 .register_ok a:hover{background-color:#4dbe92;}
-
 
 /* 密码找回 */
 .mimazhaohui{width:700px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;top:50px;margin-left:-350px;}
@@ -174,7 +182,7 @@ i.form-control-feedback.glyphicon.glyphicon-ok{color:#3c763d;}
 /* 登陆部分 css */
 .login{width:480px;background-color:#fff;padding:45px 70px;position:relative;left:50%;top:50px;margin-left:-240px;}
 .login .title{font-size:18px;color:#7c8b8e;}
-.login input{width:340px;height:40px;margin:15px 0 5px;text-indent:.6em;border:1px solid #ccc;border-radius:4px;}
+.login input{width: 100%;margin-top: 30px;margin-bottom: 0;height: 40px;border-radius: 5px;border: 1px solid #e9ecee;font-size: 14px;padding: 0 10px;}
 .login button{width:340px;border:none;height:40px;color:#fff;background-color:#63ce83;border-radius:4px;margin:20px 0;}
 button:hover{background-color:#4dbe92;}
 .login .login_about p{text-align:center;}
@@ -184,11 +192,7 @@ button:hover{background-color:#4dbe92;}
 .login .other_login li{float:left;width:25.3%;margin:0 4%;list-style:none;}
 .login .other_login img{display:block;margin:0 auto;width:90%;border-radius:50%;background-color:#444;}
 
-/* 注册部分 */
-.register{width:400px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;top:50px;margin-left:-200px;}
-.register .title{font-size:18px;color:#7c8b8e;margin-bottom:20px;text-align:center;}
-.register input{width:340px;height:40px;margin:10px 0;text-indent:.6em;border:1px solid #ccc;border-radius:4px;}
-.register button{width:340px;border:none;height:40px;color:#fff;background-color:#63ce83;border-radius:4px;margin-top:25px;}
+
 button:hover{background-color:#4dbe92;}
 @media screen and (max-width:767px){
 

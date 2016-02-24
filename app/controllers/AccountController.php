@@ -38,14 +38,13 @@ class AccountController extends \BaseController {
 	public function personalsettings(){
 		if(!Auth::check())
 		{
-
 		return	Redirect::guest('/ow_login');
 		}
 
 		$resume=Auth::user()->resume()->first();
 		if(is_null($resume)){
 			Flash::success("请先完善资料，在查看资料");
-			return	Redirect::route('editsetting');
+			return	Redirect::route('editsetting')->with('message',"请先完善资料，在查看资料");
 		}
 		$projects=Auth::user()->projects()->first();
 		return View::make('account.setting',compact('resume','projects'));
@@ -60,7 +59,7 @@ class AccountController extends \BaseController {
         $resume=Auth::user()->resume()->first();
         if(is_null($resume)){
             Flash::success("请先完善资料，在查看箱子资料");
-            return	Redirect::route('EditResume');
+            return	Redirect::route('EditResume')->with('message','请先完善资料，在查看箱子资料');
         }
         $projects=Auth::user()->projects()->first();
         return View::make('account.iframesetting',compact('resume','projects'));

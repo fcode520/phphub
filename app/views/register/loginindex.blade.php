@@ -15,17 +15,22 @@
     @endif
 </div>
 <!-- 登录框-->
-{{Form::open(array('url'=>'/ow_login','class'=>'login','id'=>'login'))}}
+{{Form::open(array('url'=>'/ow_login','class'=>'login content form-horizontal bv-form','id'=>'login','novalidate'=>'novalidate'))}}
 <div class="login_box">
     <p class="title">会员登陆</p>
+    <div class="form-group register-context has-feedback">
     {{Form::text('username',null,array('name'=>'username','id'=>'username','placeholder'=>"用户名"))}}
-    {{Form::password('password',null,array('name'=>'password','id'=>'password','placeholder'=>"密码"))}}
+    </div>
+    <div class="form-group register-context has-feedback">
+    {{ Form::password('password', array('name'=>'password','class'=>'form-control','id'=>'password','placeholder'=>"密码")) }}
+    </div>
     {{ Form::submit('登录',array('class'=>'btn btn-large btn-success btn-block')) }}
+
 </div>
        <div class="login_about">
            <p>
            <a href="{{route("ow_register")}}">注册帐号</a>
-           {{ HTML::link('/password/remind', '忘记密码', array('id' => 'linkid'), true)}}
+           <a href="/password/remind">忘记密码</a>
            </p>
        </div>
 {{Form::close()}}
@@ -60,4 +65,10 @@
         {{--<p class="ps">第三方帐号登陆</p>--}}
         {{--</div>--}}
         {{--</form>--}}
+@stop
+@section('scripts')
+    {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
+    {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
+    {{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}
+
 @stop

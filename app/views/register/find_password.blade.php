@@ -1,8 +1,5 @@
 @extends('layouts.default')
 
-@section('css')
- {{HTML::style('assets/onework_css/layout.css')}}
-@stop
 
 @section('title')
 {{ lang('Newly Registered User List') }}_@parent
@@ -14,17 +11,22 @@
             <p class="alert">{{ Session::get('message') }}</p>
         @endif
     </div>
-    {{Form::open(array('class'=>'mimazhaohui text-center'))}}
-        <p>通过绑定邮箱进行密码找回。请输入你的注册绑定邮箱</p>
-        <p><span>邮箱</span>
-            {{Form::email('email','',array('placeholder'=>'Email'))}}
-        </p>
-        <div class="clearfix"></div>
-    {{Form::submit(" 提交",array('class'=>'btn btn-success'))}}
-    {{Form::close()}}
+{{Form::open(array('class'=>'login form-horizontal bv-form','id'=>'login','novalidate'=>'novalidate'))}}
+<div class="login_box">
+    <p class="title">通过绑定邮箱进行密码找回。</p>
+    <div class="form-group register-context has-feedback">
+    {{Form::text('email',null,array('name'=>'email','id'=>'email','placeholder'=>"请输入你的注册绑定邮箱"))}}
+    </div>
+    {{ Form::submit('找回密码',array('class'=>'btn btn-large btn-success btn-block')) }}
+
+</div>
+{{Form::close()}}
 @stop
 
 @section('scripts')
+    {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
+    {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
+    {{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}
 
 
 @stop

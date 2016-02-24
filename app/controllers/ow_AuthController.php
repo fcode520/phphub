@@ -21,15 +21,16 @@ class ow_AuthController extends \BaseController
             return Redirect::intended('/');
         }else{
 
-            return Redirect::to('/ow_login')->with('message', '登录好像失败了亲!');
+            return Redirect::to('/ow_login')->with('message', '登录失败，账户不存在或密码错误')->withInput();
         }
     }
     public function show_register(){
- return View::make('register.registerindex');
+            return View::make('register.registerindex');
     }
     public function ow_Auth_register(){
         $validator= Validator::make(Input::all(),User::$rules);
         if($validator->passes()){
+            $users=User::where('email','=',Input::get('email'))->first();
             $user =new User;
             $user->username=Input::get('username');
             $user->email=Input::get('email');
@@ -47,7 +48,7 @@ class ow_AuthController extends \BaseController
             return View::make('register.email_activation',compact('user'));
 
         }else{
-            return Redirect::to('/ow_register')->with('message', $validator->messages());
+            return Redirect::to('/ow_register')->with('message', $validator->messages())->withInput();
         }
     }
     public function ow_registerok(){

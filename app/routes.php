@@ -331,3 +331,6 @@ Route::post('/account/changepassword',[
 ]);
 
 Route::get('job','JobController@index');
+
+
+#---------------------ajax---------------------------
