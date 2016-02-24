@@ -108,12 +108,10 @@
           <p class="subtitle">项目经验</p>
           <div class=" clearfix">
             <span class="col-sm-6 col-xs-12 form-group has-feedback">
-              {{--<input type="text" name="xiangmumingchegn" id="" placeholder="项目名称">--}}
               {{Form::text('ProjectName[ ]',null,array('placeholder'=>'项目名称'))}}
             </span>
             <span class="col-sm-6 col-xs-12 form-group has-feedback">
-              {{--<input type="text" name="danrenzhiwu" id="" placeholder="担任职务">--}}
-              {Form::text('ProjectPosition[ ]',null,array('placeholder'=>'担任职务'))}}
+              {{Form::text('ProjectPosition[ ]',null,array('placeholder'=>'担任职务'))}}
             </span>
           </div>
           <div class="form-group has-feedback clearfix">
@@ -167,17 +165,11 @@
                   <div class="form-group has-feedback">
                     {{Form::textarea('Projectexperience[ ]',$project[$i]->description,['placeholder'=>'项目经历'])}}
                   </div>
-
-
         @endfor
-
-
 @endif
-
       <p class="addjingyan">+添加一个项目经验</p>
       {{Form::hidden('projectNum','1',array('id'=>'projectNum'))}}
-      {{--{{Form::submit('保存',array('id'=>'mysubmit','class'=>'mysubmit'))}}--}}
-      <button>保存</button>
+      {{Form::submit('保存',array('id'=>'resumesubmit','class'=>'resumesubmit'))}}
     </div>
   {{Form::close()}}
   </div>

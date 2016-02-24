@@ -84,6 +84,8 @@ label.error{font-size:12px;color:#f30;font-weight:normal;margin:0!important;}
 .attestation p.addjingyan{text-align:center;background-color:#ddd;line-height:40px;color:#999;border-radius:6px;margin:10px 0;cursor:pointer;}
 .attestation button{display:block;width:180px;text-align:center;height:50px;line-height:50px;background-color:#63ce83;color:#fff;border-radius:6px;margin-top:30px;border:none;}
 .attestation button:hover{background-color:#4dbe92;}
+#resumesubmit {display:block;width:180px;text-align:center;height:50px;line-height:50px;background-color:#63ce83;color:#fff;border-radius:6px;margin-top:30px;border:none;}
+#resumesubmit :hover{background-color:#4dbe92;}
 .footer{margin-top:200px;}
 @media screen and (max-width:767px){
 	.attestation{margin:20px;}
