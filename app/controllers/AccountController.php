@@ -99,7 +99,7 @@ class AccountController extends \BaseController {
             $resume = User::find($id)->resume()->first();
             if(!is_null($resume)){
 //                $project=Resume::find($id)->userproject()->get();
-                $project=userproject::where('user_id','=',$id)->get();
+                $project=Userproject::where('user_id','=',$id)->get();
             }
             $skills = Skill::lists('skill');
             $professions = Profession::lists('profession');
