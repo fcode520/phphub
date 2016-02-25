@@ -16,7 +16,7 @@ class Resume extends \Eloquent {
 
 	public function userproject(){
 
-		return $this->hasMany('userproject','user_id','user_id');
+		return $this->hasMany('Userproject','user_id','user_id');
 	}
 
 

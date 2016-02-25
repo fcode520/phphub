@@ -72,7 +72,7 @@ public static $rules = array(
     //项目经历
     public function projects()
     {
-        return $this->hasMany('userproject');
+        return $this->hasMany('Userproject','user_id','id');
     }
 
     //通过gihubid 获取
