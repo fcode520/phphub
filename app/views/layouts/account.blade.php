@@ -33,6 +33,7 @@ OneWork & 远程工作者社区
 		<meta name="description" content="@section('description') 我们崇尚工作方式简单化，所以A Personal Computer, One Work!是我们的追求，更是我们的初心。 @show" />
         <link rel="stylesheet" href="{{ cdn('assets/css/'.Asset::styles('frontend')) }}">
         <link rel="shortcut icon" href="{{ cdn('favicon.ico') }}"/>
+
         @yield('css')
 		<script>
 			Config = {
@@ -42,7 +43,7 @@ OneWork & 远程工作者社区
 					'notificationsCount' : '{{ route('notifications.count') }}',
 					'upload_image' : '{{ route('upload_image') }}'
 				},
-				'token': '{{ csrf_token() }}',
+				'token': '{{ csrf_token() }}'
 			};
 		</script>
 	    @yield('styles')
@@ -62,9 +63,7 @@ OneWork & 远程工作者社区
 
 
         <script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
-
 	    @yield('scripts')
-
 
 	</body>
 </html>

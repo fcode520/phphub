@@ -58,7 +58,7 @@ return array(
     'not_in'               => '选定的 :attribute 是无效的',
     'numeric'              => ':attribute 必须是数字',
     'regex'                => ':attribute 格式是无效的',
-    'required'             => ':attribute 字段必须填写',
+    'required'             => ':attribute 必须填写',
     'required_if'          => ':attribute 字段是必须的当 :other 是 :value',
     'required_with'        => ':attribute 字段是必须的当 :values 是存在的',
     'required_with_all'    => ':attribute 字段是必须的当 :values 是存在的',
@@ -101,6 +101,10 @@ return array(
     |
     */
 
-    'attributes' => array(),
+    'attributes' => array(
+        'province'               => ':所在省',
+        'city'               => ':所在市',
+        'district'               => ':所在地区',
+    ),
 
 );

@@ -15,5 +15,6 @@
 @stop
 
 @section('scripts')
-{{HTML::script('assets/onework_js/myapp.js')}}
+
+{{HTML::script(cdn('assets/onework_js/myapp.js'))}}
 @stop
