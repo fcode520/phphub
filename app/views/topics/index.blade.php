@@ -23,10 +23,12 @@
       <div class="exchange-head">
         <ul>
           <li class="act"><a href="#">全部</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">寻找项目</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
           <li><a href="#">寻求工作</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li><a href="#">团队招募</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li><a href="#">外包</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li><a href="#">寻求合伙人</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">创建远程团队</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">提升技能</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">每周必读</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li><a href="#">我要吐槽</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
         </ul>
       </div>
       <div class="exchange-hot">
@@ -50,6 +52,7 @@
 @include('layouts.partials.sidebar')
 @stop
 
-@section('scripts')
-{{HTML::script('assets/onework_js/myapp.js')}}
-@stop
+{{--@section('scripts')--}}
+{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
+{{--{{HTML::script('assets/onework_js/myapp.js')}}--}}
+{{--@stop--}}

@@ -1,4 +1,4 @@
-@extends('layouts.account_right')
+@extends('layouts.default')
 
 @section('title')
     个人中心_@parent
@@ -10,11 +10,9 @@
 @stop
 
 @section('content')
-   <div class="my-article">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-9 modify-article message-center">
-                    <h2 class="title">Message center｜个人设置</h2>
+@include('account.partials.leftnav')
+                <div class="col-xs-9 m">
+
 
                     @include('account.partials.TopSettingNav')
                     <div class="clearfix"></div>
@@ -30,18 +28,16 @@
          {{Form::close()}}
    </div>
     						</div>
-    						</div>
-    						</div>
-    						</div>
 
 @stop
 
-@section('scripts')
-    {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.min.js'))}}
-    {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js'))}}
-    {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
-    {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
-    {{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}
-    {{HTML::script(cdn('assets/onework_js/form_ajax.js'))}}
+{{--@section('scripts')--}}
+{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.min.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/myapp.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/form_ajax.js'))}}--}}
 
-@stop
+{{--@stop--}}

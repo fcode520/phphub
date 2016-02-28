@@ -32,6 +32,14 @@ var paths = {
             'app/assets/js/main.js',
             'app/assets/js/packet/distpicker/distpicker.data.min.js',
             'app/assets/js/packet/distpicker/distpicker.min.js',
+            'app/assets/js/oneworkjs/bootstrapValidator.min.js',
+            'app/assets/js/oneworkjs/jquery.cxcalendar.languages.js',
+            'app/assets/js/oneworkjs/jquery.cxcalendar.min.js',
+            'app/assets/js/oneworkjs/jquery.form.js',
+            'app/assets/js/oneworkjs/jquery.validate.min.js',
+            'app/assets/js/oneworkjs/myapp.js',
+            'app/assets/js/oneworkjs/Register_ajax.js',
+            'app/assets/js/oneworkjs/form_ajax.js',
         ],
         styles: [
             'app/assets/css/bootstrap.min.css',
@@ -41,8 +49,6 @@ var paths = {
             'app/assets/css/dist/nprogress.css',
             'app/assets/css/dist/prism.css',
             'app/assets/css/packet/cxcalendar/jquery.cxcalendar.css',
-
-
         ]
     }
 }

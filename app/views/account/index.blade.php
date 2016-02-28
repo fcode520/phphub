@@ -1,4 +1,4 @@
-@extends('layouts.account')
+@extends('layouts.default')
 
 @section('title')
     个人中心_@parent
@@ -9,12 +9,11 @@
 @stop
 
 @section('content')
-<div id="rightFrame">
-<iframe src="{{route('ac_notify')}}" name="iframe_right" id="iframe_right"></iframe>
-</div>
+@include('account.partials.leftnav')
+@include('account.setting')
 @stop
 
-@section('scripts')
-
-{{HTML::script(cdn('assets/onework_js/myapp.js'))}}
-@stop
+{{--@section('scripts')--}}
+{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
+{{--{{HTML::script(cdn('assets/onework_js/myapp.js'))}}--}}
+{{--@stop--}}

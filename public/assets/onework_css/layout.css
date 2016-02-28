@@ -356,7 +356,7 @@ button:hover{background-color:#4dbe92;}
 .modify-article{max-width: 900px;margin-bottom: 40px;}
 #src_message{display: block;}
 .modify-article > h2{font-size: 14px;color: #30333a;margin: 0;float: left;margin-top: 20px;}
-.modify-article{margin-left: 10px;float: left;position: relative;}
+.modify-article{position: relative;}
 .modify-article > .news{background: #fff;padding: 20px;margin-top: 20px;border-radius: 4px;}
 .modify-article > .news-comments{background: #fff;padding: 20px;margin-bottom: 40px;border-radius: 4px;}
 .modify-article > button{position: absolute;right: 40px;top: 65px;height: 30px;line-height: 10px;}
@@ -418,10 +418,12 @@ button:hover{background-color:#4dbe92;}
 .my-message .b > a:hover{color: #63ce83;}
 .my-message .c{color: #9ca2a2;text-align: right;}
 .my-message .c > button{border: 1px solid #f4f5f5;width: 34px;height: 34px;width: 44px;height: 24px;border-radius: 5px;cursor: pointer;background: #fff;}
-.my-message .c > button:hover{background: #63ce83;border-color: #63ce83;color: #fff;}
+.my-message .c > button:hover{background: #63ce83;border-color: #63ce83;color: #ff0909;}
 .my-message .c > button:focus{outline: none;}
 .my-message .c > button:last-child{margin-left: 5px;}
 .my-message .c > button.act{outline: none;background: #63ce83;color: #fff;}
+.my-message .c > button >a {color: #9ca2a2}
+.my-message .c > button > a:hover{color: #ffffff}
 .my-comment{margin-top: 20px;}
 .my-comment textarea{width: 100%;height: 80px;border: 1px solid #f4f5f5;resize:none;padding: 10px;border-radius: 5px;}
 .my-comment button{width: 100px;float: right;margin: 10px 0;}
@@ -464,6 +466,9 @@ button:hover{background-color:#4dbe92;}
 .personal-nav > li{float: left;margin: 0 20px;cursor: pointer;font-size: 14px;}
 .personal-nav > li:hover{color: #63ce83;}
 .personal-nav > li.act{border-bottom: 2px solid #63ce83;color: #63ce83;}
+.personal-nav > li.act >a{color: #63ce83;}
+.personal-nav > li >a{color: #000000;}
+.personal-nav > li >a:hover{color: #63ce83;}
 .personal-infomation{max-width: 1180px;padding: 20px 30px;background: #fff;margin-bottom: 40px;border-radius: 5px;}
 .personal-infomation{color: #999;}
 .personal-infomation > .a{margin-top: 25px;}
@@ -617,6 +622,16 @@ button:hover{background-color:#4dbe92;}
     width: 100%;
     height: 100%;
 }
+
+/** 新－个人中心 begin***/
+.my-set-center{margin-top: 20px;position: relative;overflow: hidden;}
+.my-set-center > span{height: 42px;width: 2px;position: absolute;left: 15px;top: 0;display: block;z-index: 99;background: #63ce83;}
+.my-set-center > ul{background: #fff;border-radius: 4px;}
+.my-set-center > ul > li{line-height: 40px;border-bottom: 1px solid #f0f0f0;}
+.my-set-center > ul > li:last-child{border-bottom: none;}
+.my-set-center > ul > li > a{color: #666;font-size: 14px;width: 100%;display: inline-block;text-indent: 20px;}
+.my-set-center > ul > li > a:hover{color: #63ce83;}
+/** 新－个人中心 end***/
 
 
 

@@ -1,4 +1,7 @@
-<div class=" container">
+<div class=" col-sm-9">
+<div class="clearfix"></div>
+@include('account.partials.TopSettingNav')
+<div class="clearfix"></div>
 @if(Session::get('message'))
 <p>{{Session::get('message')}}</p>
 @endif
@@ -176,4 +179,4 @@
 </div>
 </div>
 </div>
-
+</div>

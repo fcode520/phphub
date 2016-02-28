@@ -18,45 +18,46 @@ class CreateSkillTable extends Migration {
 			$table->increments('id');
 			$table->string('skill');
 
-            $this->initData();
 		});
+        $this->initData();
+
 	}
 
     public function initData()
     {
         $skills = [
-            ['sill' => 'C++'],
-            ['sill' => 'java'],
-            ['sill' => 'php'],
-            ['sill' => 'c#/.net'],
-            ['sill' => 'python'],
-            ['sill' => 'delphi'],
-            ['sill' => 'perl'],
-            ['sill' => 'ruby'],
-            ['sill' => 'node.js'],
-            ['sill' => 'go'],
-            ['sill' => 'Android'],
-            ['sill' => 'IOS'],
-            ['sill' => 'javascript'],
-            ['sill' => 'u3d'],
-            ['sill' => 'cocos2d-x'],
-            ['sill' => '前端开发'],
-            ['sill' => '后端开发'],
-            ['sill' => '数据挖掘'],
-            ['sill' => '自然语言处理'],
-            ['sill' => '算法'],
-            ['sill' => '移动端开发'],
-            ['sill' => '嵌入式开发'],
-            ['sill' => '测试'],
-            ['sill' => '运维'],
-            ['sill' => '病毒分析'],
-            ['sill' => 'web 安全'],
-            ['sill' => '数据库开发'],
-            ['sill' => '项目管理'],
-            ['sill' => 'app设计'],
-            ['sill' => '交互设计'],
-            ['sill' => '数据分析'],
-            ['sill' => '运营'],
+            ['skill' => 'C++'],
+            ['skill' => 'java'],
+            ['skill' => 'php'],
+            ['skill' => 'c#/.net'],
+            ['skill' => 'python'],
+            ['skill' => 'delphi'],
+            ['skill' => 'perl'],
+            ['skill' => 'ruby'],
+            ['skill' => 'node.js'],
+            ['skill' => 'go'],
+            ['skill' => 'Android'],
+            ['skill' => 'IOS'],
+            ['skill' => 'javascript'],
+            ['skill' => 'u3d'],
+            ['skill' => 'cocos2d-x'],
+            ['skill' => '前端开发'],
+            ['skill' => '后端开发'],
+            ['skill' => '数据挖掘'],
+            ['skill' => '自然语言处理'],
+            ['skill' => '算法'],
+            ['skill' => '移动端开发'],
+            ['skill' => '嵌入式开发'],
+            ['skill' => '测试'],
+            ['skill' => '运维'],
+            ['skill' => '病毒分析'],
+            ['skill' => 'web 安全'],
+            ['skill' => '数据库开发'],
+            ['skill' => '项目管理'],
+            ['skill' => 'app设计'],
+            ['skill' => '交互设计'],
+            ['skill' => '数据分析'],
+            ['skill' => '运营'],
         ];
         DB::table('skill')->insert($skills);
     }

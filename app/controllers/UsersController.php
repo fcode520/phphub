@@ -226,7 +226,7 @@ class UsersController extends \BaseController
 
         if ($validator->fails())
         {
-            return Redirect::to('/account/personalsettings')->with($validator->messages())->withInput();
+            return Redirect::to('/account')->with($validator->messages())->withInput();
         }
         if(Auth::check()){
             $id=Auth::user()->id;
@@ -263,7 +263,7 @@ class UsersController extends \BaseController
         if(stripos($url,'account')==false){
             return Redirect::to('/EditResume');
         }else{
-            return Redirect::to('/account/personalsettings');
+            return Redirect::to('/account');
         }
 
     }
