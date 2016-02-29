@@ -12,8 +12,6 @@ tests/_output/*
 
 Envoy.blade.php
 
-public/assets/css/*
-public/assets/js/*
 app/assets/css/dist/*
 asset_manifest.json
 env.local.zip
