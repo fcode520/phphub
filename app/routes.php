@@ -252,6 +252,10 @@ Route::get('/activation', [
     'as' => 'activation',
     'uses' => 'ow_AuthController@activation',
 ]);
+Route::get('/SendActivationEmail',[
+'as'=>'SendActivationEmail',
+    'uses' => 'ow_AuthController@SendActivationEmail',
+]);
 Route::get('/ow_registerok', [
     'as' => 'ow_registerok',
     'uses' => 'ow_AuthController@ow_registerok',
@@ -289,8 +293,8 @@ Route::get('/activation','ow_AuthController@activation');
 Route::get('/account/',[
     'as'=>'account',
     'uses'=>'AccountController@index']);
-Route::get('/account/replies','AccountController@replies');
-Route::get('/account/sysnotify','AccountController@sysnotify');
+Route::get('/account/notify/replies','AccountController@replies');
+Route::get('/account/notify/sysnotify','AccountController@sysnotify');
 Route::get('/account/personalsettings',
     [
         'as'=>'ac_setting',

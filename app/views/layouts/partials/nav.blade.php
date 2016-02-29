@@ -17,10 +17,10 @@
         <!-- 导航按钮区域 -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="{{ (Request::is('topics*') ||Request::is('/')? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Topics') }}</a></li>
-                <li class="{{ (Request::is('nodes/6') ? ' active' : '') }}"><a href="{{ route('nodes.show', 6) }}">{{ lang('Jobs') }}</a></li>
-                <li class="{{ (Request::is('nodes/8') ? ' active' : '') }}"><a href="{{ route('nodes.show', 8) }}">{{ lang('Cooperate') }}</a></li>
-                <li class="{{ (Request::is('team*') ? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Team') }}</a></li>
+                <li class="{{ (Request::is('topics*') ||Request::is('/')? ' active' : '') }}"><a id="pjax" href="{{ route('topics.index') }}" >{{ lang('Topics') }}</a></li>
+                <li class="{{ (Request::is('nodes/6') ? ' active' : '') }}"><a id="pjax" href="{{ route('nodes.show', 6) }}" >{{ lang('Jobs') }}</a></li>
+                <li class="{{ (Request::is('nodes/8') ? ' active' : '') }}"><a id="pjax" href="{{ route('nodes.show', 8) }} ">{{ lang('Cooperate') }}</a></li>
+                <li class="{{ (Request::is('nodes/7') ? ' active' : '') }}"><a href="{{ route('nodes.show', 7) }}">{{ lang('Team') }}</a></li>
                 <li class="{{ (Request::is('wiki*') ? ' active' : '') }}"><a href="{{ route('wiki') }}">{{ lang('Wiki') }}</a></li>
                 <li class="{{ (Request::is('about*') ? ' active' : '') }}"><a href="{{ route('about') }}">{{ lang('About') }}</a></li>
             </ul>
@@ -37,24 +37,24 @@
             <div class="header text-right">
                 @if (Auth::check())
                 <div class="headertext">
-                        <a href="{{ route('notifications.index') }}" class="text-warning">
+                        <a class="break" href="{{ route('notifications.index') }}" class="text-warning">
                       <span class="badge badge-{{ $currentUser->notification_count > 0 ? 'important' : 'fade'; }}" id="notification-count">
                           {{ $currentUser->notification_count }}
                       </span>
                         </a>
-                        <a href="{{ route('users.show', $currentUser->id) }}">
+                        <a class="break" href="{{ route('account') }}">
                             <i class="fa fa-user"></i> {{{ $currentUser->username }}}
                         </a>
 
-                        <a class="button" href="{{ URL::route('logout') }}" >
+                        <a  class="break" href="{{ URL::route('logout') }}" >
                             <i class="fa fa-sign-out"></i> {{ lang('Logout') }}
                         </a>
                 </div>
                 @else
-                    <a href="{{ URL::route('ow_login') }}" class="btn btn-success" id="login-btn">
+                    <a  href="{{ URL::route('ow_login') }}" class="btn btn-success" id="login-btn">
                         {{ lang('Login') }}
                     </a>
-                    <a href="{{ URL::route('ow_register') }}" class="btn btn-success" id="login-btn">
+                    <a  href="{{ URL::route('ow_register') }}" class="btn btn-success" id="login-btn">
                         {{ lang('Register') }}
                     </a>
                 @endif

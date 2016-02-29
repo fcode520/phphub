@@ -13,9 +13,9 @@
                 <div class="col-xs-9 modify-article message-center">
                     <div class="clearfix"></div>
                     <p class="message-num">
-                        <span><a href="/account">所有消息</a><i>{{$notifications->sysNotifyCount+$notifications->repliesCount}}</i></span>
-                        <span><a href="/account/replies">评论留言</a><i>{{$notifications->repliesCount}}</i></span>
-                        <span><a href="/account/sysnotify">系统提示</a><i>{{$notifications->sysNotifyCount}}</i></span>
+                        <span><a href="/account/notify">所有消息</a><i>{{$notifications->sysNotifyCount+$notifications->repliesCount}}</i></span>
+                        <span><a href="/account/notify/replies">评论留言</a><i>{{$notifications->repliesCount}}</i></span>
+                        <span><a href="/account/notify/sysnotify">系统提示</a><i>{{$notifications->sysNotifyCount}}</i></span>
                     </p>
                     <div class="my-message">
                     <ul>

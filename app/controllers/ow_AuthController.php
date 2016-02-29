@@ -54,6 +54,20 @@ class ow_AuthController extends \BaseController
     public function ow_registerok(){
         return view::make('register.registerok');
     }
+    public function SendActivationEmail(){
+        if(Auth::check()){
+            $user=Auth::user();
+            $data=array('username'=>$user->username,
+                'activation'=>$user->activation,
+                'email'=>$user->email,
+            );
+            Mail::send('emails.auth.activation',$data,function($message)use ($user) {
+                $message->to($user->email, $user->username)->subject('欢迎注册成为OneWork会员，请尽快进行账号激活！');
+            });
+            return View::make('register.email_activation',compact('user'));
+        }
+                return Redirect::back();
+    }
     public function activation(){
         if(!empty($_GET['activation']) && isset($_GET['activation'])){
             $code=mysql_escape($_GET['activation']);
@@ -62,7 +76,6 @@ class ow_AuthController extends \BaseController
 
             if($user_count > 0)
             {
-
                 $count=DB::table('users')->where('activation',$code)->where('status','0')->count();
                 if($count == 1)
                 {

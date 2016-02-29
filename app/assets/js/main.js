@@ -7,7 +7,7 @@
     var PHPHub = {
         init: function(){
             var self = this;
-            $(document).pjax('a:not(a[target="_blank"])', 'body');
+            $(document).pjax('a[id="pjax"]', 'body');
             $(document).on('pjax:start', function() {
                 NProgress.start();
             });

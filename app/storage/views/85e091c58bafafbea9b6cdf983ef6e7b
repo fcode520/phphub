@@ -48,7 +48,9 @@ OneWork & 远程工作者社区
 		</div>
 
 		</div>
+
 		<?php echo $__env->make('layouts.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 		<script src="<?php echo cdn('assets/js/'.Asset::scripts('frontend')); ?>"></script>
 	    <?php echo $__env->yieldContent('scripts'); ?>
 
