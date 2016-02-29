@@ -21,6 +21,7 @@
       </div>
     <div class="container"></div>
 @stop
-@section('scripts')
-    {{ HTML::script('assets/onework_js/Register_ajax.js') }}
-@stop
+{{--@section('scripts')--}}
+{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
+    {{--{{ HTML::script('assets/onework_js/Register_ajax.js') }}--}}
+{{--@stop--}}

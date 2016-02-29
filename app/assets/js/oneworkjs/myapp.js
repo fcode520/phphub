@@ -486,3 +486,15 @@ $(function(){
         }
     });
 });
+$(function(){//新－个人中心 右边菜单滑动事件
+    var t = $('.my-set-center > ul > li');
+    var line = $('.my-set-center > span');
+    var i = t.parent().find('.act').index();
+    line.css('top',i*42);
+    t.hover(function(){
+        line.stop().animate({'top':$(this).index()*42},200);
+    },function(){
+        line.stop().animate({'top':i*42},200);
+    });
+
+});

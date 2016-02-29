@@ -18,8 +18,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="{{ (Request::is('topics*') ||Request::is('/')? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Topics') }}</a></li>
-                <li class="{{ (Request::is('nodes/40') ? ' active' : '') }}"><a href="{{ route('nodes.show', 40) }}">{{ lang('Jobs') }}</a></li>
-                <li class="{{ (Request::is('Cooperate*') ? ' active' : '') }}"><a href="{{ route('topics.index', 40) }}">{{ lang('Cooperate') }}</a></li>
+                <li class="{{ (Request::is('nodes/6') ? ' active' : '') }}"><a href="{{ route('nodes.show', 6) }}">{{ lang('Jobs') }}</a></li>
+                <li class="{{ (Request::is('nodes/8') ? ' active' : '') }}"><a href="{{ route('nodes.show', 8) }}">{{ lang('Cooperate') }}</a></li>
                 <li class="{{ (Request::is('team*') ? ' active' : '') }}"><a href="{{ route('topics.index') }}">{{ lang('Team') }}</a></li>
                 <li class="{{ (Request::is('wiki*') ? ' active' : '') }}"><a href="{{ route('wiki') }}">{{ lang('Wiki') }}</a></li>
                 <li class="{{ (Request::is('about*') ? ' active' : '') }}"><a href="{{ route('about') }}">{{ lang('About') }}</a></li>

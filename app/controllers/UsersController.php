@@ -198,6 +198,36 @@ class UsersController extends \BaseController
     }
     public function p_EditResume()
     {
+        $rules = [
+            'sex' => 'required',
+            'skill' => 'required',
+            'profession' => 'required',
+            'qqnumber' => 'required',
+            'Blog' => 'required',
+            'province' => 'required',
+            'city' => 'required',
+            'district' => 'required',
+            'summery' => 'required',
+            'experience' => 'required',
+        ];
+        $projectNum=intval(Input::get('projectNum'));
+        $ProjectName=Input::get('ProjectName');
+        $num=count($ProjectName);
+        if($num!=$projectNum){
+            $projectNum=$num;
+        }
+        $ProjectPosition=Input::get('ProjectPosition');
+        $PtStartTime=Input::get('starttime');
+        $PtEndTime=Input::get('endtime');
+        $ProjectUrl=Input::get('ProjectUrl');
+        $Projectecperience=Input::get('Projectexperience');
+
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails())
+        {
+            return Redirect::to('/account')->with($validator->messages())->withInput();
+        }
         if(Auth::check()){
             $id=Auth::user()->id;
             $Resume=Resume::firstOrNew(array('user_id'=>$id));
@@ -213,18 +243,6 @@ class UsersController extends \BaseController
             $Resume->summary=Input::get('summery');
             $Resume->skill_experience=Input::get('experience');
 
-            $projectNum=intval(Input::get('projectNum'));
-
-            $ProjectName=Input::get('ProjectName');
-            $ProjectPosition=Input::get('ProjectPosition');
-            $PtStartTime=Input::get('starttime');
-            $PtEndTime=Input::get('endtime');
-            $ProjectUrl=Input::get('ProjectUrl');
-            $Projectecperience=Input::get('Projectexperience');
-            $num=count($ProjectName);
-            if($num!=$projectNum){
-                $projectNum=$num;
-            }
 
             Userproject::where('user_id','=',$id)->delete();
 
@@ -245,7 +263,7 @@ class UsersController extends \BaseController
         if(stripos($url,'account')==false){
             return Redirect::to('/EditResume');
         }else{
-            return Redirect::to('/account/personalsettings');
+            return Redirect::to('/account');
         }
 
     }

@@ -41,33 +41,15 @@ OneWork & 远程工作者社区
 
 			@include('layouts.partials.nav')
 
-			{{--<div class="container attestation">--}}
-
-
-        <div class="container ">
+        <div class="container">
         {{--@include('flash::message')--}}
 		@yield('content')
 		</div>
+
 		</div>
 		@include('layouts.partials.footer')
-
-
-        <script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
-
+		<script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
 	    @yield('scripts')
-
-        {{--@if (App::environment() == 'production')--}}
-		{{--<script>--}}
-          {{--(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){--}}
-          {{--(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),--}}
-          {{--m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)--}}
-          {{--})(window,document,'script','//www.google-analytics.com/analytics.js','ga');--}}
-
-          {{--ga('create', 'UA-53903425-1', 'auto');--}}
-          {{--ga('send', 'pageview');--}}
-
-        {{--</script>--}}
-        {{--@endif--}}
 
 	</body>
 </html>

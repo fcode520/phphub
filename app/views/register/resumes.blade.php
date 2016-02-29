@@ -21,10 +21,11 @@
 
 @stop
 
-@section('scripts')
-    {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.min.js'))}}
-    {{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js'))}}
-    {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
-    {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
+{{--@section('scripts')--}}
+{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.min.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/jquery.cxcalendar.languages.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/myapp.js'))}}--}}
 
-@stop
+{{--@stop--}}

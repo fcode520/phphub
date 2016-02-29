@@ -15,7 +15,8 @@
   <a href="{{route('EditResume')}}">进一步完善</a>
 </div>
 @stop
-@section('scripts')
-    {{ HTML::script('assets/onework_js/Register_ajax.js') }}
+{{--@section('scripts')--}}
+{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
+    {{--{{ HTML::script('assets/onework_js/Register_ajax.js') }}--}}
 
-@stop
+{{--@stop--}}

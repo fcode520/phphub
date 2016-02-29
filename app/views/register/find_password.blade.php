@@ -23,10 +23,11 @@
 {{Form::close()}}
 @stop
 
-@section('scripts')
-    {{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}
-    {{HTML::script(cdn('assets/onework_js/myapp.js'))}}
-    {{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}
+{{--@section('scripts')--}}
+{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/jquery.form.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/myapp.js'))}}--}}
+    {{--{{HTML::script(cdn('assets/onework_js/bootstrapValidator.min.js'))}}--}}
 
 
-@stop
+{{--@stop--}}

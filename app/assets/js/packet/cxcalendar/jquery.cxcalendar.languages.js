@@ -7,11 +7,12 @@
  */
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
-    define(['../../../../../public/assets/onework_js/jquery.validate.min', 'cxCalendar'], factory);
+    define(['./../../oneworkjs/jquery.validate.min', 'cxCalendar'], factory);
   } else {
     factory(jQuery);
   };
 }(function($) {
+    if(typeof($.cxCalendar.languages) == "undefined") return ;
   $.extend($.cxCalendar.languages, {
     // English
     'en': {

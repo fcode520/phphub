@@ -1,4 +1,4 @@
-@extends('layouts.account_right')
+@extends('layouts.default')
 
 @section('title')
     个人中心_@parent
@@ -9,12 +9,8 @@
 @stop
 
 @section('content')
- <div class="my-article">
-        {{--<div class="container">--}}
-            <div class="row">
+@include('account.partials.leftnav')
                 <div class="col-xs-9 modify-article message-center">
-                    <h2 class="title">Message center｜消息中心<button type="button" class="btn btn-success post-message" data-toggle="modal" data-target="#myMessageModel">发送站内信</button></h2>
-
                     <div class="clearfix"></div>
                     <p class="message-num">
                         <span><a href="/account">所有消息</a><i>{{$notifications->sysNotifyCount+$notifications->repliesCount}}</i></span>
@@ -60,13 +56,16 @@
                                         <div class="c col-sm-3">
                                             <p class="timeago">{{ $notification->created_at }}</p>
                                             @if($notification->type=='new_reply')
-                                            {{--<p>未回复</p>--}}
-                                            <a href="{{ route('topics.show', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}" title="回复" class="d">
+
+                                           <button> <a href="{{ route('topics.show', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}" title="回复" class="d">
                                                 {{{ str_limit('回复', '100') }}}
+
                                             </a>
-                                            <a href="{{ route('topics.show', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}" title="回复" class="d">
-                                                {{{ str_limit('删除', '100') }}}
-                                            </a>
+                                            {{--<button>--}}
+                                            {{--<a href="{{ route('notify.delete', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}"  title="  回复  " class="d">--}}
+                                                {{--{{{ str_limit('删除', '100') }}}--}}
+                                            {{--</a>--}}
+                                            {{--</button>--}}
                                             @endif
                                         </div>
                                     </li>
@@ -79,14 +78,10 @@
                     </ul>
                     </div>
                 </div>
-            </div>
-        {{--</div>--}}
-    </div>
     <!--个人end-->
 @stop
 
 @section('scripts')
-{{HTML::script('assets/onework_js/myapp.js')}}
 <script>
     $('#flash-overlay-modal').modal();
 </script>

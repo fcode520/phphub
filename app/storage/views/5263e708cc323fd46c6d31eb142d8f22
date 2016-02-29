@@ -19,7 +19,7 @@
         <p class="personal-comment"><?php echo $currentUser->notification_count; ?>条未读评论<span><?php echo $currentUser->notification_count; ?></span></p>
         </a>
         <?php endif; ?>
-        <p class="a"><a href="/account">个人中心</a></p>
+        <p class="a"><a href="<?php echo URL::route('account'); ?>">个人中心</a></p>
         <p class="b"><a href="<?php echo isset($node) ? URL::route('topics.create', ['node_id' => $node->id]) : URL::route('topics.create') ;; ?>">＋发布新话题</a></p>
         <p class="c"><a href="#">认证账号，加入人才库</a></p>
       </div>

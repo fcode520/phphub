@@ -1,9 +1,5 @@
 
-<div class="my-article">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-9 modify-article message-center">
-                <h2 class="title">Message center｜个人设置</h2>
+<div class="col-xs-9 modify-article message-center">
 
                 <div class="clearfix"></div>
                 <ul class="personal-nav">
@@ -142,6 +138,5 @@
                 </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+
+

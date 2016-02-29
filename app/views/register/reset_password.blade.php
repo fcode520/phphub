@@ -21,7 +21,3 @@
 
 @stop
 
-@section('scripts')
-
-
-@stop

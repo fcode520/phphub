@@ -16,8 +16,9 @@ class CreateProfessionTable extends Migration {
 		Schema::create('profession', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('profession');
+			$table->string('profession')->default('');
 		});
+        $this->iniData();
 	}
 
     public function  iniData()
@@ -27,6 +28,7 @@ class CreateProfessionTable extends Migration {
             ['profession' => '兼职远程工作者'],
             ['profession' => '非远程工作者'],
         ];
+        DB::table('profession')->insert($profession);
     }
 	/**
 	 * Reverse the migrations.
