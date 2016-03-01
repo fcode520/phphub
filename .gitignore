@@ -9,7 +9,7 @@ composer.phar
 Thumbs.db
 
 tests/_output/*
-
+app/storage/*
 Envoy.blade.php
 
 app/assets/css/dist/*
