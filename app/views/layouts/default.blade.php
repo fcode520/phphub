@@ -51,6 +51,8 @@ OneWork & 远程工作者社区
 		@include('layouts.partials.footer')
 
 		<script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
+		<script src="{{ cdn('assets/js/onework.js')}}"></script>
+		<script src="{{ cdn('assets/js/popDialog.js')}}"></script>
 	    @yield('scripts')
 
 	</body>

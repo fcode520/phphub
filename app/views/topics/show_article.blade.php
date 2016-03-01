@@ -16,9 +16,11 @@
 
 <div class="container">
 <div class="row">
+
     <div class="col-sm-9 exchange">
            <div class="news">
                <div class="news-title">
+
                    <h2>{{{ $topic->title }}}</h2>
                         <div class="news-title-info">
                             <a href="{{ route('users.show', $topic->user->id) }}">
@@ -42,14 +44,12 @@
                             </a>
                             <i>{{$topic->favorite_count}}</i>
 
-<a data-method="post" href="javascript:void(0);" data-url="{{ route('topics.upvote', $topic->id) }}">
-            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            <a data-method="post" href="javascript:void(0);" data-url="{{ route('topics.upvote', $topic->id) }}">
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
 
-        </a><i> {{ $topic->vote_count }}</i>
-
-
-
+                                    </a><i> {{ $topic->vote_count }}</i>
 						</div>
+
 						@include('topics.partials.topic_new_operate')
 
 				</div>
@@ -112,6 +112,7 @@
     </div>
 
     @include('layouts.partials.sidebar')
+
 </div>
 </div>
 @stop

@@ -4,7 +4,7 @@ use Topic;
 use Reply;
 use User;
 use Cache;
-
+use Resume;
 class Stat
 {
     const CACHE_KEY     = 'site_stat';
@@ -17,6 +17,7 @@ class Stat
             $entity->topic_count = Topic::count();
             $entity->reply_count = Reply::count();
             $entity->user_count  = User::count();
+            $entity->remoter_count=Resume::remotercount();
             return $entity;
         });
     }

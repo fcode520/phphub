@@ -2,11 +2,17 @@
 <div class="clearfix"></div>
 @include('account.partials.TopSettingNav')
 <div class="clearfix"></div>
-@if(Session::get('message'))
-<p>{{Session::get('message')}}</p>
-@endif
+
 <div class="container attestation">
-  <p class="title"><span>完善资料</span><span>填写详细个人信息，加入人才库</span></p>
+  <p class="title"><span>完善资料</span>
+  @if(Session::get('message'))
+  <span>{{Session::get('message')}}</span>
+  @else
+    <span>填写详细个人信息，加入人才库</span>
+  @endif
+
+
+  </p>
 
 
 <div class="content row">

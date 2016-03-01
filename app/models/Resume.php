@@ -24,4 +24,7 @@ class Resume extends \Eloquent {
 	public function ResumesByid($id){
 		return $this->where('user_id','=',$id)->get();
 	}
+    public static  function remotercount(){
+        return Resume::where('remote_status','=',1)->orWhere('remote_status','=',2)->count();
+    }
 }

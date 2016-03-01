@@ -9,7 +9,12 @@
 		<div class="row">
 <div class="col-sm-9 exchange">
 				<div class="new-topic">
-					<h2>发布新话题</h2>
+				@if(Request::is('topics/*/edit'))
+				<h2>编辑话题</h2>
+				@else
+				<h2>发布新话题</h2>
+				@endif
+
 					<div class="clearfix"></div>
 					<div class="topic-con">
 					     @if (isset($topic))
