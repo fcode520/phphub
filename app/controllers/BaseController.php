@@ -36,6 +36,7 @@ class BaseController extends Controller
         View::share('currentUser', Auth::user());
         View::share('siteStat', App::make('Phphub\Stat\Stat')->getSiteStat());
         View::share('siteTip', Tip::getRandTip());
+
     }
 
     public function authorOrAdminPermissioinRequire($author_id)

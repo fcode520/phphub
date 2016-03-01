@@ -633,6 +633,14 @@ button:hover{background-color:#4dbe92;}
 .my-set-center > ul > li > a:hover{color: #63ce83;}
 /** 新－个人中心 end***/
 
-
-
+/**文章页面的精华显示**/
+.ribbon-excellent {
+	background: #fffce9;
+	border-top: 1px solid #fff3e6;
+	border-bottom: 1px solid #fff3e6;
+	margin: 0 -15px 10px;
+	padding: 4px 15px;
+	color: #da974d;
+	font-size: 12px
+}
 

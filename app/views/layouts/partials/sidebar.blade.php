@@ -62,31 +62,46 @@
         </div>
         <div class="unit-d act">
           <ul>
-            <li>
-              <i></i>
-              <a href="#">热门文章 标题</a>
-              <p><a href="#">卡卡西前辈</a><span>2015-11-11 00:17</span></p>
-            </li>
-          </ul>
-        </div>
-        <div class="unit-d">
-          <ul>
-            <li>
-              <i></i>
-              <a href="#">最新招聘 标题</a>
-              <p><a href="#">卡卡西前辈</a><span>2015-11-11 00:17</span></p>
-            </li>
+              @if(isset($sideInfos[0]))
+              @foreach( $sideInfos[0] as $topic)
+
+                <li>
+                  <i></i>
+                <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
+                <p><a href="{{ route('users.show', [$topic->user_id]) }}">{{ $topic->user->username }}</a><span class="timeago">{{ $topic->created_at }}</span></p>
+                </li>
+              @endforeach
+              @endif
 
           </ul>
         </div>
         <div class="unit-d">
           <ul>
-            <li>
-              <i></i>
-              <a href="#">外包项目</a>
-              <p><a href="#">卡卡西前辈</a><span>2015-11-11 00:17</span></p>
-            </li>
+              @if(isset($sideInfos[1]))
+                  @foreach( $sideInfos[1] as $topic)
+
+                      <li>
+                          <i></i>
+                          <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
+                          <p><a href="{{ route('users.show', [$topic->user_id]) }}">{{ $topic->user->username }}</a><span class="timeago">{{ $topic->created_at }}</span></p>
+                      </li>
+                  @endforeach
+              @endif
+
           </ul>
+        </div>
+        <div class="unit-d">
+          <ul>
+              @if(isset($sideInfos[2]))
+                  @foreach( $sideInfos[2] as $topic)
+
+                      <li>
+                          <i></i>
+                          <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
+                          <p><a href="{{ route('users.show', [$topic->user_id]) }}">{{ $topic->user->username }}</a><span class="timeago">{{ $topic->created_at }}</span></p>
+                      </li>
+            @endforeach
+            @endif
         </div>
       </div>
     </div>

@@ -25,8 +25,8 @@ class TopicsController extends \BaseController implements CreatorListener
         $nodes  = Node::allLevelUp();
         //查询结果缓存1440 分钟 获取友情链接
         $links  = Link::remember(1440)->get();
-
-        return View::make('topics.index', compact('topics', 'nodes', 'links'));
+        $sideInfos=$this->topic->getSideInfos(5);
+        return View::make('topics.index', compact('sideInfos','topics', 'nodes', 'links'));
     }
 
     public function create()
@@ -57,8 +57,8 @@ class TopicsController extends \BaseController implements CreatorListener
         $nodeTopics = $topic->getSameNodeTopics();
 
         $topic->increment('view_count', 1);
-
-        return View::make('topics.show_article', compact('topic', 'replies', 'nodeTopics', 'node'));
+        $sideInfos=$this->topic->getSideInfos(5);
+        return View::make('topics.show_article', compact('sideInfos','topic', 'replies', 'nodeTopics', 'node'));
     }
 
     public function edit($id)

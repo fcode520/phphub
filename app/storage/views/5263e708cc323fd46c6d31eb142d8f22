@@ -62,31 +62,46 @@
         </div>
         <div class="unit-d act">
           <ul>
-            <li>
-              <i></i>
-              <a href="#">热门文章 标题</a>
-              <p><a href="#">卡卡西前辈</a><span>2015-11-11 00:17</span></p>
-            </li>
-          </ul>
-        </div>
-        <div class="unit-d">
-          <ul>
-            <li>
-              <i></i>
-              <a href="#">最新招聘 标题</a>
-              <p><a href="#">卡卡西前辈</a><span>2015-11-11 00:17</span></p>
-            </li>
+              <?php if(isset($sideInfos[0])): ?>
+              <?php foreach( $sideInfos[0] as $topic): ?>
+
+                <li>
+                  <i></i>
+                <a href="<?php echo route('topics.show', [$topic->id]); ?>"><?php echo $topic->title; ?></a>
+                <p><a href="<?php echo route('users.show', [$topic->user_id]); ?>"><?php echo $topic->user->username; ?></a><span class="timeago"><?php echo $topic->created_at; ?></span></p>
+                </li>
+              <?php endforeach; ?>
+              <?php endif; ?>
 
           </ul>
         </div>
         <div class="unit-d">
           <ul>
-            <li>
-              <i></i>
-              <a href="#">外包项目</a>
-              <p><a href="#">卡卡西前辈</a><span>2015-11-11 00:17</span></p>
-            </li>
+              <?php if(isset($sideInfos[1])): ?>
+                  <?php foreach( $sideInfos[1] as $topic): ?>
+
+                      <li>
+                          <i></i>
+                          <a href="<?php echo route('topics.show', [$topic->id]); ?>"><?php echo $topic->title; ?></a>
+                          <p><a href="<?php echo route('users.show', [$topic->user_id]); ?>"><?php echo $topic->user->username; ?></a><span class="timeago"><?php echo $topic->created_at; ?></span></p>
+                      </li>
+                  <?php endforeach; ?>
+              <?php endif; ?>
+
           </ul>
+        </div>
+        <div class="unit-d">
+          <ul>
+              <?php if(isset($sideInfos[2])): ?>
+                  <?php foreach( $sideInfos[2] as $topic): ?>
+
+                      <li>
+                          <i></i>
+                          <a href="<?php echo route('topics.show', [$topic->id]); ?>"><?php echo $topic->title; ?></a>
+                          <p><a href="<?php echo route('users.show', [$topic->user_id]); ?>"><?php echo $topic->user->username; ?></a><span class="timeago"><?php echo $topic->created_at; ?></span></p>
+                      </li>
+            <?php endforeach; ?>
+            <?php endif; ?>
         </div>
       </div>
     </div>

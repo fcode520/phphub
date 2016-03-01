@@ -21,7 +21,7 @@
 
                 <?php if($topic->reply_count == 0): ?>
 
-                    <a href="<?php echo route('users.show', [$topic->user_id]); ?>" title="<?php echo e($topic->user->username); ?>">
+                    <a href="<?php echo route('users.show', [$topic->user_id]); ?>" title="<?php echo $topic->user->username; ?>">
                         <?php echo e($topic->user->username); ?>
 
                     </a>

@@ -159,7 +159,16 @@ class Topic extends \Eloquent
                         ->remember(10)
                         ->get();
     }
+    public function getNodeTopics($nodeid,$limit=5){
 
+        return Topic::select('id','title','user_id','created_at')->where('node_id', '=', $nodeid)
+            ->recent()
+            ->take($limit)
+            ->remember(10)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+    }
     public function scopeWhose($query, $user_id)
     {
         return $query->where('user_id', '=', $user_id)->with('node');
@@ -187,6 +196,13 @@ class Topic extends \Eloquent
     {
         return $query->where('is_excellent', '=', true);
     }
+    public function scopeExcellentEx($limit)
+    {
+        return Topic::select('id','title','user_id','created_at')->where('is_excellent', '=', true)->take($limit)
+            ->remember(10)
+            ->get();
+    }
+
 
     public static function makeExcerpt($body)
     {
@@ -198,5 +214,12 @@ class Topic extends \Eloquent
     public function setTitleAttribute($value)
     {
         $this->attributes['title'] = (new AutoCorrect)->convert($value);
+    }
+    public function getSideInfos($limit){
+        $sideInfos=array();
+        $sideInfos[0]=$this->scopeExcellentEx($limit);
+        $sideInfos[1]=$this->getNodeTopics(6,$limit);
+        $sideInfos[2]=$this->getNodeTopics(5,$limit);
+        return $sideInfos;
     }
 }

@@ -21,7 +21,7 @@
 
                 @if ($topic->reply_count == 0)
 
-                    <a href="{{ route('users.show', [$topic->user_id]) }}" title="{{{ $topic->user->username }}}">
+                    <a href="{{ route('users.show', [$topic->user_id]) }}" title="{{ $topic->user->username }}">
                         {{{ $topic->user->username }}}
                     </a>
                     <span> • </span>

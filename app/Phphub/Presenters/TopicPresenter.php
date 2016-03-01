@@ -65,4 +65,6 @@ class TopicPresenter extends Presenter
         $current_page = Input::get('page') ?: 1;
         return ($current_page - 1) * Config::get('phphub.replies_perpage') + $index;
     }
+
+
 }

@@ -1,5 +1,5 @@
 <?php
-//½Úµã/·ÖÀà ¿ØÖÆÆ÷
+//ï¿½Úµï¿½/ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 class NodesController extends \BaseController
 {
 
@@ -17,7 +17,7 @@ class NodesController extends \BaseController
         $node = Node::findOrFail($id);
         $filter = $this->topic->present()->getTopicFilter();
         $topics = $this->topic->getNodeTopicsWithFilter($filter, $id);
-
-        return View::make('topics.index', compact('topics', 'node'));
+        $sideInfos=$this->topic->getSideInfos(5);
+        return View::make('topics.index', compact('sideInfos','topics', 'node'));
     }
 }
