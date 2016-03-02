@@ -15,6 +15,12 @@ body{
 .header .headertext a:hover{color: #63ce83;}
 .navbar-nav > li > a:hover{color: #63ce83!important;}
 
+/*横幅提示*/
+.banner-text{width: 100%;margin-bottom: 20px;margin-top: -19px;background: #5ecf81;height: 0;overflow: hidden;}
+.banner-text > p{text-align: center;color: #fff;line-height: 50px;margin: 0;}
+.banner-text .btn {
+margin-left: 10px;
+}
 
 
 /* nav部分 */
@@ -27,6 +33,9 @@ body{
 .header{line-height:60px;}
 .header img{margin-right:10px;border-radius:50%;}
 .navbar-form{text-align: center;}
+.login-a{color: #777777;margin-right: 20px}
+.login-a:focus,.login-a:hover{color: #5ecf81;}
+
 
 /* footer部分 */
 .footer{width:100%;background-color:#fff;padding:25px 0;}

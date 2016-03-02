@@ -49,9 +49,11 @@ $(function () {//操作DOM，交流页面2 中间部分导航效果
     }
 
 
-    tt.on('click',function(){
+    tt.on('mouseover',function(){
         var left = $(this).find('span').position().left;
-        $('.list-info > .unit-d').eq($(this).index()).addClass('act').siblings().removeClass('act');
+            $(this).addClass('act').siblings().removeClass('act');
+
+            $('.list-info > .unit-d').eq($(this).index()).addClass('act').siblings().removeClass('act');
         line.stop().animate({'left':left},150);
     });
 });

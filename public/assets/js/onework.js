@@ -18,3 +18,12 @@ $(function(){//操作DOM 个人终极，点击回复
         });
     })
 });
+$(function(){//横幅提示信息
+    if(!!$('.banner-text').attr('data-time')){
+        var time=$('.banner-text').attr('data-time');
+        $('.banner-text').stop().animate({'height':50},300);
+        setTimeout(function(){
+            $('.banner-text').stop().animate({'height':0},300);
+        },time)
+    }
+});
