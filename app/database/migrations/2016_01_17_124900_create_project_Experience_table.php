@@ -17,11 +17,11 @@ class CreateProjectExperienceTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_id');
 			$table->string('project_name');
-			$table->string('role');//���ν�ɫ
+			$table->string('role');
 			$table->string('start_time');
 			$table->string('end_time');
 			$table->string('url');
-			$table->string('description');//��Ŀ����
+			$table->text('description');
 			$table->timestamps();
 		});
 	}
