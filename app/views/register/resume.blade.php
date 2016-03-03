@@ -8,7 +8,7 @@
   @if(Session::get('message'))
   <span>{{Session::get('message')}}</span>
   @else
-    <span>填写详细个人信息，加入人才库</span>
+    <span>完善个人资料，让更多人认识你！</span>
   @endif
 
 
