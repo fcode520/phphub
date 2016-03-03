@@ -54,7 +54,7 @@ label.error{font-size:12px;color:#f30;font-weight:normal;margin:0!important;}
 #uploadImg:hover{cursor:pointer;background:#63ce83;text-indent:-100px;opacity:0.1;}
 #uploadImg:focus{outline:none;}
 .attestation p.addjingyan:hover{color:#333;}
-.subtitle > b{width:14px;height:14px;font-weight:normal;background:url(../../../../ui/ow/images/close.png) no-repeat;display:inline-block;margin-left:10px;vertical-align:middle;cursor:pointer;}
+.subtitle > b{width:14px;height:14px;font-weight:normal;background:url(../images/register/close.png) no-repeat;display:inline-block;margin-left:10px;vertical-align:middle;cursor:pointer;}
 .attestation{background:#fff;border-radius:5px;max-width:735px;}
 .attestation .title{border-radius:5px 5px 0 0;height:60px;line-height:60px;background-color:#f9fafa;border-bottom:1px solid #f1f1f1;padding:0 30px 0 60px;color:#555;margin-left:-15px;margin-right:-15px;}
 .attestation .title span:first-child{font-size:18px;}

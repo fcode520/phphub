@@ -170,12 +170,14 @@
                   </div>
         @endfor
 @endif
-      <p class="addjingyan">+添加一个项目经验</p>
-      {{Form::hidden('projectNum','1',array('id'=>'projectNum'))}}
-      {{Form::submit('保存',array('id'=>'resumesubmit','class'=>'resumesubmit'))}}
+
     </div>
-  {{Form::close()}}
+
   </div>
+        <p class="addjingyan">+添加一个项目经验</p>
+        {{Form::hidden('projectNum','1',array('id'=>'projectNum'))}}
+        {{Form::submit('保存',array('id'=>'resumesubmit','class'=>'resumesubmit'))}}
+        {{Form::close()}}
 </div>
 </div>
 </div>
