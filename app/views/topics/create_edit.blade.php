@@ -64,51 +64,51 @@
     </div>
   </div>
 
-  <div class="col-md-4 side-bar">
+  {{--<div class="col-md-4 side-bar">--}}
 
-    @if ( $node )
+    {{--@if ( $node )--}}
 
-    <div class="panel panel-default corner-radius help-box">
-      <div class="panel-heading text-center">
-        <h3 class="panel-title">{{ lang('Current Node') }} : {{{ $node->name }}}</h3>
-      </div>
-      <div class="panel-body">
-        {{ $node->description }}
-      </div>
-    </div>
+    {{--<div class="panel panel-default corner-radius help-box">--}}
+      {{--<div class="panel-heading text-center">--}}
+        {{--<h3 class="panel-title">{{ lang('Current Node') }} : {{{ $node->name }}}</h3>--}}
+      {{--</div>--}}
+      {{--<div class="panel-body">--}}
+        {{--{{ $node->description }}--}}
+      {{--</div>--}}
+    {{--</div>--}}
 
-    @endif
+    {{--@endif--}}
 
-    <div class="panel panel-default corner-radius help-box">
-      <div class="panel-heading text-center">
-        <h3 class="panel-title">{{ lang('This kind of topic is not allowed.') }}</h3>
-      </div>
-      <div class="panel-body">
-        <ul class="list">
-          <li>这里放一些关于论坛的基本说明</li>
-          <li>请尽量分享技术相关的话题, 谢绝发布社会, 政治等相关新闻</li>
-          <li>这里绝对不讨论任何有关盗版软件、音乐、电影如何获得的问题</li>
-          <li>这里绝对不会全文转载任何文章，而只会以链接方式分享</li>
-      </div>
-    </div>
+    {{--<div class="panel panel-default corner-radius help-box">--}}
+      {{--<div class="panel-heading text-center">--}}
+        {{--<h3 class="panel-title">{{ lang('This kind of topic is not allowed.') }}</h3>--}}
+      {{--</div>--}}
+      {{--<div class="panel-body">--}}
+        {{--<ul class="list">--}}
+          {{--<li>这里放一些关于论坛的基本说明</li>--}}
+          {{--<li>请尽量分享技术相关的话题, 谢绝发布社会, 政治等相关新闻</li>--}}
+          {{--<li>这里绝对不讨论任何有关盗版软件、音乐、电影如何获得的问题</li>--}}
+          {{--<li>这里绝对不会全文转载任何文章，而只会以链接方式分享</li>--}}
+      {{--</div>--}}
+    {{--</div>--}}
 
-    <div class="panel panel-default corner-radius help-box">
-      <div class="panel-heading text-center">
-        <h3 class="panel-title">{{ lang('We can benefit from it.') }}</h3>
-      </div>
-      <div class="panel-body">
-        <ul class="list">
-          <li>分享生活见闻, 分享知识</li>
-          <li>接触新技术, 讨论技术解决方案</li>
-          <li>为自己的创业项目找合伙人, 遇见志同道合的人</li>
-          <li>自发线下聚会, 加强社交</li>
-          <li>发现更好工作机会</li>
-          <li>甚至是开始另一个神奇的开源项目</li>
-        </ul>
-      </div>
-    </div>
+    {{--<div class="panel panel-default corner-radius help-box">--}}
+      {{--<div class="panel-heading text-center">--}}
+        {{--<h3 class="panel-title">{{ lang('We can benefit from it.') }}</h3>--}}
+      {{--</div>--}}
+      {{--<div class="panel-body">--}}
+        {{--<ul class="list">--}}
+          {{--<li>分享生活见闻, 分享知识</li>--}}
+          {{--<li>接触新技术, 讨论技术解决方案</li>--}}
+          {{--<li>为自己的创业项目找合伙人, 遇见志同道合的人</li>--}}
+          {{--<li>自发线下聚会, 加强社交</li>--}}
+          {{--<li>发现更好工作机会</li>--}}
+          {{--<li>甚至是开始另一个神奇的开源项目</li>--}}
+        {{--</ul>--}}
+      {{--</div>--}}
+    {{--</div>--}}
 
-  </div>
+  {{--</div>--}}
 </div>
 
 @stop

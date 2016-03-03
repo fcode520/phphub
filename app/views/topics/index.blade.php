@@ -10,14 +10,16 @@
 @stop
 
 @section('content')
-    @if(isset($currentUser))
-         @if($currentUser->status==0)
-      <div class="container alert alert-danger">
-          {{ '请激活当前用户' }}
-          <a href="{{route('SendActivationEmail')}}">点击重新发送激活邮件</a>
-      </div>
-         @endif
-    @endif
+    {{--@if(isset($currentUser))--}}
+         {{--@if($currentUser->status==0)--}}
+      {{--<div class="container alert alert-danger">--}}
+          {{--{{ '请激活当前用户' }}--}}
+          {{--<a href="{{route('SendActivationEmail')}}">点击重新发送激活邮件</a>--}}
+      {{--</div>--}}
+         {{--@endif--}}
+    {{--@endif--}}
+
+
 <!--交流页面主要内容begin-->
 
  <div class="col-sm-9 exchange">

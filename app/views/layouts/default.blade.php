@@ -28,7 +28,7 @@ OneWork & 远程工作者社区
                     'notificationsCount' : '{{ route('notifications.count') }}',
                     'upload_image' : '{{ route('upload_image') }}'
                 },
-                'token': '{{ csrf_token() }}',
+                'token': '{{ csrf_token() }}'
             };
         </script>
 
@@ -40,8 +40,17 @@ OneWork & 远程工作者社区
 		<div id="wrap">
 
 			@include('layouts.partials.nav')
-
+			@if(isset($currentUser))
+                @if($currentUser->status==0)
+                <div class="banner-text" data-time="20000">
+                    <p>请激活当前用户,以便进行后续操作！</button>
+                    <a class="btn btn-default btn-sm" href="{{route('SendActivationEmail')}}">点击激活</a>
+                    </p>
+                </div>
+             @endif
+            @endif
         <div class="container">
+
         {{--@include('flash::message')--}}
 		@yield('content')
 		</div>
@@ -51,6 +60,8 @@ OneWork & 远程工作者社区
 		@include('layouts.partials.footer')
 
 		<script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
+		<script src="{{ cdn('assets/js/onework.js')}}"></script>
+		<script src="{{ cdn('assets/js/popDialog.js')}}"></script>
 	    @yield('scripts')
 
 	</body>

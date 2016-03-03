@@ -36,6 +36,7 @@ class BaseController extends Controller
         View::share('currentUser', Auth::user());
         View::share('siteStat', App::make('Phphub\Stat\Stat')->getSiteStat());
         View::share('siteTip', Tip::getRandTip());
+        View::share('g_sideInfos',Topic::getSideInfos(5));
 
     }
 

@@ -48,22 +48,23 @@
       <div class="list-info">
         <div class="unit-a clearfix">
             <ul>
-              <li><span>1120</span><p>远程工作者</p></li>
-              <li><span>20</span><p>认证会员</p></li>
-              <li><span>120</span><p>交流文章</p></li>
+              <li><span>{{$siteStat->remoter_count}}</span><p>远程工作者</p></li>
+              <li><span>{{$siteStat->user_count}}</span><p>认证会员</p></li>
+              <li><span>{{$siteStat->topic_count}}</span><p>交流文章</p></li>
             </ul>
         </div>
         <a href="{{ isset($node) ? URL::route('topics.create', ['node_id' => $node->id]) : URL::route('topics.create') ; }}" class="unit-b btn btn-success">+发布新话题</a>
         <div class="unit-c">
           <ul>
-            <li><span>热门文章</span></li><li><span>最新招聘</span></li><li><span>外包项目</span></li>
+            <li class="act"><span>热门文章</span></li><li><span>最新招聘</span></li><li><span>外包项目</span></li>
+
           </ul>
           <div class="line"></div>
         </div>
         <div class="unit-d act">
           <ul>
-              @if(isset($sideInfos[0]))
-              @foreach( $sideInfos[0] as $topic)
+              @if(isset($g_sideInfos[0]))
+              @foreach( $g_sideInfos[0] as $topic)
 
                 <li>
                   <i></i>
@@ -77,8 +78,8 @@
         </div>
         <div class="unit-d">
           <ul>
-              @if(isset($sideInfos[1]))
-                  @foreach( $sideInfos[1] as $topic)
+              @if(isset($g_sideInfos[1]))
+                  @foreach( $g_sideInfos[1] as $topic)
 
                       <li>
                           <i></i>
@@ -92,8 +93,8 @@
         </div>
         <div class="unit-d">
           <ul>
-              @if(isset($sideInfos[2]))
-                  @foreach( $sideInfos[2] as $topic)
+              @if(isset($g_sideInfos[2]))
+                  @foreach( $g_sideInfos[2] as $topic)
 
                       <li>
                           <i></i>

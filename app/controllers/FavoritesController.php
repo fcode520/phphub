@@ -16,6 +16,7 @@ class FavoritesController extends \BaseController
             $topic->increment('favorite_count', 1);
         }
         Flash::success(lang('Operation succeeded.'));
+//        return "sucess";
         return Redirect::route('topics.show', $topic->id);
     }
 }

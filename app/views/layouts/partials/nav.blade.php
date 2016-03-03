@@ -51,7 +51,7 @@
                         </a>
                 </div>
                 @else
-                    <a  href="{{ URL::route('ow_login') }}" class="btn btn-success" id="login-btn">
+                    <a  href="{{ URL::route('ow_login') }}" class="login-a" id="login-btn">
                         {{ lang('Login') }}
                     </a>
                     <a  href="{{ URL::route('ow_register') }}" class="btn btn-success" id="login-btn">
