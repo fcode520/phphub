@@ -33,9 +33,9 @@
 {{Form::open(array('url'=>'/account/EditResume','class'=>'editresume','id'=>'renzhengform','novalidate'=>'novalidate'))}}
 
     <div class="input">
-     <div class="form-group has-feedback">
-        <input type="text" name="email" id="" placeholder="邮箱">
-     </div>
+     {{--<div class="form-group has-feedback">--}}
+        {{--<input type="text" name="email" id="" placeholder="邮箱">--}}
+     {{--</div>--}}
       @if(is_null($resume))
     <div class="form-group has-feedback clearfix">
         <span class="col-sm-4 col-xs-12">
@@ -51,9 +51,9 @@
         <span class="col-sm-4 col-xs-12">
           {{Form::select('profession',[
                                           ''=>'职业',
-                                          '0'=>'全职远程工作者1',
-                                          '1'=>'兼职远程工作者',
-                                          '2'=>'非远程工作者'])}}
+                                          '1'=>'全职远程工作者',
+                                          '2'=>'兼职远程工作者',
+                                          '3'=>'非远程工作者'])}}
         </span>
       </div>
 
@@ -84,9 +84,9 @@
         <span class="col-sm-4 col-xs-12">
           {{Form::select('profession',[
                                           ''=>'职业',
-                                          '0'=>'全职远程工作者',
-                                          '1'=>'兼职远程工作者',
-                                          '2'=>'非远程工作者'],$resume->remote_status)}}
+                                          '1'=>'全职远程工作者',
+                                          '2'=>'兼职远程工作者',
+                                          '3'=>'非远程工作者'],$resume->remote_status)}}
         </span>
       </div>
   <div class="form-group has-feedback">
