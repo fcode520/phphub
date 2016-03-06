@@ -37,9 +37,11 @@
             <div class="header text-right">
                 @if (Auth::check())
                 <!-- 用户头像区域 -->
-                        <a href="#"><img class="" alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;" />
-                        {{ $currentUser->username }}
+                        <a href="{{route('ac_notify')}}">
+                        <img class="" alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;" />
+
                         </a>
+                        <a class="{{route('account')}}">{{ $currentUser->username }} </a>
                         <i class="red-dot"></i>
                         <i class="tiangle"></i>
                         <div class="header-info">
