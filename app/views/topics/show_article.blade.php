@@ -92,7 +92,7 @@
 
     {{ Form::close() }}
     <!-- Reply List -->
-      <div class=" form-group  replies panel panel-default list-panel replies-index">
+      <div class=" form-group  replies panel panel-default list-panel replies-index" style="box-shadow:none;">
         <div class="comment-content">
 
           @if (count($replies))

@@ -249,10 +249,10 @@ ul.list {
 .list-group {
   margin-bottom: 0px;
   .list-group-item{
-    padding: 10px 15px;
+    padding: 25px 0px;
     border: none;
-    margin-bottom: 0px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #f1f1f1;
+    margin: 0 15px;
   }
   .list-group-item:first-child {
     border-top-left-radius: 0px;

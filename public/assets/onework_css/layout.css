@@ -367,7 +367,7 @@ button:hover{background-color:#4dbe92;}
 .comment-info > a:hover{color: #63ce83;}
 .comment-content > ul{overflow: hidden;}
 .comment-content > ul > li{height: auto;position: relative;overflow: hidden;border-bottom: 1px solid #f1f1f1;margin-bottom: 20px;padding-bottom: 20px;}
-.comment-content > ul > li:last-child{height: auto;position: relative;overflow: hidden;border-bottom: none;}
+/*.comment-content > ul > li:last-child{height: auto;position: relative;overflow: hidden;border-bottom: none;}*/
 
 /****
 	文章交流内页css end
