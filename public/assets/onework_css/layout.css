@@ -216,6 +216,7 @@ i.form-control-feedback.glyphicon.glyphicon-ok{color:#3c763d;}
 button:hover{background-color:#4dbe92;}
 .login .login_about p{text-align:center;}
 .login .login_about p a{margin:0 15px;color:#888;}
+.login .login_about{margin-top:15px;}
 .login .other_login{width:270px;padding-left:70px;margin:30px 0 20px;}
 .login .other_login:after{content:"";display:block;overflow:hidden;clear:both;}
 .login .other_login li{float:left;width:25.3%;margin:0 4%;list-style:none;}
@@ -311,6 +312,7 @@ button:hover{background-color:#4dbe92;}
 .list-info > .unit-a > ul > li:first-child{border-left: none;}
 .list-info > .unit-a > ul > li > span{font-size: 20px;color: #f6726b;}
 .list-info > .unit-a > ul > li > p{margin-bottom: 0;text-align: center;}
+
 .list-info > .unit-b{width: 100%;width: 100%;margin-top: 20px;margin-bottom: 20px;border-radius: 3px;line-height: 26px;}
 .list-info > .unit-c{position: relative;margin-bottom: 20px;}
 .list-info > .unit-c > ul{background: #fff;overflow: hidden;height: 40px;border-radius: 3px;}
