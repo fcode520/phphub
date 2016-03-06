@@ -17,9 +17,9 @@
         <!-- 导航按钮区域 -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="{{ (Request::is('topics*') ||Request::is('/')? ' act' : '') }}"><a id="pjax" href="{{ route('topics.index') }}" >{{ lang('Topics') }}</a></li>
-                <li class="{{ (Request::is('nodes/6') ? ' act' : '') }}"><a id="pjax" href="{{ route('nodes.show', 6) }}" >{{ lang('Jobs') }}</a></li>
-                <li class="{{ (Request::is('nodes/8') ? ' act' : '') }}"><a id="pjax" href="{{ route('nodes.show', 8) }} ">{{ lang('Cooperate') }}</a></li>
+                <li class="{{ (Request::is('topics*') ||Request::is('/')? ' act' : '') }}"><a id="" href="{{ route('topics.index') }}" >{{ lang('Topics') }}</a></li>
+                <li class="{{ (Request::is('nodes/6') ? ' act' : '') }}"><a id="" href="{{ route('nodes.show', 6) }}" >{{ lang('Jobs') }}</a></li>
+                <li class="{{ (Request::is('nodes/8') ? ' act' : '') }}"><a id="" href="{{ route('nodes.show', 8) }} ">{{ lang('Cooperate') }}</a></li>
                 <li class="{{ (Request::is('nodes/7') ? ' act' : '') }}"><a href="{{ route('nodes.show', 7) }}">{{ lang('Team') }}</a></li>
                 <li class="{{ (Request::is('wiki*') ? ' act' : '') }}"><a href="{{ route('wiki') }}">{{ lang('Wiki') }}</a></li>
                 <li class="{{ (Request::is('about*') ? ' act' : '') }}"><a href="{{ route('about') }}">{{ lang('About') }}</a></li>
