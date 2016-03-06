@@ -683,6 +683,10 @@ button:hover{background-color:#4dbe92;}
 /** 个人主页 end***/
 
 
+.content-body > p:last-child{
+margin-bottom:0;
+}
+
 /*** 媒体查询 部分css**/
 @media screen and (max-width:767px){
     .modify-article{width: 90%;}
