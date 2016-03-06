@@ -27,6 +27,7 @@ $(function(){//顶部导航
     var t = $('.nav > li > a');
     var act = $('.nav > .act');
     i.css('width',t.width()+10);
+    i.stop().animate({'left':act.position().left+10,'width':act.find('a').width()+10},300)
     t.hover(function(){
         i.stop().animate({'left':$(this).parent().position().left+10,'width':$(this).width()+10},300);
         act.find('a').css({'color':'#777'});

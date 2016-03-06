@@ -14,10 +14,10 @@ body{
 }
 /*修改 填坑的呢*/
 .header  a{color: #666;}
-.headera {color: #fff!important;}
+.headera {color: #fff!important; float: right; margin-top: 14px;}
 .header  a:hover{color: #63ce83;}
 .navbar-nav > li > a:hover{color: #63ce83!important;}
-.nav{position: relative;}
+.nav{position: relative;padding-top: 1px;}
 .collapse .nav > .act > a{color: #63ce83;}
 .nav > i{position: absolute;left: 10px;top: 61px;height: 2px;background: #63ce83;}
 
