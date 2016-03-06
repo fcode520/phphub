@@ -11,7 +11,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a id="navbar-brand" class="navbar-brand" href="/"><img src={{cdn('assets/images/logo.png')}}></a>
+            <a id="navbar-brand" class="navbar-brand" href="/"><img style="margin-left: 17px" width="112" height="18" src={{cdn('assets/images/logo.png')}}></a>
         </div>
 
         <!-- 导航按钮区域 -->

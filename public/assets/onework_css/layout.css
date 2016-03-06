@@ -37,8 +37,8 @@ margin-left: 10px;
 .navbar-form input{height:28px;border-radius:14px;}
 .navbar-form button{width:20px;height:26px;color:#888;overflow:hidden;padding:3px;position:relative;margin-left: -33px;border:none;}
 .navbar-form button:hover{color:#000;background-color:#fff;}
-.header{float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: -16px;}
-.header_mrr{margin-right: -24px;}
+.header{float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: -24px;}
+.header_mrr{margin-right: -16px;}
 .header img{margin-right:10px;border-radius:50%;}
 .navbar-form{text-align: center;}
 .header-info{line-height: 1.5;position: absolute;background: #fff;top: 61px;width: 100%;text-align: center;z-index: 99;height: 0;overflow: hidden;left: 0;}
