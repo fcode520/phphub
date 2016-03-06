@@ -23,6 +23,7 @@
                 <li class="{{ (Request::is('nodes/7') ? ' act' : '') }}"><a href="{{ route('nodes.show', 7) }}">{{ lang('Team') }}</a></li>
                 <li class="{{ (Request::is('wiki*') ? ' act' : '') }}"><a href="{{ route('wiki') }}">{{ lang('Wiki') }}</a></li>
                 <li class="{{ (Request::is('about*') ? ' act' : '') }}"><a href="{{ route('about') }}">{{ lang('About') }}</a></li>
+                <i></i>
             </ul>
 
             <!-- 导航按钮区域 -->
@@ -34,12 +35,11 @@
             {{ Form::close() }}
 
                     <!-- 搜索框表单 -->
-            <div class="header text-right">
                 @if (Auth::check())
+                <div class="header header_mrr text-right">
                 <!-- 用户头像区域 -->
                         <a href="{{route('ac_notify')}}">
                         <img class="" alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;" />
-
                         </a>
                         <a class="{{route('account')}}">{{ $currentUser->username }} </a>
                         <i class="red-dot"></i>
@@ -69,10 +69,11 @@
                         {{--</a>--}}
 
                 @else
-                    <a  href="{{ URL::route('ow_login') }}" class="login-a" id="login-btn">
+                <div class="header text-right">
+                    <a  href="{{ URL::route('ow_login') }}" class="login-a" id="login-btn" style="font-size: 14px">
                         {{ lang('Login') }}
                     </a>
-                    <a  href="{{ URL::route('ow_register') }}" class="btn btn-success" id="login-btn">
+                    <a  href="{{ URL::route('ow_register') }}" class="btn headera btn-success" id="login-btn">
                         {{ lang('Register') }}
                     </a>
                 @endif
