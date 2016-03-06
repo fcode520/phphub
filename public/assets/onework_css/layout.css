@@ -605,10 +605,7 @@ button:hover{background-color:#4dbe92;}
 .user-list-one > .unit-b > div{border-top: 1px solid #eff5f6;overflow: hidden;position: absolute;bottom: 0;width: 100%;}
 .user-list-one > .unit-a{position: relative;text-align: center;}
 .user-list-one > .unit-a > a{position: absolute;bottom: 0;padding: 4px;}
-.nav > i{display: none!important;}
-.header{margin-right: 0;}
-.tiangle{display: none!important;}
-.header-info{display: none;}
+
 
 .mid-bottom > p{float: left;line-height: 48px;}
 /***认证用户列表 end***/
@@ -699,6 +696,7 @@ button:hover{background-color:#4dbe92;}
     .header-info{display: none;}
     .homepage-side{padding-left: 0;margin-bottom: 40px;}
     .homepage-main{padding-right: 15px;padding-left: 15px;}
+
 
 }
 @media screen and (max-width:560px){

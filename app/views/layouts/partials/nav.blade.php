@@ -34,24 +34,24 @@
             {{ Form::close() }}
 
                     <!-- 搜索框表单 -->
-            {{--<div class="header text-right">--}}
-                {{--@if (Auth::check())--}}
-                {{--<!-- 用户头像区域 -->--}}
-                        {{--<a href="{{ route('account') }}"><img class="" alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;" />--}}
-                        {{--{{ $currentUser->username }}--}}
-                        {{--</a>--}}
-                        {{--<i class="red-dot"></i>--}}
-                        {{--<i class="tiangle"></i>--}}
-                        {{--<div class="header-info">--}}
-                          {{--<ul>--}}
-                                {{--<li><a href="#">发布话题</a></li>--}}
-                                {{--<li><a href="#">个人资料</a></li>--}}
-                                {{--<li class="act"><a href="route('notifications.index')">消息中心</a></li>--}}
-                                {{--<li><a href="#">我的文章</a></li>--}}
-                                {{--<li><a href="#">退出</a></li>--}}
-                          {{--</ul>--}}
-                          {{--<p></p>--}}
-                        {{--</div>--}}
+            <div class="header text-right">
+                @if (Auth::check())
+                <!-- 用户头像区域 -->
+                        <a href="#"><img class="" alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;" />
+                        {{ $currentUser->username }}
+                        </a>
+                        <i class="red-dot"></i>
+                        <i class="tiangle"></i>
+                        <div class="header-info">
+                          <ul>
+                                <li><a href="{{route('topics.create')}}">发布话题</a></li>
+                                <li><a href="{{route('account')}}">个人资料</a></li>
+                                <li><a href="{{route('ac_notify')}}">消息中心</a></li>
+                                <li><a href="{{route('ac_topices')}}">我的文章</a></li>
+                                <li><a href="{{route('logout') }}">退出</a></li>
+                          </ul>
+                          <p></p>
+                        </div>
 
                         {{--<a class="break" href="{{ route('notifications.index') }}" class="text-warning">--}}
                       {{--<span class="badge badge-{{ $currentUser->notification_count > 0 ? 'important' : 'fade'; }}" id="notification-count">--}}
@@ -66,32 +66,15 @@
                             {{--<i class="fa fa-sign-out"></i> {{ lang('Logout') }}--}}
                         {{--</a>--}}
 
-                {{--@else--}}
-                    {{--<a  href="{{ URL::route('ow_login') }}" class="login-a" id="login-btn">--}}
-                        {{--{{ lang('Login') }}--}}
-                    {{--</a>--}}
-                    {{--<a  href="{{ URL::route('ow_register') }}" class="btn btn-success" id="login-btn">--}}
-                        {{--{{ lang('Register') }}--}}
-                    {{--</a>--}}
-                {{--@endif--}}
-            {{--</div>--}}
-            <!-- 用户头像区域 -->
-                  <div class="header text-right">
-                    <a href="#"><img src="images/header.jpg">Monster</a>
-                    <i class="red-dot"></i>
-                    <i class="tiangle"></i>
-                    <div class="header-info">
-                      <ul>
-                        <li><a href="#">个人中心</a></li>
-                        <li><a href="#">个人中心</a></li>
-                        <li class="act"><a href="#">个人中心</a></li>
-                        <li><a href="#">个人中心</a></li>
-                        <li><a href="#">个人中心</a></li>
-                        <li><a href="#">个人中心</a></li>
-                      </ul>
-                      <p></p>
-                    </div>
-                  </div>
+                @else
+                    <a  href="{{ URL::route('ow_login') }}" class="login-a" id="login-btn">
+                        {{ lang('Login') }}
+                    </a>
+                    <a  href="{{ URL::route('ow_register') }}" class="btn btn-success" id="login-btn">
+                        {{ lang('Register') }}
+                    </a>
+                @endif
+            </div>
         </div>
     </div>
 </nav>
