@@ -17,7 +17,8 @@ class ow_AuthController extends \BaseController
     }
     public function Do_Login()
     {
-        if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')),true)){
+        if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')),true)
+            ||Auth::attempt(array('email'=>Input::get('username'),'password'=>Input::get('password')),true)){
             return Redirect::intended('/');
         }else{
 

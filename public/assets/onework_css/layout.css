@@ -2,6 +2,8 @@
 ul,li{list-style-type: none;margin: 0;padding: 0;}
 .copy .text-center{padding-left: 70px;}
 .mart20{margin-top: 20px;}
+.mart0{margin-top: 0!important;}
+
 .btn-success{background-color: #63ce83;border-color: #63ce83;}
 .btn-success:hover{background-color: #5cb85c;border-color: #4cae4c;}
 
@@ -11,12 +13,15 @@ body{
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 /*修改 填坑的呢*/
-.header .headertext a{color: #666;}
-.header .headertext a:hover{color: #63ce83;}
+.header  a{color: #666;}
+.header  a:hover{color: #63ce83;}
 .navbar-nav > li > a:hover{color: #63ce83!important;}
+.nav{position: relative;}
+.collapse .nav > .act > a{color: #63ce83;}
+.nav > i{position: absolute;left: 10px;top: 61px;height: 2px;background: #63ce83;}
 
 /*横幅提示*/
-.banner-text{width: 100%;margin-bottom: 20px;margin-top: -19px;background: #5ecf81;height: 0;overflow: hidden;}
+.banner-text{width: 100%;margin-bottom: 20px;margin-top: -21px;background: #5ecf81;height: 0;overflow: hidden;}
 .banner-text > p{text-align: center;color: #fff;line-height: 50px;margin: 0;}
 .banner-text .btn {
 margin-left: 10px;
@@ -24,15 +29,27 @@ margin-left: 10px;
 
 
 /* nav部分 */
+.navbar{background: #fff;}
 .navbar-brand{margin-right:30px;}
 .navbar-nav li{font-size:15px;}
 .navbar-brand img{display:inline-block;vertical-align:middle;}
 .navbar-form input{height:28px;border-radius:14px;}
 .navbar-form button{width:20px;height:26px;color:#888;overflow:hidden;padding:3px;position:relative;margin-left: -33px;border:none;}
 .navbar-form button:hover{color:#000;background-color:#fff;}
-.header{line-height:60px;}
+.header{float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: -30px;}
+
 .header img{margin-right:10px;border-radius:50%;}
 .navbar-form{text-align: center;}
+.header-info{line-height: 1.5;position: absolute;background: #fff;top: 61px;width: 100%;text-align: center;z-index: 99;height: 0;overflow: hidden;left: 0;}
+.header-info > p{width: 2px;height: 18px;position: absolute;background: #63ce83;left: 0;}
+.header-info > ul{padding-top: 10px;overflow: hidden;border: 1px solid #f0f0f0;border-radius: 3px;}
+.header-info > ul > li{line-height: 18px;margin-bottom: 10px;font-size: 14px;}
+.header-info > ul > li > a{color: #666;display: block;width: 100%;height: 100%;}
+.header-info > ul > li.act > a{color: #63ce83;}
+.header-info > ul > li > a:hover{color: #63ce83;}
+.tiangle{width: 13px;height: 8px;display: none;position: absolute;left: 10px;top: 54px;z-index: 100;background: url('../images/tiangle.png') no-repeat;}
+.red-dot{width: 10px;height: 10px;border-radius: 50%;background: red;position: absolute;z-index: 100;left: 30px;top: 15px;}
+
 .login-a{color: #777777;margin-right: 20px}
 .login-a:focus,.login-a:hover{color: #5ecf81;}
 
@@ -588,6 +605,10 @@ button:hover{background-color:#4dbe92;}
 .user-list-one > .unit-b > div{border-top: 1px solid #eff5f6;overflow: hidden;position: absolute;bottom: 0;width: 100%;}
 .user-list-one > .unit-a{position: relative;text-align: center;}
 .user-list-one > .unit-a > a{position: absolute;bottom: 0;padding: 4px;}
+.nav > i{display: none!important;}
+.header{margin-right: 0;}
+.tiangle{display: none!important;}
+.header-info{display: none;}
 
 .mid-bottom > p{float: left;line-height: 48px;}
 /***认证用户列表 end***/
@@ -602,20 +623,6 @@ button:hover{background-color:#4dbe92;}
 .change-pwd-con > small{margin-top: 10px;}
 .change-submint{width: 50%;margin: 30px 0;}
 /**修改密码 end**/
-
-
-/*** 媒体查询 部分css**/
-@media screen and (max-width:767px){
-	.modify-article{width: 90%;}
-	.navigation-info{max-width: 551px;margin: 30px auto;}
-	.navigation-nav > ul > li:first-child{margin-left: 10px;}
-	.user-list{padding-left: 15px;}
-	.user-list-one > div:nth-child(2){border-left: none;border-right: none;padding-left: 0;padding-right: 0;border-bottom: 1px solid #eff5f6;border-top: 1px solid #eff5f6;}
-
-}
-@media screen and (max-width:560px){
-	.navigation-info{margin: 30px 10px;}
-}
 
 
 #rightFrame{
@@ -652,4 +659,48 @@ button:hover{background-color:#4dbe92;}
 	color: #da974d;
 	font-size: 12px
 }
+/** 激活成功 begin***/
+.activate-success{background: #fff;max-width: 900px;width: 80%;margin: 40px auto;text-align: center;border-radius: 4px;border: 1px solid #f0f0f0;}
+.activate-success > h2{font-weight: 400;color: #666;font-size: 22px;margin:  100px 0 40px;}
+.activate-success > a:last-child{display: inline-block;margin: 10px 0 100px;color: #666;}
+.activate-success > a:last-child:hover{color: #63ce83;}
+/** 激活成功 end***/
 
+/** 个人主页 end***/
+.homepage-side{padding-left: 15px;}
+.homepage-main{padding-right: 0;padding-left: 40px;}
+.homepage-head > ul > li > a{color: #999;}
+.homepage-head > ul > li > a:hover{color: #333;}
+.homepage-head > ul > li.act > a{color: #333;}
+.homepage-info{margin-left: 15px;margin-top: 10px;}
+.homepage-info > span{color: #63ce83;margin-left: 10px;}
+.homepage-info > span:last-child{color: #999;}
+.del-article{position: absolute;width: 32px;height: 32px;display: block;background: url('../images/del.png') no-repeat;right: 15px;top: 22px;}
+
+.homepage-all-info{margin-top: -20px;}
+.homepage-all-info > p > .p-title{border-radius: 3px;border: 1px solid #f0f0f0;color: #666;font-weight: 400;padding: 2px 5px;}
+.homepage-all-info > p{padding: 10px 0;margin: 0;border-bottom: 1px solid #f3f3f3;font-size: 13px;color: #999;}
+.homepage-all-info > p:last-child{border-bottom: none;margin-bottom: 10px;}
+.homepage-all-info > p > span{font-weight: 700;color: #333;}
+/** 个人主页 end***/
+
+
+/*** 媒体查询 部分css**/
+@media screen and (max-width:767px){
+    .modify-article{width: 90%;}
+    .navigation-info{max-width: 551px;margin: 30px auto;}
+    .navigation-nav > ul > li:first-child{margin-left: 10px;}
+    .user-list{padding-left: 15px;}
+    .user-list-one > div:nth-child(2){border-left: none;border-right: none;padding-left: 0;padding-right: 0;border-bottom: 1px solid #eff5f6;border-top: 1px solid #eff5f6;}
+    .user-list-one > .unit-a > button{left: auto;right: 20px;top: 20px;margin-left: 0;bottom: auto;}
+    .nav > i{display: none!important;}
+    .header{margin-right: 0;}
+    .tiangle{display: none!important;}
+    .header-info{display: none;}
+    .homepage-side{padding-left: 0;margin-bottom: 40px;}
+    .homepage-main{padding-right: 15px;padding-left: 15px;}
+
+}
+@media screen and (max-width:560px){
+    .navigation-info{margin: 30px 10px;}
+}
