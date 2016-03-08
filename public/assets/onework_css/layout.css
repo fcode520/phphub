@@ -19,7 +19,7 @@ body{
 .navbar-nav > li > a:hover{color: #63ce83!important;}
 .nav{position: relative;padding-top: 1px;}
 .collapse .nav > .act > a{color: #63ce83;}
-.nav > i{position: absolute;left: 10px;top: 61px;height: 2px;background: #63ce83;}
+.nav > i{position: absolute;left: 10px;top: 48px;height: 2px;background: #63ce83;}
 
 /*横幅提示*/
 .banner-text{width: 100%;margin-bottom: 20px;margin-top: -21px;background: #5ecf81;height: 0;overflow: hidden;}
@@ -342,7 +342,7 @@ button:hover{background-color:#4dbe92;}
 .news-title-info img{width: 26px;height: 26px;border: 1px solid #eff5f6;float: left;margin-right: 15px;}
 .news-title-info p{font-size: 12px;color: #999999;line-height: 28px;}
 .news-title-info p span{font-size: 14px;color: #000;margin-right: 15px;}
-.news-con{margin-bottom: 60px;}
+.news-con{margin-bottom: 60px;font-size: 16px;}
 .news-con > p{font-size: 12px;line-height: 150%;color: #666666;}
 .enjoy > .two-icon a>span {width: 40px;height: 40px;border-radius: 50%;background: #000;line-height: 41px;text-align: center;font-size: 20px;color: #fff;}
 .enjoy > .two-icon a>span:hover{background: #63ce83;cursor: pointer;}

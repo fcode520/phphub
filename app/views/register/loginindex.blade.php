@@ -19,7 +19,7 @@
 <div class="login_box">
     <p class="title">会员登陆</p>
     <div class="form-group register-context has-feedback">
-    {{Form::text('username',null,array('name'=>'username','id'=>'username','placeholder'=>"用户名"))}}
+    {{Form::text('username',null,array('name'=>'username','id'=>'username','placeholder'=>"用户名/Email"))}}
     </div>
     <div class="form-group register-context has-feedback">
     {{ Form::password('password', array('name'=>'password','class'=>'form-control','id'=>'password','placeholder'=>"密码")) }}
