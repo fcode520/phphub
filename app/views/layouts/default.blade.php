@@ -42,11 +42,13 @@ OneWork & 远程工作者社区
 			@include('layouts.partials.nav')
 			@if(isset($currentUser))
                 @if($currentUser->status==0)
+                    @if(Request::is('/'))
                 <div class="banner-text" data-time="20000">
                     <p>请激活当前用户,以便进行后续操作！</button>
                     <a class="btn btn-default btn-sm" style="border:none" href="{{route('SendActivationEmail')}}">点击激活</a>
                     </p>
                 </div>
+                @endif
              @endif
             @endif
         <div class="container">
