@@ -26,15 +26,19 @@ $(function(){//顶部导航
     var i = $('.nav > i');
     var t = $('.nav > li > a');
     var act = $('.nav > .act');
-    i.css('width',t.width()+10);
-    i.stop().animate({'left':act.position().left+10,'width':act.find('a').width()+10},300)
-    t.hover(function(){
-        i.stop().animate({'left':$(this).parent().position().left+10,'width':$(this).width()+10},300);
-        act.find('a').css({'color':'#777'});
-    },function(){
+
+        i.css('width',t.width()+10);
         i.stop().animate({'left':act.position().left+10,'width':act.find('a').width()+10},300)
-        act.find('a').css({'color':'#63ce83'});
-    });
+        t.hover(function(){
+            i.stop().animate({'left':$(this).parent().position().left+10,'width':$(this).width()+10},300);
+            act.find('a').css({'color':'#777'});
+        },function(){
+            i.stop().animate({'left':act.position().left+10,'width':act.find('a').width()+10},300)
+            act.find('a').css({'color':'#63ce83'});
+        });
+
+
+
 });
 $(function(){//操作DOM 个人终极，点击回复
     var t = $('.two-icon >a');
@@ -65,3 +69,23 @@ $(function(){//横幅提示信息
         },time)
     }
 });
+function vaild_mail(url){
+    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+    $.ajax({
+        url: 'vaild_email/'.url,
+        type: 'POST',
+        data: {_token: CSRF_TOKEN},
+        dataType: 'html',
+        success: function (data) {
+            if(data.status==true){
+                alert("You pressed OK!");
+                console.log(data);
+            }else{
+                alert("You pressed Not OK!");
+                console.log(data);
+            }
+
+        }
+
+    });
+}

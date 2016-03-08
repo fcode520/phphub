@@ -338,14 +338,15 @@ class UsersController extends \BaseController
     public function vaild_email($id){
 
         $user=User::find($id);
-
-
-
-
         return View::make('register.email_activation',compact('user'));
     }
     public function p_vaild_email($id){
-        $user=User::find($id);
+        $user=Auth::user();
+
+        if($user->id != $id){
+            return false;
+        }
+
         if($user->activation==null)
         {
             $user->activation=Hash::make($user->email.time());
@@ -356,6 +357,7 @@ class UsersController extends \BaseController
             //发送邮件
             $data=array('username'=>$user->username,
                 'activation'=>$user->activation,
+                'email'=>$user->email,
             );
             Mail::send('emails.auth.activation',$data,function($message)use ($user){
                 $message->to($user->email, $user->username)->subject('欢迎注册成为OneWork会员，请尽快进行账号激活！');
