@@ -6,13 +6,13 @@
 
 @section('content')
         {{--错误信息框--}}
-<div class="container">
-    @if(Session::has('message'))
-        @foreach (Session::get('message')->all() as $message)
-        <p class="alert">{{$message}}</p>
-        @endforeach
-    @endif
-</div>
+{{--<div class="container">--}}
+    {{--@if(Session::has('message'))--}}
+        {{--@foreach (Session::get('message')->all() as $message)--}}
+        {{--<p class="alert">{{$message}}</p>--}}
+        {{--@endforeach--}}
+    {{--@endif--}}
+{{--</div>--}}
 
 {{Form::open(array('url'=>'/ow_register','class'=>'register content form-horizontal bv-form','novalidate'=>'novalidate'))}}
 <div class="register_box">

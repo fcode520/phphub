@@ -1,19 +1,19 @@
 @extends('layouts.default')
 
-@section('css')
-
- {{HTML::style('assets/onework_css/layout.css')}}
-@stop
 
 @section('title')
 {{ lang('Newly Registered User List') }}_@parent
 @stop
 
 @section('content')
-<div class="register_ok">
-  <p>恭喜你，激活成功，请完善个人资料</p>
-  <a href="{{route('EditResume')}}">进一步完善</a>
-</div>
+	<!--激活成功-->
+	<div class="container">
+		<div class="activate-success clearfix">
+			<h2>恭喜您，激活成功！</h2>
+			<a class="btn btn-success" href="{{route('editsetting')}}">完善资料</a><br>
+			<a href="{{route('home')}}">返回首页</a>
+		</div>
+	</div>
 @stop
 {{--@section('scripts')--}}
 {{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}

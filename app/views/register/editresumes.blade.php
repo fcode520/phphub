@@ -15,9 +15,9 @@
 
                     <div class="header">
                         @if(isset($user->avatar))
-                            {{HTML::image($user->present()->gravatar,'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:38px;height:38px;'))}}
+                            {{HTML::image($user->present()->gravatar,'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:58px;height:58px;'))}}
                         @else
-                            {{HTML::image(cdn('assets/images/register/addheader.png'),'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:38px;height:38px;'))}}
+                            {{HTML::image(cdn('assets/images/register/addheader.png'),'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:58px;height:58px;'))}}
                         @endif
                         {{Form::file('uploadImg',array('id'=>'uploadImg','onchange'=>'setImagePreview(\'header\',\'uploadImg\')'))}}
                         <span id="upload-avatar">添加头像</span>

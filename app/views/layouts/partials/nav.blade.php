@@ -37,13 +37,13 @@
 
                     <!-- 搜索框表单 -->
                 @if (Auth::check())
-                <div class="header header_mrr text-right">
+
+                <div class="personal-header header_mrr text-right">
                 <!-- 用户头像区域 -->
-                        <a href="{{route('ac_notify')}}">
-                        <img class="" alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;" />
-                        </a>
-                        <a class="{{route('account')}}">{{ $currentUser->username }} </a>
-                        <i class="red-dot"></i>
+                             <a href="{{route('ac_notify')}}"><img alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;">{{ $currentUser->username }}</a>
+                        @if($currentUser->notification_count>0)
+                              <i class="red-dot"></i>
+                        @endif
                         <i class="tiangle"></i>
                         <div class="header-info">
                           <ul>
@@ -70,7 +70,7 @@
                         {{--</a>--}}
 
                 @else
-                <div class="header text-right">
+                <div class="personal-header-loginin text-right">
                     <a  href="{{ URL::route('ow_login') }}" class="login-a" id="login-btn" style="font-size: 14px">
                         {{ lang('Login') }}
                     </a>

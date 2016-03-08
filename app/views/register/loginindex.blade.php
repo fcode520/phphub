@@ -3,17 +3,9 @@
 @section('title')
 {{ lang('Newly Registered User List') }}_@parent
 @stop
-@section('css')
- {{HTML::style('assets/onework_css/layout.css')}}
-@stop
-@section('content')
 
-        {{--错误信息框--}}
-<div class="container">
-    @if(Session::has('message'))
-        <p class="alert">{{ Session::get('message') }}</p>
-    @endif
-</div>
+
+@section('content')
 <!-- 登录框-->
 {{Form::open(array('url'=>'/ow_login','class'=>'login content form-horizontal bv-form','id'=>'login','novalidate'=>'novalidate'))}}
 <div class="login_box">

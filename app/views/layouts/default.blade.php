@@ -40,6 +40,7 @@ OneWork & 远程工作者社区
 		<div id="wrap">
 
 			@include('layouts.partials.nav')
+			{{--激活提示框--}}
 			@if(isset($currentUser))
                 @if($currentUser->status==0)
                     @if(Request::is('/'))
@@ -51,9 +52,25 @@ OneWork & 远程工作者社区
                 @endif
              @endif
             @endif
+        {{--登录错误信息框--}}
+
+                @if(Session::has('message'))
+                  <div class="banner-text" data-time="100000">
+                    @if(is_string(Session::get('message')))
+                            <p><span class="glyphicon glyphicon-remove-sign"></span>{{ Session::get('message') }}</p>
+
+                    @else
+                     @foreach (Session::get('message')->all() as $message)
+                                                    <p><span class="glyphicon glyphicon-remove-sign"></span>{{$message}}</p>
+                                                    @endforeach
+
+                    @endif
+
+                  </div>
+                @endif
+
         <div class="container">
 
-        {{--@include('flash::message')--}}
 		@yield('content')
 		</div>
 

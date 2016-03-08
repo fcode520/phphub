@@ -1,7 +1,7 @@
 $(function(){//顶部头像 滑过后效果等
     var w = $('.header-info').find('ul').outerHeight();
-    $('.header').hover(function(){
-        $('.header-info').stop().animate({'height':w},100);
+    $('.personal-header').hover(function(){
+            $('.header-info').stop().animate({'height':w},100);
         $('.tiangle').fadeIn(100);
     },function(){
         $('.header-info').stop().animate({'height':0},100);
@@ -26,9 +26,10 @@ $(function(){//顶部导航
     var i = $('.nav > i');
     var t = $('.nav > li > a');
     var act = $('.nav > .act');
-
-        i.css('width',t.width()+10);
-        i.stop().animate({'left':act.position().left+10,'width':act.find('a').width()+10},300)
+    if(act.length<1)return;
+    i.css('width',t.width()+10);
+    i.css({'left':act.position().left+10,'width':act.find('a').width()+10});
+    i.stop().animate({'left':act.position().left+10,'width':act.find('a').width()+10},300)
         t.hover(function(){
             i.stop().animate({'left':$(this).parent().position().left+10,'width':$(this).width()+10},300);
             act.find('a').css({'color':'#777'});
@@ -61,18 +62,26 @@ $(function(){//操作DOM 个人终极，点击回复
     })
 });
 $(function(){//横幅提示信息
-    if(!!$('.banner-text').attr('data-time')){
-        var time=$('.banner-text').attr('data-time');
+    var time = $('.banner-text').attr('data-time');
+    if(!!time && time < 100000){
         $('.banner-text').stop().animate({'height':50},300);
         setTimeout(function(){
             $('.banner-text').stop().animate({'height':0},300);
         },time)
     }
+    if(time == 100000 || time > 100000){
+        $('.banner-text').css('background','#ff5350');
+        $('.banner-text').stop().animate({'height':50},300);
+        $('.banner-text > p > span').css('cursor','pointer').on('click',function(){
+            $('.banner-text').stop().animate({'height':0},300);
+        });
+    }
 });
-function vaild_mail(url){
+function vaild_mail(id){
     var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+    var posturl='vaild_email/'+id ;
     $.ajax({
-        url: 'vaild_email/'.url,
+        url: posturl,
         type: 'POST',
         data: {_token: CSRF_TOKEN},
         dataType: 'html',

@@ -341,6 +341,9 @@ class UsersController extends \BaseController
         return View::make('register.email_activation',compact('user'));
     }
     public function p_vaild_email($id){
+        if(!Auth::check()){
+            return false;
+        }
         $user=Auth::user();
 
         if($user->id != $id){

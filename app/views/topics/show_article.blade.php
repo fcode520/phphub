@@ -49,10 +49,20 @@
 
                                     </a><i> {{ $topic->vote_count }}</i>
 						</div>
-
 						@include('topics.partials.topic_new_operate')
 
 				</div>
+    @foreach ($topic->appends as $index => $append)
+
+        <div class="appends">
+            <span class="meta">{{ lang('Append') }} {{ $index }} &nbsp;·&nbsp; <abbr title="{{ $append->created_at }}" class="timeago">{{ $append->created_at }}</abbr></span>
+            <div class="sep5"></div>
+            <div class="markdown-reply append-content">
+                {{ $append->content }}
+            </div>
+        </div>
+
+    @endforeach
            </div>
             <div class="news-comments">
             <h2>文章评论({{$topic->reply_count}})</h2>

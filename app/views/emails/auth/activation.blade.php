@@ -46,14 +46,16 @@
 
 <!--邮件样式-->
 <div class="container">
-	<p class="title">{{$username}}</p>
+	<p class="title">亲爱的 {{$username}} </p>
 	<div class="email clearfix">
-		<h2>最后一步......</h2>
-		<p>请确认你的电子邮件地址以完成你的{{$username}}账号{{$email}}注册。很简单－只需要点击下面的按钮即可</p>
-		<a href="{{url("activation?activation=".$activation)}}">立即确认</a>
+		<h2>请欢迎加入OneWork！</h2>
+         <p>请尽快验证您的邮箱，以便享受更多功能与服务。</br>
+         很简单－只需要点击下面的按钮即可</p>
+
+		<a href="{{url("activation?activation=".$activation)}}">立即激活</a>
 	</div>
 	<div class="footer">
-		<p><a href="#">帮助</a>|<a href="#">帮助</a>|<a href="#">帮助</a></p>
+		<p><a href="{{route('home')}}">onework</a>|<a href="{{route('about')}}">About Us</a>|<a href="{{route('home')}}">加入我们</a></p>
 		<p>Copyright © 2016 - 京ICP备14019620号-2, </p>
 	</div>
 </div>

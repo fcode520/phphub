@@ -58,6 +58,11 @@ class ow_AuthController extends \BaseController
     public function SendActivationEmail(){
         if(Auth::check()){
             $user=Auth::user();
+
+            if($user->activation==null){
+                $user->activation=Hash::make(Input::get('email').time());
+                $user->save();
+            }
             $data=array('username'=>$user->username,
                 'activation'=>$user->activation,
                 'email'=>$user->email,
@@ -84,7 +89,6 @@ class ow_AuthController extends \BaseController
                     if($db_res == 1){
                         Auth::login($User);
                         return View::make('register/activation_to_resumes');
-                        //return Redirect::to('/')->with('message','您的账号已经激活');
                     }
                 }
                 else

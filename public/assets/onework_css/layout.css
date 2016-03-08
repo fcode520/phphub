@@ -13,9 +13,14 @@ body{
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 /*修改 填坑的呢*/
-.header  a{color: #666;}
+/*.header  a{color: #666;}*/
+/*.header  a:hover{color: #63ce83;}*/
+.personal-header > a{color: #666;display: block;}
+.personal-header > a:hover{color: #63ce83;}
+
 .headera {color: #fff!important; float: right; margin-top: 14px;}
-.header  a:hover{color: #63ce83;}
+
+
 .navbar-nav > li > a:hover{color: #63ce83!important;}
 .nav{position: relative;padding-top: 1px;}
 .collapse .nav > .act > a{color: #63ce83;}
@@ -37,9 +42,12 @@ margin-left: 10px;
 .navbar-form input{height:28px;border-radius:14px;}
 .navbar-form button{width:20px;height:26px;color:#888;overflow:hidden;padding:3px;position:relative;margin-left: -33px;border:none;}
 .navbar-form button:hover{color:#000;background-color:#fff;}
-.header{float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: -24px;}
+/*.header{float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: -24px;}*/
+/*.header img{margin-right:10px;border-radius:50%;}*/
+.personal-header{float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: -30px;}
+.personal-header img{margin-right:10px;border-radius:50%;}
+
 .header_mrr{margin-right: -16px;}
-.header img{margin-right:10px;border-radius:50%;}
 .navbar-form{text-align: center;}
 .header-info{line-height: 1.5;position: absolute;background: #fff;top: 61px;width: 100%;text-align: center;z-index: 99;height: 0;overflow: hidden;left: 0;}
 .header-info > p{width: 2px;height: 18px;position: absolute;background: #63ce83;left: 0;}
@@ -402,7 +410,7 @@ button:hover{background-color:#4dbe92;}
 /****
 	我-文章 css end
 ****/
-.modify-article .news-list{background: #fff;padding: 20px;margin-top: 20px;margin-bottom: 40px;}
+.modify-article .news-list{background: #fff;padding: 20px;margin-bottom: 40px;}
 .modify-article .news-list > ul > li{border-bottom: 1px solid #e9ecee;padding-top: 10px;}
 .modify-article .news-list > ul > li:last-child{border-bottom: none;}
 .modify-article .news-list > ul > li > a{color: #222525;font-size: 14px;}
@@ -689,6 +697,12 @@ button:hover{background-color:#4dbe92;}
 margin-bottom:0;
 }
 
+.TopicTiele >a:hover{color: #63ce83;}
+.TopicTiele >a{color: #666;}
+.personal-header-loginin{
+float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: -24px;
+}
+.enjoy{margin-bottom: 15px}
 /*** 媒体查询 部分css**/
 @media screen and (max-width:767px){
     .modify-article{width: 90%;}
