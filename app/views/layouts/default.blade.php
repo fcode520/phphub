@@ -36,7 +36,6 @@ OneWork & 远程工作者社区
 
 	</head>
 	<body id="body">
-    <div id="PopDialog" style="display:none;"></div>
 		<div id="wrap">
 
 			@include('layouts.partials.nav')
@@ -82,6 +81,8 @@ OneWork & 远程工作者社区
 		<script src="{{ cdn('assets/js/onework.js')}}"></script>
 		<script src="{{ cdn('assets/js/popDialog.js')}}"></script>
 	    @yield('scripts')
+
+    <div id="PopDialog" style="display:none;"></div>
 
 	</body>
 </html>

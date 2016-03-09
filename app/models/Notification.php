@@ -6,9 +6,13 @@ use Phphub\Core\Jpush;
 class Notification extends \Eloquent
 {
     use PresentableTrait;
+
     public $presenter = 'Phphub\Presenters\NotificationPresenter';
 
     private static $jpush = null;
+
+    use SoftDeletingTrait;
+    protected $dates = ['deleted_at'];
 
     // Don't forget to fill this array
     protected $fillable = [

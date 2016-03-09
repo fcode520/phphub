@@ -161,7 +161,7 @@ class AccountController extends \BaseController {
                 return "false";
             }
             //查看 该同志ID 是否属于目前登录用户。
-            //$info->delete();
+            $info->delete();
             return "true";
         }
     }

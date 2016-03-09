@@ -71,9 +71,13 @@
                                                 {{{ str_limit('回复', '100') }}}
                                             </a>
                                             <button id="notify_delete">
-                                            <a id="notify_delete" title="  删除  " onclick="delete_notify({{$notification->id}})" class="d">
-                                                {{{ str_limit('删除', '100') }}}
+                                            {{--<a id="notify_delete" title="  删除  " onclick="delete_notify({{$notification->id}})" class="d">--}}
+                                                {{--{{{ str_limit('删除', '100') }}}--}}
+                                            {{--</a>--}}
+                                            <a  id="{{$notification->id}}" title="  删除  "  class=" deletenotify d">
+                                            {{{ str_limit('删除', '100') }}}
                                             </a>
+
                                             </button>
                                             {{--@endif--}}
                                         </div>

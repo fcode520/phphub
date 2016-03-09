@@ -22,6 +22,7 @@ class CreateNotificationsTable extends Migration
             $table->text('body')->nullable();
             $table->string('type')->index();
             $table->timestamps();
+
         });
     }
 

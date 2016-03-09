@@ -21,7 +21,7 @@
 
         var _this = this;
         setTimeout(function(){
-        	_this.fadeOut(500); 
+        	_this.fadeOut(500);
         },1200);
 
         this.find('b').first().css({
@@ -29,7 +29,8 @@
             boxShadow:'0 0 5px #f0efef',
             borderRadius:'4px',
             padding:'30px 0',
-            display:'inline-block'
+            display:'inline-block',
+            'background-color':'#fff'
         });
  		
  		
@@ -76,7 +77,7 @@
             padding: '30px 80px',
             align:'center',
             width:'100%',
-            position:'relative',
+            position:'absolute',
             top:'200px'
         }, options );
 
@@ -90,7 +91,8 @@
             boxShadow:'0 0 5px #f0efef',
             borderRadius:'4px',
             padding:'30px 0',
-            display:'inline-block'
+            display:'inline-block',
+            'background-color':'#fff'
         });
  
  		
@@ -137,7 +139,7 @@
             padding: '0 80px',
             align:'center',
             width:'100%',
-            position:'relative',
+            position:'absolute',
             top:'200px'
         }, options );
 
@@ -151,7 +153,8 @@
             boxShadow:'0 0 5px #f0efef',
             borderRadius:'4px',
             padding:'30px 0',
-            display:'inline-block'
+            display:'inline-block',
+            'background-color':'#fff'
         });
 
         this.css({            
