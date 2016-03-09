@@ -98,3 +98,27 @@ function vaild_mail(id){
 
     });
 }
+
+function delete_notify(nid){
+    var CSRF_TOKEN = Config['token'];
+    var posturl='/account/notify/delete/'+nid ;
+    $.ajax({
+        url: posturl,
+        type: 'POST',
+        data: {_token: CSRF_TOKEN,_nid:nid},
+        dataType: 'html',
+        success: function (data) {
+            if(data=="true"){
+                alert("You pressed OK!");
+                console.log(data);
+                $('#PopDialog').successPOP();
+            }else{
+                alert("You pressed Not OK!");
+                console.log(data);
+            }
+
+        }
+
+    });
+}
+

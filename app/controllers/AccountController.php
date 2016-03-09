@@ -153,6 +153,18 @@ class AccountController extends \BaseController {
             return "请登陆后在进行密码修改操作";
         }
     }
+    function  NotifyDelete($nid){
+        if(Auth::check()){
+//            $info=Auth::user()->notifications()->where('user_id','=',Auth::user()->id)->andwhere('id','=',$nid)->get();
+            $info=Notification::where('user_id','=',Auth::user()->id)->where('id','=',$nid)->first();
+            if(is_null($info)){
+                return "false";
+            }
+            //查看 该同志ID 是否属于目前登录用户。
+            //$info->delete();
+            return "true";
+        }
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

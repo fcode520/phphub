@@ -15,7 +15,7 @@
             padding: '30px 80px',
             align:'center',
             width:'100%',
-            position:'relative',
+            position:'absolute',
             top:'200px'
         }, options );
 
