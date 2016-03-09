@@ -300,8 +300,8 @@ class UsersController extends \BaseController
         $filename = $file->getClientOriginalName();
         $filePath_Name=Auth::user()->id.'/'.$filename;
 
-           if(!File::exists(Auth::user()->id))
-            File::makeDirectory(Auth::user()->id);
+//        if(!File::exists(Auth::user()->id))
+//            File::makeDirectory(Auth::user()->id);
 
         $destinationPath=$destinationPath.Auth::user()->id;
         $file->move($destinationPath, $filename);
