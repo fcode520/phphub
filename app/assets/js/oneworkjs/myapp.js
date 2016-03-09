@@ -302,20 +302,20 @@ $(function () {
                 }
             },
 
-            "starttime[ ]": {
-                validators: {
-                    notEmpty: {
-                        message: '开始时间选择不能为空'
-                    }
-                }
-            },
-            "endtime[ ]": {
-                validators: {
-                    notEmpty: {
-                        message: '结束时间选择不能为空'
-                    }
-                }
-            },
+            //"starttime[ ]": {
+            //    validators: {
+            //        notEmpty: {
+            //            message: '开始时间选择不能为空'
+            //        }
+            //    }
+            //},
+            //"endtime[ ]": {
+            //    validators: {
+            //        notEmpty: {
+            //            message: '结束时间选择不能为空'
+            //        }
+            //    }
+            //},
             "ProjectUrl[ ]": {
                 validators: {
                     notEmpty: {

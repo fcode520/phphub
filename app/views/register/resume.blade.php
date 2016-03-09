@@ -10,8 +10,6 @@
   @else
     <span>完善个人资料，让更多人认识你！</span>
   @endif
-
-
   </p>
 
 
@@ -33,67 +31,64 @@
 {{Form::open(array('url'=>'/account/EditResume','class'=>'editresume','id'=>'renzhengform','novalidate'=>'novalidate'))}}
 
     <div class="input">
-     {{--<div class="form-group has-feedback">--}}
-        {{--<input type="text" name="email" id="" placeholder="邮箱">--}}
-     {{--</div>--}}
       @if(is_null($resume))
-    <div class="form-group has-feedback clearfix">
-        <span class="col-sm-4 col-xs-12">
-         {{Form::select('sex',[
-                                         ''=>'性别',
-                                         '0'=>'男',
-                                         '1'=>'女',
-                                         '2'=>'保密'])}}
-        </span>
-        <span class="col-sm-4 col-xs-12">
-          {{Form::select('skill',$skills)}}
-        </span>
-        <span class="col-sm-4 col-xs-12">
-          {{Form::select('profession',[
-                                          ''=>'职业',
-                                          '1'=>'全职远程工作者',
-                                          '2'=>'兼职远程工作者',
-                                          '3'=>'非远程工作者'])}}
-        </span>
-      </div>
+        <div class="form-group has-feedback clearfix">
+            <span class="col-sm-4 col-xs-12">
+             {{Form::select('sex',[
+                                             ''=>'性别',
+                                             '0'=>'男',
+                                             '1'=>'女',
+                                             '2'=>'保密'])}}
+            </span>
+            <span class="col-sm-4 col-xs-12">
+              {{Form::select('skill',$skills)}}
+            </span>
+            <span class="col-sm-4 col-xs-12">
+              {{Form::select('profession',[
+                                              ''=>'远程类型',
+                                              '1'=>'全职远程工作者',
+                                              '2'=>'兼职远程工作者',
+                                              '3'=>'非远程工作者'])}}
+            </span>
+         </div>
 
-  <div class="form-group has-feedback">
-          {{--<input type="tel" name="qqnumber" id="" placeholder="QQ">--}}
+        <div class="form-group has-feedback">
+          <input type="tel" name="qqnumber" id="" placeholder="QQ">
           {{Form::text('qqnumber',null,array('placeholder'=>'QQ','id'=>'qq'))}}
            {{Form::text('Blog','',array('placeholder'=>'博客/github'))}}
       </div>
       @else
-<div class="form-group has-feedback clearfix">
-        <span class="col-sm-4 col-xs-12">
-          {{Form::select('sex',[
-                                         ''=>'性别',
-                                         '0'=>'男',
-                                         '1'=>'女',
-                                         '2'=>'保密'],$resume->sex)}}
-        </span>
-        <span class="col-sm-4 col-xs-12">
-           {{Form::select('skill',[
-                                          ''=>'主要技能',
-                                          '0'=>'C++',
-                                          '1'=>'PHP',
-                                          '2'=>'ios',
-                                          '3'=>'Andriod',
-                                          '4'=>'web前端'
-                                          ],$resume->skill_id)}}
-        </span>
-        <span class="col-sm-4 col-xs-12">
-          {{Form::select('profession',[
-                                          ''=>'职业',
-                                          '1'=>'全职远程工作者',
-                                          '2'=>'兼职远程工作者',
-                                          '3'=>'非远程工作者'],$resume->remote_status)}}
-        </span>
+    <div class="form-group has-feedback clearfix">
+            <span class="col-sm-4 col-xs-12">
+              {{Form::select('sex',[
+                                             ''=>'性别',
+                                             '0'=>'男',
+                                             '1'=>'女',
+                                             '2'=>'保密'],$resume->sex)}}
+            </span>
+            <span class="col-sm-4 col-xs-12">
+               {{Form::select('skill',[
+                                              ''=>'主要技能',
+                                              '0'=>'C++',
+                                              '1'=>'PHP',
+                                              '2'=>'ios',
+                                              '3'=>'Andriod',
+                                              '4'=>'web前端'
+                                              ],$resume->skill_id)}}
+            </span>
+            <span class="col-sm-4 col-xs-12">
+              {{Form::select('profession',[
+                                              ''=>'远程类型',
+                                              '1'=>'全职远程工作者',
+                                              '2'=>'兼职远程工作者',
+                                              '3'=>'非远程工作者'],$resume->remote_status)}}
+            </span>
+    </div>
+      <div class="form-group has-feedback">
+                                {{Form::text('qqnumber',$resume->qq,array('placeholder'=>'QQ','id'=>'qq'))}}
+                                {{Form::text('Blog',$resume->blog,array('placeholder'=>'博客/github'))}}
       </div>
-  <div class="form-group has-feedback">
-                            {{Form::text('qqnumber',$resume->qq,array('placeholder'=>'QQ','id'=>'qq'))}}
-                            {{Form::text('Blog',$resume->blog,array('placeholder'=>'博客/github'))}}
-  </div>
-      @endif
+    @endif
 
 
 
@@ -125,11 +120,11 @@
           </div>
           <div class="form-group has-feedback clearfix">
             <span class="col-sm-6 col-xs-12">
-            {{Form::text('starttime[ ]',null,array('id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+            {{Form::text('starttime[ ]',null,array('placeholder'=>'1988-01-01','id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
 
             </span>
             <span class="col-sm-6 col-xs-12">
-            {{Form::text('endtime[ ]',null,array('id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+            {{Form::text('endtime[ ]',null,array('placeholder'=>'1988-01-01','id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
             </span>
           </div>
           <div class="form-group has-feedback">
@@ -140,7 +135,6 @@
             <textarea name="xiangmujingli" id="" placeholder="项目经历"></textarea>
             {{Form::textarea('Projectexperience[ ]',null,['placeholder'=>'项目经历'])}}
           </div>
-
         </div>
 
 @else
@@ -161,11 +155,11 @@
                   </div>
                   <div class="form-group has-feedback clearfix">
                     <span class="col-sm-6 col-xs-12">
-                    {{Form::text('starttime[ ]',$project[$i]->start_time,array('id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+                    {{Form::text('starttime[ ]',$project[$i]->start_time,array('placeholder'=>'1988-01-01','id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
 
                     </span>
                     <span class="col-sm-6 col-xs-12">
-                     {{Form::text('endtime[ ]',$project[$i]->end_time,array('id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+                     {{Form::text('endtime[ ]',$project[$i]->end_time,array('placeholder'=>'1988-01-01','id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
                     </span>
                   </div>
                   <div class="form-group has-feedback">
@@ -174,6 +168,7 @@
                   <div class="form-group has-feedback">
                     {{Form::textarea('Projectexperience[ ]',$project[$i]->description,['placeholder'=>'项目经历'])}}
                   </div>
+        </div>
         @endfor
 @endif
 

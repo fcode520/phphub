@@ -217,8 +217,12 @@ class UsersController extends \BaseController
             $projectNum=$num;
         }
         $ProjectPosition=Input::get('ProjectPosition');
+
         $PtStartTime=Input::get('starttime');
         $PtEndTime=Input::get('endtime');
+        if(is_null($PtStartTime)){
+            $time=false;
+        }
         $ProjectUrl=Input::get('ProjectUrl');
         $Projectecperience=Input::get('Projectexperience');
 
@@ -226,7 +230,7 @@ class UsersController extends \BaseController
 
         if ($validator->fails())
         {
-            return Redirect::to('/account')->with($validator->messages())->withInput();
+            return Redirect::back()->withInput();
         }
         if(Auth::check()){
             $id=Auth::user()->id;
@@ -242,17 +246,21 @@ class UsersController extends \BaseController
             $Resume->blog=Input::get('Blog');
             $Resume->summary=Input::get('summery');
             $Resume->skill_experience=Input::get('experience');
-
-
             Userproject::where('user_id','=',$id)->delete();
 
             for($i=0;$i<$projectNum ;$i++){
                 $OneProject=new Userproject();
                 $OneProject->user_id=$id;
+
                 $OneProject->project_name=$ProjectName[$i];
                 $OneProject->role=$ProjectPosition[$i];
-                $OneProject->start_time=$PtStartTime[$i];
-                $OneProject->end_time=$PtEndTime[$i];
+                if($time==false){
+                    $OneProject->start_time="1989-01-01";
+                    $OneProject->end_time="1989-01-01";
+                }else{
+                    $OneProject->start_time=$PtStartTime[$i];
+                    $OneProject->end_time=$PtEndTime[$i];
+                }
                 $OneProject->url=$ProjectUrl[$i];
                 $OneProject->description=$Projectecperience[$i];
                 $OneProject->save();
