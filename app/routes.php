@@ -294,8 +294,17 @@ Route::get('/activation','ow_AuthController@activation');
 Route::get('/account/',[
     'as'=>'account',
     'uses'=>'AccountController@index']);
+
 Route::get('/account/notify/replies','AccountController@replies');
 Route::get('/account/notify/sysnotify','AccountController@sysnotify');
+Route::get('/account/notify',[
+    'as' => 'ac_notify',
+    'uses' => 'AccountController@notify',
+]);
+Route::post('/account/notify/delete/{id}',[
+    'as'=> 'notify_delete',
+    'uses'=>'AccountController@NotifyDelete'
+]);
 Route::get('/account/personalsettings',
     [
         'as'=>'ac_setting',
@@ -316,10 +325,7 @@ Route::get('/account/editresume',[
     'as' => 'acc_editresume',
     'uses' => 'AccountController@editresume',
 ]);
-Route::get('/account/notify',[
-    'as' => 'ac_notify',
-    'uses' => 'AccountController@notify',
-]);
+
 Route::get('/account/topics',[
     'as' => 'ac_topices',
     'uses' => 'AccountController@topics',

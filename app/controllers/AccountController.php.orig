@@ -153,9 +153,12 @@ class AccountController extends \BaseController {
             return "请登陆后在进行密码修改操作";
         }
     }
-public function changeheader(){
+<<<<<<< HEAD
+
+    public function changeheader(){
         return View::make('account.changeheader');
-    }    function  NotifyDelete($nid){
+=======
+    function  NotifyDelete($nid){
         if(Auth::check()){
 //            $info=Auth::user()->notifications()->where('user_id','=',Auth::user()->id)->andwhere('id','=',$nid)->get();
             $info=Notification::where('user_id','=',Auth::user()->id)->where('id','=',$nid)->first();
@@ -166,6 +169,7 @@ public function changeheader(){
             $info->delete();
             return "true";
         }
+>>>>>>> d413d4b3c95631fb730a68d2e5c3e4dd0dd800a8
     }
 	/**
 	 * Show the form for creating a new resource.
