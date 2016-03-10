@@ -38,7 +38,13 @@
                     canvas.width = width;
                     canvas.height = height;
                     var context = canvas.getContext("2d");
-                    context.drawImage(this.image, 0, 0, sw, sh, dx, dy, dw, dh);
+                    try{
+                        context.drawImage(this.image, 0, 0, sw, sh, dx, dy, dw, dh);
+                    }
+                    catch(err){
+                        console.log('处理图片失败');
+                        return 'noimg';
+                    }
                     var imageData = canvas.toDataURL('image/png');
                     return imageData;
                 },

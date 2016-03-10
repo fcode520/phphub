@@ -169,11 +169,21 @@ $(function() {
                 options.imgSrc = e.target.result;
                 cropper = $('.imageBox').cropbox(options);
             }
+            var filetype=this.files[0];
+            if(!/image\/\w+/.test(filetype.type)){
+                alert("请确保文件为图像类型");
+                return false;
+            }
             reader.readAsDataURL(this.files[0]);
             this.files = [];
         })
         $('#btnCrop').on('click', function () {
             var img = cropper.getDataURL();
+            if(img=='noimg'){
+                alert('请上传正确格式的图片');
+                return ;
+            }
+            $('.cropped >img ').remove();
             $('.cropped').append('<img src="' + img + '">');
         })
         $('#btnZoomIn').on('click', function () {
@@ -192,8 +202,12 @@ $(function(){
     $('.submitavatar').on('click',function(){
 
         var img=$('.cropped >img');
-        if(img.length<1) return;
-        var imgdata=img.attr('src');
+        var imgdata='';
+        if(img.length<1) {
+            $('#btnCrop').click();
+            img=$('.cropped >img');
+        }
+        imgdata=img.attr('src');
         var CSRF_TOKEN = Config['token'];
         var posturl='/account/changeheader' ;
 
@@ -205,9 +219,10 @@ $(function(){
             success: function (data) {
                 if(data=="false"){
                     alert("You pressed faild!");
-                    //$('#PopDialog').successPOP();
+
                 }else{
                     alert("You pressed ok!");
+                    window.location.reload(true)
                     //$('#PopDialog').errorPOP();
                 }
 

@@ -383,6 +383,9 @@ class UsersController extends \BaseController
     public function changeheader(){
         $this->wrongTokenAjax();
         $imgdata=Input::get('imgdata');
+        if(is_null($imgdata)){
+            return 'false';
+        }
         $img=str_replace('data:image/png;base64,','',$imgdata);
         $img=str_replace(' ','+',$img);
         $data=base64_decode($img);
@@ -396,7 +399,8 @@ class UsersController extends \BaseController
         $file=$destinationPath.'/avatar.png';
 
         $sucess=file_put_contents($file,$data);
-
+        $image_size   =   getimagesize($file);
+        print( "文件的格式为： ".$image_size[2]);
         if($sucess)
         {
             $Resum=new Resume();
