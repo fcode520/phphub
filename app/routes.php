@@ -301,7 +301,10 @@ Route::get('/account/personalsettings',
         'as'=>'ac_setting',
         'uses'=>'AccountController@personalsettings'
     ]);
-
+Route::get('/account/changeheader',[
+    'as'=>'changeheader',
+    'uses'=>'AccountController@changeheader'
+]);
 Route::get('/account/ac_if_setting',
     [
         'as'=>'ac_if_setting',

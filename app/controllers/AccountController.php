@@ -153,6 +153,10 @@ class AccountController extends \BaseController {
             return "请登陆后在进行密码修改操作";
         }
     }
+
+    public function changeheader(){
+        return View::make('account.changeheader');
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *
