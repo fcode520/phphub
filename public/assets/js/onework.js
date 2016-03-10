@@ -158,7 +158,7 @@ $(function() {
         {
             thumbBox: '.thumbBox',
             spinner: '.spinner',
-            imgSrc: 'http://homestead.app/uploads/avatars/def_avatars.png'
+            imgSrc: $('.imageBox').attr('date')
         }
 
         var cropper = $('.imageBox').cropbox(options);

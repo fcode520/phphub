@@ -1,7 +1,12 @@
 <div class="clearfix"></div>
 
 
+    @if (Auth::check())
+    <div class="imageBox" date="{{ $currentUser->present()->gravatar }}">
+    @else
     <div class="imageBox">
+    @endif
+
         <div class="thumbBox"></div>
         <div class="spinner" style="display: none">Loading...</div>
     </div>
