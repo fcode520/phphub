@@ -1,12 +1,19 @@
-<p>支持jpg、png格式图片</p>
-<form id="fileSubmit" action="crop.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" id="demo-file" accept="image/*">
-    <input type="text" name="ix" id="ix" style="display: none;">
-    <input type="text" name="iy" id="iy" style="display: none;">
-    <input type="text" name="iw" id="iw" style="display: none;">
-    <input type="text" name="ih" id="ih" style="display: none;">
-</form>
+<div class="clearfix"></div>
 
-<div id="demo-preview"></div>
 
-<input id="subImg" type="button" value="保存" onclick="saveIcon();" style="display: none;" />
+    <div class="imageBox">
+        <div class="thumbBox"></div>
+        <div class="spinner" style="display: none">Loading...</div>
+    </div>
+
+    <div class="action">
+        <input type="file" id="file" style="float:left; width: 250px">
+        <input type="button" id="btnCrop" value="Crop" style="float: right">
+        <input type="button" id="btnZoomIn" value="+" style="float: right">
+        <input type="button" id="btnZoomOut" value="-" style="float: right">
+        <input type="button" class="submitavatar" id="submitavatar" value="提交图片" style="float: left width: 250px">
+    </div>
+    <div class="cropped">
+
+    </div>
+

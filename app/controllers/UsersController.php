@@ -210,6 +210,7 @@ class UsersController extends \BaseController
             'summery' => 'required',
             'experience' => 'required',
         ];
+        $time=true;
         $projectNum=intval(Input::get('projectNum'));
         $ProjectName=Input::get('ProjectName');
         $num=count($ProjectName);
@@ -287,7 +288,9 @@ class UsersController extends \BaseController
         }
     }
     public function avatarUpload(){
+
         $this->wrongTokenAjax();
+
         if(!Auth::check()){
             Redirect::guest('ow_login');
         }
@@ -307,9 +310,6 @@ class UsersController extends \BaseController
         $destinationPath = 'uploads/avatars/';
         $filename = $file->getClientOriginalName();
         $filePath_Name=Auth::user()->id.'/'.$filename;
-
-//        if(!File::exists(Auth::user()->id))
-//            File::makeDirectory(Auth::user()->id);
 
         $destinationPath=$destinationPath.Auth::user()->id;
         $file->move($destinationPath, $filename);
@@ -339,6 +339,7 @@ class UsersController extends \BaseController
                 'avatar' => asset($destinationPath.'/'.$filename),
             ]
         );
+
     }
 
 
@@ -379,4 +380,48 @@ class UsersController extends \BaseController
         }
     }
 
+    public function changeheader(){
+        $this->wrongTokenAjax();
+        $imgdata=Input::get('imgdata');
+        $img=str_replace('data:image/png;base64,','',$imgdata);
+        $img=str_replace(' ','+',$img);
+        $data=base64_decode($img);
+        $fileName=Auth::user()->id.'/avatar.png';
+        $destinationPath = 'uploads/avatars/'.Auth::user()->id;
+        if(!is_dir($destinationPath)){
+                if(!mkdir($destinationPath,0777)){
+                    return false;
+                }
+        }
+        $file=$destinationPath.'/avatar.png';
+
+        $sucess=file_put_contents($file,$data);
+
+        if($sucess)
+        {
+            $Resum=new Resume();
+            if($Resum->find(Auth::user()->id))
+            {
+//            $Resum->find(Auth::user()->id)->update(['head_img'=>$filename]);
+                DB::table('Resume')
+                    ->where('user_id', Auth::user()->id)
+                    ->update(['head_img' => $fileName]);
+                DB::table('users')
+                    ->where('id', Auth::user()->id)
+                    ->update(['avatar' => $fileName]);
+            }else
+            {
+                $Resum->user_id=Auth::user()->id;
+                $Resum->head_img=$fileName;
+                $Resum->save();
+                DB::table('users')
+                    ->where('id', Auth::user()->id)
+                    ->update(['avatar' => $fileName]);
+            }
+            return $file;
+        }
+
+        return 'false';
+
+    }
 }

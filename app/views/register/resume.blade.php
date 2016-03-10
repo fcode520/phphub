@@ -120,11 +120,11 @@
           </div>
           <div class="form-group has-feedback clearfix">
             <span class="col-sm-6 col-xs-12">
-            {{Form::text('starttime[ ]',null,array('placeholder'=>'1988-01-01','id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+            {{Form::text('starttime[ ]',null,array('readonly'=>"readonly",'placeholder'=>'1988-01-01','id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
 
             </span>
             <span class="col-sm-6 col-xs-12">
-            {{Form::text('endtime[ ]',null,array('placeholder'=>'1988-01-01','id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+            {{Form::text('endtime[ ]',null,array('readonly'=>"readonly",'placeholder'=>'1988-01-01','id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
             </span>
           </div>
           <div class="form-group has-feedback">
@@ -155,11 +155,11 @@
                   </div>
                   <div class="form-group has-feedback clearfix">
                     <span class="col-sm-6 col-xs-12">
-                    {{Form::text('starttime[ ]',$project[$i]->start_time,array('placeholder'=>'1988-01-01','id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+                    {{Form::text('starttime[ ]',$project[$i]->start_time,array('readonly'=>"readonly",'id'=>'starttime_id','class'=>'timeclass','data-position'=>'bottom'))}}
 
                     </span>
                     <span class="col-sm-6 col-xs-12">
-                     {{Form::text('endtime[ ]',$project[$i]->end_time,array('placeholder'=>'1988-01-01','id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
+                     {{Form::text('endtime[ ]',$project[$i]->end_time,array('readonly'=>"readonly",'id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
                     </span>
                   </div>
                   <div class="form-group has-feedback">

@@ -151,23 +151,70 @@ $(function(){
 
     })
 });
-<<<<<<< .mine
-})();
 
-function saveIcon(){
-    $("#fileSubmit").submit();   //讲form表单提交到crop.php进行处理
-}
+$(function() {
+    try{
+        var options =
+        {
+            thumbBox: '.thumbBox',
+            spinner: '.spinner',
+            imgSrc: 'http://homestead.app/uploads/avatars/def_avatars.png'
+        }
+
+        var cropper = $('.imageBox').cropbox(options);
+
+        $('#file').on('change', function () {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                options.imgSrc = e.target.result;
+                cropper = $('.imageBox').cropbox(options);
+            }
+            reader.readAsDataURL(this.files[0]);
+            this.files = [];
+        })
+        $('#btnCrop').on('click', function () {
+            var img = cropper.getDataURL();
+            $('.cropped').append('<img src="' + img + '">');
+        })
+        $('#btnZoomIn').on('click', function () {
+            cropper.zoomIn();
+        })
+        $('#btnZoomOut').on('click', function () {
+            cropper.zoomOut();
+        })
+    }catch(err){
+
+    }
 
 
-//		function huoqu(){
-//			var img = $("#demo-preview img"); // Get my img elem
-//			var pic_real_width, pic_real_height;
-//			$("<img/>") // Make in memory copy of image to avoid css issues
-//			    .attr("src", img.eq(0).attr("src"))
-//			    .load(function() {
-//			        pic_real_width = this.width;   // Note: $(this).width() will not
-//			        pic_real_height = this.height; // work for in memory images.
-//			        alert(pic_real_width+ "  "+pic_real_height);
-//			    });
-//					}
-=======>>>>>>> .theirs
+});
+$(function(){
+    $('.submitavatar').on('click',function(){
+
+        var img=$('.cropped >img');
+        if(img.length<1) return;
+        var imgdata=img.attr('src');
+        var CSRF_TOKEN = Config['token'];
+        var posturl='/account/changeheader' ;
+
+        $.ajax({
+            url: posturl,
+            type: 'POST',
+            data: {_token: CSRF_TOKEN,imgdata:imgdata},
+            dataType: 'html',
+            success: function (data) {
+                if(data=="false"){
+                    alert("You pressed faild!");
+                    //$('#PopDialog').successPOP();
+                }else{
+                    alert("You pressed ok!");
+                    //$('#PopDialog').errorPOP();
+                }
+
+            }
+
+        });
+
+
+    })
+});

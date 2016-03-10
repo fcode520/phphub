@@ -278,6 +278,9 @@ Route::post('/account/EditResume', [
     'uses' => 'UsersController@p_EditResume',
 ]);
 Route::post('/EditResume/uploadimg','UsersController@avatarUpload');
+Route::post('/account/changeheader','UsersController@changeheader');
+
+
 Route::get('/vaild_email/{id}', [
     'as' => 'vaild_email',
     'uses' => 'UsersController@vaild_email',

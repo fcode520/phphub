@@ -25,5 +25,5 @@
 @stop
 
 @section('scripts')
-{{HTML::script(cdn('assets/js/jquery.Jcrop.min.js'))}}
+    <script src="{{ cdn('assets/js/cropbox.js')}}"></script>
 @stop
