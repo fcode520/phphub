@@ -183,8 +183,7 @@ $(function() {
                 alert('请上传正确格式的图片');
                 return ;
             }
-            $('.cropped >img ').remove();
-            $('.cropped').append('<img src="' + img + '">');
+            $('.cropped').html('<img src="' + img + '">');
         })
         $('#btnZoomIn').on('click', function () {
             cropper.zoomIn();
