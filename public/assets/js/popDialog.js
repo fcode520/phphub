@@ -21,8 +21,8 @@
 
         var _this = this;
         setTimeout(function(){
-        	_this.fadeOut(500);
-        },1200);
+        	_this.fadeOut(1500);
+        },2000);
 
         this.find('b').first().css({
             border:'1px solid #f0efef',
@@ -44,7 +44,7 @@
             fontSize:settings.fontsize,
             position:settings.position,
             top:settings.top
-        }).fadeIn(500);
+        }).fadeIn(1500);
 
         this.find('span').last().text(settings.text).css({
  			padding:settings.padding,
@@ -83,8 +83,8 @@
 
         var _this = this;
         setTimeout(function(){
-        	_this.fadeOut(500);
-        },1200);
+        	_this.fadeOut(1500);
+        },2000);
 
         this.find('b').first().css({
             border:'1px solid #f0efef',
@@ -105,7 +105,7 @@
             fontSize:settings.fontsize,
             position:settings.position,
             top:settings.top
-        }).fadeIn(500);
+        }).fadeIn(1500);
 
         this.find('span').last().text(settings.text).css({ 			
  			padding:settings.padding,
@@ -145,8 +145,8 @@
 
         var _this = this;
         setTimeout(function(){
-         _this.fadeOut(500);
-        },1200);
+         _this.fadeOut(1500);
+        },2000);
  
         this.find('b').first().css({
             border:'1px solid #f0efef',
@@ -167,7 +167,7 @@
             fontSize:settings.fontsize,
             position:settings.position,
             top:settings.top
-        }).fadeIn(500);
+        }).fadeIn(1500);
 
         this.find('span').last().text(settings.text).css({             
             padding:settings.padding,   

@@ -6,6 +6,7 @@
     @foreach ($topics as $topic)
      <li>
                   <div class="photo">
+
                    <img class="" alt="{{{ $topic->user->username }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>
                     </div>
                    <div class="hot-news">

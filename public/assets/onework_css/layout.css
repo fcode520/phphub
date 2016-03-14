@@ -704,6 +704,10 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 }
 .enjoy{margin-bottom: 15px}
 /*** 媒体查询 部分css**/
+@media screen and (max-width:995px){
+    .change-avatar-right{float: left;}
+}
+
 @media screen and (max-width:767px){
     .modify-article{width: 90%;}
     .navigation-info{max-width: 551px;margin: 30px auto;}
@@ -717,59 +721,34 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
     .header-info{display: none;}
     .homepage-side{padding-left: 0;margin-bottom: 40px;}
     .homepage-main{padding-right: 15px;padding-left: 15px;}
+    .change-avatar{margin: 30px 15px;}
+    .change-avatar-right{margin-left: 20px;}
 
 
 }
 @media screen and (max-width:560px){
     .navigation-info{margin: 30px 10px;}
 }
-/**头像上传相关**/
 
-.action
-{
-	width: 400px;
-	height: 30px;
-	margin: 10px 0;
-}
-.cropped>img
-{
-	margin-right: 10px;
-}
-.imageBox
-{
-	position: relative;
-	height: 400px;
-	width: 400px;
-	border:1px solid #aaa;
-	background: #fff;
-	overflow: hidden;
-	background-repeat: no-repeat;
-	cursor:move;
-}
+/***修改头像 ***/
+.change-avatar{min-height: 710px;height: auto;background: #fff;margin-top: 20px;border-radius: 4px;padding:30px;overflow: hidden;}
+.change-avatar-left{float: left;}
+.change-avatar-right{float: right;}
+.change-avatar-left > p:first-child{color: #2c3e50;font-size: 16px;line-height: 16px;margin-bottom: 30px;margin-top: 0;}
+.file{position:relative;display:inline-block;background:#FFF;border-radius:4px;padding:4px 30px;overflow:hidden;color:#9ba3af;text-indent:0;line-height:25px;border: 1px solid #f1f1f1;float: left;font-size: 14px;}
+.file input{position:absolute;font-size:100px;right:0;top:0;opacity:0;}
+.file:hover{color:#63ce83;}
+.action{width: 400px;height: 30px;margin: 10px 0;}
+#btnCrop{border: 1px solid #f1f1f1;padding:4px 30px;background:#FFF;border-radius:4px;color:#9ba3af;line-height: 25px;font-size: 14px;margin-left: 20px;}
+#btnCrop:hover{color: #63ce83;}
+.change-avatar-left > p{font-size: 14px;color: #9ba3af;margin: 20px 0;}
+.save-avatar{padding:8px 30px;}
+.cropped>img{margin-right: 10px;}
+.imageBox{position: relative;height: 400px;width: 400px;border:1px solid #aaa;background: #fff;overflow: hidden;background-repeat: no-repeat;cursor:move;}
+.cropped{border: 1px solid #f1f1f1;width: 200px;height: 200px;margin-top: 46px;}
+.change-avatar-right > p{font-size: 15px;color: #9ba3af;margin-top: 15px;}
 
-.imageBox .thumbBox
-{
-	position: relative;
-	top: 50%;
-	left: 50%;
-	width: 200px;
-	height: 200px;
-	margin-top: -100px;
-	margin-left: -100px;
-	box-sizing: border-box;
-	border: 1px solid rgb(102, 102, 102);
-	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
-	background: none repeat scroll 0% 0% transparent;
-}
+.imageBox .thumbBox{position: absolute;top: 50%;left: 50%;width: 200px;height: 200px;margin-top: -100px;
+    margin-left:-100px;box-sizing:border-box;border:1px solid rgb(102,102,102);box-shadow:0 0 0 1000px rgba(0,0,0,0.5);background:none repeat scroll 0% 0% transparent;}
+.imageBox .spinner{position:absolute;top:0;left:0;bottom:0;right:0;text-align:center;line-height:400px;background:rgba(0,0,0,0.7);}
 
-.imageBox .spinner
-{
-	position: relative;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	text-align: center;
-	line-height: 400px;
-	background: rgba(0,0,0,0.7);
-}

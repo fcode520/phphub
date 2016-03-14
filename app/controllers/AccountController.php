@@ -177,7 +177,9 @@ class AccountController extends \BaseController {
     }
 public function changeheader(){
         return View::make('account.changeheader');
-    }    function  NotifyDelete($nid){
+    }
+
+    function  NotifyDelete($nid){
         if(Auth::check()){
 //            $info=Auth::user()->notifications()->where('user_id','=',Auth::user()->id)->andwhere('id','=',$nid)->get();
             $info=Notification::where('user_id','=',Auth::user()->id)->where('id','=',$nid)->first();

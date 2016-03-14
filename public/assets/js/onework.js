@@ -151,58 +151,58 @@ $(function(){
 
     })
 });
-
-$(function() {
-    try{
-        var options =
-        {
-            thumbBox: '.thumbBox',
-            spinner: '.spinner',
-            imgSrc: $('.imageBox').attr('date')
-        }
-
-        var cropper = $('.imageBox').cropbox(options);
-
-        $('#file').on('change', function () {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                options.imgSrc = e.target.result;
-                cropper = $('.imageBox').cropbox(options);
-            }
-            var filetype=this.files[0];
-            if(!/image\/\w+/.test(filetype.type)){
-                alert("请确保文件为图像类型");
-                return false;
-            }
-            reader.readAsDataURL(this.files[0]);
-            this.files = [];
-        })
-        $('#btnCrop').on('click', function () {
-            var img = cropper.getDataURL();
-            if(img=='noimg'){
-                alert('请上传正确格式的图片');
-                return ;
-            }
-            $('.cropped').html('<img src="' + img + '">');
-        })
-        $('#btnZoomIn').on('click', function () {
-            cropper.zoomIn();
-        })
-        $('#btnZoomOut').on('click', function () {
-            cropper.zoomOut();
-        })
-    }catch(err){
-
-    }
-
-
-});
+//
+//$(function() {
+//    try{
+//        var options =
+//        {
+//            thumbBox: '.thumbBox',
+//            spinner: '.spinner',
+//            imgSrc: $('.imageBox').attr('date')
+//        }
+//
+//        var cropper = $('.imageBox').cropbox(options);
+//
+//        $('#file').on('change', function () {
+//            var reader = new FileReader();
+//            reader.onload = function (e) {
+//                options.imgSrc = e.target.result;
+//                cropper = $('.imageBox').cropbox(options);
+//            }
+//            var filetype=this.files[0];
+//            if(!/image\/\w+/.test(filetype.type)){
+//                alert("请确保文件为图像类型");
+//                return false;
+//            }
+//            reader.readAsDataURL(this.files[0]);
+//            this.files = [];
+//        })
+//        $('#btnCrop').on('click', function () {
+//            var img = cropper.getDataURL();
+//            if(img=='noimg'){
+//                alert('请上传正确格式的图片');
+//                return ;
+//            }
+//            $('.cropped').html('<img src="' + img + '">');
+//        })
+//        $('#btnZoomIn').on('click', function () {
+//            cropper.zoomIn();
+//        })
+//        $('#btnZoomOut').on('click', function () {
+//            cropper.zoomOut();
+//        })
+//    }catch(err){
+//
+//    }
+//
+//
+//});
 $(function(){
-    $('.submitavatar').on('click',function(){
+    $('.save-avatar').on('click',function(){
 
         var img=$('.cropped >img');
         var imgdata='';
-        if(img.length<1) {
+        if(img.length<=1) {
             $('#btnCrop').click();
             img=$('.cropped >img');
         }
@@ -217,12 +217,15 @@ $(function(){
             dataType: 'html',
             success: function (data) {
                 if(data=="false"){
-                    alert("You pressed faild!");
-
+                    //alert("You pressed faild!");
+                    $('#PopDialog').errorPOP();
                 }else{
-                    alert("You pressed ok!");
-                    window.location.reload(true)
+                    //alert("You pressed ok!");
+                    $('#PopDialog').successPOP();
+                    //window.location.reload(true)
                     //$('#PopDialog').errorPOP();
+                    var name=$('.personal-header >a').text();
+                    $('.personal-header >a').html('<img alt="'+name+'"src="' + imgdata + '" style="width:30px;height:30px;">'+name);
                 }
 
             }
@@ -232,3 +235,4 @@ $(function(){
 
     })
 });
+

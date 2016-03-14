@@ -3,7 +3,8 @@
 Route::pattern('id', '[0-9]+');
 
 # ------------------ Page Route ------------------------
-Route::get('/', 'PageController@home');
+//Route::get('/', 'PageController@home');
+
 Route::get('/', [
     'as' => 'home',
 //    'uses' => 'PagesController@home',

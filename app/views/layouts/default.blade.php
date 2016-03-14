@@ -61,7 +61,7 @@ OneWork & 远程工作者社区
                     @else
                      @foreach (Session::get('message')->all() as $message)
                                                     <p><span class="glyphicon glyphicon-remove-sign"></span>{{$message}}</p>
-                                                    @endforeach
+                     @endforeach
 
                     @endif
 
