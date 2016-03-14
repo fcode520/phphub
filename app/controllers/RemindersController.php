@@ -44,7 +44,35 @@ class RemindersController extends \BaseController
 
 		return View::make('register.reset_password')->with('token', $token);
 	}
+	/**
+	 * 生成密码种子
+	 *
+	 * @param  integer
+	 * @return string
+	 */
+	function fetch_salt($length = 4)
+	{
+		$salt='';
+		for ($i = 0; $i < $length; $i++)
+		{
+			$salt .= chr(rand(97, 122));
+		}
 
+		return $salt;
+	}
+	/**
+	 * 根据 salt 混淆密码
+	 *
+	 * @param  string
+	 * @param  string
+	 * @return string
+	 */
+	function compile_password($password, $salt)
+	{
+		$password = md5(md5($password) . $salt);
+
+		return $password;
+	}
 	/**
 	 * Handle a POST request to reset a user's password.
 	 *
@@ -58,8 +86,12 @@ class RemindersController extends \BaseController
 
 		$response = Password::reset($credentials, function($user, $password)
 		{
-			$user->password = Hash::make($password);
-
+			$salt=$user->getAuthSalt();
+			if(is_null($salt)){
+				$salt=$this->fetch_salt(4);
+			}
+			$user->password = $this->compile_password($password,$salt);
+			$user->salt=$salt;
 			$user->save();
 		});
 

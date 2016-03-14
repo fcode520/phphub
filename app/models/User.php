@@ -158,4 +158,9 @@ public static $rules = array(
         $this->avatar = $avatar_name;
         $this->save();
     }
+    public function getAuthSalt()
+    {
+        return $this->salt;
+    }
+
 }

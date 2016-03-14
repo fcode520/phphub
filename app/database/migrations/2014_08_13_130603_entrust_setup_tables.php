@@ -71,7 +71,35 @@ class EntrustSetupTables extends Migration
         Schema::drop('roles');
         Schema::drop('permissions');
     }
+    /**
+     * 生成密码种子
+     *
+     * @param  integer
+     * @return string
+     */
+    function fetch_salt($length = 4)
+    {
+        $salt='';
+        for ($i = 0; $i < $length; $i++)
+        {
+            $salt .= chr(rand(97, 122));
+        }
 
+        return $salt;
+    }
+    /**
+     * 根据 salt 混淆密码
+     *
+     * @param  string
+     * @param  string
+     * @return string
+     */
+    function compile_password($password, $salt)
+    {
+        $password = md5(md5($password) . $salt);
+
+        return $password;
+    }
     public function setupFoundorAndBaseRolsPermission()
     {
         // Create Roles
@@ -82,13 +110,14 @@ class EntrustSetupTables extends Migration
         $admin = new Role;
         $admin->name = 'Admin';
         $admin->save();
-
+        $salt=$this->fetch_salt(4);
         // Create User
         $user = User::create([
                 'id' => 1,
                 'username' => 'zhanglei',
-                'password' => Hash::make('zhanglei'),
-                'email'=>'fcode520@gmail.com'
+                'password' => $this->compile_password('zhanglei',$salt),
+                'email'=>'fcode520@gmail.com',
+                'salt'=>$salt
 
             ]);
 

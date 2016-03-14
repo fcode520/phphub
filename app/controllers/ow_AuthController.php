@@ -28,14 +28,46 @@ class ow_AuthController extends \BaseController
     public function show_register(){
             return View::make('register.registerindex');
     }
-    public function ow_Auth_register(){
+    /**
+     * 生成密码种子
+     *
+     * @param  integer
+     * @return string
+     */
+    function fetch_salt($length = 4)
+    {
+        $salt = '';
+        for ($i = 0; $i < $length; $i++)
+        {
+            $salt .= chr(rand(97, 122));
+        }
+
+        return $salt;
+    }
+    /**
+     * 根据 salt 混淆密码
+     *
+     * @param  string
+     * @param  string
+     * @return string
+     */
+    function compile_password($password, $salt)
+    {
+        $password = md5(md5($password) . $salt);
+
+        return $password;
+    }
+    public function ow_Auth_register()
+    {
         $validator= Validator::make(Input::all(),User::$rules);
         if($validator->passes()){
+            $salt = $this->fetch_salt(4);
             $users=User::where('email','=',Input::get('email'))->first();
             $user =new User;
             $user->username=Input::get('username');
             $user->email=Input::get('email');
-            $user->password=Hash::make(Input::get('password'));
+            $user->salt=$salt;
+            $user->password=$this->compile_password(Input::get('password'), $salt);
             $user->activation=Hash::make(Input::get('email').time());
             $user->status=0;
             $user->save();

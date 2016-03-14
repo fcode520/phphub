@@ -128,6 +128,26 @@ class AccountController extends \BaseController {
             return Redirect::guest('/');
         }
     }
+    /**
+     * 用户密码验证
+     *
+     * @param string
+     * @param string
+     * @param string
+     * @return boolean
+     */
+    public function check_password($password, $db_password, $salt)
+    {
+        $password = compile_password($password, $salt);
+
+        if ($password == $db_password)
+        {
+            return true;
+        }
+
+        return false;
+
+    }
     public function post_changepwd(){
 
         if(Auth::check()){
@@ -138,10 +158,12 @@ class AccountController extends \BaseController {
             if(empty($oldpwd) or empty($password) or empty($confirmPassword) or $password!=$confirmPassword){
                 return "密码不能为空";
             }
-            if(!Hash::check($oldpwd,Auth::user()->password)){
+            if(check_password($oldpwd,Auth::user()->password,Auth::user()->getAuthSalt()))
+            {
                 return "旧密码不正确";
             }
-            $newpwd=Hash::make($confirmPassword);
+
+            $newpwd=$this->compile_password($confirmPassword,Auth::user()->getAuthSalt());
             $user=Auth::user();
             $user->password=$newpwd;
             $user->save();
