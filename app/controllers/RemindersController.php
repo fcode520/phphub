@@ -25,7 +25,7 @@ class RemindersController extends \BaseController
 		switch ($response = Password::remind(Input::only('email')))
 		{
 			case Password::INVALID_USER:
-				return Redirect::back()->with('error', Lang::get($response));
+				return Redirect::back()->with('message', Lang::get($response));
 
 			case Password::REMINDER_SENT:
                 return View::make('register.find_password_ok',compact('email'));
@@ -41,8 +41,10 @@ class RemindersController extends \BaseController
 	public function getReset($token = null)
 	{
 		if (is_null($token)) App::abort(404);
-
-		return View::make('register.reset_password')->with('token', $token);
+        $user=DB::table('password_reminders')->where('token','=',$token)->first();
+        if(is_null($user)) App::abort(404);
+        $email=$user->email;
+		return View::make('register.reset_password',compact('token','email'));
 	}
 	/**
 	 * 生成密码种子
@@ -100,10 +102,11 @@ class RemindersController extends \BaseController
 			case Password::INVALID_PASSWORD:
 			case Password::INVALID_TOKEN:
 			case Password::INVALID_USER:
-				return Redirect::back()->with('error', Lang::get($response));
+				return Redirect::back()->with('message', Lang::get($response));
 
 			case Password::PASSWORD_RESET:
-				return Redirect::to('/');
+
+				return Redirect::to('/ow_login');
 		}
 	}
 

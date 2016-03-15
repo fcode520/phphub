@@ -6,11 +6,7 @@
 @stop
 
 @section('content')
-    <div class="container">
-        @if(Session::has('message'))
-            <p class="alert">{{ Session::get('message') }}</p>
-        @endif
-    </div>
+
 {{Form::open(array('class'=>'login form-horizontal bv-form','id'=>'login','novalidate'=>'novalidate'))}}
 <div class="login_box">
     <p class="title">通过绑定邮箱进行密码找回。</p>

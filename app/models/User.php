@@ -112,7 +112,9 @@ public static $rules = array(
     {
         return $this->email;
     }
-
+    public function getReminderUserName(){
+        return $this->username;
+    }
     public function getRememberToken()
     {
         return $this->remember_token;

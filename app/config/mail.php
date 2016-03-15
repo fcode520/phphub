@@ -55,7 +55,8 @@ return array(
     |
     */
 
-    'from' => array('address' => 'apcow@apcow.com', 'name' => 'onework'),
+//    'from' => array('address' => 'apcow@apcow.com', 'name' => 'onework'),
+    'from' => ['address' => 'apcow@apcow.com', 'name' => 'OneWork'],
 
     /*
     |--------------------------------------------------------------------------
