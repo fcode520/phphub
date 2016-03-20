@@ -128,11 +128,11 @@
             </span>
           </div>
           <div class="form-group has-feedback">
-            <input type="text" name="zhanshi" id="" placeholder="展示链接">
+            {{--<input type="text" name="zhanshi" id="" placeholder="展示链接">--}}
             {{Form::text('ProjectUrl[ ]',null,array('placeholder'=>'展示链接'))}}
           </div>
           <div class="form-group has-feedback">
-            <textarea name="xiangmujingli" id="" placeholder="项目经历"></textarea>
+            {{--<textarea name="xiangmujingli" id="" placeholder="项目经历"></textarea>--}}
             {{Form::textarea('Projectexperience[ ]',null,['placeholder'=>'项目经历'])}}
           </div>
         </div>
@@ -140,11 +140,11 @@
 @else
         @for($i=0;$i<count($project);$i++)
         <div class="one-project">
-        @if($i>0)
-        <p class="subtitle">项目经验<span></span></p>
-        @else
-        <p class="subtitle">项目经验</p>
-        @endif
+            @if($i>0)
+            <p class="subtitle">项目经验<span></span></p>
+            @else
+            <p class="subtitle">项目经验</p>
+            @endif
                   <div class=" clearfix">
                     <span class="col-sm-6 col-xs-12 form-group has-feedback">
                         {{Form::text('ProjectName[ ]',$project[$i]->project_name,array('placeholder'=>'项目名称'))}}

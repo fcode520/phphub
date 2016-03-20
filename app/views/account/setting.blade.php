@@ -27,7 +27,11 @@
 
                                 <span class="col-sm-6"><label>注册时间</label>：{{$resume->user->created_at}}</span></p>
 
-                            <p><span class="col-sm-6"><label>QQ</label>：{{$resume->qq}}</span><span class="col-sm-6"><label>工作技能</label>：C++工程师</span></p>
+                            <p><span class="col-sm-6"><label>QQ</label>：{{$resume->qq}}</span><span class="col-sm-6"><label>工作技能</label>：
+                            @if(isset($resume->skill->skill))
+                            {{$resume->skill->skill}}
+                            @endif
+                            </span></p>
                         </di>
                         <div class="clearfix"></div>
                         <div class="b">

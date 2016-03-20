@@ -32,8 +32,11 @@ class UsersController extends \BaseController
         $user = User::findOrFail($id);
         $topics = Topic::whose($user->id)->recent()->limit(10)->get();
         $replies = Reply::whose($user->id)->recent()->limit(10)->get();
-
-        return View::make('users.show', compact('user', 'topics', 'replies','resume'));
+        if(!is_null($resume)){
+            $projects=$resume->userproject()->get();
+            return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','projects'));
+        }
+        return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume'));
     }
 
     public function edit($id)

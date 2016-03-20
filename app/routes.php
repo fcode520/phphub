@@ -71,6 +71,7 @@ Route::get('users/regenerate_login_token', [
     'uses' => 'UsersController@regenerateLoginToken',
 ]);
 
+
 Route::post('/favorites/{id}', [
     'as' => 'favorites.createOrDelete',
     'uses' => 'FavoritesController@createOrDelete',
