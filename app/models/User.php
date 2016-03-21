@@ -40,7 +40,7 @@ public static $rules = array(
             SiteStatus::newUser();
         });
     }
-    //最喜欢的文章
+    //最收藏的文章
     public function favoriteTopics()
     {
         return $this->belongsToMany('Topic', 'favorites')->withTimestamps();
