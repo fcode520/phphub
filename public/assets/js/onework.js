@@ -241,6 +241,7 @@ $(function(){//顶部头像 滑过后效果等
     var t = $('.new-personal-head > ul > li');
     var width = t.find('.act').width();
     var line = $('.new-line');
+    if(t.length<1)return;
     if(!!t){
         line.css({'width':width}).css({'left':t.parent().find('.act').position().left+15});
         t.on('click',function(){
@@ -257,4 +258,29 @@ $(function(){//顶部头像 滑过后效果等
         })
     }
 
+});
+$(function(){
+    $('#Focus').on('click',function(){
+        var ToUserID=$(this).attr('data');;
+        var CSRF_TOKEN = Config['token'];
+        var posturl='/users/focus' ;
+        $.ajax({
+            url: posturl,
+            type: 'POST',
+            data: {_token: CSRF_TOKEN,_ntoid:ToUserID},
+            dataType: 'html',
+            success: function (data) {
+                if(data=="true"){
+                    $('#PopDialog').successPOP({text:"关注成功"});
+                }else{
+                    $('#PopDialog').errorPOP({text:data});
+
+                }
+
+            }
+
+        });
+
+
+    })
 });

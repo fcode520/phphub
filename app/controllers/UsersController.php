@@ -29,26 +29,31 @@ class UsersController extends \BaseController
     public function show($id)
     {
 
+
         $resume=Resume::find($id);
 
         $user = User::findOrFail($id);
-
-//        $votes=$user->getTopicsups();
-
+        $from= $user->fanssystem_from()->count();
+        $to= $user->fanssystem_to()->count();
+        $bFocus=Fanssystem::isFocus($id);
+        $fans=array();
+        $fans[0]=$from;
+        $fans[1]=$to;
+        $fans[2]=$bFocus;
 
         $topics = Topic::whose($user->id)->recent()->paginate(10);
         $favoritetopics = $user->favoriteTopics()->paginate(10);
         $replies = Reply::whose($user->id)->recent()->limit(10)->get();
         if(is_null($resume)){
-            return View::make('usersinfo.show', compact('user', 'topics', 'replies','favoritetopics'));
+            return View::make('usersinfo.show', compact('user', 'topics', 'replies','favoritetopics','fans'));
         }
         $skill=Skill::where('id','=',$resume->skill_id)->first()->skill;
         if(!is_null($resume)){
             $projects=$resume->userproject()->get();
-            return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','projects','favoritetopics','skill'));
+            return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','projects','favoritetopics','skill','fans'));
         }
 
-        return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','favoritetopics'));
+        return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','favoritetopics','fans'));
     }
 
     public function edit($id)
@@ -444,4 +449,23 @@ class UsersController extends \BaseController
         return 'false';
 
     }
+
+    public function postfocus(){
+        if(Auth::check()){
+            $toid=input::get('_ntoid');
+            $bFocus=Fanssystem::isFocus($toid);
+            if($bFocus){
+                $fans=Fanssystem::findFans($toid);
+                $fans->delete();
+                return "true";
+            }
+            $fans=new Fanssystem();
+            $fans->from_user_id=Auth::id();
+            $fans->to_user_id=$toid;
+            $fans->save();
+            return "true";
+        }
+        return "请登录后再进行关注";
+    }
+
 }

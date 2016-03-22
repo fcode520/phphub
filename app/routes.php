@@ -349,7 +349,14 @@ Route::post('/account/changepassword',[
     'uses'=>'AccountController@post_changepwd'
 ]);
 
+
+
 Route::get('job','JobController@index');
 
 
 #---------------------ajax---------------------------
+Route::post('/users/focus',[
+        'as'=>'focus',
+        'uses'=>'UsersController@postfocus'
+    ]
+);

@@ -280,6 +280,7 @@ button:hover{background-color:#4dbe92;}
 .hot-news-info{margin-top: 10px;margin-left: 15px;margin-bottom: 10px;}
 .hot-news-info span{color: #666;}
 .hot-news-info > span:first-child{color: #666;background: #f0f0f0;padding: 2px 5px;border-radius: 4px;}
+.hot-news-info > span >a{color: #666;background: #f0f0f0;padding: 2px 5px;border-radius: 4px;}
 .hot-news-info > span:nth-child(2){color: #666;}
 .hot-news-info > span:last-child{color: #9ca2a2;margin-left: 5px;}
 .hot-comment{line-height: 22px;text-align: center;font-size: 12px;color: #fff;background-color: #e8e8e8;float: right;border-radius: 5px;top: 24px;right: 25px;display: inline-block;position: absolute;padding: 0 5px;}

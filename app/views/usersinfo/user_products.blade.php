@@ -1,8 +1,8 @@
 <div class="exchange-hot new-personal-center">
         <h2 class="title">项目</h2>
-    @if(isset($resume))
-        <ul>
+    @if(isset($resume)&& count($resume->userproject)>0)
 
+        <ul>
     @foreach($resume->userproject as $product)
           <li>
             <div class="row">

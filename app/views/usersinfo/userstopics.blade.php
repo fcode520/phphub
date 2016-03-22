@@ -11,9 +11,9 @@
                                      </h2>
                                      <div class="hot-news-info new-hot-news-info">
                                          <span>
-                                         {{--<a href="{{ route('nodes.show', [$topic->node->id]) }}" title="{{{ $topic->node->name }}}">--}}
+                                         <a href="{{ route('nodes.show', [$topic->node->id]) }}" title="{{{ $topic->node->name }}}">
                                          {{{ $topic->node->name }}}
-                                         {{--</a>--}}
+                                         </a>
                                          </span>
                                          {{--<span> • </span>--}}
                                          &nbsp;&nbsp;&nbsp;

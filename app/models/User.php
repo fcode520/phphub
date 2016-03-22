@@ -50,6 +50,7 @@ public static $rules = array(
     {
         return $this->belongsToMany('Topic', 'attentions')->withTimestamps();
     }
+
     //文章
     public function topics()
     {
@@ -64,6 +65,14 @@ public static $rules = array(
     public function notifications()
     {
         return $this->hasMany('Notification')->recent()->with('topic', 'fromUser')->paginate(20);
+    }
+    //该用户关注的数量
+    public function fanssystem_from(){
+        return $this->hasMany('fanssystem','from_user_id','id');
+    }
+    //该用户被关注的数量
+    public function fanssystem_to(){
+        return $this->hasMany('fanssystem','to_user_id','id');
     }
     //简历
     public function resume(){
