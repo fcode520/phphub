@@ -41,8 +41,18 @@
                                              '2'=>'保密'])}}
             </span>
             <span class="col-sm-4 col-xs-12">
-              {{Form::select('skill',$skills)}}
+<select name="skill" data-bv-field="skill">
+    <option value="" selected="selected">职业技能</option>
+    <?php $skillIndex=1; ?>
+    @foreach($skills as $skill)
+        <option value="{{$skillIndex++}}">{{$skill}}</option>
+
+    @endforeach
+</select>
+              {{--{{Form::select('skill',$skills)}}--}}
+
             </span>
+
             <span class="col-sm-4 col-xs-12">
               {{Form::select('profession',[
                                               ''=>'远程类型',

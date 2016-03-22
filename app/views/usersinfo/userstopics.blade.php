@@ -22,7 +22,7 @@
                                          <span class="timeago">{{ $topic->created_at }}</span>
                                       </div>
                                      {{--<a class="del-article new-del-article" href="#" title="删除"></a>--}}
-                                     {{--<span class="hot-comment new-hot-comment">111</span>--}}
+                                     <span class="hot-comment new-hot-comment">{{$topic->view_count}}</span>
                                    </div>
                      </li>
 @endforeach
@@ -31,5 +31,7 @@
 {{--{{ $topics->links(); }}--}}
 {{--</div>--}}
 @else
+    <ul CLASS="act">
 <div class="empty-block">{{ lang('Dont have any data Yet') }}~~</div>
+    </ul>
 @endif

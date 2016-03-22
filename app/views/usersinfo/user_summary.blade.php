@@ -3,6 +3,8 @@
         <div class="new-personal-center-con">
         @if(isset($resume))
             {{$resume->summary}}
+            @else
+            {{'尚未完善资料'}}
         @endif
        </div>
       </div>

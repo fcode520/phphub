@@ -28,18 +28,27 @@ class UsersController extends \BaseController
 
     public function show($id)
     {
+
         $resume=Resume::find($id);
+
         $user = User::findOrFail($id);
-        $topics = Topic::whose($user->id)->recent()->paginate(6);
-        $favoritetopics = $user->favoriteTopics()->paginate(6);
+
+//        $votes=$user->getTopicsups();
+
+
+        $topics = Topic::whose($user->id)->recent()->paginate(10);
+        $favoritetopics = $user->favoriteTopics()->paginate(10);
         $replies = Reply::whose($user->id)->recent()->limit(10)->get();
+        if(is_null($resume)){
+            return View::make('usersinfo.show', compact('user', 'topics', 'replies','favoritetopics'));
+        }
         $skill=Skill::where('id','=',$resume->skill_id)->first()->skill;
         if(!is_null($resume)){
             $projects=$resume->userproject()->get();
             return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','projects','favoritetopics','skill'));
         }
 
-        return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume'));
+        return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','favoritetopics'));
     }
 
     public function edit($id)
@@ -195,6 +204,7 @@ class UsersController extends \BaseController
                 $project=Resume::find($id)->userproject()->get();
             }
             $skills = Skill::lists('skill');
+
             $professions = Profession::lists('profession');
             return View::make('register.resumes', compact('user', 'resume', 'project', 'skills', 'professions'));
         }else{

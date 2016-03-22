@@ -33,5 +33,7 @@
 {{--{{ $topics->links(); }}--}}
 {{--</div>--}}
 @else
-<div class="empty-block">{{ lang('Dont have any data Yet') }}~~</div>
+    <ul>
+        <div class="empty-block">{{ lang('Dont have any data Yet') }}~~</div>
+    </ul>
 @endif

@@ -1,6 +1,8 @@
 <div class="exchange-hot new-personal-center">
         <h2 class="title">项目</h2>
+    @if(isset($resume))
         <ul>
+
     @foreach($resume->userproject as $product)
           <li>
             <div class="row">
@@ -16,5 +18,12 @@
             </div>
           </li>
     @endforeach
+
         </ul>
+    @else
+
+        <div class="new-personal-center-con">
+            {{'无项目'}}
+        </div>
+    @endif
 </div>

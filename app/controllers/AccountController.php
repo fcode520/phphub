@@ -20,7 +20,8 @@ class AccountController extends \BaseController {
             return	Redirect::route('editsetting')->with('message',"请先完善资料，在查看资料");
         }
         $projects=Auth::user()->projects()->first();
-        return View::make('account.index',compact('resume','projects'));
+        $skill=Skill::where('id','=',$resume->skill_id)->first()->skill;
+        return View::make('account.index',compact('resume','projects','skill'));
 //		if(!Auth::check()){
 //		return 	Redirect::intended('/');
 //		}

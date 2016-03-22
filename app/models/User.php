@@ -40,7 +40,7 @@ public static $rules = array(
             SiteStatus::newUser();
         });
     }
-    //最收藏的文章
+    //收藏的文章
     public function favoriteTopics()
     {
         return $this->belongsToMany('Topic', 'favorites')->withTimestamps();
@@ -164,5 +164,20 @@ public static $rules = array(
     {
         return $this->salt;
     }
+    //获取该用户所有文章总共的攒
+    public function getTopicsups(){
+        $votes= DB::table('topics')->where('user_id','=',$this->id)->lists('vote_count');
+        $votesCount=0;
+        foreach($votes as $vote)
+        {
+            $votesCount+=$vote;
+        }
+        return $votesCount;
+    }
+    //获取该用户关注的用户数量
+    public function getFocusCount(){
+
+    }
+    //获取该用户被关注的数量
 
 }
