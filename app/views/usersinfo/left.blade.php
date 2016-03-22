@@ -3,7 +3,10 @@
          <div class="new-personal-photo"><img src="{{ $user->present()->gravatar(180) }}"></div>
          <div class="new-personal-name">
            <h2>{{ $user->username }}</h2>
-           <p><span class="glyphicon glyphicon-map-marker"></span>{{substr($resume->position,0,strpos($resume->position,'-'))}}<span class="new-personal-work">
+           <p>
+               <span class="glyphicon glyphicon-map-marker"></span>
+               {{--{{substr($resume->position,0,strpos($resume->position,'-'))}}--}}
+               <span class="new-personal-work">
 
            @if(isset($resume->skill->skill))
             {{$resume->skill->skill}}

@@ -53,7 +53,6 @@
          </div>
 
         <div class="form-group has-feedback">
-          <input type="tel" name="qqnumber" id="" placeholder="QQ">
           {{Form::text('qqnumber',null,array('placeholder'=>'QQ','id'=>'qq'))}}
            {{Form::text('Blog','',array('placeholder'=>'博客/github'))}}
       </div>

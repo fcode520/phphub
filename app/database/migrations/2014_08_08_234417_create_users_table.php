@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email',100)->unique();
             $table->string('username')->unique();
             $table->string('password',64);
+            $table->string('salt',16)->nullable();
             $table->boolean('is_banned')->default(false)->index();
             $table->integer('topic_count')->default(0)->index();
             $table->integer('reply_count')->default(0)->index();
