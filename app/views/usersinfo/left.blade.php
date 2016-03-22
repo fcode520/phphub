@@ -5,12 +5,9 @@
            <h2>{{ $user->username }}</h2>
            <p>
                <span class="glyphicon glyphicon-map-marker"></span>
-               {{--{{substr($resume->position,0,strpos($resume->position,'-'))}}--}}
+               {{substr($resume->position,0,strpos($resume->position,'-'))}}
                <span class="new-personal-work">
-
-           @if(isset($resume->skill->skill))
-            {{$resume->skill->skill}}
-            @endif
+            {{$skill}}
            </span></p>
            <p><span class="computer"></span>
             @if($resume->remote_status==2)

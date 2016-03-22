@@ -33,9 +33,10 @@ class UsersController extends \BaseController
         $topics = Topic::whose($user->id)->recent()->paginate(6);
         $favoritetopics = $user->favoriteTopics()->paginate(6);
         $replies = Reply::whose($user->id)->recent()->limit(10)->get();
+        $skill=$resume->skill()->first()->skill;
         if(!is_null($resume)){
             $projects=$resume->userproject()->get();
-            return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','projects','favoritetopics'));
+            return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume','projects','favoritetopics','skill'));
         }
 
         return View::make('usersinfo.show', compact('user', 'topics', 'replies','resume'));
