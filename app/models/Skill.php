@@ -6,6 +6,6 @@ class Skill extends \Eloquent {
 
 
     public function resume(){
-        return $this->belongsTo('Resume');
+        return $this->belongsTo('resume');
     }
 }

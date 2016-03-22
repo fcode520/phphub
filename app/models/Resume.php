@@ -18,6 +18,7 @@ class Resume extends \Eloquent {
 
 		return $this->hasMany('Userproject','user_id','user_id');
 	}
+
     public function skill(){
         return $this->hasOne('skill','id','skill_id');
     }
