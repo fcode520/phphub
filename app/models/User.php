@@ -68,11 +68,11 @@ public static $rules = array(
     }
     //该用户关注的数量
     public function fanssystem_from(){
-        return $this->hasMany('fanssystem','from_user_id','id');
+        return $this->hasMany('2fanssystem','from_user_id','id');
     }
     //该用户被关注的数量
     public function fanssystem_to(){
-        return $this->hasMany('\app\fanssystem','to_user_id','id');
+        return $this->hasMany('3fanssystem','to_user_id','id');
     }
     //简历
     public function resume(){
