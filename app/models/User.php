@@ -72,7 +72,7 @@ public static $rules = array(
     }
     //该用户被关注的数量
     public function fanssystem_to(){
-        return $this->hasMany('\fanssystem','to_user_id','id');
+        return $this->hasMany('\app\fanssystem','to_user_id','id');
     }
     //简历
     public function resume(){
