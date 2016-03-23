@@ -1,5 +1,4 @@
 <?php
-
 class Fanssystem extends \Eloquent {
     use SoftDeletingTrait;
 	protected $fillable = [];
