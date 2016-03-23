@@ -779,7 +779,7 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 .new-personal-head > ul > li{line-height: 58px;}
 .new-hot-con > ul{display: none;}
 .new-hot-con > ul.act{display: block;}
-.new-hot-con > ul > li{height: 90px;}
+/*.new-hot-con > ul > li{height: 90px;}*/
 .new-hot-con .hot-news-title{margin-top: 22px;}
 .new-hot-con .hot-news-info{margin-top: 18px;}
 .new-line{width: 58px;height: 2px;background: #39ca74;display: block;position: absolute;left: 15px;top:57px;}

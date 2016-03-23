@@ -8,4 +8,5 @@
 
 @include('usersinfo.left')
 @include('usersinfo.right_userinfo')
+
 @stop

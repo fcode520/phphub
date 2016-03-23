@@ -41,9 +41,9 @@ class UsersController extends \BaseController
         $fans[1]=$to;
         $fans[2]=$bFocus;
 
-        $topics = Topic::whose($user->id)->recent()->paginate(10);
-        $favoritetopics = $user->favoriteTopics()->paginate(10);
-        $replies = Reply::whose($user->id)->recent()->limit(10)->get();
+        $topics = Topic::whose($user->id)->recent()->paginate(6);
+        $favoritetopics = $user->favoriteTopics()->paginate(6);
+        $replies = Reply::whose($user->id)->recent()->limit(6)->get();
         if(is_null($resume)){
             return View::make('usersinfo.show', compact('user', 'topics', 'replies','favoritetopics','fans'));
         }
@@ -252,7 +252,7 @@ class UsersController extends \BaseController
 
         if ($validator->fails())
         {
-            return Redirect::back()->withInput();
+            return Redirect::back()->withInput()->with('message',$validator->messages());
         }
         if(Auth::check()){
             $id=Auth::user()->id;
@@ -293,7 +293,7 @@ class UsersController extends \BaseController
         if(stripos($url,'account')==false){
             return Redirect::to('/EditResume');
         }else{
-            return Redirect::to('/account');
+            return Redirect::to('/account')->with('sucessmsg',"资料完善成功！");
         }
 
     }

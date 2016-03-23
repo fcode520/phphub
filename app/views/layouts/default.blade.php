@@ -37,7 +37,6 @@ OneWork & 远程工作者社区
 	</head>
 	<body id="body">
 		<div id="wrap">
-
 			@include('layouts.partials.nav')
 			{{--激活提示框--}}
 			@if(isset($currentUser))
@@ -57,15 +56,29 @@ OneWork & 远程工作者社区
                   <div class="banner-text" data-time="100000">
                     @if(is_string(Session::get('message')))
                             <p><span class="glyphicon glyphicon-remove-sign"></span>{{ Session::get('message') }}</p>
-
                     @else
+
                      @foreach (Session::get('message')->all() as $message)
-                                                    <p><span class="glyphicon glyphicon-remove-sign"></span>{{$message}}</p>
+                              <p><span class="glyphicon glyphicon-remove-sign"></span>{{$message}}</p>
                      @endforeach
 
                     @endif
 
                   </div>
+                @endif
+
+                @if(Session::has('sucessmsg'))
+                  <div class="banner-text" data-time="20000">
+                    @if(is_string(Session::get('sucessmsg')))
+                                               <p>{{ Session::get('sucessmsg') }}</p>
+                                       @else
+
+                                        @foreach (Session::get('sucessmsg')->all() as $message)
+                                                 <p>{{$message}}</p>
+                                        @endforeach
+
+                                       @endif
+                   </div>
                 @endif
 
         <div class="container">

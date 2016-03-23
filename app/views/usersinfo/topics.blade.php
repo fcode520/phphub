@@ -3,6 +3,7 @@
 
 @include('usersinfo.userstopics')
 @include('usersinfo.usersfavorites')
+@include('usersinfo.usersreplies')
         </div>
 
       </div>

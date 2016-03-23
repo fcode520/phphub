@@ -130,6 +130,19 @@ class AccountController extends \BaseController {
         }
     }
     /**
+     * 根据 salt 混淆密码
+     *
+     * @param  string
+     * @param  string
+     * @return string
+     */
+    function compile_password($password, $salt)
+    {
+        $password = md5(md5($password) . $salt);
+
+        return $password;
+    }
+    /**
      * 用户密码验证
      *
      * @param string
@@ -139,7 +152,7 @@ class AccountController extends \BaseController {
      */
     public function check_password($password, $db_password, $salt)
     {
-        $password = compile_password($password, $salt);
+        $password = $this->compile_password($password, $salt);
 
         if ($password == $db_password)
         {
@@ -155,13 +168,17 @@ class AccountController extends \BaseController {
             $oldpwd=Input::get('old_pwd');
             $password=Input::get('password');
             $confirmPassword=Input::get('confirmPassword');
-
+            $retArr=array();
             if(empty($oldpwd) or empty($password) or empty($confirmPassword) or $password!=$confirmPassword){
-                return "密码不能为空";
+                $retArr[0]='error';
+                $retArr[1]="密码不能为空";
+                return $retArr;
             }
-            if(check_password($oldpwd,Auth::user()->password,Auth::user()->getAuthSalt()))
+            if(!$this->check_password($oldpwd,Auth::user()->password,Auth::user()->getAuthSalt()))
             {
-                return "旧密码不正确";
+                $retArr[0]='error';
+                $retArr[1]="旧密码不正确";
+               return $retArr;
             }
 
             $newpwd=$this->compile_password($confirmPassword,Auth::user()->getAuthSalt());
@@ -170,10 +187,15 @@ class AccountController extends \BaseController {
             $user->save();
             Auth::logout();
 
-            return "修改成功";
+            $retArr[0]='sucess';
+            $retArr[1]="密码修改成功";
+            return $retArr;
+
 
         }else{
-            return "请登陆后在进行密码修改操作";
+            $retArr[0]='nologin';
+            $retArr[1]="请登陆后在进行密码修改操作";
+            return $retArr;
         }
     }
 public function changeheader(){

@@ -14,20 +14,6 @@
 
 
 <div class="content row">
-
-        {{Form::open(array('url'=>'/EditResume/uploadimg','method' => 'POST','class'=>' form-group has-feedback','id'=>'uploadimgform'))}}
-            <div class="header">
-                                  @if(isset($user->avatar))
-                                  {{HTML::image($user->present()->gravatar,'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:58px;height:58px;'))}}
-                                  @else
-                                  {{HTML::image(cdn('assets/images/register/addheader.png'),'a picture',array('class'=>'header','id'=>'user-avatar','style'=>'width:58px;height:58px;'))}}
-                                  @endif
-                                  {{Form::file('uploadImg',array('id'=>'uploadImg','onchange'=>'setImagePreview(\'header\',\'uploadImg\')'))}}
-                                  <span id="upload-avatar">添加头像</span>
-                                  </div>
-        {{Form::close()}}
-
-
 {{Form::open(array('url'=>'/account/EditResume','class'=>'editresume','id'=>'renzhengform','novalidate'=>'novalidate'))}}
 
     <div class="input">
@@ -42,11 +28,10 @@
             </span>
             <span class="col-sm-4 col-xs-12">
 <select name="skill" data-bv-field="skill">
-    <option value="" selected="selected">职业技能</option>
+    <option value="" selected="selected">职业</option>
     <?php $skillIndex=1; ?>
     @foreach($skills as $skill)
         <option value="{{$skillIndex++}}">{{$skill}}</option>
-
     @endforeach
 </select>
               {{--{{Form::select('skill',$skills)}}--}}
@@ -76,14 +61,20 @@
                                              '2'=>'保密'],$resume->sex)}}
             </span>
             <span class="col-sm-4 col-xs-12">
-               {{Form::select('skill',[
-                                              ''=>'主要技能',
-                                              '0'=>'C++',
-                                              '1'=>'PHP',
-                                              '2'=>'ios',
-                                              '3'=>'Andriod',
-                                              '4'=>'web前端'
-                                              ],$resume->skill_id)}}
+
+                                              <select name="skill" data-bv-field="skill">
+                                                  <option value="" selected="selected">职业</option>
+                                                  <?php $skillIndex=1; ?>
+                                                  @foreach($skills as $skill)
+                                                  @if($skillIndex==$resume->skill_id)
+                                                  <option value="{{$skillIndex++}}" selected="selected">{{$skill}}</option>
+                                                  @else
+                                                  <option value="{{$skillIndex++}}">{{$skill}}</option>
+                                                  @endif
+
+                                                  @endforeach
+                                              </select>
+
             </span>
             <span class="col-sm-4 col-xs-12">
               {{Form::select('profession',[
