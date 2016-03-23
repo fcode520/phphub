@@ -27,7 +27,7 @@
 {{--{{ $topics->links(); }}--}}
 {{--</div>--}}
 @else
-    <ul CLASS="act">
-<div class="empty-block">{{ lang('Dont have any data Yet') }}~~</div>
+    <ul >
+    <div class="empty-block">{{ lang('Dont have any data Yet') }}~~</div>
     </ul>
 @endif
