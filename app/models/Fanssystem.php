@@ -6,13 +6,15 @@ class Fanssystem extends \Eloquent {
     protected $dates = ['deleted_at'];
 
     public function user(){
-        return $this->belongsTo('users');
+        return $this->belongsToMany('User');
     }
-  public function fromuser(){
-      return $this->belongsTo('users','from_user_id','id');
-  }
+    //我关注
+      public function fromuser(){
+          return $this->belongsTo('User','from_user_id','id');
+    }
+    //关注我
     public function touser(){
-        return $this->belongsTo('users','to_user_id','id');
+            return $this->belongsTo('User','to_user_id','id');
     }
 
    public static function  isFocus($id)
@@ -29,4 +31,5 @@ class Fanssystem extends \Eloquent {
     public static  function findFans($id){
          return Fanssystem::where('from_user_id','=',Auth::id())->where('to_user_id','=',$id)->firstOrFail();
     }
+
 }

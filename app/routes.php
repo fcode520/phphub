@@ -349,7 +349,11 @@ Route::post('/account/changepassword',[
     'uses'=>'AccountController@post_changepwd'
 ]);
 
-
+#---------------------fans-------------------------
+Route::get('/users/{id}/fans',[
+'as'=>'fans',
+    'uses'=>'UsersController@showfans'
+]);
 
 Route::get('job','JobController@index');
 

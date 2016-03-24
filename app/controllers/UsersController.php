@@ -467,5 +467,30 @@ class UsersController extends \BaseController
         }
         return "请登录后再进行关注";
     }
+    public function showfans($id){
+       //$user=Auth::user();
+        $user = User::findOrFail($id);
+        $from= $user->fanssystem_from()->count();
+        $to= $user->fanssystem_to()->count();
+        $bFocus=Fanssystem::isFocus($id);
+        $fans=array();
+        $fans[0]=$from;
+        $fans[1]=$to;
+        $fans[2]=$bFocus;
+        //关注我的
+        $myfans=$user->fanssystem_to()->paginate(1);
+        $fans2=array();
+        foreach($myfans as $myfan){
+            $fans2[]=$myfan->fromuser()->first();;
+        }
+        //我关注的
+//        $myfocus=$user->fanssystem_from()->paginate(1);
+//        $focus=array();
+//        foreach($myfocus as $focu){
+//            $focus[]=$focu->touser()->first();
+//        }
+
+        return View::make('usersinfo.fans',compact('user','fans','myfans','fans2'));
+    }
 
 }

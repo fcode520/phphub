@@ -188,5 +188,15 @@ public static $rules = array(
 
     }
     //获取该用户被关注的数量
-
+    //获取该用户的职位
+    public function GetSkillByUserid(){
+        $resume=Resume::find($this->id);
+        $skill=$resume->skill()->first();
+        return $skill->skill;
+    }
+    //找到所有关注我的用户
+    public function FindMyFans(){
+        $users=$this->fanssystem_to();
+        return $users;
+    }
 }

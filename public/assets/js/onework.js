@@ -241,7 +241,7 @@ $(function(){//顶部头像 滑过后效果等
     var width = t.find('.act').width();
     var line = $('.new-line');
     if(t.length<1)return;
-    if(!!t){
+    if(!!t && line,length > 0){
         line.css({'width':width}).css({'left':t.parent().find('.act').position().left+15});
         t.on('click',function(){
             $(this).addClass('act').siblings().removeClass('act');
@@ -305,4 +305,23 @@ $(function(){
 
         });
     });
+    $(function(){//关注粉丝列表
+        var t = $('.yes-focus');
+        var _this = this;
+        if(t.length < 1)return;
+        t.hover(function(){
+            _this.text = $(this).text();
+            _this.clas = $(this).find('span').attr('class');
+            $(this).find('i').text('取消关注');
+            $(this).addClass('no-focus');
+            $(this).find('span').attr('class','glyphicon glyphicon-minus');
+        },function(){
+            $(this).find('i').text(_this.text);
+            $(this).removeClass('no-focus');
+            $(this).find('span').attr('class',_this.clas);
+        });
+
+    });
+
+
 });

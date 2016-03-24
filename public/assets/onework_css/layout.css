@@ -818,3 +818,27 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 .new-personal-pro-right > p:last-child > span{background: #39ca74;padding: 2px 5px;margin-right: 10px;color: #fff;border-radius: 3px;font-size: 14px;}
 .new-follow{margin-bottom: 20px;}
 .new-follow > a{width: 100%;border-radius: 3px;height: 39px;line-height: 24px;font-size: 14px;}
+
+/****关注粉丝列表***/
+.my-fans{padding-right: 0;margin-top: 10px;padding-left: 40px;border-radius: 3px;}
+.my-fans-head{background: #fff;border-radius: 3px 3px 0 0;}
+.my-fans-head > p{color: #2c3e50;border-bottom: 1px solid #f0f0f0;height: 59px;line-height: 59px;padding-left: 30px;font-size: 14px;margin-bottom: 0;}
+.my-fans-list{background: #fff;background: #fff;overflow: hidden;border-radius:  0 0 3px 3px;}
+.my-fans-list > ul{}
+.my-fans-list > ul > li{height: 104px;overflow: hidden;border-bottom: 1px solid #f0f0f0;position: relative;}
+.fans-img{float: left;height: 100%;}
+.fans-img > img{width: 62px;height: 62px;margin-top: 21px;margin-left: 30px;margin-right: 20px;}
+.fans-info{float: left;}
+.fans-info > p:first-child{font-size: 16px;color: #2c3e50;margin-bottom: 0;margin-top: 30px;line-height: 16px;}
+.fans-info > p:last-child{font-size: 12px;color: #3498db;margin-top: 10px;}
+.my-fans-list > ul > li > a{position: absolute;right: 30px;top: 38px;width: 85px;height: 30px;border: 1px solid #f0f0f0;line-height: 30px;text-align: center;color: #9ba3af;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;display: block;border-radius: 3px;}
+.my-fans-list > ul > li > a > span{margin-right: 5px;}
+.my-fans-list > ul > li > a > i{font-style: normal;}
+.my-fans-list > ul > li > a > span.glyphicon-sort{transform:rotate(90deg);}
+.my-fans-list > ul > li > a:hover{color: #fff;background: #39ca74;}
+.my-fans-list > ul > li > a.no-focus:hover{background: #f94747;}
+
+.change-page{line-height: 60px;padding-right: 25px;}
+.change-page > p{float: right;margin-bottom: 0;}
+.change-page > p > a{margin-right: 5px;font-size: 13px;color: #9ba3af;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;}
+.change-page > p > a:hover{color: #39ca74;}
