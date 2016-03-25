@@ -79,7 +79,7 @@
 
       <!-- Pager -->
       <div class="pull-right" style="padding-right:20px">
-        {{ $replies->appends(Request::except('page'))->links(); }}
+        {{ $replies->appends(Request::except('page'))->links('layouts.partials.pagination'); }}
       </div>
     </div>
   </div>

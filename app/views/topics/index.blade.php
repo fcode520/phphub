@@ -46,7 +46,7 @@
         </div>
         <div class="hot-footer text-right">
                         <!-- Pager -->
-         {{ $topics->appends(Request::except('page', '_pjax'))->links(); }}
+         {{ $topics->appends(Request::except('page', '_pjax'))->links('layouts.partials.pagination'); }}
         </div>
       </div>
 

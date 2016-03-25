@@ -457,18 +457,19 @@ class UsersController extends \BaseController
             if($bFocus){
                 $fans=Fanssystem::findFans($toid);
                 $fans->delete();
-                return "true";
+                return "关注";
             }
             $fans=new Fanssystem();
             $fans->from_user_id=Auth::id();
             $fans->to_user_id=$toid;
             $fans->save();
-            return "true";
+            return "取消关注";
         }
         return "请登录后再进行关注";
     }
     public function showfans($id){
-       //$user=Auth::user();
+
+        $fanssss=Fanssystem::whereIn('from_user_id', array_pluck(Fanssystem::where('from_user_id', 1)->get()->toArray(), 'to_user_id'))->where('to_user_id', 1)->get();
         $user = User::findOrFail($id);
         $from= $user->fanssystem_from()->count();
         $to= $user->fanssystem_to()->count();
@@ -480,9 +481,16 @@ class UsersController extends \BaseController
         //关注我的
         $myfans=$user->fanssystem_to()->paginate(1);
         $fans2=array();
+        $fansState=array();
         foreach($myfans as $myfan){
-            $fans2[]=$myfan->fromuser()->first();;
+            $fans2[]=$myfan->fromuser()->first();
         }
+        //我与粉丝的关系
+        /*
+         * 1 他关注我 我未关注他
+         * 1 他关注我  我也关注他
+         * */
+
         //我关注的
 //        $myfocus=$user->fanssystem_from()->paginate(1);
 //        $focus=array();
@@ -490,7 +498,7 @@ class UsersController extends \BaseController
 //            $focus[]=$focu->touser()->first();
 //        }
 
-        return View::make('usersinfo.fans',compact('user','fans','myfans','fans2'));
+        return View::make('usersinfo.fans',compact('user','fans','myfans','fans2','fansState'));
     }
 
 }

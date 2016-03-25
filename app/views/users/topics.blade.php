@@ -24,7 +24,7 @@
       @if (count($topics))
 	    @include('users.partials.topics')
 	    <div class="pull-right add-padding-vertically">
-	        {{ $topics->links(); }}
+	        {{ $topics->links('layouts.partials.pagination'); }}
 	    </div>
       @else
         <div class="empty-block">{{ lang('Dont have any data Yet') }}~~</div>

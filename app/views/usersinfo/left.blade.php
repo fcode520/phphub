@@ -42,6 +42,7 @@
            </ul>
          </div>
          <p class="new-follow"><a id="Focus" data="{{$user->id}}" class="btn btn-success" href="#">{{$fans[2]?'取消关注':'关注'}}</a></p>
+
          <p><a href="#">联系他</a></p>
        </div>
 </div>

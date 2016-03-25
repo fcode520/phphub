@@ -25,7 +25,7 @@
       @if (count($replies))
 	      @include('users.partials.replies')
 	      <div class="pull-right add-padding-vertically">
-	        {{ $replies->links(); }}
+	        {{ $replies->links('layouts.partials.pagination'); }}
 	      </div>
       @else
 	       <div class="empty-block">{{ lang('Dont have any comment yet') }}~~</div>

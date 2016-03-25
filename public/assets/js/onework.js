@@ -263,8 +263,9 @@ $(function(){//顶部头像 滑过后效果等
     $('.new-personal-name span[data-toggle="tooltip"]').tooltip();
 });
 $(function(){
+
     $('#Focus').on('click',function(){
-        var ToUserID=$(this).attr('data');;
+        var ToUserID=$(this).attr('data');
         var CSRF_TOKEN = Config['token'];
         var posturl='/users/focus' ;
         $.ajax({
@@ -272,20 +273,19 @@ $(function(){
             type: 'POST',
             data: {_token: CSRF_TOKEN,_ntoid:ToUserID},
             dataType: 'html',
-            success: function (data) {
-                if(data=="true"){
-                    $('#PopDialog').successPOP({text:"关注成功"});
-                }else{
-                    $('#PopDialog').errorPOP({text:data});
-
-                }
-
+            success:function(msg){
+                $('#PopDialog').successPOP({text:'操作成功'});
+                $('#Focus')[0].text=msg
+            },
+            error:function(msg){
+                $('#PopDialog').errorPOP({text:'提交失败'});
             }
 
         });
 
 
     })
+
     $('#mysubmit').click(function() {
         $.ajax({
             type:"POST",

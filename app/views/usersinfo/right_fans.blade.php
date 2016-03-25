@@ -15,22 +15,20 @@
             @else
              <div class="fans-info"><p>{{$fan->username}}</p><p>未完善简历</p></div>
             @endif
+            @if(Fanssystem::isFocus($fan->id))
+                  <a href="#" data="{{$fan->id}} class="yes-focus"><span class="glyphicon glyphicon-sort"></span><i>相互关注</i></a>
+                @else
+                  <a href="#"><span data="{{$fan->id}} "class="glyphicon glyphicon-plus"></span><i>关注<i/></a>
+              @endif
 
-            <a href="#"><span class="glyphicon glyphicon-plus"></span>关注</a>
+
           </li>
           @endforeach
         </ul>
 
         <div class="change-page">
           <p>
-          {{ $myfans->links()}}
-            {{--<a href="#">上一页</a>--}}
-            {{--<a href="#">1</a>--}}
-            {{--<a href="#">2</a>--}}
-            {{--<a href="#">3</a>--}}
-            {{--<a href="#">4</a>--}}
-            {{--<a href="#">5</a>--}}
-            {{--<a href="#">下一页</a>--}}
+          {{ $myfans->links('layouts.partials.pagination')}}
           </p>
         </div>
       </div>

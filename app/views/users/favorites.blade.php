@@ -24,7 +24,7 @@
 
       @if (count($topics))
 	      @include('users.partials.topics')
-	      <div class="pull-right add-padding-vertically"> {{ $topics->links(); }} </div>
+	      <div class="pull-right add-padding-vertically"> {{ $topics->links('layouts.partials.pagination'); }} </div>
       @else
         <div class="empty-block">{{ lang('Dont have any favorites yet') }}~~</div>
       @endif

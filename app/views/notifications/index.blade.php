@@ -62,7 +62,7 @@
 
         <div class="panel-footer text-right remove-padding-horizontal pager-footer">
             <!-- Pager -->
-            {{ $notifications->links(); }}
+            {{ $notifications->links('layouts.partials.pagination'); }}
         </div>
 
     @else
