@@ -284,7 +284,7 @@ $(function(){
         });
     })
     $('.rfocusEachother').on('click',function(){
-        alert("yes-focus");
+        //alert("yes-focus");
         var ToUserID=$(this).attr('data');
         var CSRF_TOKEN = Config['token'];
         var posturl='/users/focus' ;
@@ -330,7 +330,7 @@ $(function(){
         });
     })
     $('.rFocus').on('click',function(){
-        alert("rFocus");
+        //alert("rFocus");
         $(this).unbind('mouseenter').unbind('mouseleave');
         var ToUserID=$(this).attr('data');
         var CSRF_TOKEN = Config['token'];
@@ -380,7 +380,7 @@ $(function(){
         });
     })
     $('.rEachother').on('click',function(){
-        alert("rEachothers");
+        //alert("rEachothers");
         var ToUserID=$(this).attr('data');
         var CSRF_TOKEN = Config['token'];
         var posturl='/users/focus' ;
