@@ -368,3 +368,4 @@ Route::post('/users/focus',[
         'uses'=>'UsersController@postfocus'
     ]
 );
+Route::get('NotifyTest','TopicsController@NotifyTest');

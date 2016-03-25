@@ -246,4 +246,15 @@ class TopicsController extends \BaseController implements CreatorListener
 
         return Redirect::route('topics.show', array($topic->id));
     }
+    //测试一下 发送消息到关注我的人
+    public function NotifyTest(){
+        if(!Auth::check()){
+            return 'login?';
+        }
+        $user=Auth::user();
+        $Myfans=Fanssystem::FindMyFans($user->id);
+
+        //App::make('Phphub\Notification\Notifier')->newAppendNotify(Auth::user(), $topic, $append);
+    return 'ok';
+    }
 }

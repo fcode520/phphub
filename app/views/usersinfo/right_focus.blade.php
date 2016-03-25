@@ -12,12 +12,20 @@
         <ul>
         @foreach($fans2 as $fan)
           <li>
-            <div class="fans-img"><img class="img-circle" src="{{ $fan->present()->gravatar(180) }}"></div>
+            <div class="fans-img">
+            <a href="{{route('users.show',$fan->id)}}">
+            <img class="img-circle" src="{{ $fan->present()->gravatar(180) }}">
+            </a>
+            </div>
 
             @if(!is_null($fan->resume()->first()))
-             <div class="fans-info"><p>{{$fan->username}}</p><p>{{$fan->GetSkillByUserid()}}</p></div>
+             <div class="fans-info">
+             <p><a href="{{route('users.show',$fan->id)}}">{{$fan->username}}</a></p>
+             <p>{{$fan->GetSkillByUserid()}}</p></div>
             @else
-             <div class="fans-info"><p>{{$fan->username}}</p><p>未完善简历</p></div>
+             <div class="fans-info">
+             <p><a href="{{route('users.show',$fan->id)}}">{{$fan->username}}</a></p>
+             <p>未完善简历</p></div>
             @endif
             @if(isset($isme))
 

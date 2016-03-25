@@ -827,7 +827,7 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 .my-fans-list > ul{}
 .my-fans-list > ul > li{height: 104px;overflow: hidden;border-bottom: 1px solid #f0f0f0;position: relative;}
 .fans-img{float: left;height: 100%;}
-.fans-img > img{width: 62px;height: 62px;margin-top: 21px;margin-left: 30px;margin-right: 20px;}
+.fans-img > a > img{width: 62px;height: 62px;margin-top: 21px;margin-left: 30px;margin-right: 20px;}
 .fans-info{float: left;}
 .fans-info > p:first-child{font-size: 16px;color: #2c3e50;margin-bottom: 0;margin-top: 30px;line-height: 16px;}
 .fans-info > p:last-child{font-size: 12px;color: #3498db;margin-top: 10px;}

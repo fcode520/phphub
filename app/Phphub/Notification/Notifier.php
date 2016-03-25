@@ -64,6 +64,10 @@ class Notifier
                     null,
                     $append->content);
     }
+    public function newTopicsNotify(){
+
+    }
+
 
     // in case of a user get a lot of the same notification
     public function removeDuplication($users)

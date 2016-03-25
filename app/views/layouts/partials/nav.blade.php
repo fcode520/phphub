@@ -49,7 +49,7 @@
                           <ul>
                                 <li><a href="{{route('topics.create')}}">发布话题</a></li>
                                 <li><a href="{{route('account')}}">个人资料</a></li>
-                                <li><a href="{{route('users.show',$currentUser->id)}}">我的首页</a></li>
+                                <li><a href="{{route('users.show',$currentUser->id)}}">个人主页</a></li>
                                 <li><a href="{{route('ac_notify')}}">消息中心</a></li>
                                 <li><a href="{{route('ac_topices')}}">我的文章</a></li>
                                 <li><a href="{{route('logout') }}">退出</a></li>
