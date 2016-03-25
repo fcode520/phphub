@@ -64,7 +64,14 @@ class Notifier
                     null,
                     $append->content);
     }
-    public function newTopicsNotify(){
+
+    public function newTopicsNotify(User $fromUser,  Topic $topic){
+        // Notify 关注我的人
+        Notification::NewTopicNotify(
+            'NewTopic',
+            $fromUser,
+            $this->GetUsersFoucsMe(),
+            $topic);
 
     }
 
@@ -80,5 +87,16 @@ class Notifier
             }
         }
         return $notYetNotifyUsers;
+    }
+
+    public function GetUsersFoucsMe(){
+     $ids= \Fanssystem::FindMyFans(Auth::id());
+        $user=Auth::user();
+        $myfans=$user->fanssystem_to()->get();
+        $fans2=array();
+        foreach($myfans as $myfan){
+            $fans2[]=$myfan->fromuser()->first();
+        }
+        return$fans2;
     }
 }

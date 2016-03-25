@@ -253,8 +253,8 @@ class TopicsController extends \BaseController implements CreatorListener
         }
         $user=Auth::user();
         $Myfans=Fanssystem::FindMyFans($user->id);
-
-        //App::make('Phphub\Notification\Notifier')->newAppendNotify(Auth::user(), $topic, $append);
+        $topic = Topic::findOrFail(6);
+        App::make('Phphub\Notification\Notifier')->newTopicsNotify($user, $topic);
     return 'ok';
     }
 }

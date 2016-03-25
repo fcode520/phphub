@@ -41,7 +41,8 @@ class NotificationPresenter extends Presenter
             case 'attention_append':
                 $lable = lang('Attented topic has new update:');
                 break;
-
+            case 'NewTopic':
+                $lable ="您关注的人发不了一篇新文章";
             default:
                 break;
         }

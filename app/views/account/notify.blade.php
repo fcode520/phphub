@@ -35,12 +35,16 @@
                                         <div class="b col-sm-8">
                                             @if($notification->type=='new_reply')
                                             {{"评论留言：您的文章 "}}
+                                            @elseif($notification->type=='NewTopic')
+                                            {{"您关注的用户 ："}}{{$notification->fromUser->username}}{{"发布了一篇文章"}}
+                                            <a href="{{ route('topics.show', [$notification->topic->id]) }}"><<{{$notification->topic->title}}>></a>
                                             @else
                                             {{"系统提示：您的文章 "}}
                                             @endif
+                                            @if($notification->type!='NewTopic')
                                             <a href="{{ route('topics.show', [$notification->topic->id]) }}">{{$notification->topic->title}}</a>
-
-                                            {{" 被 "}}<a href="{{route('users.show',[$notification->from_user_id])}}">{{$notification->fromUser->username}}</a>
+                                            {{" 被 "}}
+                                            <a href="{{route('users.show',[$notification->from_user_id])}}">{{$notification->fromUser->username}}</a>
                                             @if($notification->type=='topic_attent')
                                                 {{" 关注"}}
                                                     @elseif($notification->type=='topic_favorite')
@@ -53,6 +57,7 @@
                                                 {{--{{" 回复"}}--}}
                                                     @elseif($notification->type=='topic_mark_wiki')
                                                     {{"加入wiki"}}
+                                                    @elseif($notification->type=='NewTopic')
                                                 <p> {{ $notification->body }}</p>
                                             @else
                                             {{" 回复"}}
@@ -63,10 +68,12 @@
                                                 <p> {{ $notification->body }}</p>
 
                                             @endif
+                                            @endif
                                         </div>
                                         <div class="c col-sm-3">
                                             <p class="timeago">{{ $notification->created_at }}</p>
-                                            {{--@if($notification->type=='new_reply')--}}
+                                            {{--@if($notification->type!='NewTopic')--}}
+
                                             <button> <a href="{{ route('topics.show', [$notification->topic->id]) }}{{{ !empty($notification->reply_id) ? '#reply' . $notification->reply_id : '' }}}" title="回复" class="d">
                                                 {{{ str_limit('回复', '100') }}}
                                             </a>

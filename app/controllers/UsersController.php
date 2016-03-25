@@ -520,8 +520,6 @@ class UsersController extends \BaseController
         $fansState=array();
         foreach($myfocus as $focus){
             $fans2[]=$focus->touser()->first();
-            $tmp=$focus->touser()->first();
-            $var=$tmp->present()->gravatar(180);
         }
         return View::make('usersinfo.focus',compact('user','fans','myfocus','fans2','isme'));
     }

@@ -38,15 +38,15 @@ class Fanssystem extends \Eloquent {
         return false;
     }
 
-    //获取当前用户相互关注的信息
+    //获取执行相互关注的一条记录
     public static  function findFans($id){
         return Fanssystem::where('from_user_id','=',Auth::id())->where('to_user_id','=',$id)->firstOrFail();
 
     }
     public static function FindMyFans($id){
-        //  $fanssss=Fanssystem::whereIn('from_user_id', array_pluck(Fanssystem::where('from_user_id', 1)->get()->toArray(), 'to_user_id'))->where('to_user_id', 1)->get();
-        $fansss=DB::select('Select * FROM `fanssystem` s WHERE s.`from_user_id` IN ( SELECT t.`to_user_id` FROM `fanssystem` t WHERE t.`from_user_id`=$id ) AND s.`to_user_id`=$id');
-        return $fansss;
+          $fanssss=Fanssystem::whereIn('from_user_id', array_pluck(Fanssystem::where('from_user_id', 1)->get()->toArray(), 'to_user_id'))->where('to_user_id', 1)->get();
+//        $fansss=DB::select('Select * FROM `fanssystem` s WHERE s.`from_user_id` IN ( SELECT t.`to_user_id` FROM `fanssystem` t WHERE t.`from_user_id`=$id ) AND s.`to_user_id`=$id');
+        return $fanssss;
     }
     public static function IsFocusHim($id){
        return Fanssystem::where('from_user_id','=',Auth::id())->where('to_user_id','=',$id)->count();

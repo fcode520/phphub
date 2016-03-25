@@ -116,6 +116,37 @@ class Notification extends \Eloquent
         self::pushNotification($data);
     }
 
+    public static function NewTopicNotify($type, User $fromUser, $users,Topic $topic){
+        $nowTimestamp = Carbon::now()->toDateTimeString();
+        $data = [];
+
+        foreach ($users as $toUser) {
+            if ($fromUser->id == $toUser->id) {
+                continue;
+            }
+
+            $data[] = [
+                'from_user_id' => $fromUser->id,
+                'user_id'      => $toUser->id,
+                'topic_id'     => $topic->id,
+                'reply_id'     => 0,
+                'body'         => $topic->body,
+                'type'         => $type,
+                'created_at'   => $nowTimestamp,
+                'updated_at'   => $nowTimestamp
+            ];
+
+            $toUser->increment('notification_count', 1);
+        }
+
+        if (count($data)) {
+            Notification::insert($data);
+        }
+
+        foreach ($data as $value) {
+            self::pushNotification($value);
+        }
+    }
     public static function pushNotification($data)
     {
         $notification = Notification::query()
