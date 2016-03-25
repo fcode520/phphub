@@ -354,6 +354,10 @@ Route::get('/users/{id}/fans',[
 'as'=>'fans',
     'uses'=>'UsersController@showfans'
 ]);
+Route::get('/users/{id}/focus',[
+    'as'=>'ufocus',
+    'uses'=>'UsersController@showfocus'
+]);
 
 Route::get('job','JobController@index');
 

@@ -457,20 +457,20 @@ class UsersController extends \BaseController
             $bFocus=Fanssystem::isFocus($toid);
             if($bFocus){
                 $fans=Fanssystem::findFans($toid);
-                $fans->delete();
+             //   $fans->delete();
                 return "关注";
             }
             $fans=new Fanssystem();
             $fans->from_user_id=Auth::id();
             $fans->to_user_id=$toid;
-            $fans->save();
+           // $fans->save();
             return "取消关注";
         }
         return "请登录后再进行关注";
     }
     public function showfans($id){
-        if(Auth::id()!=$id){
-            return Redirect::to('/')->with('message','不允许查看他人粉丝');
+        if(Auth::id()==$id){
+            $isme=true;
         }
        // $fanssss=Fanssystem::whereIn('from_user_id', array_pluck(Fanssystem::where('from_user_id', 1)->get()->toArray(), 'to_user_id'))->where('to_user_id', 1)->get();
         $user = User::findOrFail($id);
@@ -484,7 +484,6 @@ class UsersController extends \BaseController
         //关注我的
         $myfans=$user->fanssystem_to()->paginate(10);
         $fans2=array();
-        $fansState=array();
         foreach($myfans as $myfan){
             $fans2[]=$myfan->fromuser()->first();
         }
@@ -501,7 +500,30 @@ class UsersController extends \BaseController
 //            $focus[]=$focu->touser()->first();
 //        }
 
-        return View::make('usersinfo.fans',compact('user','fans','myfans','fans2','fansState'));
+        return View::make('usersinfo.fans',compact('user','fans','myfans','fans2','isme'));
+    }
+    public  function  showfocus($id){
+        if(Auth::id()==$id){
+            $isme=true;
+        }
+        $user = User::findOrFail($id);
+        $from= $user->fanssystem_from()->count();
+        $to= $user->fanssystem_to()->count();
+        $bFocus=Fanssystem::isFocus($id);
+        $fans=array();
+        $fans[0]=$from;
+        $fans[1]=$to;
+        $fans[2]=$bFocus;
+
+        $myfocus=$user->fanssystem_from()->paginate(10);
+        $fans2=array();
+        $fansState=array();
+        foreach($myfocus as $focus){
+            $fans2[]=$focus->touser()->first();
+            $tmp=$focus->touser()->first();
+            $var=$tmp->present()->gravatar(180);
+        }
+        return View::make('usersinfo.focus',compact('user','fans','myfocus','fans2','isme'));
     }
 
 }

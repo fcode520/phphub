@@ -27,6 +27,17 @@ class Fanssystem extends \Eloquent {
         }
         return false;
    }
+   public static function  isFocusMe($id)
+    {
+        if(Auth::check()){
+            $count=Fanssystem::where('from_user_id','=',$id)->where('to_user_id','=',Auth::id())->count();
+            if($count){
+                return true;
+            }
+        }
+        return false;
+    }
+
     //获取当前用户相互关注的信息
     public static  function findFans($id){
         return Fanssystem::where('from_user_id','=',Auth::id())->where('to_user_id','=',$id)->firstOrFail();

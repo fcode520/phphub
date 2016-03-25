@@ -1,11 +1,10 @@
 <div class="col-sm-9 my-fans">
       <div class="my-fans-head">
       @if(isset($isme)&&$isme==true)
-      <p>我的粉丝（{{$fans[1]}}）</p>
+      <p>我的关注（{{$fans[0]}}）</p>
       @else
-      <p>他的粉丝（{{$fans[1]}}）</p>
+      <p>他的关注（{{$fans[0]}}）</p>
       @endif
-
       </div>
 
       <div class="my-fans-list">
@@ -20,12 +19,12 @@
             @else
              <div class="fans-info"><p>{{$fan->username}}</p><p>未完善简历</p></div>
             @endif
+            @if(isset($isme))
 
-            @if(isset($isme)&&$isme==true)
-                @if(Fanssystem::isFocus($fan->id))
-                      <a  class="rfocusEachother yes-focus" href="#" data="{{$fan->id}}" ><span class="glyphicon glyphicon-sort"></span><i>相互关注</i></a>
+                @if(Fanssystem::isFocusMe($fan->id))
+                      <a  class="rEachother yes-focus" href="#" data="{{$fan->id}}" ><span class="glyphicon glyphicon-sort"></span><i>相互关注</i></a>
                     @else
-                      <a class="rFocus" href="#" data="{{$fan->id}}"><span class="glyphicon glyphicon-plus"></span><i>关注</i></a>
+                      <a class="rEachother yes-focus" href="#" data="{{$fan->id}}"  class="rFocus yes-focus"><span class="glyphicon glyphicon-ok"></span><i>已关注</i></a>
                 @endif
             @endif
 
@@ -35,7 +34,7 @@
 
         <div class="change-page">
           <p>
-          {{ $myfans->links('layouts.partials.pagination')}}
+          {{ $myfocus->links('layouts.partials.pagination')}}
           </p>
         </div>
       </div>

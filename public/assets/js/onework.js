@@ -283,7 +283,7 @@ $(function(){
 
         });
     })
-    $('.yes-focus').on('click',function(){
+    $('.rfocusEachother').on('click',function(){
         alert("yes-focus");
         var ToUserID=$(this).attr('data');
         var CSRF_TOKEN = Config['token'];
@@ -372,6 +372,30 @@ $(function(){
                     });
                 }
 
+            },
+            error:function(msg){
+                $('#PopDialog').errorPOP({text:'提交失败'});
+            }
+
+        });
+    })
+    $('.rEachother').on('click',function(){
+        alert("rEachothers");
+        var ToUserID=$(this).attr('data');
+        var CSRF_TOKEN = Config['token'];
+        var posturl='/users/focus' ;
+        var _this = $(this);
+        $.ajax({
+            url: posturl,
+            type: 'POST',
+            data: {_token: CSRF_TOKEN,_ntoid:ToUserID},
+            dataType: 'html',
+            success:function(msg){
+
+                $('#PopDialog').successPOP({text:'操作成功'});
+                if(msg=='关注'){
+                    _this.parent().remove();
+                }
             },
             error:function(msg){
                 $('#PopDialog').errorPOP({text:'提交失败'});
