@@ -457,13 +457,13 @@ class UsersController extends \BaseController
             $bFocus=Fanssystem::isFocus($toid);
             if($bFocus){
                 $fans=Fanssystem::findFans($toid);
-             //   $fans->delete();
+                $fans->delete();
                 return "关注";
             }
             $fans=new Fanssystem();
             $fans->from_user_id=Auth::id();
             $fans->to_user_id=$toid;
-           // $fans->save();
+            $fans->save();
             return "取消关注";
         }
         return "请登录后再进行关注";
