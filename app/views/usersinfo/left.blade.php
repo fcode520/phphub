@@ -38,7 +38,8 @@
            <ul>
                <li><span>{{$user->getTopicsups()}}</span><p>赞</p></li>
                <li><span>{{$fans[0]}}</span><p>关注</p></li>
-               <li><span>{{$fans[1]}}</span><p>粉丝</p></li>
+               {{--<li><span>{{$fans[1]}}</span><p>粉丝</p></li>--}}
+               <li><span>{{$fans[1]}}</span><p><a href="{{route('fans',$currentUser->id)}}">粉丝</a></p></li>
            </ul>
          </div>
          <p class="new-follow"><a id="Focus" data="{{$user->id}}" class="btn btn-success" href="#">{{$fans[2]?'取消关注':'关注'}}</a></p>

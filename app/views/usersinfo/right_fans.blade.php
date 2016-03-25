@@ -16,9 +16,9 @@
              <div class="fans-info"><p>{{$fan->username}}</p><p>未完善简历</p></div>
             @endif
             @if(Fanssystem::isFocus($fan->id))
-                  <a href="#" data="{{$fan->id}} class="yes-focus"><span class="glyphicon glyphicon-sort"></span><i>相互关注</i></a>
+                  <a  href="#" data="{{$fan->id}}" class="yes-focus"><span class="glyphicon glyphicon-sort"></span><i>相互关注</i></a>
                 @else
-                  <a href="#"><span data="{{$fan->id}} "class="glyphicon glyphicon-plus"></span><i>关注<i/></a>
+                  <a  class="rFocus" href="#" data="{{$fan->id}}"><span  class="glyphicon glyphicon-plus"></span><i>关注<i/></a>
               @endif
 
 

@@ -282,8 +282,102 @@ $(function(){
             }
 
         });
+    })
+    $('.yes-focus').on('click',function(){
+        alert("yes-focus");
+        var ToUserID=$(this).attr('data');
+        var CSRF_TOKEN = Config['token'];
+        var posturl='/users/focus' ;
+        var _this = $(this);
+        $.ajax({
+            url: posturl,
+            type: 'POST',
+            data: {_token: CSRF_TOKEN,_ntoid:ToUserID},
+            dataType: 'html',
+            success:function(msg){
 
+                $('#PopDialog').successPOP({text:'操作成功'});
+                if(msg=='关注'){
+                    _this.unbind('mouseenter').unbind('mouseleave');
+                    _this.attr('class','rFocus');
+                    _this.find('i').text('关注');
+                    _this.find('span').attr('class','glyphicon glyphicon-plus');
+                }
+                else{
+                    _this.on('hover');
+                    _this.attr('class','yes-focus');
+                    _this.find('i').text('相互关注');
+                    _this.find('span').attr('class','glyphicon glyphicon-sort');
+                    _this.hover(function(){
+                        _this.text = '相互关注';
+                        _this.clas = _this.find('span').attr('class');
+                        _this.find('i').text('取消关注');
+                        _this.addClass('no-focus');
+                        _this.find('span').attr('class','glyphicon glyphicon-minus');
+                    },function(){
+                        if(!_this.attr('class'))return;
+                        _this.find('i').text(_this.text);
+                        _this.removeClass('no-focus');
+                        _this.find('span').attr('class',_this.clas);
+                    });
+                }
 
+            },
+            error:function(msg){
+                $('#PopDialog').errorPOP({text:'提交失败'});
+            }
+
+        });
+    })
+    $('.rFocus').on('click',function(){
+        alert("rFocus");
+        $(this).unbind('mouseenter').unbind('mouseleave');
+        var ToUserID=$(this).attr('data');
+        var CSRF_TOKEN = Config['token'];
+        var posturl='/users/focus' ;
+        var ToUserID=$(this).attr('data');
+        var CSRF_TOKEN = Config['token'];
+        var posturl='/users/focus' ;
+        var _this = $(this);
+        $.ajax({
+            url: posturl,
+            type: 'POST',
+            data: {_token: CSRF_TOKEN,_ntoid:ToUserID},
+            dataType: 'html',
+            success:function(msg){
+
+                $('#PopDialog').successPOP({text:'操作成功'});
+                if(msg=='关注'){
+                    _this.unbind('mouseenter').unbind('mouseleave');
+                    _this.attr('class','');
+                    _this.find('i').text('关注');
+                    _this.find('span').attr('class','glyphicon glyphicon-plus');
+                }
+                else{
+                    _this.on('hover');
+                    _this.attr('class','yes-focus');
+                    _this.find('i').text('相互关注');
+                    _this.find('span').attr('class','glyphicon glyphicon-sort');
+                    _this.hover(function(){
+                        _this.text = '相互关注';
+                        _this.clas = _this.find('span').attr('class');
+                        _this.find('i').text('取消关注');
+                        _this.addClass('no-focus');
+                        _this.find('span').attr('class','glyphicon glyphicon-minus');
+                    },function(){
+                        if(!_this.attr('class'))return;
+                        _this.find('i').text(_this.text);
+                        _this.removeClass('no-focus');
+                        _this.find('span').attr('class',_this.clas);
+                    });
+                }
+
+            },
+            error:function(msg){
+                $('#PopDialog').errorPOP({text:'提交失败'});
+            }
+
+        });
     })
 
     $('#mysubmit').click(function() {
@@ -305,23 +399,22 @@ $(function(){
 
         });
     });
-    $(function(){//关注粉丝列表
-        var t = $('.yes-focus');
-        var _this = this;
-        if(t.length < 1)return;
-        t.hover(function(){
-            _this.text = $(this).text();
-            _this.clas = $(this).find('span').attr('class');
-            $(this).find('i').text('取消关注');
-            $(this).addClass('no-focus');
-            $(this).find('span').attr('class','glyphicon glyphicon-minus');
-        },function(){
-            $(this).find('i').text(_this.text);
-            $(this).removeClass('no-focus');
-            $(this).find('span').attr('class',_this.clas);
-        });
-
+});
+$(function(){//关注粉丝列表
+    var t = $('.yes-focus');
+    var _this = this;
+    if(t.length < 1)return;
+    t.hover(function(){
+        _this.text = $(this).text();
+        _this.clas = $(this).find('span').attr('class');
+        $(this).find('i').text('取消关注');
+        $(this).addClass('no-focus');
+        $(this).find('span').attr('class','glyphicon glyphicon-minus');
+    },function(){
+        if(!$(this).attr('class'))return;
+        $(this).find('i').text(_this.text);
+        $(this).removeClass('no-focus');
+        $(this).find('span').attr('class',_this.clas);
     });
-
 
 });

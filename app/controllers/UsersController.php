@@ -452,6 +452,7 @@ class UsersController extends \BaseController
 
     public function postfocus(){
         if(Auth::check()){
+
             $toid=input::get('_ntoid');
             $bFocus=Fanssystem::isFocus($toid);
             if($bFocus){
@@ -468,8 +469,10 @@ class UsersController extends \BaseController
         return "请登录后再进行关注";
     }
     public function showfans($id){
-
-        $fanssss=Fanssystem::whereIn('from_user_id', array_pluck(Fanssystem::where('from_user_id', 1)->get()->toArray(), 'to_user_id'))->where('to_user_id', 1)->get();
+        if(Auth::id()!=$id){
+            return Redirect::to('/')->with('message','不允许查看他人粉丝');
+        }
+       // $fanssss=Fanssystem::whereIn('from_user_id', array_pluck(Fanssystem::where('from_user_id', 1)->get()->toArray(), 'to_user_id'))->where('to_user_id', 1)->get();
         $user = User::findOrFail($id);
         $from= $user->fanssystem_from()->count();
         $to= $user->fanssystem_to()->count();
@@ -479,7 +482,7 @@ class UsersController extends \BaseController
         $fans[1]=$to;
         $fans[2]=$bFocus;
         //关注我的
-        $myfans=$user->fanssystem_to()->paginate(1);
+        $myfans=$user->fanssystem_to()->paginate(10);
         $fans2=array();
         $fansState=array();
         foreach($myfans as $myfan){
