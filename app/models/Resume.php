@@ -20,7 +20,7 @@ class Resume extends \Eloquent {
 	}
 
     public function skill(){
-        return $this->hasOne('skill','id','skill_id');
+        return $this->hasOne('Skill','id','skill_id');
     }
 
 	//api

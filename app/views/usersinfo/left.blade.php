@@ -29,8 +29,6 @@
                                {{'未填写'}}
                            @endif
             </p>
-
-
             </p>
          </div>
          <div class="clearfix"></div>
