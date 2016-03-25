@@ -32,7 +32,7 @@
                 @if ($topic->reply_count > 0 && count($topic->lastReplyUser))
                     {{ lang('Last Reply by') }}
                     <a href="{{{ URL::route('users.show', [$topic->lastReplyUser->id]) }}}">
-                      {{{ $topic->lastReplyUser->name }}}
+                      {{{ $topic->lastReplyUser->username }}}
                     </a>
                     <span> • </span>
                     <span class="timeago">{{ $topic->updated_at }}</span>
