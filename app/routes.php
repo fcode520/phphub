@@ -287,6 +287,7 @@ Route::get('/vaild_email/{id}', [
     'as' => 'vaild_email',
     'uses' => 'UsersController@vaild_email',
 ]);
+
 Route::post('/vaild_email/{id}', [
     'as' => 'p_vaild_email',
     'uses' => 'UsersController@p_vaild_email',

@@ -372,12 +372,12 @@ class UsersController extends \BaseController
     }
     public function p_vaild_email($id){
         if(!Auth::check()){
-            return false;
+            return "false";
         }
         $user=Auth::user();
 
         if($user->id != $id){
-            return false;
+            return "false";
         }
 
         if($user->activation==null)
@@ -395,9 +395,9 @@ class UsersController extends \BaseController
             Mail::send('emails.auth.activation',$data,function($message)use ($user){
                 $message->to($user->email, $user->username)->subject('欢迎注册成为OneWork会员，请尽快进行账号激活！');
             });
-            return true;
+            return "true";
         }else{
-            return false;
+            return "false";
         }
     }
 

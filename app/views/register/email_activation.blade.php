@@ -16,7 +16,7 @@
         <p class="a" >{{$user->email}}</p>
         <p>点击邮件里的链接即可激活账户</p>
         <p class="b">还没收到确认邮件？尝试到广告邮件，垃圾邮件目录里找找看</p>
-        {{HTML::link('#','再次发送确认邮件',array('class'=>'send_valid_mail','onclick'=>'vaild_mail('.$user->id.')'))}}
+        {{HTML::link('#','再次发送确认邮件',array('class'=>'send_valid_mail','data'=>$user->id))}}
                 <meta name="csrf-token" content="{{ csrf_token() }}" />
       </div>
     <div class="container"></div>

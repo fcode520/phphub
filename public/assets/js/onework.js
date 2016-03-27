@@ -76,27 +76,31 @@ $(function(){//横幅提示信息
         });
     }
 });
-function vaild_mail(id){
-    var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
-    var posturl='vaild_email/'+id ;
+
+//send_valid_mail
+$('.send_valid_mail').on('click',function(){
+    var id=$(this).attr('data');
+    var CSRF_TOKEN = Config['token'];
+    var posturl='/vaild_email/'+id ;
     $.ajax({
         url: posturl,
         type: 'POST',
-        data: {_token: CSRF_TOKEN},
+        data: {_token: CSRF_TOKEN,id:id},
         dataType: 'html',
-        success: function (data) {
-            if(data.status==true){
-                alert("You pressed OK!");
-                console.log(data);
+        success:function(msg){
+            if(msg=="true"){
+                $('#PopDialog').successPOP({text:'操作成功'});
             }else{
-                alert("You pressed Not OK!");
-                console.log(data);
+                $('#PopDialog').errorPOP({text:'提交失败'});
             }
 
+        },
+        error:function(msg){
+            $('#PopDialog').errorPOP({text:'提交异常'});
         }
 
     });
-}
+})
 
 
 function delete_notify(nid){
