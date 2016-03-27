@@ -40,7 +40,7 @@
 
                 <div class="personal-header header_mrr text-right">
                 <!-- 用户头像区域 -->
-                {{var_dump($currentUser)}}
+
                 @if(!is_null($currentUser))
                              <a href="{{route('ac_notify')}}">
                              <img alt="{{{ $currentUser->username }}}"
@@ -64,6 +64,8 @@
                           </ul>
                           <p></p>
                         </div>
+                        @else
+                        {{"用户信息获取失败"}}
                 @endif
                         {{--<a class="break" href="{{ route('notifications.index') }}" class="text-warning">--}}
                       {{--<span class="badge badge-{{ $currentUser->notification_count > 0 ? 'important' : 'fade'; }}" id="notification-count">--}}
