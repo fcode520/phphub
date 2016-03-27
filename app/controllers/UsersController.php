@@ -29,9 +29,7 @@ class UsersController extends \BaseController
     public function show($id)
     {
 
-
-        $resume=Resume::find($id);
-
+        $resume=Resume::where('user_id','=',$id)->first();
         $user = User::findOrFail($id);
         $from= $user->fanssystem_from()->count();
         $to= $user->fanssystem_to()->count();
@@ -44,6 +42,7 @@ class UsersController extends \BaseController
         $topics = Topic::whose($user->id)->recent()->paginate(6);
         $favoritetopics = $user->favoriteTopics()->paginate(6);
         $replies = Reply::whose($user->id)->recent()->limit(6)->get();
+
         if(is_null($resume)){
             return View::make('usersinfo.show', compact('user', 'topics', 'replies','favoritetopics','fans'));
         }
