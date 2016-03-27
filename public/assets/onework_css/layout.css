@@ -845,3 +845,8 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 .change-page > p > a{margin-right: 5px;font-size: 13px;color: #9ba3af;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;}
 .change-page > p > a:hover{color: #39ca74;}
 .change-page .active {color: #39ca74;}
+@media (min-width: 1000px){
+    .container, .navbar-fixed-bottom .container, .navbar-fixed-top .container, .navbar-static-top .container {
+        width: 1210px;
+    }
+}
