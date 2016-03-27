@@ -446,10 +446,15 @@ $(function(){//关注粉丝列表
 $(function () {//点击添加 删除 一个项目经验
     function showtime(){
         var mydate = new Date();
-        var str = "" + mydate.getFullYear() + "-";
-        str += (mydate.getMonth()+1)<10?"0"+mydate.getMonth():mydate.getMonth();
+        var year=mydate.getFullYear();
+        var Month=mydate.getMonth()+1
+        var day=mydate.getDate();
+
+
+        var str = "" + year + "-";
+        str += (Month)<10?"0"+Month:Month;
         str+="-";
-        str += mydate.getDate()<10?"0"+mydate.getDate():mydate.getDate() ;
+        str += day<10?"0"+day:day ;
         return str;
     }
     var t = $('.project-info');
