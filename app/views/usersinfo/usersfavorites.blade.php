@@ -1,4 +1,4 @@
-@if (count($favoritetopics))
+@if (count($favoritetopics)>0)
 
                     <ul>
 @foreach ($favoritetopics as $index => $topic)

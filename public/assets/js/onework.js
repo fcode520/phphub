@@ -238,19 +238,16 @@ $(function(){
 
     })
 });
-
 //新－个人主页
-$(function(){//顶部头像 滑过后效果等
+$(function(){
     var t = $('.new-personal-head > ul > li');
     var width = t.find('.act').width();
     var line = $('.new-line');
-    if(t.length<1)return;
-    if(!!t && line,length > 0){
+    if(!!t && line.length > 0){
         line.css({'width':width}).css({'left':t.parent().find('.act').position().left+15});
         t.on('click',function(){
             $(this).addClass('act').siblings().removeClass('act');
             $('.new-hot-con > ul').eq($(this).index()).addClass('act').siblings().removeClass('act');
-
         });
         t.hover(function(){
             line.stop().animate({'left':$(this).position().left+15},300);
@@ -260,10 +257,10 @@ $(function(){//顶部头像 滑过后效果等
             $('.header-info > ul > .act > a').css({'color':'#63ce83'});
         })
     }
-    var ops = {//可以作为tooltip的参数，具体可以看其api介绍
-        title:"123213",
-        trigger:"hover"
-    }
+    // var ops = {//可以作为tooltip的参数，具体可以看其api介绍
+    //     title:"123213",
+    //     trigger:"hover"
+    // }
     $('.new-personal-name span[data-toggle="tooltip"]').tooltip();
 });
 $(function(){

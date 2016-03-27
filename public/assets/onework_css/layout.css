@@ -794,6 +794,8 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 .new-three-info > ul > li{width: 33.33333%;float: left;border-left: 1px solid #f1f1f1;text-align: center;color: #a9b7b7;font-size: 18px;}
 .new-three-info > ul > li:first-child{border-left: none;}
 .new-three-info > ul > li > p{margin-bottom: 0;font-size: 14px;}
+.new-three-info > ul > li > p > a{color: #a9b7b7;}
+.new-three-info > ul > li > p > a:hover{color: #3498db;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;}
 .new-three-info > ul > li > span{font-size: 24px;}
 .new-personal-info > p{font-size: 14px;}
 .new-personal-info > p:last-child > a{width: 100%;border: 1px solid #f1f1f1; border-radius: 3px;text-align: center;line-height: 37px;color: #a9b7b7;display: block;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;}
