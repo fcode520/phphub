@@ -80,12 +80,17 @@ $(function () {//点击添加 删除 一个项目经验
     var t = $('.project-info');
     var html = $('.one-project');
     var numProject=parseInt($('#projectNum').val());
+    //numProject+=1;
+    var starttime = html.find('input[id="starttime_id"]');
+    var endtime = html.find('input[id="endtime_id"]');
+    var newstartid = starttime.attr('id') + '1';
+    var newendid = endtime.attr('id') + '1';
     $('.addjingyan').on('click', function () {
         numProject+=1;
-        var starttime = html.find('input[id="starttime_id"]');
-        var endtime = html.find('input[id="endtime_id"]');
-        var newstartid = starttime.attr('id') + '1';
-        var newendid = endtime.attr('id') + '1';
+        //var starttime = html.find('input[id="starttime_id"]');
+        //var endtime = html.find('input[id="endtime_id"]');
+        //var newstartid = starttime.attr('id') + '1';
+        //var newendid = endtime.attr('id') + '1';
         starttime.attr('id', newstartid);
         endtime.attr('id', newendid);
         t.append('<div class="one-project">'+html.html()+'</div>');
