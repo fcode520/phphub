@@ -86,6 +86,7 @@ $(function () {//点击添加 删除 一个项目经验
     var newstartid = starttime.attr('id') + '1';
     var newendid = endtime.attr('id') + '1';
 
+
     starttime.val('');
     endtime.val('');
     $('.addjingyan').on('click', function () {

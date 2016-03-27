@@ -63,13 +63,13 @@
                                 </ul>
                             @endif
                         </div>
-                        <p class="d">您的个人信息不会透露给任何第三方，请放心填写。</p>
-                        <div class="c">
-                            <p><label>姓名：</label><span>张磊</span></p>
-                            <p><label>身份证号：</label><span>128291294129</span></p>
-                            <p><label>手机号：</label><span>127123687</span></p>
-                            <p><label>微信号：</label><span>xijois</span></p>
-                        </div>
+                        {{--<p class="d">您的个人信息不会透露给任何第三方，请放心填写。</p>--}}
+                        {{--<div class="c">--}}
+                            {{--<p><label>姓名：</label><span>张磊</span></p>--}}
+                            {{--<p><label>身份证号：</label><span>128291294129</span></p>--}}
+                            {{--<p><label>手机号：</label><span>127123687</span></p>--}}
+                            {{--<p><label>微信号：</label><span>xijois</span></p>--}}
+                        {{--</div>--}}
                     </div>
 @endif
 </div>
