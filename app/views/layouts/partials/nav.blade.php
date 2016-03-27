@@ -40,7 +40,10 @@
 
                 <div class="personal-header header_mrr text-right">
                 <!-- 用户头像区域 -->
-                             <a href="{{route('ac_notify')}}"><img alt="{{{ $currentUser->username }}}" src="{{ $currentUser->present()->gravatar }}" style="width:30px;height:30px;">{{ $currentUser->username }}</a>
+                             <a href="{{route('ac_notify')}}">
+                             <img alt="{{{ $currentUser->username }}}"
+                             src="{{ $currentUser->present()->gravatar }}"
+                             style="width:30px;height:30px;">{{ $currentUser->username }}</a>
                         @if($currentUser->notification_count>0)
                               <i class="red-dot"></i>
                         @endif
