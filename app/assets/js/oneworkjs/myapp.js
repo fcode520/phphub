@@ -76,45 +76,6 @@ $(function(){//操作DOM 个人终极，点击回复
     })
 });
 
-$(function () {//点击添加 删除 一个项目经验
-    var t = $('.project-info');
-    var html = $('.one-project');
-    var numProject=parseInt($('#projectNum').val());
-    //numProject+=1;
-    var starttime = html.find('input[id="starttime_id"]');
-    var endtime = html.find('input[id="endtime_id"]');
-    var newstartid = starttime.attr('id') + '1';
-    var newendid = endtime.attr('id') + '1';
-
-
-    starttime.val('');
-    endtime.val('');
-    $('.addjingyan').on('click', function () {
-        numProject+=1;
-        starttime.attr('id', newstartid);
-        endtime.attr('id', newendid);
-        t.append('<div class="one-project">'+html.html()+'</div>');
-        $('.one-project').last().find('.subtitle').append('<b></b>');
-        $('#projectNum').val(numProject);
-    });
-    if(typeof($.cxCalendar)!="undefined"){
-        $.cxCalendar.defaults.startDate = 1980;
-        $.cxCalendar.defaults.language = {
-            monthList: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
-            weekList: ['日', '一', '二', '三', '四', '五', '六']
-        };
-    }
-
-    $(document).on('click',".timeclass", function(){
-        $(this).cxCalendar().focus();
-
-    });
-
-    $('.project-info').on('click', 'b', function (e) {
-        $(this).parent().parent().remove();
-    });
-});
-
 $(function () {//操作文本域的，发送站内信
     var t = $('.m-message');
     t.focus(function () {

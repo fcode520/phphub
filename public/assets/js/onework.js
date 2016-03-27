@@ -443,3 +443,49 @@ $(function(){//关注粉丝列表
     });
 
 });
+$(function () {//点击添加 删除 一个项目经验
+    function showtime(){
+        var mydate = new Date();
+        var str = "" + mydate.getFullYear() + "-";
+        str += (mydate.getMonth()+1)<10?"0"+mydate.getMonth():mydate.getMonth();
+        str+="-";
+        str += mydate.getDate()<10?"0"+mydate.getDate():mydate.getDate() ;
+        return str;
+    }
+    var t = $('.project-info');
+    if(t.length<1 ) return;
+    var html = $('.one-project');
+
+    var numProject=parseInt($('#projectNum').val());
+    $('.addjingyan').on('click', function () {
+        numProject+=1;
+        var starttime = html.find('input[id="starttime_id"]');
+        var endtime = html.find('input[id="endtime_id"]');
+        var newstartid = starttime.attr('id') + '1';
+        var newendid = endtime.attr('id') + '1';
+        starttime.attr('id', newstartid);
+        endtime.attr('id', newendid);
+        t.append('<div class="one-project">'+html.html()+'</div>');
+        $('.one-project').last().find('.subtitle').append('<b></b>');
+        $('.one-project').last().find('input').val('');
+        $('.one-project').last().find('textarea').val('');
+        $('.one-project').last().find('.timeclass').attr('placeholder',showtime);
+        $('#projectNum').val(numProject);
+    });
+    if(typeof($.cxCalendar)!="undefined"){
+        $.cxCalendar.defaults.startDate = 1980;
+        $.cxCalendar.defaults.language = {
+            monthList: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'],
+            weekList: ['日', '一', '二', '三', '四', '五', '六']
+        };
+    }
+
+    $(document).on('click',".timeclass", function(){
+        $(this).cxCalendar().focus();
+
+    });
+
+    $('.project-info').on('click', 'b', function (e) {
+        $(this).parent().parent().remove();
+    });
+});
