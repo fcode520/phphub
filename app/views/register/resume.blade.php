@@ -165,7 +165,6 @@
                   </div>
                   <div class="form-group has-feedback">
                 {{Form::text('ProjectUrl[ ]',$project[$i]->url,array('placeholder'=>'展示链接 http://'))}}
-                //placeholder="http://"
                   </div>
                   <div class="form-group has-feedback">
                     {{Form::textarea('Projectexperience[ ]',$project[$i]->description,['placeholder'=>'项目经历'])}}
