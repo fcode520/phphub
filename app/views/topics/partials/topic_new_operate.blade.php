@@ -91,7 +91,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">{{ lang('Close') }}</button>
-            <button type="submit" class="btn btn-primary">{{ lang('Submit') }}</button>
+            <button type="submit" class="btn btn-success">{{ lang('Submit') }}</button>
           </div>
 
       {{ Form::close() }}
