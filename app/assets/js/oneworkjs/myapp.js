@@ -85,12 +85,11 @@ $(function () {//点击添加 删除 一个项目经验
     var endtime = html.find('input[id="endtime_id"]');
     var newstartid = starttime.attr('id') + '1';
     var newendid = endtime.attr('id') + '1';
+
+    starttime.val('');
+    endtime.val('');
     $('.addjingyan').on('click', function () {
         numProject+=1;
-        //var starttime = html.find('input[id="starttime_id"]');
-        //var endtime = html.find('input[id="endtime_id"]');
-        //var newstartid = starttime.attr('id') + '1';
-        //var newendid = endtime.attr('id') + '1';
         starttime.attr('id', newstartid);
         endtime.attr('id', newendid);
         t.append('<div class="one-project">'+html.html()+'</div>');
@@ -323,16 +322,17 @@ $(function () {
             //},
             "ProjectUrl[ ]": {
                 validators: {
-                    notEmpty: {
-                        message: '项目连接不能为空'
+                    uri: {
+                        message: '请输入一个有效链接'
                     }
                 }
             },
             "Projectexperience[ ]": {
                 validators: {
-                    notEmpty: {
-                        message: '项目精力不能为空'
+                    notEmpty:{
+                        message:'项目经历不能为空'
                     }
+
                 }
             }
 

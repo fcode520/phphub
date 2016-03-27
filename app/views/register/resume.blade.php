@@ -50,6 +50,7 @@
         <div class="form-group has-feedback">
           {{Form::text('qqnumber',null,array('placeholder'=>'QQ','id'=>'qq'))}}
            {{Form::text('Blog','',array('placeholder'=>'博客/github'))}}
+
       </div>
       @else
     <div class="form-group has-feedback clearfix">
@@ -129,7 +130,7 @@
           </div>
           <div class="form-group has-feedback">
             {{--<input type="text" name="zhanshi" id="" placeholder="展示链接">--}}
-            {{Form::text('ProjectUrl[ ]',null,array('placeholder'=>'展示链接'))}}
+            {{Form::text('ProjectUrl[ ]',null,array('placeholder'=>'展示链接 http://'))}}
           </div>
           <div class="form-group has-feedback">
             {{--<textarea name="xiangmujingli" id="" placeholder="项目经历"></textarea>--}}
@@ -163,7 +164,8 @@
                     </span>
                   </div>
                   <div class="form-group has-feedback">
-                {{Form::text('ProjectUrl[ ]',$project[$i]->url,array('placeholder'=>'展示链接'))}}
+                {{Form::text('ProjectUrl[ ]',$project[$i]->url,array('placeholder'=>'展示链接 http://'))}}
+                //placeholder="http://"
                   </div>
                   <div class="form-group has-feedback">
                     {{Form::textarea('Projectexperience[ ]',$project[$i]->description,['placeholder'=>'项目经历'])}}
