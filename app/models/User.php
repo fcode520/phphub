@@ -191,7 +191,10 @@ public static $rules = array(
     //获取该用户的职位
     public function GetSkillByUserid(){
         $resume=Resume::find($this->id);
-        $skill=$resume->skill()->first();
+        if(is_null($resume)){
+            return "用户尚未添加";
+        }
+        $skill=$resume->Skill()->first();
         return $skill->skill;
     }
     //找到所有关注我的用户
