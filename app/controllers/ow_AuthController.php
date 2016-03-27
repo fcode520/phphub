@@ -110,7 +110,8 @@ class ow_AuthController extends \BaseController
         if(!empty($_GET['activation']) && isset($_GET['activation'])){
             $code=mysql_escape($_GET['activation']);
             $user_count = User::where('activation',$code)->count();
-            $User=User::where('activation', '=', $code)->firstOrFail();
+            $User=User::where('activation', '=', $code)->first();
+
             if(is_null($User))
             {
                 return "激活码错误";
@@ -121,8 +122,7 @@ class ow_AuthController extends \BaseController
                 $count=DB::table('users')->where('activation',$code)->where('status','0')->count();
                 if($count == 1)
                 {
-                    $db_res=1;
-                    //$db_res = DB::table('users')->where('activation',$code)->update(array('status' => 1));
+                    $db_res = DB::table('users')->where('activation',$code)->update(array('status' => 1));
                     if($db_res == 1){
                         Auth::login($User);
                         View::share('currentUser', Auth::user());
