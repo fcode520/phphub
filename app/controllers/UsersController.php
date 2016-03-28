@@ -283,7 +283,7 @@ class UsersController extends \BaseController
                 }
                 $OneProject->url=$ProjectUrl[$i];
                 $OneProject->description=$Projectecperience[$i];
-                $OneProject->praise_count=0;
+
                 $OneProject->save();
             }
             $Resume->save();
@@ -523,9 +523,29 @@ class UsersController extends \BaseController
         return View::make('usersinfo.focus',compact('user','fans','myfocus','fans2','isme'));
     }
 
-    public  function praise_count($id,$pid){
+    public  function praise_count(){
+        $ret=array();
+        $ret[0]=true;
 
-        return "true";
+        if(Auth::check()){
+
+            $pid=input::get('_pid');
+            $bIsVote=ProjectVote::where('user_id','=',Auth::id())->where('project_id','=',$pid)->count();
+            if($bIsVote>0){
+                $ret[0]=false;
+                $ret[1]="已经点赞，请不要重复点赞";
+                return $ret;
+            }
+
+            $pvote=new ProjectVote();
+            $pvote->user_id=Auth::id();
+            $pvote->project_id=$pid;
+            $pvote->save();
+            $ret[1]="点赞成功！";
+            return $ret;
+        }
+        $ret[1]="请登录后再进行点赞！";
+        return $ret;
     }
 
 }

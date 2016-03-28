@@ -369,7 +369,7 @@ Route::post('/users/focus',[
         'uses'=>'UsersController@postfocus'
     ]
 );
-Route::post('/users/{id}/{pid}',[
+Route::post('/users/praise_count',[
         'as'=>'praise_count',
         'uses'=>'UsersController@praise_count'
     ]

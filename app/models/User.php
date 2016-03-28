@@ -83,6 +83,12 @@ public static $rules = array(
     {
         return $this->hasMany('Userproject','user_id','id');
     }
+    //项目点赞
+    public function projectvote(){
+        return $this->hasMany('ProjectVote','user_id','id');
+    }
+
+
 
     //通过gihubid 获取
     public function getByGithubId($id)

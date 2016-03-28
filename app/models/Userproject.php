@@ -16,4 +16,8 @@ class Userproject extends \Eloquent {
 	public function users(){
 		return $this->belongsTo('users');
 	}
+    //项目点赞
+    public function projectvote(){
+        return $this->hasMany('ProjectVote','project_id','id');
+    }
 }

@@ -1,26 +1,3 @@
-{{--<div class="clearfix"></div>--}}
-
-
-    {{--@if (Auth::check())--}}
-    {{--<div class="imageBox" date="{{ $currentUser->present()->gravatar }}">--}}
-    {{--@else--}}
-    {{--<div class="imageBox">--}}
-    {{--@endif--}}
-
-        {{--<div class="thumbBox"></div>--}}
-        {{--<div class="spinner" style="display: none">Loading...</div>--}}
-    {{--</div>--}}
-
-    {{--<div class="action">--}}
-        {{--<input type="file" id="file" style="float:left; width: 250px">--}}
-        {{--<input type="button" id="btnCrop" value="Crop" style="float: right">--}}
-        {{--<input type="button" id="btnZoomIn" value="+" style="float: right">--}}
-        {{--<input type="button" id="btnZoomOut" value="-" style="float: right">--}}
-        {{--<input type="button" class="submitavatar" id="submitavatar" value="提交图片" style="float: left width: 250px">--}}
-    {{--</div>--}}
-    {{--<div class="cropped">--}}
-
-{{--</div>--}}
 <div class="col-sm-9 change-avatar">
 				<div class="change-avatar-left">
 					<p>头像设置</p>
@@ -50,7 +27,10 @@
 					</div>
 					<p>预览</p>
 				</div>
-
-			</div>
-
-
+<div class="spinner_bg">
+		<div class="spinner">
+		    <div class="double-bounce1"></div>
+		    <div class="double-bounce2"></div>
+		</div>
+	</div>
+</div>

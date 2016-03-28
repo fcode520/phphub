@@ -497,21 +497,25 @@ $(function () {//点击添加 删除 一个项目经验
 
 $(function () {
 $('.praise_product').click(function() {
-    var pid=0;
+    var pid=$(this).attr('data');
+    var CSRF_TOKEN = Config['token'];
+    var voteCount=$('.praise_product .voteCount').text();
+    voteCount++;
     $.ajax({
         type:"POST",
         async:false,//异步请求  默认为true,设置为false的话,suncess之后，才会继续执行  下面的js
-        data:$('#changepwd').serialize(),// 你的formid
-        url:"/account/changepassword",
+        data: {_token: CSRF_TOKEN,_pid:pid},
+        url:"/users/praise_count",
         success:function(msg){
-            if(msg[0]=='error'){
+            if(msg[0]){
+                $('#PopDialog').successPOP({text:msg[1]});
+                $('.praise_product .voteCount').text(voteCount);
+            }else{
                 $('#PopDialog').errorPOP({text:msg[1]});
-                return;
             }
-            $('#PopDialog').successPOP({text:msg[1]});
         },
         error:function(msg){
-            $('#PopDialog').errorPOP({text:'密码修改异常，请重新提交！'});
+            $('#PopDialog').errorPOP({text:msg});
         }
 
     });

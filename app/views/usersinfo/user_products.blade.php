@@ -7,7 +7,7 @@
                 <li>
                     <div class="row praise_product" data="{{$product->id}}">
                         <a href="#" class="new-personal-pro-left col-xs-2">
-                            <p>{{$product->praise_count}}</p>
+                            <p class="voteCount">{{$product->projectvote()->count()}}</p>
                             <p>赞</p>
                         </a>
                         <div class="new-personal-pro-right col-xs-10">
