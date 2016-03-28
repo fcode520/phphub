@@ -92,7 +92,7 @@ class AccountController extends \BaseController {
 	}
 	public function topics(){
 
-		$topics = Topic::whose(Auth::user()->id)->recent()->limit(10)->get();
+		$topics = Topic::whose(Auth::user()->id)->recent()->paginate(10);
 		return View::make('account.topics',compact('topics'));
 	}
     public function notify(){
