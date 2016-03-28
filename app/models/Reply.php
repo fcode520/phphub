@@ -3,6 +3,7 @@
 class Reply extends \Eloquent
 {
 
+    use SoftDeletingTrait;
     protected $fillable = [
         'body',
         'user_id',

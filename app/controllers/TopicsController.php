@@ -177,8 +177,14 @@ class TopicsController extends \BaseController implements CreatorListener
     public function destroy($id)
     {
         $topic = Topic::findOrFail($id);
+
         $this->authorOrAdminPermissioinRequire($topic->user_id);
+        //删除文章
         $topic->delete();
+        //该文章相关的通知删除
+        Notification::where('user_id','=',$topic->user_id)->where('topic_id','=',$topic->id)->delete();
+        //该文章的回复删除
+        Reply::where('topic_id','=',$topic->id)->delete();
 
         Flash::success(lang('Operation succeeded.'));
 

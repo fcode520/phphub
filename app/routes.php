@@ -369,4 +369,9 @@ Route::post('/users/focus',[
         'uses'=>'UsersController@postfocus'
     ]
 );
+Route::post('/users/{id}/{pid}',[
+        'as'=>'praise_count',
+        'uses'=>'UsersController@praise_count'
+    ]
+);
 Route::get('NotifyTest','TopicsController@NotifyTest');

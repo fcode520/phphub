@@ -1,7 +1,7 @@
 <?php
 
 use Phphub\Core\CreatorListener;
-//»Ø¸´¿ØÖÆÆ÷
+//ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 class RepliesController extends \BaseController implements CreatorListener
 {
     public function __construct()
@@ -25,7 +25,9 @@ class RepliesController extends \BaseController implements CreatorListener
     public function destroy($id)
     {
         $reply = Reply::findOrFail($id);
+
         $this->authorOrAdminPermissioinRequire($reply->user_id);
+
         $reply->delete();
 
         $reply->topic->decrement('reply_count', 1);

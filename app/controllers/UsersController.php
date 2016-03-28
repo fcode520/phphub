@@ -38,7 +38,6 @@ class UsersController extends \BaseController
         $fans[0]=$from;
         $fans[1]=$to;
         $fans[2]=$bFocus;
-
         $topics = Topic::whose($user->id)->recent()->paginate(6);
         $favoritetopics = $user->favoriteTopics()->paginate(6);
         $replies = Reply::whose($user->id)->recent()->limit(6)->get();
@@ -284,6 +283,7 @@ class UsersController extends \BaseController
                 }
                 $OneProject->url=$ProjectUrl[$i];
                 $OneProject->description=$Projectecperience[$i];
+                $OneProject->praise_count=0;
                 $OneProject->save();
             }
             $Resume->save();
@@ -521,6 +521,11 @@ class UsersController extends \BaseController
             $fans2[]=$focus->touser()->first();
         }
         return View::make('usersinfo.focus',compact('user','fans','myfocus','fans2','isme'));
+    }
+
+    public  function praise_count($id,$pid){
+
+        return "true";
     }
 
 }

@@ -494,3 +494,26 @@ $(function () {//点击添加 删除 一个项目经验
         $(this).parent().parent().remove();
     });
 });
+
+$(function () {
+$('.praise_product').click(function() {
+    var pid=0;
+    $.ajax({
+        type:"POST",
+        async:false,//异步请求  默认为true,设置为false的话,suncess之后，才会继续执行  下面的js
+        data:$('#changepwd').serialize(),// 你的formid
+        url:"/account/changepassword",
+        success:function(msg){
+            if(msg[0]=='error'){
+                $('#PopDialog').errorPOP({text:msg[1]});
+                return;
+            }
+            $('#PopDialog').successPOP({text:msg[1]});
+        },
+        error:function(msg){
+            $('#PopDialog').errorPOP({text:'密码修改异常，请重新提交！'});
+        }
+
+    });
+});
+});

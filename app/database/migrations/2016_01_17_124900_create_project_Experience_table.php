@@ -22,6 +22,7 @@ class CreateProjectExperienceTable extends Migration {
 			$table->string('end_time');
 			$table->string('url');
 			$table->text('description');
+			$table->integer('praise_count')->defaulte(0);
 			$table->timestamps();
 		});
 	}
