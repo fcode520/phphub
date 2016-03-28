@@ -282,8 +282,24 @@
                     if ($(this).attr('data-method') == 'post') {
                         $(this).find("form").submit();
                     }
-                    if ($(this).attr('data-method') == 'delete' && confirm("Are you sure want to proceed?")) {
-                        $(this).find("form").submit();
+                    if ($(this).attr('data-method') == 'delete')
+                    {
+                    var myform=$(this).find("form");
+                  swal({
+                            title: "您确定要删除吗？",
+                            text: "您确定要删除这篇文章？",
+                            type: "warning",
+                            showCancelButton: true,
+                            closeOnConfirm: false,
+                            confirmButtonText: "是的，我要删除",
+                            confirmButtonColor: "#ec6c62"},
+                        function(){
+                            myform.submit();
+                        })
+
+
+                        //
+
                     }
                 });
            // attr('onclick',' if (confirm("Are you sure want to proceed?")) { $(this).find("form").submit(); };');

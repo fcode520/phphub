@@ -20,8 +20,8 @@
                 {{--<li class="{{ (Request::is('topics*') ||Request::is('/') || Request::is('account/*') ? ' act' : '')}}"><a id="" href="{{ route('topics.index') }}" >{{ lang('Topics') }}</a></li>--}}
                 <li class="{{ (Request::is('nodes/6') ||Request::is('nodes/8') ||Request::is('nodes/7') ||Request::is('wiki*') || Request::is('about*') ? ' ' : 'act')}}"><a id="" href="{{ route('topics.index') }}" >{{ lang('Topics') }}</a></li>
                 <li class="{{ (Request::is('nodes/6') ? ' act' : '') }}"><a id="" href="{{ route('nodes.show', 6) }}" >{{ lang('Jobs') }}</a></li>
-                <li class="{{ (Request::is('nodes/8') ? ' act' : '') }}"><a id="" href="{{ route('nodes.show', 8) }} ">{{ lang('Cooperate') }}</a></li>
-                <li class="{{ (Request::is('nodes/7') ? ' act' : '') }}"><a href="{{ route('nodes.show', 7) }}">{{ lang('Team') }}</a></li>
+{{--                <li class="{{ (Request::is('nodes/8') ? ' act' : '') }}"><a id="" href="{{ route('nodes.show', 8) }} ">{{ lang('Cooperate') }}</a></li>--}}
+                {{--<li class="{{ (Request::is('nodes/7') ? ' act' : '') }}"><a href="{{ route('nodes.show', 7) }}">{{ lang('Team') }}</a></li>--}}
                 <li class="{{ (Request::is('wiki*') ? ' act' : '') }}"><a href="{{ route('wiki') }}">{{ lang('Wiki') }}</a></li>
                 <li class="{{ (Request::is('about*') ? ' act' : '') }}"><a href="{{ route('about') }}">{{ lang('About') }}</a></li>
                 <i></i>
@@ -55,11 +55,13 @@
                         <i class="tiangle"></i>
                         <div class="header-info">
                           <ul>
+                                <li><a href="{{route('ac_notify')}}">消息中心</a></li>
                                 <li><a href="{{route('topics.create')}}">发布话题</a></li>
+                                <li><a href="{{route('ac_topices')}}">我的文章</a></li>
                                 <li><a href="{{route('account')}}">个人资料</a></li>
                                 <li><a href="{{route('users.show',$currentUser->id)}}">个人主页</a></li>
-                                <li><a href="{{route('ac_notify')}}">消息中心</a></li>
-                                <li><a href="{{route('ac_topices')}}">我的文章</a></li>
+                                <li><a href="{{route('changeheader')}}">修改头像</a></li>
+                                <li><a href="{{route('changepassword')}}">修改密码</a></li>
                                 <li><a href="{{route('logout') }}">退出</a></li>
                           </ul>
                           <p></p>

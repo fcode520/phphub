@@ -40,6 +40,7 @@ var paths = {
             'app/assets/js/oneworkjs/myapp.js',
             'app/assets/js/oneworkjs/Register_ajax.js',
             'app/assets/js/oneworkjs/form_ajax.js',
+            'app/assets/js/oneworkjs/sweetalert.min.js',
         ],
         styles: [
             'app/assets/css/bootstrap.min.css',
@@ -48,6 +49,7 @@ var paths = {
             'app/assets/css/dist/markdown.css',
             'app/assets/css/dist/nprogress.css',
             'app/assets/css/dist/prism.css',
+            'app/assets/css/dist/sweetalert.css',
             'app/assets/css/packet/cxcalendar/jquery.cxcalendar.css',
         ]
     }

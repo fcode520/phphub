@@ -17,12 +17,12 @@
                                          </span>
                                          {{--<span> • </span>--}}
                                          &nbsp;&nbsp;&nbsp;
-                                         {{ $topic->reply_count }} {{ lang('Replies') }}
+                                         {{  $topic->view_count }} {{ "浏览" }}
                                          <span> • </span>
                                          <span class="timeago">{{ $topic->created_at }}</span>
                                       </div>
                                      {{--<a class="del-article new-del-article" href="#" title="删除"></a>--}}
-                                     <span class="hot-comment new-hot-comment">{{$topic->view_count}}</span>
+                                     <span class="hot-comment new-hot-comment">{{$topic->reply_count}}</span>
                                    </div>
                      </li>
 @endforeach
