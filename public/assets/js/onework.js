@@ -203,6 +203,7 @@ $(function(){
 $(function(){
     $('.save-avatar').on('click',function(){
 
+
         var img=$('.cropped >img');
         var imgdata='';
         if(img.length<=1) {
@@ -212,7 +213,7 @@ $(function(){
         imgdata=img.attr('src');
         var CSRF_TOKEN = Config['token'];
         var posturl='/account/changeheader' ;
-
+        $('#updateheader').show();
         $.ajax({
             url: posturl,
             type: 'POST',
@@ -221,10 +222,12 @@ $(function(){
             success: function (data) {
                 if(data=="false"){
                     //alert("You pressed faild!");
-                    $('#PopDialog').errorPOP();
+                    $('#updateheader').hide();
+                    swal("抱歉!", "头像上传成功", "error");
                 }else{
                     //alert("You pressed ok!");
-                    $('#PopDialog').successPOP();
+                    $('#updateheader').hide();
+                    swal("Good!", "头像上传成功", "success");
                     //window.location.reload(true)
                     //$('#PopDialog').errorPOP();
                     var name=$('.personal-header >a').text();

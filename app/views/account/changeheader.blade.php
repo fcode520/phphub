@@ -9,11 +9,10 @@
 @stop
 
 @section('content')
+
 @include('account.partials.leftnav')
 
 @include('account.partials.avatar')
-
-
 
 @stop
 
@@ -54,5 +53,14 @@
     	        })
     	    });
     	</script>
+	<div id="updateheader" style="display:none;">
+	{{--<div id="updateheader" >--}}
+		<div class="spinner_bg">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div>
+	</div>
 
 @stop

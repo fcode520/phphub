@@ -27,10 +27,4 @@
 					</div>
 					<p>预览</p>
 				</div>
-<div class="spinner_bg">
-		<div class="spinner">
-		    <div class="double-bounce1"></div>
-		    <div class="double-bounce2"></div>
-		</div>
-	</div>
-</div>
+
