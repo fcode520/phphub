@@ -523,6 +523,7 @@ button:hover{background-color:#4dbe92;}
 .personal-infomation > .b > p{overflow: hidden;}
 .personal-infomation > .b > p > label{font-size: 14px;height: 100%;float: left;}
 .personal-infomation > .b > p > span{display: block;margin-top: 3px;width: auto;margin-left: 70px;}
+.personal-infomation > .b > ul >li{margin-top:30px;}
 .personal-infomation > .c > p > label{font-size: 14px;}
 .personal-infomation > .c {margin-bottom: 40px;}
 

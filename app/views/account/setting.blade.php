@@ -9,7 +9,7 @@
                     <div class="personal-infomation">
                         <div class="text-left">
                             <img class="" alt="{{$resume->user->username}}"
-                                 src="{{ $resume->user->present()->gravatar }}"  style="width:38px;height:38px;"/>
+                                 src="{{ $resume->user->present()->gravatar }}"  style="width:100px;height:100px;"/>
 
                         </div>
                         <di class="a row">
