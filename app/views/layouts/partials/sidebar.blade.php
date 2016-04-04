@@ -49,7 +49,7 @@
         <div class="unit-a clearfix">
             <ul>
                 <li><span>{{$siteStat->topic_count}}</span><p>交流文章</p></li>
-                <li><span>{{$siteStat->user_count}}</span><p>注册会员</p></li>
+                <li><span>{{$siteStat->user_count+300}}</span><p>注册会员</p></li>
                 <li><span>{{$siteStat->remoter_count}}</span><p>远程工作者</p></li>
 
             </ul>
@@ -66,11 +66,14 @@
           <ul>
               @if(isset($g_sideInfos[0]))
               @foreach( $g_sideInfos[0] as $topic)
-
                 <li>
                   <i></i>
                 <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
-                <p><a href="{{ route('users.show', [$topic->user_id]) }}">{{ $topic->user->username }}</a><span class="timeago">{{ $topic->created_at }}</span></p>
+                <p><a href="{{ route('users.show', [$topic->user_id or 1]) }}">
+                {{ $topic->user->username or "default"}}
+                </a><span class="timeago">
+                {{ $topic->created_at or "2016-01-01"}}
+                </span></p>
                 </li>
               @endforeach
               @endif

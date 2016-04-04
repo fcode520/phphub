@@ -181,7 +181,10 @@ class Topic extends \Eloquent
 
     public function scopePinAndRecentReply($query)
     {
-        return $query->whereRaw("(`created_at` > '".Carbon::today()->subMonth()->toDateString()."' or (`order` > 0) )") 
+//        return $query->whereRaw("(`created_at` > '".Carbon::today()->subMonth()->toDateString()."' or (`order` > 0) )")
+//                     ->orderBy('order', 'desc')
+//                     ->orderBy('updated_at', 'desc');
+        return $query->whereRaw("(`created_at` > '".Carbon::today()->subYear()->toDateString()."' or (`order` > 0) )")
                      ->orderBy('order', 'desc')
                      ->orderBy('updated_at', 'desc');
     }

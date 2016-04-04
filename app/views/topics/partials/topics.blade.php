@@ -6,8 +6,9 @@
     @foreach ($topics as $topic)
      <li>
                   <div class="photo">
-
-                   <img class="" alt="{{{ $topic->user->username }}}" src="{{ $topic->user->present()->gravatar }}"  style="width:48px;height:48px;"/>
+                   <img class="" alt="{{{ $topic->user->username }}}"
+                   src="{{ $topic->user->present()->gravatar }}"
+                    style="width:48px;height:48px;"/>
                     </div>
                    <div class="hot-news">
                      <h2 class="hot-news-title">
@@ -16,7 +17,7 @@
                       </h2>
 
                      <div class="hot-news-info">
-                        {{--<a href="{{ route('nodes.show', [$topic->node->id]) }}" title="{{{ $topic->node->name }}}"></a>--}}
+                        <a href="{{ route('nodes.show', [$topic->node->id]) }}" title="{{{ $topic->node->name }}}"></a>
                         <span> {{{ $topic->node->name }}}</span>
 
 
