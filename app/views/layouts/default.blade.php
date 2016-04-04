@@ -36,7 +36,9 @@ OneWork & 远程工作者社区
 
 	</head>
 	<body id="body">
+
 		<div id="wrap">
+
 			@include('layouts.partials.nav')
 			{{--激活提示框--}}
 			@if(isset($currentUser))
@@ -94,8 +96,6 @@ OneWork & 远程工作者社区
 		<script src="{{ cdn('assets/js/onework.js')}}"></script>
 		<script src="{{ cdn('assets/js/popDialog.js')}}"></script>
 	    @yield('scripts')
-
-    <div id="PopDialog" style="display:none;"></div>
 
 	</body>
 </html>
