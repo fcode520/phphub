@@ -41,9 +41,9 @@
             <span class="col-sm-4 col-xs-12">
               {{Form::select('profession',[
                                               ''=>'远程类型',
-                                              '1'=>'全职远程工作者',
-                                              '2'=>'兼职远程工作者',
-                                              '3'=>'非远程工作者'])}}
+                                              '0'=>'全职远程工作者',
+                                              '1'=>'兼职远程工作者',
+                                              '2'=>'非远程工作者'])}}
             </span>
          </div>
 
@@ -80,9 +80,9 @@
             <span class="col-sm-4 col-xs-12">
               {{Form::select('profession',[
                                               ''=>'远程类型',
-                                              '1'=>'全职远程工作者',
-                                              '2'=>'兼职远程工作者',
-                                              '3'=>'非远程工作者'],$resume->remote_status)}}
+                                              '0'=>'全职远程工作者',
+                                              '1'=>'兼职远程工作者',
+                                              '2'=>'非远程工作者'],$resume->remote_status)}}
             </span>
     </div>
       <div class="form-group has-feedback">
