@@ -134,7 +134,7 @@
           </div>
           <div class="form-group has-feedback">
             {{--<textarea name="xiangmujingli" id="" placeholder="项目经历"></textarea>--}}
-            {{Form::textarea('Projectexperience[ ]',null,['placeholder'=>'项目经历'])}}
+            {{Form::textarea('Projectexperience[ ]',null,['placeholder'=>'项目描述'])}}
           </div>
         </div>
 
