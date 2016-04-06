@@ -67,7 +67,7 @@ margin-left: 10px;
 
 
 /* footer部分 */
-.footer{width:100%;background-color:#fff;padding:25px 0;}
+.footer{width:100%;background-color:#fff;padding:25px 0; margin-top:50px;}
 .footer .subtitle span{border:1px solid #ccc;border-radius:4px;padding:1px 6px;color:#666;}
 .footer ul{padding-left:0;}
 .footer .about{padding:10px 0;}
@@ -124,7 +124,8 @@ label.error{font-size:12px;color:#f30;font-weight:normal;margin:0!important;}
 .attestation button:hover{background-color:#4dbe92;}
 #resumesubmit {display:block;width:180px;text-align:center;height:50px;line-height:50px;background-color:#63ce83;color:#fff;border-radius:6px;margin-top:30px;border:none;}
 #resumesubmit :hover{background-color:#4dbe92;}
-.footer{margin-top:200px;}
+
+
 @media screen and (max-width:767px){
 	.attestation{margin:20px;}
 	.attestation .title{padding:0 20px;}

@@ -57,30 +57,15 @@
         <a href="{{ isset($node) ? URL::route('topics.create', ['node_id' => $node->id]) : URL::route('topics.create') ; }}" class="unit-b btn btn-success">+发布新话题</a>
         <div class="unit-c">
           <ul>
-            <li class="act"><span>热门文章</span></li><li><span>最新招聘</span></li><li><span>外包项目</span></li>
 
+              <li class="act"><span>最新招聘</span></li>
+              <li><span>外包项目</span></li>
+              <li><span>热门文章</span></li>
           </ul>
           <div class="line"></div>
         </div>
-        <div class="unit-d act">
-          <ul>
-              @if(isset($g_sideInfos[0]))
-              @foreach( $g_sideInfos[0] as $topic)
-                <li>
-                  <i></i>
-                <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
-                <p><a href="{{ route('users.show', [$topic->user_id or 1]) }}">
-                {{ $topic->user->username or "default"}}
-                </a><span class="timeago">
-                {{ $topic->created_at or "2016-01-01"}}
-                </span></p>
-                </li>
-              @endforeach
-              @endif
 
-          </ul>
-        </div>
-        <div class="unit-d">
+        <div class="unit-d act">
           <ul>
               @if(isset($g_sideInfos[1]))
                   @foreach( $g_sideInfos[1] as $topic)
@@ -108,6 +93,24 @@
             @endforeach
             @endif
         </div>
+          <div class="unit-d">
+              <ul>
+                  @if(isset($g_sideInfos[0]))
+                      @foreach( $g_sideInfos[0] as $topic)
+                          <li>
+                              <i></i>
+                              <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
+                              <p><a href="{{ route('users.show', [$topic->user_id or 1]) }}">
+                                      {{ $topic->user->username or "default"}}
+                                  </a><span class="timeago">
+                {{ $topic->created_at or "2016-01-01"}}
+                </span></p>
+                          </li>
+                      @endforeach
+                  @endif
+
+              </ul>
+          </div>
       </div>
     </div>
 
