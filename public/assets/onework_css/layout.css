@@ -271,7 +271,7 @@ button:hover{background-color:#4dbe92;}
 .exchange-hot{background: #fff;border: 1px solid #f0f5f6;margin-top: 20px;}
 .hot-title{color: #222525;font-size: 12px;height: 35px;line-height: 35px;padding-left: 15px;background: #f7f8f8;margin-bottom: 0px;margin-top: 0px;}
 .photo{float: left;margin-right: 5px;}
-.photo > img{border: 1px solid #f0f0f0;margin-left: 15px;margin-top: 15px;border-radius: 4px;}
+.photo > a>img{border: 1px solid #f0f0f0;margin-left: 15px;margin-top: 15px;border-radius: 4px;}
 .hot-con > ul{}
 .hot-con > ul > li{border-bottom: 1px solid #f0f0f0;min-height: 78px;width: 100%;height: auto;overflow: hidden;position: relative;}
 .hot-news{float: left;}
@@ -287,7 +287,8 @@ button:hover{background-color:#4dbe92;}
 .hot-news-info > span:last-child{color: #9ca2a2;margin-left: 5px;}
 .hot-comment{line-height: 22px;text-align: center;font-size: 12px;color: #fff;background-color: #e8e8e8;float: right;border-radius: 5px;top: 24px;right: 25px;display: inline-block;position: absolute;padding: 0 5px;}
 .more-exchange{text-align: center;background: #fff;border: 1px solid #f0f5f6;height: 40px;line-height: 40px;width: 100%;font-size: 12px;color: #999;display: block;margin-top: 20px;margin-bottom: 20px;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;}
-
+.topic_node >span {color: #666;background: #f0f0f0;padding: 2px 5px;border-radius: 4px;}
+.topic_node >span:hover {color: #fff;background: #63ce83;padding: 2px 5px;border-radius: 4px;}
 .more-exchange:hover{color: #63ce83;}
 
 .exchange-side{margin-top: 10px;border: 1px solid #f0f0f0;padding: 0;}

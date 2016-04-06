@@ -43,6 +43,9 @@
          </div>
          <p class="new-follow"><a id="Focus" data="{{$user->id}}" class="btn btn-success" href="#">{{$fans[2]?'取消关注':'关注'}}</a></p>
 
-         <p><a href="#">联系他</a></p>
+         {{--<p><a href="#">联系他</a></p>--}}
+           @if(isset($resume))
+               <p> <a href="tencent://message/?uin={{$resume->qq}}&amp;Site=im.qq.com&amp;Menu=yes">联系他</a></p>
+           @endif
        </div>
 </div>

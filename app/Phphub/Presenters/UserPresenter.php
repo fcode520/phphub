@@ -17,12 +17,20 @@ class UserPresenter extends Presenter
             //Using Qiniu image processing service.
             return cdn('uploads/avatars/'.$this->avatar)."?imageView2/1/w/{$size}/h/{$size}";
         }
+        if($this->avatar=='def_avatars.png')
+        {
+            $randnum=rand(0,10);
+            $randnum = sprintf("%02d", $randnum);
+            $strAvatar="Default/".$randnum."_avatar_max.jpg";
+//            $userid=$this->id;
+            $User= User::findOrFail($this->id);
+            $User->avatar=$strAvatar;
+            $User->save();
+            return cdn('uploads/avatars/'.$strAvatar)."?imageView2/1/w/{$size}/h/{$size}";
 
+        }
          return cdn('uploads/avatars/'.$this->avatar)."?imageView2/1/w/{$size}/h/{$size}";
-//        $github_id = $this->github_id;
-//        $domainNumber = rand(0, 3);
-//
-//        return "https://avatars{$domainNumber}.githubusercontent.com/u/{$github_id}?v=2&s={$size}";
+
     }
 
     public function loginQR($size = 80)
