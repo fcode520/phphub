@@ -6,7 +6,13 @@
            <p>
             <p><span data-toggle="tooltip" data-placement="top" title="所在地" class="glyphicon glyphicon-map-marker"></span>
                 @if(isset($resume))
-               {{substr($resume->position,0,strpos($resume->position,'-'))}}
+                    @if($resume->position=="")
+                         {{'地球'}}
+                        @else
+                         {{substr($resume->position,0,strpos($resume->position,'-'))}}
+                        @endif
+
+
                @else
                {{'地球'}}
                @endif
