@@ -36,16 +36,26 @@
            <ul>
                <li><span>{{$user->getTopicsups()}}</span><p>赞</p></li>
                {{--<li><span>{{$fans[0]}}</span><p>关注</p></li>--}}
-               <li><span>{{$fans[0]}}</span><p><a href="{{route('ufocus',$user->id)}}">关注</a></p></li>
+                <li><span>{{$fans[0]}}</span><p><a href="{{route('ufocus',$user->id)}}">关注</a></p></li>
+
                {{--<li><span>{{$fans[1]}}</span><p>粉丝</p></li>--}}
                <li><span>{{$fans[1]}}</span><p><a href="{{route('fans',$user->id)}}">粉丝</a></p></li>
            </ul>
          </div>
-         <p class="new-follow"><a id="Focus" data="{{$user->id}}" class="btn btn-success" href="#">{{$fans[2]?'取消关注':'关注'}}</a></p>
+                        @if(isset($currentUser))
+                        @if($currentUser->id == $user->id)
+                                <div class="new-follow"><a  class="btn btn-success" href="{{route('editsetting')}}">{{"修改资料"}}</a></div>
+                        @else
+                           <div class="new-follow"><a id="Focus" data="{{$user->id}}" class="btn btn-success" href="#">{{$fans[2]?'取消关注':'关注'}}</a></div>
+                        @endif
+                        @else
+                        <div class="new-follow" data-toggle="tooltip" data-placement="top" title="请登陆后进行关注！"><a id="Focus" data="{{$user->id}}" class="btn btn-success disabled" href="#">{{$fans[2]?'取消关注':'关注'}}</a></div>
+                        @endif
+
 
          {{--<p><a href="#">联系他</a></p>--}}
            @if(isset($resume))
-               <p> <a href="tencent://message/?uin={{$resume->qq}}&amp;Site=im.qq.com&amp;Menu=yes">联系他</a></p>
+               <div> <a href="tencent://message/?uin={{$resume->qq}}&amp;Site=im.qq.com&amp;Menu=yes">联系他</a></div>
            @endif
        </div>
 </div>
