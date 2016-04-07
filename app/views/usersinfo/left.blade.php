@@ -17,6 +17,7 @@
               {{'神秘的职位'}}
                @endif
             </span></p>
+
             <p>
             <span data-toggle="tooltip" data-placement="top" title="从业状态" class="computer"></span>
                    @if(isset($resume))
@@ -29,6 +30,14 @@
                                {{'未填写'}}
                            @endif
             </p>
+             <p>
+                 <span data-toggle="tooltip" data-placement="top" title="工作经验" class="computer"></span>
+                 @if(isset($resume))
+                    {{$resume->work_experience}}年
+                     @else
+                     0年
+                     @endif
+             </p>
             </p>
          </div>
          <div class="clearfix"></div>
@@ -55,7 +64,9 @@
 
          {{--<p><a href="#">联系他</a></p>--}}
            @if(isset($resume))
-               <div> <a href="tencent://message/?uin={{$resume->qq}}&amp;Site=im.qq.com&amp;Menu=yes">联系他</a></div>
+               <p><a  href="tencent://message/?uin={{$resume->qq}}&amp;Site=im.qq.com&amp;Menu=yes">联系他</a>
+                </p>
+
            @endif
        </div>
 </div>
