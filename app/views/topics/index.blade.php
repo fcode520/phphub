@@ -28,7 +28,7 @@
           <li class={{(Request::is('topics*') ||Request::is('/')? ' act' : '') }}><a href="{{ route('topics.index') }}">全部</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
           <li class={{(Request::is('nodes/5') ? ' act' : '') }}><a href="{{ route('nodes.show', 5)}}">寻找项目</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
           <li class={{(Request::is('nodes/6') ? ' act' : '') }}><a href="{{ route('nodes.show', 6)}}">寻求工作</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li class={{(Request::is('nodes/7') ? ' act' : '') }}><a href="{{ route('nodes.show', 7)}}">创建远程团队</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
+          <li class={{(Request::is('nodes/7') ? ' act' : '') }}><a href="{{ route('nodes.show', 7)}}">远程团队</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
           <li class={{(Request::is('nodes/8') ? ' act' : '') }}><a href="{{ route('nodes.show', 8)}}">提升技能</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
           <li class={{(Request::is('nodes/9') ? ' act' : '') }}><a href="{{ route('nodes.show', 9)}}">每周必读</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
           <li class={{(Request::is('nodes/13') ? ' act' : '') }}><a href="{{ route('nodes.show', 13)}}">我要吐槽</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>

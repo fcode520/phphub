@@ -13,8 +13,28 @@
 
                         </div>
                         <di class="a row">
-                            <p><span class="col-sm-6"><label>邮箱</label>：{{$resume->user->email}}</span class="col-sm-6"><span class="col-sm-6"><label>性别</label>：男</span></p>
-                            <p><span class="col-sm-6"><label>所在地</label>：{{$resume->position}}</span><span class="col-sm-6"><label>是否远程</label>：{{$resume->remote_status==2?"否":"是"}}</span></p>
+
+                            <p><span class="col-sm-6"><label>真实姓名</label>：{{$resume->real_name}}</span>
+                                <span class="col-sm-6"><label>性别</label>：
+                                @if($resume->sex==0)
+                                {{"男"}}
+                                @elseif($resume->sex==1)
+                                {{"女"}}
+                                @else
+                                {{"保密"}}
+                                @endif
+
+                                </span>
+                            </p>
+
+                            <p><span class="col-sm-6"><label>邮箱</label>：{{$resume->user->email}}</span>
+
+
+
+                             <span class="col-sm-6"><label>工作经验</label>：{{$resume->work_experience}}年</span>
+                            </p>
+                            <p><span class="col-sm-6"><label>所在地</label>：{{$resume->position}}</span>
+                                <span class="col-sm-6"><label>是否远程</label>：{{$resume->remote_status==2?"否":"是"}}</span></p>
 
                             <p><span class="col-sm-6"><label>远程类型</label>：
                                     @if($resume->remote_status==2)

@@ -170,6 +170,7 @@
             <span class="col-sm-6 col-xs-12">
             {{Form::text('endtime[ ]',null,array('readonly'=>"readonly",'placeholder'=>'1988-01-01','id'=>'endtime_id','class'=>'timeclass','data-position'=>'bottom'))}}
             </span>
+<<<<<<< HEAD
                             </div>
                             <div class="form-group has-feedback">
                                 {{--<input type="text" name="zhanshi" id="" placeholder="展示链接">--}}
@@ -190,6 +191,28 @@
                                     <p class="subtitle">项目经验</p>
                                 @endif
                                 <div class=" clearfix">
+=======
+          </div>
+          <div class="form-group has-feedback">
+            {{--<input type="text" name="zhanshi" id="" placeholder="展示链接">--}}
+            {{Form::text('ProjectUrl[ ]',null,array('placeholder'=>'展示链接 http://'))}}
+          </div>
+          <div class="form-group has-feedback">
+            {{--<textarea name="xiangmujingli" id="" placeholder="项目经历"></textarea>--}}
+            {{Form::textarea('Projectexperience[ ]',null,['placeholder'=>'项目描述'])}}
+          </div>
+        </div>
+
+@else
+        @for($i=0;$i<count($project);$i++)
+        <div class="one-project">
+            @if($i>0)
+            <p class="subtitle">项目经验<span></span></p>
+            @else
+            <p class="subtitle">项目经验</p>
+            @endif
+                  <div class=" clearfix">
+>>>>>>> b346cf6f20e7cea4b6f33b2020a52dd785f5b786
                     <span class="col-sm-6 col-xs-12 form-group has-feedback">
                         {{Form::text('ProjectName[ ]',$project[$i]->project_name,array('placeholder'=>'项目名称'))}}
                     </span>

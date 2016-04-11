@@ -218,6 +218,7 @@ class UsersController extends \BaseController
     public function p_EditResume()
     {
         $rules = [
+            'Real_name'=> 'required',
             'sex' => 'required',
             'skill' => 'required',
             'profession' => 'required',
@@ -228,6 +229,7 @@ class UsersController extends \BaseController
             'district' => 'required',
             'summery' => 'required',
             'experience' => 'required',
+            'work_experience'=>'required',
         ];
         $time=true;
         $projectNum=intval(Input::get('projectNum'));
@@ -266,6 +268,8 @@ class UsersController extends \BaseController
             $Resume->blog=Input::get('Blog');
             $Resume->summary=Input::get('summery');
             $Resume->skill_experience=Input::get('experience');
+            $Resume->real_name=Input::get('Real_name');
+            $Resume->work_experience=Input::get('work_experience');
             Userproject::where('user_id','=',$id)->delete();
 
             for($i=0;$i<$projectNum ;$i++){

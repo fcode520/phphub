@@ -57,7 +57,7 @@ class CreateNodesTable extends Migration
                     'slug' => 'job',
                     'description' => '真正的工作，并不是外包，如果你需要真正的远程工作者成为您正式的同事，请在这里发布您的招聘！',
                 ],
-                '创建远程团队' => [
+                '远程团队' => [
                     'slug' => 'createteam',
                     'description' => '每个人都应该有自己的团队，在这里我们寻找志同道合多人！',
                 ],

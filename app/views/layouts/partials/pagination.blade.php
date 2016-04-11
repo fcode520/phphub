@@ -15,8 +15,13 @@
                 {{ $i }}
             </a>
         @endfor
+            @if($paginator->getCurrentPage()==$paginator->getLastPage())
+                <?php $page=$paginator->getLastPage() ?>
+                @else
+                <?php $page=$paginator->getCurrentPage()+1?>
+                @endif
 
-            <a href="{{ $paginator->getUrl($paginator->getLastPage()) }}" class="item{{ ($paginator->getCurrentPage() == $paginator->getLastPage()) ? ' disabled' : '' }}">
+            <a href="{{ $paginator->getUrl($page) }}" class="item{{ ($paginator->getCurrentPage() == $paginator->getLastPage()) ? ' disabled' : '' }}">
                 下一页
                 <i class="icon right arrow"></i>
             </a>

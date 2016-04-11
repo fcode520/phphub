@@ -45,7 +45,11 @@ class TopicsController extends \BaseController implements CreatorListener
 
     public function show($id)
     {
-        $topic = Topic::findOrFail($id);
+        $topic = Topic::find($id);
+        if(is_null($topic))
+        {
+             return Redirect::to("/")->with('message','所查找的文章不存在');
+        }
         if($topic->vote_count<0){
             $topic->vote_count=0;
         }

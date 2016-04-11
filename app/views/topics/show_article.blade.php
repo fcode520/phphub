@@ -19,8 +19,12 @@
 
     <div class="col-sm-9 exchange">
            <div class="news">
+               <div class="ow_breadcrumb">
+               <a href="{{route("home")}}">OneWork</a>
+                   <span class="chevron">&nbsp;›&nbsp;</span>
+               <a href="{{route("nodes.show",$topic->node_id)}}">{{$topic->node->name}}</a>
+               </div>
                <div class="news-title">
-
                    <h2>{{{ $topic->title }}}</h2>
                         <div class="news-title-info">
                             <a href="{{ route('users.show', $topic->user->id) }}">
