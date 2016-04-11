@@ -67,7 +67,7 @@ margin-left: 10px;
 
 
 /* footer部分 */
-.footer{width:100%;background-color:#fff;padding:25px 0; margin-top:50px;}
+.footer{width:100%;background-color:#fff;padding:25px 0; margin-top:50px;padding-left: 26px;}
 .footer .subtitle span{border:1px solid #ccc;border-radius:4px;padding:1px 6px;color:#666;}
 .footer ul{padding-left:0;}
 .footer .about{padding:10px 0;}
