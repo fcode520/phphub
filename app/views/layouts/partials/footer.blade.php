@@ -10,14 +10,12 @@
 		</ul>
 		<p class="subtitle"><span>友情链接:</span></p>
 		<ul class="friendlyLink clearfix">
-			<li><a href="#"><img src="{{ cdn('assets/images/link/link1.png') }}"></a></li>
-			<li><a href="#"><img src="{{ cdn('assets/images/link/link2.png') }}"></a></li>
-			<li><a href="#"><img src="{{ cdn('assets/images/link/link3.png') }}"></a></li>
-			<li><a href="#"><img src="{{ cdn('assets/images/link/link4.png') }}"></a></li>
-			<li><a href="#"><img src="{{ cdn('assets/images/link/link5.png') }}"></a></li>
-			<li><a href="#"><img src="{{ cdn('assets/images/link/link6.png') }}"></a></li>
-			<li><a href="#"><img src="{{ cdn('assets/images/link/link7.png') }}"></a></li>
-
+			@if (isset($links) && count($links))
+						@foreach ($links as $link)
+					<li><a href="{{ $link->link }}" target="_blank" rel="nofollow" title="{{ $link->title }}">
+									<img src="{{ cdn($link->cover) }}"></a></li>
+						@endforeach
+			@endif
 		</ul>
 	</div>
 </div>
