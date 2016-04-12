@@ -22,7 +22,10 @@
                 <li class="{{ (Request::is('nodes/6') ? ' act' : '') }}"><a id="" href="{{ route('nodes.show', 6) }}" >{{ lang('Jobs') }}</a></li>
 {{--                <li class="{{ (Request::is('nodes/8') ? ' act' : '') }}"><a id="" href="{{ route('nodes.show', 8) }} ">{{ lang('Cooperate') }}</a></li>--}}
                 {{--<li class="{{ (Request::is('nodes/7') ? ' act' : '') }}"><a href="{{ route('nodes.show', 7) }}">{{ lang('Team') }}</a></li>--}}
+                <li class=""><a href="http://hao.apcow.com/" target="_blank" >网址导航</a></li>
                 <li class="{{ (Request::is('wiki*') ? ' act' : '') }}"><a href="{{ route('wiki') }}">{{ lang('Wiki') }}</a></li>
+
+
                 {{--<li class="{{ (Request::is('about*') ? ' act' : '') }}"><a href="{{ route('about') }}">{{ lang('About') }}</a></li>--}}
                 <i></i>
             </ul>
