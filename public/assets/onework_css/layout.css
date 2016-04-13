@@ -845,6 +845,27 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 	color: #4d5256;
 	text-decoration: underline;
 }
+/**翻页的css**/
+.change-page{width: 100%;background: #fff;}
+.cd-pagination{width:90%;max-width:768px;margin:2em auto;text-align:center;font-family:"PT Sans",sans-serif;}
+.cd-pagination li.button{display:inline-block;}
+@media only screen and (min-width:768px){
+    .cd-pagination li{display:inline-block;}
+    .cd-pagination li{margin:0 .2em;}
+}
+.cd-pagination a.disabled{color:rgba(46,64,87,0.4);pointer-events:none;}
+.cd-pagination .current{background-color:#5cb85c;border-color:#64a281;color:#ffffff;pointer-events:none;}
+.cd-pagination li.button{display:inline-block;}
+.cd-pagination a{border:1px solid #e6e6e6;border-radius:0.2em;}
+.cd-pagination a,.cd-pagination span{display:inline-block;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;padding:.45em .8em;font-size:1.6rem;color:#2E4057;transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+.cd-pagination a:hover{background:#f1f1f1;}
+.cd-pagination a:active{transform:scale(0.95);-webkit-transform:scale(0.95);-mox-transform:scale(0.95);-transform:scale(0.95);}
+.cd-pagination .button:first-of-type a::before{content:'\00ab ';}
+.cd-pagination .button:last-of-type a::after{content:' \00bb';}
+.cd-pagination a.disabled::before,.cd-pagination a.disabled::after{opacity:.4;}
+.change-page a::after,.change-page a::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+/***ç¿»é¡µ css**/
+/***翻页 css**/
 
 
 /*** 媒体查询 部分css**/
@@ -859,7 +880,8 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 }
 
 @media screen and (max-width:767px){
-	.modify-article{width: 90%;}
+    .cd-pagination li{display: inline-block;}
+    .modify-article{width: 90%;}
 	.navigation-info{max-width: 551px;margin: 30px auto;}
 	.navigation-nav > ul > li:first-child{margin-left: 10px;}
 	.user-list{padding-left: 15px;}
@@ -882,6 +904,10 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 @media screen and (max-width:560px){
 	.navigation-info{margin: 30px 10px;}
 }
+@media screen and (max-width:500px){
+    .cd-pagination li{display: none;}
+}
+
 .spinner_bg{
 	position: fixed;
 	width: 100%;
