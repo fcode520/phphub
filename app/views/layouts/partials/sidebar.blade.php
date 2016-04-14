@@ -50,7 +50,7 @@
             <ul>
                 <li><span>{{$siteStat->topic_count}}</span><p>交流文章</p></li>
                 <li><span>{{$siteStat->user_count+300}}</span><p>注册会员</p></li>
-                <li><span>{{$siteStat->remoter_count}}</span><p>远程工作者</p></li>
+                <li><span>{{$siteStat->remoter_count+85}}</span><p>远程工作者</p></li>
 
             </ul>
         </div>
