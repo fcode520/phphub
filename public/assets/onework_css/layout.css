@@ -158,7 +158,7 @@ i.form-control-feedback.glyphicon.glyphicon-ok{color:#3c763d;}
 .mimazhaohui > p > input{margin-bottom:15px;margin-top:15px;}
 .mimazhaohui > p > label{display:block;}
 /* 注册部分 */
-.register{width:400px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;top:50px;margin-left:-200px;}
+.register{width:400px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;top:50px;margin-left:-200px;margin-bottom: 50px;}
 .register .title{font-size:18px;color:#7c8b8e;margin-bottom:20px;text-align:center;}
 .register-context{width: 100%;margin: 0 auto!important;height: auto;}
 /*.register-context > input{width: 100%;margin-top: 30px;margin-bottom: 0;height: 40px;border-radius: 5px;border: 1px solid #e9ecee;font-size: 14px;padding: 0 10px;}*/
