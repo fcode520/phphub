@@ -33,7 +33,15 @@ OneWork & 远程工作者社区
         </script>
 
 	    @yield('styles')
-
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?bd29023024a311e45822649f1ea9ef11";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
 	</head>
 	<body id="body">
 
@@ -96,6 +104,7 @@ OneWork & 远程工作者社区
 		<script src="{{ cdn('assets/js/onework.js')}}"></script>
 		<script src="{{ cdn('assets/js/popDialog.js')}}"></script>
 	    @yield('scripts')
+
 
 	</body>
 </html>
