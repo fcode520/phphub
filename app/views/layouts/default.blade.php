@@ -37,11 +37,12 @@ OneWork & 远程工作者社区
             var _hmt = _hmt || [];
             (function() {
                 var hm = document.createElement("script");
-                hm.src = "//hm.baidu.com/hm.js?bd29023024a311e45822649f1ea9ef11";
+                hm.src = "//hm.baidu.com/hm.js?5dbe49a97b6730632b93ed44db92ba06";
                 var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(hm, s);
             })();
         </script>
+
 	</head>
 	<body id="body">
 
