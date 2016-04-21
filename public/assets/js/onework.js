@@ -524,3 +524,15 @@ $('.praise_product').click(function() {
     });
 });
 });
+$(function(){
+    var dh = $(document).height();//整个网页高度
+    var wh = $(window).height();//浏览器窗口高度
+    var warp=$("#wrap").height();
+    var t = $('.footer');
+    var copy=$('.copy');
+    if(t.length > 0 &&warp.legth>0&& dh > warp){
+
+        copy.css({'position':'absolute','bottom':0,'left':0});
+        t.css({'position':'absolute','bottom':40,'left':0});
+    }
+});
