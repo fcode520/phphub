@@ -168,7 +168,7 @@ i.form-control-feedback.glyphicon.glyphicon-ok{color:#3c763d;}
 .register input{width: 100%;margin-top: 30px;margin-bottom: 0;height: 40px;border-radius: 5px;border: 1px solid #e9ecee;font-size: 14px;padding: 0 10px;}
 .register button{width:340px;border:none;height:40px;color:#fff;background-color:#63ce83;border-radius:4px;margin-top:25px;}
 /* 注册成功 */
-.register_ok{width:700px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;top:50px;margin-left:-350px;}
+.register_ok{width:700px;background-color:#fff;padding:40px 30px 45px;position:relative;left:50%;margin-top:50px;margin-left:-350px;}
 .register_ok p{font-size:12px;color:#7c8b8e;margin-bottom:20px;text-align:center;}
 .register_ok a{display:block;width:190px;border:none;height:40px;color:#fff;background-color:#63ce83;border-radius:4px;margin:25px auto 0;text-align:center;line-height:40px;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;}
 .register_ok a:hover{background-color:#4dbe92;}
@@ -222,7 +222,7 @@ i.form-control-feedback.glyphicon.glyphicon-ok{color:#3c763d;}
 /************************************************************************************/
 
 /* 登陆部分 css */
-.login{width:480px;background-color:#fff;padding:45px 70px;position:relative;left:50%;top:50px;margin-left:-240px;}
+.login{width:480px;background-color:#fff;padding:45px 70px;position:relative;left:50%;margin-top:50px;margin-left:-240px;}
 .login .title{font-size:18px;color:#7c8b8e;}
 .login input{width: 100%;margin-top: 30px;margin-bottom: 0;height: 40px;border-radius: 5px;border: 1px solid #e9ecee;font-size: 14px;padding: 0 10px;}
 .login button{width:340px;border:none;height:40px;color:#fff;background-color:#63ce83;border-radius:4px;margin:20px 0;}

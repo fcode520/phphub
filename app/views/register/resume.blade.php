@@ -5,11 +5,11 @@
 
     <div class="container attestation">
         <p class="title"><span>完善资料</span>
-            @if(Session::get('message'))
-                <span>{{Session::get('message')}}</span>
-            @else
+            {{--@if(Session::get('message'))--}}
+                {{--<span>{{Session::get('message')}}</span>--}}
+            {{--@else--}}
                 <span>完善个人资料，让更多人认识你！</span>
-            @endif
+            {{--@endif--}}
         </p>
 
 
