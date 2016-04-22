@@ -105,6 +105,15 @@ return array(
         'province'               => ':所在省',
         'city'               => ':所在市',
         'district'               => ':所在地区',
+        'Real_name'=>'真实姓名' ,
+        'sex' => '性别',
+        'skill' => '技能',
+        'profession' => '职业',
+        'qqnumber' => 'QQ',
+        'Blog' => '博客',
+        'summery' => '个人简介',
+        'experience' => '技术经验',
+        'work_experience'=>'工作经验年限',
     ),
 
 );
