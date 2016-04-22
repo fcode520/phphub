@@ -98,8 +98,8 @@ OneWork & 远程工作者社区
 		</div>
 
 		</div>
+        @include('layouts.partials.footer')
 
-		@include('layouts.partials.footer')
 
 		<script src="{{ cdn('assets/js/'.Asset::scripts('frontend')) }}"></script>
 		<script src="{{ cdn('assets/js/onework.js')}}"></script>

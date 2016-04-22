@@ -1,3 +1,4 @@
+{{--<div class="myFooter">--}}
 <div class="footer">
 	<div class="container">
 		<ul class="about clearfix">
@@ -18,10 +19,12 @@
 			@endif
 		</ul>
 	</div>
-</div>
-<!-- 版权信息 -->
-<div class="copy">
-	<div class="container">
-		<p>Copyright &copy; 2015 - 京ICP备14019620号-2, All Rights Reserved One Work 版权所有 Support by OneWork</p>
 	</div>
+	<!-- 版权信息 -->
+	<div class="copy">
+	<div class="container">
+	<p>Copyright &copy; 2015 - 京ICP备14019620号-2, All Rights Reserved One Work 版权所有 Support by OneWork</p>
+	</div>
+	</div>
+
 </div>

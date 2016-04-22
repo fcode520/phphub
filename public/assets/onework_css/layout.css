@@ -6,7 +6,9 @@ ul,li{list-style-type: none;margin: 0;padding: 0;}
 
 .btn-success{background-color: #63ce83;border-color: #63ce83;transition: all .2s ease-in-out;-webkit-transition: all .2s ease-in-out;-moz-transition: all .2s ease-in-out;-o-transition: all .2s ease-in-out;}
 .btn-success:hover{background-color: #5cb85c;border-color: #4cae4c;}
-
+html{
+	height: 100%;
+}
 body{
 	font-size: 12px;
 	background-color:#eeeff1;
@@ -67,7 +69,14 @@ margin-left: 10px;
 
 
 /* footer部分 */
-.footer{width:100%;background-color:#fff;padding:25px 0; margin-top:50px;padding-left: 26px;}
+.footer{
+	width:100%;
+	background-color:#fff;
+	padding:25px 0;
+
+	margin-top:50px;
+	padding-left: 26px;}
+
 .footer .subtitle span{border:1px solid #ccc;border-radius:4px;padding:1px 6px;color:#666;}
 .footer ul{padding-left:0;}
 .footer .about{padding:10px 0;}
@@ -866,7 +875,20 @@ float: right;position: relative;line-height: 62px;padding: 0 10px;margin-right: 
 .change-page a::after,.change-page a::before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 /***ç¿»é¡µ css**/
 /***翻页 css**/
-
+#mywarp{
+	position: relative;   /*重要！保证footer是相对于wapper位置绝对*/
+	height: auto;          /* 保证页面能撑开浏览器高度时显示正常*/
+	min-height: 100%  /* IE6不支持，IE6要单独配置*/
+}
+.myFooter{
+	position: absolute;
+	bottom: 0; /* 关键 */
+	left:0; /* IE下一定要记得 */
+	height: 231px;
+}
+#warp{
+	padding-bottom: 70px;
+}
 
 /*** 媒体查询 部分css**/
 

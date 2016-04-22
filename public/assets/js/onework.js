@@ -524,15 +524,45 @@ $('.praise_product').click(function() {
     });
 });
 });
-$(function(){
-    var dh = $(document).height();//整个网页高度
-    var wh = $(window).height();//浏览器窗口高度
-    var warp=$("#wrap").height();
-    var t = $('.footer');
-    var copy=$('.copy');
-    if(t.length > 0 &&warp.legth>0&& dh > warp){
+//$(function(){
+//    var dh = $(document).height();//整个网页高度
+//    var wh = $(window).height();//浏览器窗口高度
+//    var warp=$("#wrap").height();
+//    var t = $('.footer');
+//    var copy=$('.copy');
+//    if(t.length > 0 && warp>0 && dh > warp){
+//
+//        copy.css({'position':'static','bottom':0,'left':0});
+//        t.css({'position':'static','bottom':40,'left':0});
+//    }
+//});
+$(function () {
 
-        copy.css({'position':'absolute','bottom':0,'left':0});
-        t.css({'position':'absolute','bottom':40,'left':0});
+    var footerHeight = 0,
+        footerTop = 0,
+        $footer = $("#myFooter");
+
+    positionFooter();
+
+    function positionFooter() {
+
+        //footerHeight = $footer.height();
+        footerHeight = 231;
+        footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+
+        if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+            $footer.css({
+                position: "absolute"
+            });
+        } else {
+            $footer.css({
+                position: "static"
+            });
+        }
+
     }
+
+    $(window)
+        .scroll(positionFooter)
+        .resize(positionFooter)
 });
