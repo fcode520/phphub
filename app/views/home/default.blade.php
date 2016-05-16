@@ -92,8 +92,8 @@ OneWork & 远程工作者社区
                    </div>
                 @endif
 
-        @yield('navigation-title')
         <div class="container">
+
 		@yield('content')
 		</div>
 
