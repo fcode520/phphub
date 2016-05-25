@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="navigation-nav clearfix">
 				<ul>
-					<li><a class="{{Request::is('hao')?'act':' '}}" href="#">全部</a></li>
+					<li><a class="{{Request::is('hao')?'act':' '}}" href="{{route('hao')}}">全部</a></li>
 					@foreach($categorys as $category)
 					<li><a class="{{Request::is('hao/'.$category->id)?'act':' '}}" href="{{route('haoCattegory',$category->id)}}">{{$category->LinkCategoryName}}</a></li>
 					@endforeach
@@ -38,11 +38,7 @@
 						<div>{{$item->LinkDescription}}</div>
 					</div>
                 @endforeach
-
-
 				</div>
-
-
 			</div>
 		</div>
 	</div>
