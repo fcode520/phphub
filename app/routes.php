@@ -10,6 +10,11 @@ Route::get('/', [
 //    'uses' => 'PagesController@home',
     'uses' => 'TopicsController@index',
 ]);
+Route::get('/homes', [
+    'as' => 'homes',
+//    'uses' => 'PagesController@home',
+    'uses' => 'TopicsController@home',
+]);
 
 Route::get('/about', [
     'as' => 'about',
@@ -375,3 +380,17 @@ Route::post('/users/praise_count',[
     ]
 );
 Route::get('NotifyTest','TopicsController@NotifyTest');
+
+
+
+#-----------------Start Navigation-----------------------------
+Route::get('/hao',[
+    'as'=>'hao',
+    'uses'=>'NavigationController@index'
+]);
+
+Route::get('/hao/{id}',[
+    'as'=>'haoCattegory',
+    'uses'=>'NavigationController@Cattegory'
+]);
+#-----------------End Navigation-----------------------------
