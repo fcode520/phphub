@@ -62,7 +62,7 @@ class Notification extends \Eloquent
                 'from_user_id' => $fromUser->id,
                 'user_id'      => $toUser->id,
                 'topic_id'     => $topic->id,
-                'reply_id'     => $content ?: $reply->id,
+                'reply_id'     => $reply ?$reply->id: $reply,
                 'body'         => $content ?: $reply->body,
                 'type'         => $type,
                 'created_at'   => $nowTimestamp,
