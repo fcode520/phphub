@@ -1,7 +1,8 @@
 @extends('layouts.default')
 
 @section('title')
-{{ lang('Topic List') }} @parent
+
+{{(Request::is('topics*') ||Request::is('/')? '发现' : $node->name)}} @parent
 @stop
 
 @section('css')
