@@ -631,6 +631,8 @@ button:hover{background-color:#4dbe92;}
 .navigation-nav > ul > li > a:hover{color: #fff;background: #5ecf80;}
 .navigation-info{border-radius: 3px;margin-bottom: 30px;}
 .navigation-info > p{padding: 10px;margin-bottom: 0;font-size: 16px;color: #333;background: #fff;}
+.navigation-info > p >a {color: #333;font-size: 30px;}
+.navigation-info > p >a:hover {color: #5ecf80;}
 .navigation-info > div{color: #333;height: 70px;padding: 10px;background: #fff;}
 .navigation-info > a{border-bottom: 1px solid #f0f0f0;border-top: 1px solid #f0f0f0;display: block;}
 

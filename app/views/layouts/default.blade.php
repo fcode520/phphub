@@ -6,7 +6,7 @@
 
 		<title>
 			@section('title')
-OneWork & 远程工作者社区
+OneWork & 远程工作者社区 &我们崇尚工作方式简单化，所以A Personal Computer, One Work ，既是我们的追求，更是我们的初心。
 			@show
 		</title>
 

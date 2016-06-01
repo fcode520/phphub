@@ -33,8 +33,11 @@
 				<div class="row">
 				@foreach($items as $item)
 					<div class="col-sm-6 navigation-info">
-						<p>{{$item->LinkName}}</p>
-						<a href="#"><img src={{$item->Logo}} width="100%"></a>
+						<p>
+						<a href="{{$item->LinkUrl}}">{{$item->LinkName}}</a>
+						</p>
+
+						<a href="{{$item->LinkUrl}}"><img src={{$item->Logo}} width="100%"></a>
 						<div>{{$item->LinkDescription}}</div>
 					</div>
                 @endforeach
