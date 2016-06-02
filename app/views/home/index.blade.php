@@ -1,61 +1,165 @@
-@extends('layouts.default')
+@extends('home.default')
 
-@section('title')
-{{ lang('Topic List') }} @parent
-@stop
 
 @section('css')
-    {{--{{HTML::style('assets/onework_css/layout.css')}}--}}
     <link rel="stylesheet" href="{{cdn('assets/onework_css/layout.css')}}">
 @stop
 
 @section('content')
-    {{--@if(isset($currentUser))--}}
-         {{--@if($currentUser->status==0)--}}
-      {{--<div class="container alert alert-danger">--}}
-          {{--{{ '请激活当前用户' }}--}}
-          {{--<a href="{{route('SendActivationEmail')}}">点击重新发送激活邮件</a>--}}
+
+  <div class="new-index">
+
+    <div class="container">
+      <div class="new-index-head clearfix">
+        <img src="{{cdn("assets/images/x_logo.png")}}"/>
+        <div class="new-index-nav">
+          <ul>
+            <li><a href="{{route('home')}}">社区</a></li>
+            <li><a href="{{url('nodes/6')}}">工作</a></li>
+            <li><a href="{{url('nodes/7')}}">寻求团队</a></li>
+            <li><a href="http://hao.apcow.com">网址导航</a></li>
+          </ul>
+          <span>new</span>
+        </div>
+        <div class="new-index-map">
+          <img src="{{cdn("assets/images/x_map.png")}}">
+          <div class="new-index-map-text">
+            <p>聚集远程工作者的社区</p>
+            <p>快速找到远程团队</p>
+            <a href="{{url('/nodes/7')}}">申请加入远程团队</a>
+          </div>
+        </div>
+        <div class="new-index-pic">
+          <p>远程团队TEAM<span>+</span></p>
+          <p>加入团队，共谋发展</p>
+          <div class="new-index-pic-tab">
+            <div class="new-index-pic-box">
+              <ul>
+                <li>
+
+                  <img src="{{cdn("assets/images/x_pic1.png")}}" alt="">
+                  <div class="new-index-pic-info">
+                    <p>远程外包团队TEAM</p>
+                    <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                  </div>
+                </li>
+                <li>
+
+                  <img src="{{cdn("assets/images/x_pic2.png")}}" alt="">
+                  <div class="new-index-pic-info">
+                    <p>远程外包团队TEAM</p>
+                    <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="{{cdn("assets/images/x_pic3.png")}}" alt="">
+                  <div class="new-index-pic-info">
+                    <p>远程外包团队TEAM</p>
+                    <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                  </div>
+                </li>
+                <li>
+                  <img src="{{cdn("assets/images/x_pic2.png")}}" alt="">
+                  <div class="new-index-pic-info">
+                    <p>远程外包团队TEAM</p>
+                    <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                  </div>
+                </li>
+                <li>
+                   <img src="{{cdn("assets/images/x_pic2.png")}}" alt="">
+                  <div class="new-index-pic-info">
+                    <p>远程外包团队TEAM</p>
+                    <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <span class="pic-tab-left glyphicon glyphicon-chevron-left"></span>
+            <span class="pic-tab-right glyphicon glyphicon-chevron-right"></span>
+          </div>
+          <div class="new-index-pic-list">
+            <ul>
+              <li>
+                <img src="{{cdn("assets/images/x_pic2.png")}}" alt="">
+                <div class="new-index-pic-info">
+                  <p>远程外包团队TEAM</p>
+                  <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                </div>
+              </li>
+              <li>
+                 <img src="{{cdn("assets/images/x_pic2.png")}}" alt="">
+                <div class="new-index-pic-info">
+                  <p>远程外包团队TEAM</p>
+                  <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                </div>
+              </li>
+              <li>
+                 <img src="{{cdn("assets/images/x_pic3.png")}}" alt="">
+                <div class="new-index-pic-info">
+                  <p>远程外包团队TEAM</p>
+                  <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="new-index-unit-a">
+    <p>2016 ONEWORK</p>
+    <p>通过建立云协作的组织，让人们相信远程办公是可行的，即使是在中国</p>
+  </div>
+
+  <div class="new-index-unit-b">
+    <div class="new-index-unit-b-title">
+      <p>远程工作</p>
+      <p>推荐优秀远程人才</p>
+    </div>
+    <div class="new-index-unit-b-con">
+      <div class="new-index-unit-b-con-left">
+        <div class="title">最新项目</div>
+        <div class="new-index-unit-b-list">
+          <ul>
+                 @if(isset($g_sideInfos[2]))
+                            @foreach( $g_sideInfos[2] as $topic)
+                                  <li>
+                                      <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
+                                      <p><span>{{ $topic->user->username }}</span><span class="timeago">{{ $topic->created_at }}</span></p>
+                                  </li>
+                          @endforeach
+                      @endif
+            <li><a href="{{url('nodes/5')}}">更多...</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="new-index-unit-b-con-right">
+        <div class="title">最新招聘</div>
+        <div class="new-index-unit-b-list">
+          <ul>
+            @if(isset($g_sideInfos[1]))
+                              @foreach( $g_sideInfos[1] as $topic)
+                                  <li>
+                                      <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
+                                      <p><span>{{ $topic->user->username }}</span><span class="timeago">{{ $topic->created_at }}</span></p>
+                                  </li>
+                              @endforeach
+            @endif
+            <li><a href="{{url('nodes/6')}}">更多...</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    {{--<div class="new-index-unit-c">--}}
+    @include('layouts.partials.footer')
       {{--</div>--}}
-         {{--@endif--}}
-    {{--@endif--}}
-
-
-<!--交流页面主要内容begin-->
-
- <div class="col-sm-9 exchange">
-      <div class="exchange-head">
-        <ul>
-          <li class={{(Request::is('topics*') ||Request::is('/')? ' act' : '') }}><a href="{{ route('topics.index') }}">全部</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li class={{(Request::is('nodes/5') ? ' act' : '') }}><a href="{{ route('nodes.show', 5)}}">寻找项目</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li class={{(Request::is('nodes/6') ? ' act' : '') }}><a href="{{ route('nodes.show', 6)}}">寻求工作</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li class={{(Request::is('nodes/7') ? ' act' : '') }}><a href="{{ route('nodes.show', 7)}}">远程团队</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li class={{(Request::is('nodes/8') ? ' act' : '') }}><a href="{{ route('nodes.show', 8)}}">提升技能</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li class={{(Request::is('nodes/9') ? ' act' : '') }}><a href="{{ route('nodes.show', 9)}}">每周必读</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-          <li class={{(Request::is('nodes/13') ? ' act' : '') }}><a href="{{ route('nodes.show', 13)}}">我要吐槽</a><span class="glyphicon glyphicon-triangle-bottom"></span></li>
-        </ul>
-      </div>
-      <div class="exchange-hot">
-          @if (isset($node))
-                  <h2 class="hot-title">{{ lang('Current Node') }}: {{{ $node->name }}}</h2>
-          @else
-                  <h2 class="hot-title">全部文章</h2>
-          @endif
-
-        <div class="hot-con">
-             @include('topics.partials.topics')
-        </div>
-        <div class="hot-footer text-right">
-                        <!-- Pager -->
-         {{ $topics->appends(Request::except('page', '_pjax'))->links('layouts.partials.pagination'); }}
-        </div>
-      </div>
-
-</div>
-<!--交流页面主要内容end-->
-@include('layouts.partials.sidebar')
 @stop
-
-{{--@section('scripts')--}}
-{{--{{HTML::script(cdn('assets/js/'.Asset::scripts('frontend')))}}--}}
-{{--{{HTML::script('assets/onework_js/myapp.js')}}--}}
-{{--@stop--}}
+@section('scripts')
+<script>
+$(".footer").css("margin-top",0);
+</script>
+@stop

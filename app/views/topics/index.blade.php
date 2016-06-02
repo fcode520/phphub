@@ -2,7 +2,7 @@
 
 @section('title')
 
-{{(Request::is('topics*') ||Request::is('/')? '发现' : $node->name)}} @parent
+{{(Request::is('topics*') ||Request::is('/')||Request::is('home')? '发现' : $node->name)}} @parent
 @stop
 
 @section('css')

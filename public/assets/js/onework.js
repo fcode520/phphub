@@ -566,3 +566,41 @@ $(function () {
         .scroll(positionFooter)
         .resize(positionFooter)
 });
+
+
+$(function(){
+    //新主页 图片切换
+    if($('.new-index-pic-box > ul').length < 1)return;
+    var ul = $('.new-index-pic-box > ul'),
+        li = $('.new-index-pic-box > ul > li'),
+        tabbox = $('.new-index-pic-tab')
+    left = $('.pic-tab-left'),
+        right = $('.pic-tab-right'),
+        box = $('.new-index-pic-box')
+    w = (li.innerWidth()+20);
+    left.click(function(){
+        ul.find('li:last').prependTo(ul);
+        ul.css({'margin-left':-w});
+        ul.animate({'margin-left':0});
+    });
+    right.click(function(){
+        ul.animate({'margin-left':-w},function(){
+            ul.find('li').eq(0).appendTo(ul);
+            ul.css({'margin-left':0});
+        });
+    });
+    var tab = function(){
+        ul.stop().animate({marginLeft:-w},500,function(){
+            ul.find('li').eq(0).appendTo(ul);
+            ul.css({'margin-left':0});
+        });
+    };
+    var timer = setInterval(tab , 3000);
+
+    tabbox.hover(function(){
+        clearInterval(timer);
+    },function(){
+        timer = setInterval(tab , 3000);
+    })
+
+});

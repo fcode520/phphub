@@ -24,9 +24,13 @@ class TopicsController extends \BaseController implements CreatorListener
         //取所有列表
         $nodes  = Node::allLevelUp();
         //查询结果缓存1440 分钟 获取友情链接
-//        $links  = Link::remember(1440)->get();
+        //$links  = Link::remember(1440)->get();
 
         return View::make('topics.index', compact('topics', 'nodes'));
+    }
+    public function home()
+    {
+        return View::make('home.index');
     }
 
     public function create()

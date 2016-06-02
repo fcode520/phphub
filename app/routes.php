@@ -5,14 +5,12 @@ Route::pattern('id', '[0-9]+');
 # ------------------ Page Route ------------------------
 //Route::get('/', 'PageController@home');
 
-Route::get('/', [
+Route::get('/home', [
     'as' => 'home',
-//    'uses' => 'PagesController@home',
     'uses' => 'TopicsController@index',
 ]);
-Route::get('/homes', [
+Route::get('/', [
     'as' => 'homes',
-//    'uses' => 'PagesController@home',
     'uses' => 'TopicsController@home',
 ]);
 

@@ -90,7 +90,7 @@
                           <a href="{{ route('topics.show', [$topic->id]) }}">{{$topic->title}}</a>
                           <p><a href="{{ route('users.show', [$topic->user_id]) }}">{{ $topic->user->username }}</a><span class="timeago">{{ $topic->created_at }}</span></p>
                       </li>
-            @endforeach
+                @endforeach
             @endif
         </div>
           <div class="unit-d">

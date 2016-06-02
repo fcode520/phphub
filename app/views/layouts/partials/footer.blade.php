@@ -14,7 +14,7 @@
 			@if (isset($links) && count($links))
 						@foreach ($links as $link)
 					<li><a href="{{ $link->link }}" target="_blank" rel="nofollow" title="{{ $link->title }}">
-									<img src="{{ cdn($link->cover) }}"></a></li>
+									<img src="{{ ($link->cover) }}"></a></li>
 						@endforeach
 			@endif
 		</ul>
