@@ -11,7 +11,7 @@ class ow_AuthController extends \BaseController
     public function show_login()
     {
         if(Auth::check()){
-            return Redirect::intended('/');
+            return Redirect::route('home');
         }
         return View::make("register.loginindex");
     }
@@ -19,7 +19,7 @@ class ow_AuthController extends \BaseController
     {
         if(Auth::attempt(array('username'=>Input::get('username'),'password'=>Input::get('password')),true)
             ||Auth::attempt(array('email'=>Input::get('username'),'password'=>Input::get('password')),true)){
-            return Redirect::intended('/');
+            return Redirect::route('home');
         }else{
 
             return Redirect::to('/ow_login')->with('message', '登录失败，账户不存在或密码错误')->withInput();

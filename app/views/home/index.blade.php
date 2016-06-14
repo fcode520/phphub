@@ -36,7 +36,6 @@
             <div class="new-index-pic-box">
               <ul>
                 <li>
-
                   <img src="{{cdn("assets/images/x_pic1.png")}}" alt="">
                   <div class="new-index-pic-info">
                     <p>远程外包团队TEAM</p>
@@ -47,8 +46,9 @@
 
                   <img src="{{cdn("assets/images/x_pic2.png")}}" alt="">
                   <div class="new-index-pic-info">
-                    <p>远程外包团队TEAM</p>
-                    <p>多年外包经验，长期承接外包，团队成员来自大型互联网公司</p>
+                    <p>设计外包团队</p>
+                    <p>提供整体UI设计服务，为客户提供从可用性评估、交互策划、
+                    界面设计、产品包装等一站式设计服务。</p>
                   </div>
                 </li>
                 <li>

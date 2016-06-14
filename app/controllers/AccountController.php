@@ -30,7 +30,7 @@ class AccountController extends \BaseController {
 	}
     public function replies(){
 		if(!Auth::check()){
-			Redirect::intended('/');
+			Redirect::route('home');
 		}
         $notifications=Notification::where('type','=','new_reply')->where('user_id','=',Auth::user()->id)->get();
         $userID=Auth::user()->id;
@@ -40,7 +40,7 @@ class AccountController extends \BaseController {
     }
     public function  sysnotify(){
 		if(!Auth::check()){
-			Redirect::intended('/');
+			Redirect::route('home');
 		}
         $notifications=Notification::where('type','<>','new_reply')->where('user_id','=',Auth::user()->id)->get();
         $userID=Auth::user()->id;

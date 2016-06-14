@@ -10,8 +10,8 @@ Route::get('/home', [
     'uses' => 'TopicsController@index',
 ]);
 Route::get('/', [
-    'as' => 'homes',
-    'uses' => 'TopicsController@home',
+    'as' => 'index',
+    'uses' => 'HoneController@index',
 ]);
 
 Route::get('/about', [
